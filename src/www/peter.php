@@ -8,5 +8,5 @@
 
 <h1>Hello Peter</h1>
 
+<h2><?php print "hello" ?></h2>
 </body>
-</html>
