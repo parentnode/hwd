@@ -16,5 +16,7 @@
 <a href="peter.php">Peter</a><br />
 <a href="octavian.php">Octavian</a>
 
+<h2><?php print "Hello, I'm PHP" ?></h2>
+
 </body>
 </html>
