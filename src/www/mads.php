@@ -7,6 +7,7 @@
 <body>
 
 <h1>Hello Mads</h1>
+<p>Welcome to the test CLASS</p>
 
 </body>
 </html>
