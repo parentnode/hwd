@@ -7,6 +7,6 @@
 <body>
 
 <h1>Hello Bolette</h1>
-
+<h2>Welcome. We're so glad you're here!</h2>
 </body>
 </html>
