@@ -67,16 +67,37 @@ html{
 }
 body{
     height:100%; /* force the BODY element to match the height of the HTML element */
-    margin: 0px;
+    margin: 0px; /*remove standar 8px margin of body*/
 }
-button{
-	background: none;
-	border: 0px;
-	cursor:pointer;
+#wrapper{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow:hidden;
+    display: flex;
+    flex-flow: column;
+}
+#header {
+	min-height: 200px;
+	display: flex;
+	background: #48AAA8;
+}
+#main {
+    height: 100%; /* makes it fill out remaining space between header and footer */
+	background: #EF6D4F;
+    display: flex;
+}
+#footer {
+	bottom: 0px;
+	display: flex;
+	min-height: 200px;
+	background: #f8c755;
 }
 h1 {
 	display: inline-block;
-	font-size: 6vw;
+	font-size: 6vw; /* use 'vw' measure to change font-size according to browser-window size*/
 	font-family: 'Abril Fatface', cursive;
 }
 #txt1{
@@ -99,38 +120,7 @@ h1 {
 	font-family: 'Poiret One', cursive;
 	font-size: 1.2em;
 }
-#wrapper{
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    overflow:hidden;
-    display: flex;
-    flex-flow: column;
-    z-index:-1; /* Remove this line if it's not going to be a background! */
-}
-#header {
-	min-height: 200px;
-	min-width: 460px;
-	display: flex;
-	background: #48AAA8;
-}
-#main {
-    height: 100%; 
-	min-width: 460px;
-	background: #EF6D4F;
-	position: relative;
-    overflow: scroll;
-    display: flex;
-}
-#footer {
-	bottom: 0px;
-	display: flex;
-	min-width: 460px;
-	min-height: 200px;
-	background: #f8c755;
-}
+
 </style>
 
 
