@@ -9,4 +9,9 @@
 <h1>Hello Peter</h1>
 
 <h2><?php print "hello" ?></h2>
+<?// phpinfo() ?>
+<?
+	$mysqli = new mysqli("127.0.0.1", "root", "Warman13");
+	print_r($mysqli);
+?>
 </body>
