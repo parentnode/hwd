@@ -23,6 +23,8 @@ Test
 More testing
 <br />
 Atom test
+<br />
+Testing Atom committing
 
 </body>
 </html>
