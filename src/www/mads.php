@@ -62,22 +62,22 @@
 
 <style>
 html{
-    min-height:100%;/* make sure it is at least as tall as the viewport */
+	min-height:100%;/* make sure it is at least as tall as the viewport */
 /*  position:relative;*/
 }
 body{
-    height:100%; /* force the BODY element to match the height of the HTML element */
-    margin: 0px; /*remove standar 8px margin of body*/
+	height:100%; /* force the BODY element to match the height of the HTML element */
+	margin: 0px; /*remove standar 8px margin of body*/
 }
 #wrapper{
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    overflow:hidden;
-    display: flex;
-    flex-flow: column;
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	overflow:hidden;
+	display: flex;
+	flex-flow: column;
 }
 #header {
 	min-height: 200px;
