@@ -8,9 +8,13 @@
 
 <h1>Hello Octavian</h1>
 <?
-	$mysqli = new mysqli("127.0.0.1", "root", "Bamsi123");
+	$mysqli = new mysqli("127.0.0.1", "root", "#PASS#");
 	print_r($mysqli);
 ?>
 
 </body>
+#
+	Hej
+
+#
 </html>

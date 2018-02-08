@@ -12,11 +12,13 @@
     margin-top: 30px;
     margin-left: 80px;
     margin-right: 1280px}
-	li {
-    color:brown;
-    font-family: times;
-    font-size: 20 px;
-    margin: 5px 15px 20px 80px}
+
+		li {
+			color:brown;
+			font-family: times;
+			font-size: 20 px;
+			margin: 5px 15px 20px 80px;
+		}
 	</style>
 </head>
 <body>
