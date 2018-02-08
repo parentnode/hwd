@@ -63,7 +63,7 @@
 <style>
 html{
     min-height:100%;/* make sure it is at least as tall as the viewport */
-    position:relative;
+/*  position:relative;*/
 }
 body{
     height:100%; /* force the BODY element to match the height of the HTML element */
@@ -81,6 +81,7 @@ body{
 }
 #header {
 	min-height: 200px;
+	max-height: 200px;
 	display: flex;
 	background: #48AAA8;
 }
@@ -93,24 +94,46 @@ body{
 	bottom: 0px;
 	display: flex;
 	min-height: 200px;
+	max-height: 200px;
 	background: #f8c755;
 }
 h1 {
 	display: inline-block;
 	font-size: 6vw; /* use 'vw' measure to change font-size according to browser-window size*/
 	font-family: 'Abril Fatface', cursive;
+	vertical-align: middle;
 }
 #txt1{
-	 color: black;
-	 font-family: 'Abril Fatface', cursive;
+	color: black;
+	font-family: 'Abril Fatface', cursive;
+	text-align: right;
+	width: 30%;
+}
+#txt1{
+	animation-name: fontChange;
+    animation-duration: 1s;
+    animation-iteration-count: 40;
+    animation-timing-function: linear;
 }
 #txt2 {
 	color: white;
 	font-family: 'Pacifico', cursive;
+	text-align: center;
+	width: 20%;
+	animation-name: fontChange2;
+    animation-duration: 1.8s;
+    animation-iteration-count: 40;
+    animation-timing-function: linear;
 }
 #txt3 {
 	color: black;
-	font-family: 'Archivo Black', sans-serif;	
+	font-family: 'Archivo Black', sans-serif;
+	text-align: left;
+	width: 40%;
+	animation-name: fontChange;
+    animation-duration: 1s;
+    animation-iteration-count: 40;
+    animation-timing-function: linear;
 }
 .content {
 	display: inline-block;
@@ -121,6 +144,29 @@ h1 {
 	font-size: 1.2em;
 }
 
+/* animation */
+@keyframes animate1 {
+    0% {color: #EF6D4F; font-size: .1vw;}
+    66% {color: white; font-size:7vw;}
+    100% {color: white; font-size: 6vw;}
+}
+@keyframes animate2 {
+    0% {color: black;}
+    100% {color: black;}
+}
+
+@keyframes fontChange {
+	0% {font-family: 'Abril Fatface', cursive;}
+	25% {font-family: 'Berkshire Swash', cursive;}
+	50% {font-family: 'Poiret One', cursive;}
+	75% {font-family: 'Pacifico', cursive;}
+}
+@keyframes fontChange2 {
+	0% {font-family: 'Shadows Into Light', cursive;}
+	25% {font-family: 'Pacifico', cursive;}
+	50% {font-family: 'Archivo Black', sans-serif;}
+	75% {font-family: 'Poiret One', cursive;}
+}
 </style>
 
 
