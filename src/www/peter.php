@@ -15,3 +15,7 @@
 	print_r($mysqli);
 ?>
 </body>
+#
+	hej
+
+#
