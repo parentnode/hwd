@@ -62,22 +62,22 @@
 
 <style>
 html{
-    min-height:100%;/* make sure it is at least as tall as the viewport */
+	min-height:100%;/* make sure it is at least as tall as the viewport */
 /*  position:relative;*/
 }
 body{
-    height:100%; /* force the BODY element to match the height of the HTML element */
-    margin: 0px; /*remove standar 8px margin of body*/
+	height:100%; /* force the BODY element to match the height of the HTML element */
+	margin: 0px; /*remove standar 8px margin of body*/
 }
 #wrapper{
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    overflow:hidden;
-    display: flex;
-    flex-flow: column;
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	overflow:hidden;
+	display: flex;
+	flex-flow: column;
 }
 #header {
 	min-height: 200px;
@@ -86,9 +86,9 @@ body{
 	background: #48AAA8;
 }
 #main {
-    height: 100%; /* makes it fill out remaining space between header and footer */
+	height: 100%; /* makes it fill out remaining space between header and footer */
 	background: #EF6D4F;
-    display: flex;
+	display: flex;
 }
 #footer {
 	bottom: 0px;
@@ -111,9 +111,9 @@ h1 {
 }
 #txt1{
 	animation-name: fontChange;
-    animation-duration: 1s;
-    animation-iteration-count: 40;
-    animation-timing-function: linear;
+	animation-duration: 1s;
+	animation-iteration-count: 40;
+	animation-timing-function: linear;
 }
 #txt2 {
 	color: white;
@@ -121,9 +121,9 @@ h1 {
 	text-align: center;
 	width: 20%;
 	animation-name: fontChange2;
-    animation-duration: 1.8s;
-    animation-iteration-count: 40;
-    animation-timing-function: linear;
+	animation-duration: 1.8s;
+	animation-iteration-count: 40;
+	animation-timing-function: linear;
 }
 #txt3 {
 	color: black;
@@ -131,9 +131,9 @@ h1 {
 	text-align: left;
 	width: 40%;
 	animation-name: fontChange;
-    animation-duration: 1s;
-    animation-iteration-count: 40;
-    animation-timing-function: linear;
+	animation-duration: 1s;
+	animation-iteration-count: 40;
+	animation-timing-function: linear;
 }
 .content {
 	display: inline-block;
@@ -146,13 +146,13 @@ h1 {
 
 /* animation */
 @keyframes animate1 {
-    0% {color: #EF6D4F; font-size: .1vw;}
-    66% {color: white; font-size:7vw;}
-    100% {color: white; font-size: 6vw;}
+	0% {color: #EF6D4F; font-size: .1vw;}
+	66% {color: white; font-size:7vw;}
+	100% {color: white; font-size: 6vw;}
 }
 @keyframes animate2 {
-    0% {color: black;}
-    100% {color: black;}
+	0% {color: black;}
+	100% {color: black;}
 }
 
 @keyframes fontChange {
@@ -181,3 +181,7 @@ var fonts = {
 	font6: "font-family: 'Poiret One', cursive;"
 };
 </script>
+#
+	HEJ
+
+#
