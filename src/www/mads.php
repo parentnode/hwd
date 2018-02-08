@@ -62,34 +62,78 @@
 
 <style>
 html{
-    min-height:100%;/* make sure it is at least as tall as the viewport */
-    position:relative;
+	min-height:100%;/* make sure it is at least as tall as the viewport */
+/*  position:relative;*/
 }
 body{
-    height:100%; /* force the BODY element to match the height of the HTML element */
-    margin: 0px;
+	height:100%; /* force the BODY element to match the height of the HTML element */
+	margin: 0px; /*remove standar 8px margin of body*/
 }
-button{
-	background: none;
-	border: 0px;
-	cursor:pointer;
+#wrapper{
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	overflow:hidden;
+	display: flex;
+	flex-flow: column;
+}
+#header {
+	min-height: 200px;
+	max-height: 200px;
+	display: flex;
+	background: #48AAA8;
+}
+#main {
+    height: 100%; /* makes it fill out remaining space between header and footer */
+	background: #EF6D4F;
+    display: flex;
+}
+#footer {
+	bottom: 0px;
+	display: flex;
+	min-height: 200px;
+	max-height: 200px;
+	background: #f8c755;
 }
 h1 {
 	display: inline-block;
-	font-size: 6vw;
+	font-size: 6vw; /* use 'vw' measure to change font-size according to browser-window size*/
 	font-family: 'Abril Fatface', cursive;
+	vertical-align: middle;
 }
 #txt1{
-	 color: black;
-	 font-family: 'Abril Fatface', cursive;
+	color: black;
+	font-family: 'Abril Fatface', cursive;
+	text-align: right;
+	width: 30%;
+}
+#txt1{
+	animation-name: fontChange;
+    animation-duration: 1s;
+    animation-iteration-count: 40;
+    animation-timing-function: linear;
 }
 #txt2 {
 	color: white;
 	font-family: 'Pacifico', cursive;
+	text-align: center;
+	width: 20%;
+	animation-name: fontChange2;
+    animation-duration: 1.8s;
+    animation-iteration-count: 40;
+    animation-timing-function: linear;
 }
 #txt3 {
 	color: black;
-	font-family: 'Archivo Black', sans-serif;	
+	font-family: 'Archivo Black', sans-serif;
+	text-align: left;
+	width: 40%;
+	animation-name: fontChange;
+    animation-duration: 1s;
+    animation-iteration-count: 40;
+    animation-timing-function: linear;
 }
 .content {
 	display: inline-block;
@@ -99,37 +143,29 @@ h1 {
 	font-family: 'Poiret One', cursive;
 	font-size: 1.2em;
 }
-#wrapper{
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    overflow:hidden;
-    display: flex;
-    flex-flow: column;
-    z-index:-1; /* Remove this line if it's not going to be a background! */
+
+/* animation */
+@keyframes animate1 {
+    0% {color: #EF6D4F; font-size: .1vw;}
+    66% {color: white; font-size:7vw;}
+    100% {color: white; font-size: 6vw;}
 }
-#header {
-	min-height: 200px;
-	min-width: 460px;
-	display: flex;
-	background: #48AAA8;
+@keyframes animate2 {
+    0% {color: black;}
+    100% {color: black;}
 }
-#main {
-    height: 100%; 
-	min-width: 460px;
-	background: #EF6D4F;
-	position: relative;
-    overflow: scroll;
-    display: flex;
+
+@keyframes fontChange {
+	0% {font-family: 'Abril Fatface', cursive;}
+	25% {font-family: 'Berkshire Swash', cursive;}
+	50% {font-family: 'Poiret One', cursive;}
+	75% {font-family: 'Pacifico', cursive;}
 }
-#footer {
-	bottom: 0px;
-	display: flex;
-	min-width: 460px;
-	min-height: 200px;
-	background: #f8c755;
+@keyframes fontChange2 {
+	0% {font-family: 'Shadows Into Light', cursive;}
+	25% {font-family: 'Pacifico', cursive;}
+	50% {font-family: 'Archivo Black', sans-serif;}
+	75% {font-family: 'Poiret One', cursive;}
 }
 </style>
 
