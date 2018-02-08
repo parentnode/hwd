@@ -24,7 +24,7 @@ More testing
 <br />
 Atom test
 <br />
-Testing Atom committing
+Testing Atom committing 2
 <br />
 </body>
 </html>
