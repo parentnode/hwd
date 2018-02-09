@@ -12,6 +12,8 @@
 	print_r($mysqli);
 ?>
 
+<p>Hello</p>
+
 </body>
 #
 	Hej
