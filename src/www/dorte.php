@@ -27,10 +27,12 @@
 <p></p>
 <h2>Om foreningen</h2>
 <h3/>En medlemsdrevet forening</h3>
-<img src="images_dorte/ny-struktur.003.jpg"</img src>
 <p>Københavns Fødevarefællesskab er en medlemsejet og -drevet indkøbsforening, der fokuserer på at tilbyde økologiske, velsmagende, lokalt producerede og bæredygtige fødevarer i et sæsonbaseret udbud til priser, hvor alle kan være med.</p>
 <h3>Grundprincipperne</h3>
 <p>For os er “forbrugerindflydelse” ikke blot muligheden for at kunne vælge mellem forskellige produkter. I fødevarefællesskabet er kunderne både medlemmer, medarbejdere og medejere.</p>
+<h2>Organisationsstruktur</h2>
+<p>I januar 2014 introducerede vi en ny organisationsstruktur, som har til formål at gøre organisationen mere overskuelig og gennemsigtig for det enkelte medlem.</p>
+<img src="images_dorte/ny-struktur.003.jpg"</img src>
 <h3>Vision/forretningsplan</h3>
 <p></p>
 <h3>Refusion</h3>
