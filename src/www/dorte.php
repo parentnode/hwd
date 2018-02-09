@@ -22,7 +22,7 @@
 <h2>Vores handlingsplan</h2>
 <p></p>
 <h2>Hvordan bliver man medlem</h2>
-<p></p>
+<p>Indmeldelse er forskellig fra afdeling til afdeling. Nogle afdelinger melder nye ind hver uge, andre afdelinger melder nye ind ved introduktionsmøder én gang om måneden. Start med at finde den lokalafdeling, som du ønsker at hente grøntsager i. For langt de fleste er det det sted, der er nærmest hvor man bor eller arbejder. Her på listen kan du se, hvor det er obligatorisk at deltage i et introduktionsmøde for at blive medlem, og hvor du bare kan møde op i åbningstiden om onsdagen.</p>
 <h3>Introduktion til Kbhff før indmeldelse</h3>
 <p></p>
 <h2>Om foreningen</h2>
