@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Test</title>
+	<title>Peter's site</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
 
-<h1>Hello Peter</h1>
+
+<h1>Hello!</h1>
+
+
+
+
+
+
+
+
+
+
 
 <h2><?php print "hello" ?></h2>
 <?// phpinfo() ?>
@@ -15,9 +26,3 @@
 	print_r($mysqli);
 ?>
 </body>
-#
-	hej
-
-#
-
-#
