@@ -76,7 +76,14 @@
 		ol.procedure {
 		margin: 0 6px 15px 0;
 		padding: 0 6px 15px 0;
+		margin-right: 650px;
 		font-weight: lighter;
+		}
+		table, th, td {
+			border: 1px solid black;
+			background-color: whitesmoke;
+			width: 600px;
+
 		}
 	</style>
 </head>
@@ -136,8 +143,61 @@
 	<li>Bake the pizza for 15 minutes.</li>
 	<li>When the cheese is melting and the pizza looks yummie take it out and dinner is ready to be served!</li>
 </ol>
-<img src="images_elisabeth/27849308_207398993336669_1740407598_n.jpg" alt="Kale Burger in progress"
-<p>Af: Elisabeth Haabegaard</p>
+<table>
+	<caption>Nutritional values</caption>
+	<tr>
+		<th></th>
+		<th>Per slice of pizza</th>
+		<th>Per pizza (10 slices)</th>
+	</tr>
+	<tr>
+		<td>kj/kcal</td>
+		<td>428 kj/ 100 kcal</td>
+		<td>4275 kj / 1011 kcal</td>
+	</tr>
+	<tr>
+		<td>Protein</td>
+		<td>6,8 g</td>
+		<td>67,7 g</td>
+	</tr>
+	<tr>
+		<td>Fat</td>
+		<td>4,7 g</td>
+		<td>47,4 g</td>
+	</tr>
+<tr>
+	<td>Saturated fats</td>
+	<td>2 g</td>
+	<td>20,5 g</td>
+</tr>
+	<tr>
+		<td>Monounsaturated fats</td>
+		<td>0,6 g</td>
+		<td>5,8 g</td>
+	</tr>
+	<tr>
+		<td>Polyunsaturated fats</td>
+		<td>0,4 g</td>
+		<td>4 g</td>
+	</tr>
+	<tr>
+		<td>Carbohydrates</td>
+		<td>7 g</td>
+		<td>70 g</td>
+	</tr>
+	<tr>
+		<td>Added sugars</td>
+		<td>0,6 g</td>
+		<td>0,06 g</td>
+	</tr>
+	<tr>
+		<td>Dietary fibers</td>
+		<td>2,4 g</td>
+		<td>23,8 g</td>
+	</tr>
+	</table>
+<br/>
+<p>By: Elisabeth Haabegaard</p>
 </body>
 </html>
 #
