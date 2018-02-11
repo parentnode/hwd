@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Page title</title>
+	<title>Class Test Area</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
 
 <h1>Hello World</h1>
 
-<a href="dorte.php">Dorte</a><br />
-<a href="bolette.php">Bolette</a><br />
-<a href="mads.php">Mads</a><br />
-<a href="elisabeth.php">Elisabeth</a><br />
-<a href="sarah.php">Sarah</a><br />
-<a href="peter.php">Peter</a><br />
-<a href="octavian.php">Octavian</a>
+<ul>
+	<li><a href="dorte.php">Dorte</a></li>
+	<li><a href="bolette.php">Bolette</a></li>
+	<li><a href="mads.php">Mads</a></li>
+	<li><a href="elisabeth.php">Elisabeth</a></li>
+	<li><a href="sarah.php">Sarah</a></li>
+	<li><a href="peter.php">Peter</a></li>
+	<li><a href="octavian.php">Octavian</a></li>
 
-<h2><?php print "Hello, I'm PHP" ?></h2>
+	<li><a href="new-participant.php">New participant</a></li>
+</ul>
 
 </body>
 </html>
