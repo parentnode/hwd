@@ -39,8 +39,3 @@ ogg		binary
 m4v		binary
 pdf		binary
 zip		binary
-
-
-# LOCAL REPOS SPECIFIC
-wkhtmltoimage	binary
-wkhtmltopdf		binary
