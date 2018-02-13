@@ -4,11 +4,18 @@
 	<title>The best site of all time</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
-<body>
-<style>
 
+<style>
+body {
+    background-color: linen;
+}
+h1 {
+    color: maroon;
+    margin-left: 40px;
+} 
 </style>
 
+<body>
 <h1>Hello there!</h1>
 <h2>Welcome to my site :)</h2>
 
