@@ -1,0 +1,46 @@
+/* Importing fonts, this can also be done in one line with | between fonts */
+@import url('https://fonts.googleapis.com/css?family=Patua+One');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+
+/* Elements */
+body {
+    text-align: center;
+    background-color: linen;
+}
+
+h1, h2 {
+    font-size: 300%;
+    font-family: 'Patua One', cursive;}
+
+h1 {
+    color: maroon;
+    margin-left: 40px;
+} 
+
+h2 {
+    color: rgb(185, 50, 0);
+}
+
+/* Classes */
+.text {
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    color: darkred;
+}
+
+.ordered-lists-test, .unordered-lists-test {
+    display: inline-block;
+}
+
+.in-progress {
+    font-family: 'Inconsolata', monospace;
+    color: indigo;
+    background-color: gold;
+
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
