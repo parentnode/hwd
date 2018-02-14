@@ -1,0 +1,90 @@
+/* Importing fonts, could also have done 3 lines seperately for better overview */
+@import url('https://fonts.googleapis.com/css?family=Patua+One|Pacifico|Inconsolata|Permanent+Marker');
+
+/* Elements */
+body {
+    text-align: center;
+    background-color: linen;
+}
+
+h1, h2 {
+    color: maroon;
+    font-size: 300%;
+    font-family: 'Patua One', cursive;
+
+    animation: fadein 5s;
+    transition: color 0.5s linear;
+}
+
+h1:hover, h2:hover {
+    color: red;
+}
+
+/* Classes */
+.text {
+    font-family: 'Pacifico', cursive;
+    font-size: 2em;
+    color: darkred;
+
+    transition: all 500ms;
+}
+
+.text:hover {
+    font-size: 45px;
+    font-size-adjust: 30px;
+}
+
+.ordered-lists, .unordered-lists {
+    color: rgb(27, 35, 59);
+    display: inline-block;
+}
+
+.in-progress {
+    font-family: 'Inconsolata', monospace;
+    color: indigo;
+    background-color: gold;
+
+    position: fixed;
+    right: 0;
+    bottom: 0;
+	left: 0;
+}
+
+.psst {
+	display: inline-block;
+	font-family: 'Permanent Marker', cursive;
+	font-size: 10px;
+	color: black;
+}
+
+.secret	{
+	display: inline-block;
+	font-family: 'Permanent Marker', cursive;
+		font-size: 10px;
+	color: transparent;
+
+	/* making text unselectable on most browsers */
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+/* Making secret text appear by looking for secret class when hovering over the psst class, using the ~ selector */
+.psst:hover ~ .secret {
+	color: black;
+	animation: showtext 5s;
+}
+
+/* CSS3 Keyframe vars */
+@keyframes fadein {
+    from { opacity: 0; font-size: 200% }
+    to { opacity: 1; font-size:300% }
+}
+
+@keyframes showtext {
+	from { opacity: 0; }
+    to { opacity: 1; }
+}

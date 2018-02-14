@@ -7,10 +7,10 @@
 <body>
 
 <h1>Hello Octavian</h1>
-<?
-	$mysqli = new mysqli("127.0.0.1", "root", "#PASS#");
-	print_r($mysqli);
-?>
+<p>
+somthing to write
+</p>
+
 
 <p>Hello</p>
 
