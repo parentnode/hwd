@@ -1,5 +1,5 @@
 /* Importing fonts, could also have done 3 lines seperately for better overview */
-@import url('https://fonts.googleapis.com/css?family=Patua+One|Pacifico|Inconsolata');
+@import url('https://fonts.googleapis.com/css?family=Patua+One|Pacifico|Inconsolata|Permanent+Marker');
 
 /* Elements */
 body {
@@ -34,7 +34,7 @@ h1:hover, h2:hover {
     font-size-adjust: 30px;
 }
 
-.ordered-lists-test, .unordered-lists-test {
+.ordered-lists, .unordered-lists {
     color: rgb(27, 35, 59);
     display: inline-block;
 }
@@ -47,11 +47,44 @@ h1:hover, h2:hover {
     position: fixed;
     right: 0;
     bottom: 0;
-    left: 0;
+	left: 0;
+}
+
+.psst {
+	display: inline-block;
+	font-family: 'Permanent Marker', cursive;
+	font-size: 10px;
+	color: black;
+}
+
+.secret	{
+	display: inline-block;
+	font-family: 'Permanent Marker', cursive;
+		font-size: 10px;
+	color: transparent;
+
+	/* making text unselectable on most browsers */
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+/* Making secret text appear by looking for secret class when hovering over the psst class, using the ~ selector */
+.psst:hover ~ .secret {
+	color: black;
+	animation: showtext 5s;
 }
 
 /* CSS3 Keyframe vars */
 @keyframes fadein {
     from { opacity: 0; font-size: 200% }
-    to   { opacity: 1; font-size:300% }
+    to { opacity: 1; font-size:300% }
+}
+
+@keyframes showtext {
+	from { opacity: 0; }
+    to { opacity: 1; }
 }

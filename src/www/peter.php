@@ -10,7 +10,7 @@
 <h1>Hello there!</h1>
 <h2>Welcome to my site :)</h2>
 
-<div class="ordered-lists-test text">
+<div class="ordered-lists text">
 	<ol>
 		<li>One</li>
 		<li>Two</li>
@@ -18,7 +18,7 @@
 	</ol>
 </div>
 
-<div class="unordered-lists-test text">
+<div class="unordered-lists text">
 	<ul>
 		<li>Count</li>
 		<li>the rest</li>
@@ -37,6 +37,14 @@
 
 <div class="in-progress">
 	<p><strong>OBS:</strong> This site is currently being worked on, and is not yet finnished.</p>
+</div>
+
+<div class="psst">
+	<p>psssssst</p>
+</div>
+
+<div class="secret">
+	<p>...i might've eaten all your snacks... nom nom tasty >:D</P>
 </div>
 
 <!-- IGNORE php for now
