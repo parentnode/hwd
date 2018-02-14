@@ -4,7 +4,6 @@
 	<title>The best website of all time</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" type="text/css" href="files_peter/HelloGoodLookin.css">
-
 </head>
 
 <body>
@@ -13,9 +12,9 @@
 
 <div class="ordered-lists-test text">
 	<ol>
-		<li>First</li>
-		<li>Second</li>
-		<li>Third</li>
+		<li>One</li>
+		<li>Two</li>
+		<li>Three</li>
 	</ol>
 </div>
 

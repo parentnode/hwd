@@ -1,8 +1,5 @@
-/* Importing fonts, this can also be done in one line with | between fonts */
-@import url('https://fonts.googleapis.com/css?family=Patua+One');
-@import url('https://fonts.googleapis.com/css?family=Pacifico');
-@import url('https://fonts.googleapis.com/css?family=Inconsolata');
-
+/* Importing fonts, could also have done 3 lines seperately for better overview */
+@import url('https://fonts.googleapis.com/css?family=Patua+One|Pacifico|Inconsolata');
 
 /* Elements */
 body {
@@ -11,26 +8,34 @@ body {
 }
 
 h1, h2 {
-    font-size: 300%;
-    font-family: 'Patua One', cursive;}
-
-h1 {
     color: maroon;
-    margin-left: 40px;
-} 
+    font-size: 300%;
+    font-family: 'Patua One', cursive;
 
-h2 {
-    color: rgb(185, 50, 0);
+    animation: fadein 5s;
+    transition: color 0.5s linear;
+}
+
+h1:hover, h2:hover {
+    color: red;
 }
 
 /* Classes */
 .text {
     font-family: 'Pacifico', cursive;
-    font-size: 30px;
+    font-size: 2em;
     color: darkred;
+
+    transition: all 500ms;
+}
+
+.text:hover {
+    font-size: 45px;
+    font-size-adjust: 30px;
 }
 
 .ordered-lists-test, .unordered-lists-test {
+    color: rgb(27, 35, 59);
     display: inline-block;
 }
 
@@ -43,4 +48,10 @@ h2 {
     right: 0;
     bottom: 0;
     left: 0;
+}
+
+/* CSS3 Keyframe vars */
+@keyframes fadein {
+    from { opacity: 0; font-size: 200% }
+    to   { opacity: 1; font-size:300% }
 }
