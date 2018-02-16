@@ -97,6 +97,14 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 <h2>
 Installing the Apache
 </h2>
+<p>
+The Apache windows binaries  are avalable at : <a href="http://www.apachelounge.com/download/">http://www.apachelounge.com/download/ </a 
+</p>
+<p>
+<a href="http://www.apachelounge.com/download/VC15/binaries/httpd-2.4.29-Win64-VC15.zip">download link: </a
+
+</p>
+
 </body>
 
 </html>
