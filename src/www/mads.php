@@ -4,6 +4,7 @@
 		<title>HWD</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Archivo+Black|Berkshire+Swash|Pacifico|Poiret+One|Shadows+Into+Light" rel="stylesheet">
+		<link type="text/css" href="files_mads/main.css" rel="stylesheet">
 	</head>
 	<body>
 	<div id="wrapper">
@@ -59,110 +60,3 @@
 	</div>
 	</body>
 </html>
-
-<style>
-	html{
-		min-height:100%;/* make sure it is at least as tall as the viewport */
-	}
-	body{
-		height:100%; /* force the BODY element to match the height of the HTML element */
-		margin: 0px; /*remove standard 8px margin of body*/
-	}
-	h1 {
-		display: inline-block;
-		vertical-align: middle;
-		font-size: 6vw; /* use 'vw' measure to change font-size according to browser-window size*/
-	}
-	.manifest {
-		font-family: 'Poiret One', cursive;
-		font-size: 1.2em;
-	}
-	.container {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		margin-right: -50%; /* to compensate for taking up half the space with 'left: 50%' */
-		transform: translate(-50%, -50%); /* moving the element up and left by half it own width */
-		animation-name: fadeUp;
-		animation-duration: 4s;
-	}
-	#wrapper{
-		position:absolute;
-		top:0;
-		bottom:0;
-		left:0;
-		right:0;
-		overflow:hidden;
-	}
-	#header {
-		height: 200px;
-		background: #48AAA8;
-		overflow:hidden;
-	}
-	#main {
-		height: calc(100% - (200px + 200px)); /* makes it fill out remaining space between header and footer */
-		background: #EF6D4F;
-		position: relative;
-	}
-	#footer {
-		bottom: 0px;
-		height: 200px;
-		background: #f8c755;
-	}
-	#txt1{
-		color: black;
-		font-family: 'Abril Fatface', cursive;
-		text-align: right;
-	}
-	#txt1:hover{
-		animation-name: fontChange;
-		animation-duration: 1s;
-		animation-iteration-count: 40;
-		animation-timing-function: linear;
-	}
-	#txt2 {
-		color: white;
-		font-family: 'Pacifico', cursive;
-		text-align: center;
-	}
-	#txt2:hover {
-		animation-name: fontChange2;
-		animation-duration: 1.8s;
-		animation-iteration-count: 40;
-		animation-timing-function: linear;
-	}
-	#txt3 {
-		color: black;
-		font-family: 'Archivo Black', sans-serif;
-		text-align: left;
-	}
-	#txt3:hover {
-		animation-name: fontChange;
-		animation-duration: 1s;
-		animation-iteration-count: 40;
-		animation-timing-function: linear;
-	}
-
-	/* animation */
-	@keyframes fadeUp {
-		0% {opacity: 0;}
-		100% {opacity: 1;}
-	}
-	@keyframes animate2 {
-		0% {color: black;}
-		100% {color: black;}
-	}
-
-	@keyframes fontChange {
-		0% {font-family: 'Abril Fatface', cursive;}
-		25% {font-family: 'Berkshire Swash', cursive;}
-		50% {font-family: 'Poiret One', cursive;}
-		75% {font-family: 'Pacifico', cursive;}
-	}
-	@keyframes fontChange2 {
-		0% {font-family: 'Shadows Into Light', cursive;}
-		25% {font-family: 'Pacifico', cursive;}
-		50% {font-family: 'Archivo Black', sans-serif;}
-		75% {font-family: 'Poiret One', cursive;}
-	}
-</style>
