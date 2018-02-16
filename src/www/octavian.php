@@ -104,7 +104,9 @@ The Apache windows binaries  are avalable at : <a href="http://www.apachelounge.
 <a href="http://www.apachelounge.com/download/VC15/binaries/httpd-2.4.29-Win64-VC15.zip">download link: </a
 
 </p>
-
+<h2>
+Installing the PHP
+</h2>
 </body>
 
 </html>
