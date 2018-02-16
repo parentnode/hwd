@@ -54,9 +54,11 @@ Then search for “Ubuntu” app on the search field of that page where thelink 
 <p>
 Run the Ubuntu app 
 It will install a Unbutu distribution 
+<ol>
 Then will be promt for 
 Enter new UNIX username: 
 Enter new UNIX password: 
+<ol/>
 </p>
 <p>
 Accessing the windows drive "C: from bash environment or Ubuntu is made with "cd /mnt/c" 
@@ -67,7 +69,6 @@ Accessing the windows drive "C: from bash environment or Ubuntu is made with "cd
 </p>
 </body>
 #
-	Hej
 
 #
 
