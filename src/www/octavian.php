@@ -29,10 +29,13 @@ login in Github
  </p>
 
 <p>
-Download Sourcetree for windows from <ul> <li><a href="https://www.sourcetreeapp.com/">Download Sourcetree</a></li></ul>  
-Install bash shell command line for windows 10 by folowing the guid from the below:
-	<ul> <li><a href="https://www.windowscentral.com/how-install-bash-shell-command-line-Windows-10">Install bash shell command line for windows 10</a></li></ul>
+Download Sourcetree for windows from
 </p>
+ <ul> <li><a href="https://www.sourcetreeapp.com/">Download Sourcetree</a></li></ul>  
+Install bash shell command line for windows 10 by folowing the guid from the below:
+
+	<ul> <li><a href="https://www.windowscentral.com/how-install-bash-shell-command-line-Windows-10">Install bash shell command line for windows 10</a></li></ul>
+
 <p>
 Check for  the “Windows Subsystem for Linux” is avalable in the Windows 10 computer by folowing instructions.
 Run CMD in admin mode by cliking right button on CMD icon. 
@@ -50,23 +53,30 @@ Then search for “Ubuntu” app on the search field of that page where thelink 
 it may complain that does no find the Ubuntu app because the link is old, but it still point to the microsoft app stor.
 Then search for “Ubuntu” app on the search field of that page where thelink was mooved so red from below: 
 <ul> <li><a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">Installing guid </a></li></ul>
-<img src="octavian_files/ubuntu_f_win" >
+<img src="octavian_files/ubuntu_f_win.jpg" >
 <p>
 Run the Ubuntu app 
 It will install a Unbutu distribution 
-<ol>
-Then will be promt for 
-Enter new UNIX username: 
-Enter new UNIX password: 
-<ol/>
 </p>
+<ol>
+<p>
+Then will be promt for 
+</p>
+<p>
+Enter new UNIX username:
+</p> 
+Enter new UNIX password: 
+</ol>
+
 <p>
 Accessing the windows drive "C: from bash environment or Ubuntu is made with "cd /mnt/c" 
 </p>
-<p>
- The editor line endings has to be changed to UNIX by for Sublime editor:  "Sublime-> view->line endings-> UNIX" 
- </p>
-</p>
+<div class="line_endings">
+ The editor line endings has to be changed to UNIX by for Sublime editor:  "Sublime-> view->line endings-> UNIX"
+ </div>
+
+<img src="octavian_files/sublime_line_end" >
+
 </body>
 
 </html>
