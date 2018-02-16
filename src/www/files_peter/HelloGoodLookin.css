@@ -51,16 +51,24 @@ h1:hover, h2:hover {
 }
 
 .psst {
-	display: inline-block;
+    display: inline-block;
+    font-size: 25px;
 	font-family: 'Permanent Marker', cursive;
-	font-size: 10px;
-	color: black;
+    color: transparent;
+    
+    /* making text unselectable on most browsers */
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
 }
 
 .secret	{
-	display: inline-block;
+    display: inline-block;
+    font-size: 25px;
 	font-family: 'Permanent Marker', cursive;
-		font-size: 10px;
 	color: transparent;
 
 	/* making text unselectable on most browsers */
@@ -72,10 +80,15 @@ h1:hover, h2:hover {
 	user-select: none;
 }
 
+.psst:hover {
+    color: black;
+    animation: showtext 2s;
+}
+
 /* Making secret text appear by looking for secret class when hovering over the psst class, using the ~ selector */
 .psst:hover ~ .secret {
 	color: black;
-	animation: showtext 5s;
+	animation: showtext 8s;
 }
 
 /* CSS3 Keyframe vars */
@@ -85,6 +98,6 @@ h1:hover, h2:hover {
 }
 
 @keyframes showtext {
-	from { opacity: 0; }
+	from { opacity: -1; }
     to { opacity: 1; }
 }

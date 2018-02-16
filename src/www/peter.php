@@ -40,11 +40,11 @@
 </div>
 
 <div class="psst">
-	<p>psssssst</p>
+	<p>psssssst...</p>
 </div>
 
 <div class="secret">
-	<p>...i might've eaten all your snacks... nom nom tasty >:D</P>
+	<p>i might've eaten all your snacks... nom nom tasty >:D</P>
 </div>
 
 <!-- IGNORE php for now
