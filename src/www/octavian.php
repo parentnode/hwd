@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Page title</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>guid</title>
+	<link rel="stylesheet" href="octavian_files/guid1.css">
 </head>
 <body>
 
@@ -21,7 +21,7 @@ login in Github</p>
 <p>Download Sourcetree for windows from</p>
 <ul>
 	<li><a href="https://www.sourcetreeapp.com/">Download Sourcetree</a></li>
-</ul>  
+</ul>
 Install bash shell command line for windows 10 by folowing the guid from the below:
 	<ul> <li><a href="https://www.windowscentral.com/how-install-bash-shell-command-line-Windows-10">Install bash shell command line for windows 10</a></li></ul>
 <p>Check for  the “Windows Subsystem for Linux” is avalable in the Windows 10 computer by folowing instructions.
@@ -50,6 +50,7 @@ Then search for “Ubuntu” app on the search field of that page where thelink 
 	<li><p>Run the Ubuntu app</p></li>
 	<li><p>It will install a Ubuntu distribution</p></li>
 </ol>
+<hr id="line1" >
 </div>
 	<ul>
 		<li><p>Then will be promt for </p></li>
