@@ -68,9 +68,5 @@ Accessing the windows drive "C: from bash environment or Ubuntu is made with "cd
  </p>
 </p>
 </body>
-#
 
-#
-
-#
 </html>
