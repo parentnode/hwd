@@ -83,5 +83,13 @@ then has to click yes on the pop up windows</p>
 <p>The PHP and Apache has to be compiled with the same compiler the redistributed
  pakage VC++ 15 (the latest) downloaded from:</p>
  <a href="https://aka.ms/vs/15/release/VC_redist.x64.exe">https://aka.ms/vs/15/release/VC_redist.x64.exe </a>
+ <p>The folowing way to install has to be avoided as much as possible because of mentenance and compatibility isues in a long run.</p>
+ <hr .linia >
+ <ol>
+<li><p>choco install php</p></li>
+<li><p>choco install ffmpeg</p></li> 
+</ol> 
+
+https://www.wikihow.com/Install-FFmpeg-on-Windows
 </body>
 </html>

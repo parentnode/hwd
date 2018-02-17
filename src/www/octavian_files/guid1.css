@@ -1,3 +1,10 @@
+*|*:root {
+	background-color: rgba(245, 187, 187, 0.945);
+	color: rgba(24, 25, 59, 0.815);
+	direction: ltr;
+	-moz-control-character-visibility: visible;
+	height: 100%;
+  }
 p{
 color:rgba(2, 1, 61, 0.979);
 background-color:rgba(144, 146, 16, 0.479);
