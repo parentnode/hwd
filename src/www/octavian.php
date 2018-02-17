@@ -48,7 +48,7 @@ Then search for “Ubuntu” app on the search field of that page where thelink 
 <hr .linia >
 <div>
 <hr .linia >
-<img src="octavian_files/ubuntu_f_win.jpg" >
+<img class="resize" src="octavian_files/ubuntu_f_win.jpg" >
 <ol>
 	<li><p>Run the Ubuntu app</p></li>
 	<li><p>It will install a Ubuntu distribution</p></li>
@@ -66,16 +66,15 @@ Then search for “Ubuntu” app on the search field of that page where thelink 
 	The editor line endings has to be changed to UNIX by for Sublime editor:  "Sublime-> view->line endings-> UNIX"
  </div>
  <hr .linia >
-
-<img src="octavian_files/sublime_line_end.jpg" />
+ <img class="resize" src="octavian_files/sublime_line_end.jpg"  alt="Computer Hope logo small"/S>
 <p>Optional installing programs like in Linux can be done by:</p>
 <p>Installing the chocolatey by executing the following line in  Powershell elevated in administrator mod privilege </p>
-<img src="octavian_files/chocolatey.jpg" >
+<img class="resize" src="octavian_files/chocolatey.jpg" >
 <p>(run as admin by  mouse click right on the program icon)</p>
 then has to click yes on the pop up windows</p>
 <p>Copy then paste (click right) the folowing line in the terminal :
 <p>Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))</p>
-</p><img src="octavian_files/powershell.jpg" ><p>
+</p><img class="resize" src="octavian_files/powershell.jpg" ><p>
 <h2>Installing the Apache</h2>
 <hr .linia >
 <p>The Apache windows binaries  are avalable at : <a href="http://www.apachelounge.com/download/">http://www.apachelounge.com/download/ </a </p>
