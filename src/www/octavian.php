@@ -7,6 +7,7 @@
 <body>
 
 <h1>Installing the parentNode web stack on Windows 10</h1>
+<hr .linia >
 <p>This guide is currently being updated.</p>
 <p>This will guide you through installing the parentNode web stack on Windows 10
 The parentNode development environment 
@@ -22,6 +23,7 @@ login in Github</p>
 <ul>
 	<li><a href="https://www.sourcetreeapp.com/">Download Sourcetree</a></li>
 </ul>
+<hr .linia >
 Install bash shell command line for windows 10 by folowing the guid from the below:
 	<ul> <li><a href="https://www.windowscentral.com/how-install-bash-shell-command-line-Windows-10">Install bash shell command line for windows 10</a></li></ul>
 <p>Check for  the “Windows Subsystem for Linux” is avalable in the Windows 10 computer by folowing instructions.
@@ -43,14 +45,15 @@ Then search for “Ubuntu” app on the search field of that page where thelink 
 		<li><a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">Installing guid </a></li>
 	</ul>
 </div>
+<hr .linia >
 <div>
-
+<hr .linia >
 <img src="octavian_files/ubuntu_f_win.jpg" >
 <ol>
 	<li><p>Run the Ubuntu app</p></li>
 	<li><p>It will install a Ubuntu distribution</p></li>
 </ol>
-<hr id="line1" >
+<hr .linia >
 </div>
 	<ul>
 		<li><p>Then will be promt for </p></li>
@@ -58,9 +61,11 @@ Then search for “Ubuntu” app on the search field of that page where thelink 
 		<li><p>Enter new UNIX password:</p></li>
 	</ul>
 <li><p>Accessing the windows drive "C: from bash environment or Ubuntu is made with "cd /mnt/c" </p></li>
+<hr .linia >
 <div class="line_endings">
 	The editor line endings has to be changed to UNIX by for Sublime editor:  "Sublime-> view->line endings-> UNIX"
  </div>
+ <hr .linia >
 
 <img src="octavian_files/sublime_line_end.jpg" />
 <p>Optional installing programs like in Linux can be done by:</p>
@@ -72,6 +77,7 @@ then has to click yes on the pop up windows</p>
 <p>Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))</p>
 </p><img src="octavian_files/powershell.jpg" ><p>
 <h2>Installing the Apache</h2>
+<hr .linia >
 <p>The Apache windows binaries  are avalable at : <a href="http://www.apachelounge.com/download/">http://www.apachelounge.com/download/ </a </p>
 <p>
 	<a href="http://www.apachelounge.com/download/VC15/binaries/httpd-2.4.29-Win64-VC15.zip">download link: </a>
@@ -80,6 +86,7 @@ then has to click yes on the pop up windows</p>
 <p>
 	<a href="http://windows.php.net/download">http://windows.php.net/download </a
 </p>
+<hr .linia >
 <p>The PHP and Apache has to be compiled with the same compiler the redistributed
  pakage VC++ 15 (the latest) downloaded from:</p>
  <a href="https://aka.ms/vs/15/release/VC_redist.x64.exe">https://aka.ms/vs/15/release/VC_redist.x64.exe </a>
@@ -89,7 +96,7 @@ then has to click yes on the pop up windows</p>
 <li><p>choco install php</p></li>
 <li><p>choco install ffmpeg</p></li> 
 </ol> 
-
+<hr .linia >
 https://www.wikihow.com/Install-FFmpeg-on-Windows
 </body>
 </html>
