@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<Content-Language: en>
 	<title>guid</title>
 	<link rel="stylesheet" href="octavian_files/guid1.css">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
 </head>
 <body>
-
 <h1>Installing the parentNode web stack on Windows 10</h1>
-<hr .linia >
+<hr>
 <p>This guide is currently being updated.</p>
 <p>This will guide you through installing the parentNode web stack on Windows 10
 The parentNode development environment 
