@@ -123,7 +123,7 @@
 	}
 	.dropdown:hover .dropdown-content {
 		display: block;
-}
+	}
 	.desc {
 		padding: 15px;
 		text-align: center;
@@ -138,29 +138,46 @@
 	li.dropdown {
 		display: inline-block;
 	}
-.dropdown-content a {
-	padding: 12px 16px;
-	display: block;
-	text-align: left;}
+	.dropdown-content a {
+		padding: 12px 16px;
+		display: block;
+		text-align: left;
 	}
 	.dropdown-content a:hover {background-color: #f1f1f1}
 	.dropdown:hover .dropdown-content {
 		display: block;
+		width: 400px;
+		height: 600px;
 	}
 	.formularspr {
 		font-size: 20px;
 		margin-top: 80px;
 	}
+	.burgerimg {
+		width: 600px;
+		height: 400px;
+	}
+	.mypic {
+	width:115px;
+	height:170px;
+	float:left;
+	}
+	div.formular {
+	font-size: 10px;
+	margin-top: 40px;
+	}
+
+
 	</style>
 </head>
 <body>
 <div class="header">
 	<h1>Elisabeth's yummie and hearty recipes</h1>
 	<h2 class="beskrivelse">Healthy and cruelty free recipes made from the heart</h2>
-	<hr>
+	<hr/>
 		<ul class="menu">
 			<li class="submenu">Home</li>
-			<li class="submenu">Recipes</li>
+			<li class="submenu"><a href="files_elisabeth\shop.html">Shop</li>
 			<li class="submenu dropdown">
 	    <a href="javascript:void(0)" class="dropbtn">Sustainability</a>
 	    <div class="dropdown-content">
@@ -169,7 +186,7 @@
 	      <a href="http://www.suztain.dk">Suztain</a>
 	    </div>
 		</li>
-			<li class="submenu"><a href="images_elisabeth\about.html">About</a></li>
+			<li class="submenu"><a href="files_elisabeth\about.html">About</a></li>
 			<li class="submenu">Contact</li>
 		</ul>
 	<hr class="menuhr">
@@ -177,11 +194,10 @@
 <div class="main">
 	<h2 class="overskrift">Kale burger with veggie paddie</h2>
 	<h2 class="kategori">Categories: Dinner, Vegetarian, Low-carb, Burger</h2>
-	<img src="images_elisabeth/27846464_207399026669999_591757260_o.jpg" alt="Kale Burger" style="width: 600px; height: 400px">
+	<img class="burgerimg" src="files_elisabeth/27846464_207399026669999_591757260_o.jpg" alt="Kale Burger"/>
 	<div class="historien">
 		<p>This kale pizza is truly made from the heart. It is a low-carb, super healthy and all organic recepie which is high in fibers, vitamins and minerals. And as you can see it tastes good as well! One piece of pizza only contains 100 kcal, but still contains 6 grams of protein, 7 grams of carbs and 5 grams of fats! It is the perfect distribution of the macro nutriens if you are up for a healhy lifestyle.</p>
 		<p>I usually make one or two of these pizzas to impress my hungry guests and it never goes wrong. Everybody simply loves my kale-pizza! I am usually very full after three pieces, but if you have leftovers one or two pieces form a really nice lunch the day after. </p>
-		<hr>
 	</div>
 	<h2 class="overskrift2">Kale pizza with veggies</h2>
 	<ul class="about">
@@ -288,38 +304,43 @@
 	<h2 class="welcome">Welcome!</h2>
 	<div class="me">
 		<div class="dropdown">
-			<img src="images_elisabeth\27994672_207399000003335_1252007330_n.jpg" alt="Elisabeth in Cali" style="width:115px;height:170px;float:left">My name is Elisabeth and I care about our Earth and all living creatures on the planet. As we are all born as sinners in these times of destruction, we should try to do our best to reduce our footprints on the Earth.
-			<div class="dropdown-content"><img src="images_elisabeth\27994672_207399000003335_1252007330_n.jpg" alt="Elisabeth at Mount San Jacinto, California" width="400px" height="600px">
+			<img class="mypic" src="files_elisabeth\27994672_207399000003335_1252007330_n.jpg" alt="Elisabeth in Cali"/>My name is Elisabeth and I care about our Earth and all living creatures on the planet. As we are all born as sinners in these times of destruction, we should try to do our best to reduce our footprints on the Earth.
+			<div class="dropdown-content burgerimg" ><img src="files_elisabeth\27994672_207399000003335_1252007330_n.jpg" alt="Elisabeth at Mount San Jacinto, California"/>
 		<div class="desc">Elisabeth at Mount San Jacinto, California</div>
 			</div>
 		</div>
 	</div>
-		<h2 class="formularspr">Har du nogle kommentarer eller ønsker, så udfyld venligst nedenstående</h2>
-		<form action="mailto:e.haabegaard@gmail.com" method="post">
-			<p>Hvem henvender sig?</p>
-			<input type="radio" value="Virksomhed" name="afsender" id="afsender" checked tabindex="1"/>Virksomhed&nbsp;&nbsp;&nbsp;
-			<input type="radio" value="Privatperson" name="afsender" id="afsender" checked tabindex="2"/>Privatperson&nbsp;&nbsp;&nbsp;
-			<input type="radio" value="Investor" name="afsender" id="afsender" checked tabindex="3"/>Investor&nbsp;&nbsp;&nbsp;
-			<p>Dit fulde navn</p>
-			<p><input type="text" name="navn" id="navn" tabindex="4"/></p>
-			<p>Din emailadresse</p>
-			<p><input type="text" name="email" id="email" tabindex="5"/></p>
-			<p>Dit telefonnummer</p>
-			<p><input type="text" name="telefonnr" id="telefonnummer" tabindex="6"/></p>
-			<p>Dit køn
+
+<div class="formular">
+
+	<h2 class="formularspr">Har du nogle kommentarer eller ønsker, så udfyld venligst nedenstående</h2>
+	<form action="mailto:e.haabegaard@gmail.com" method="post">
+		<p>Hvem henvender sig?</p>
+		<input type="radio" value="Virksomhed" name="afsender" id="afsender" checked tabindex="1"/>Virksomhed&nbsp;&nbsp;&nbsp;
+		<input type="radio" value="Privatperson" name="afsender" id="afsender" checked tabindex="2"/>Privatperson&nbsp;&nbsp;&nbsp;
+		<input type="radio" value="Investor" name="afsender" id="afsender" checked tabindex="3"/>Investor&nbsp;&nbsp;&nbsp;
+		<p>Dit fulde navn</p>
+		<p><input type="text" name="navn" id="navn" tabindex="4"/></p>
+		<p>Din emailadresse</p>
+		<p><input type="text" name="email" id="email" tabindex="5"/></p>
+		<p>Dit telefonnummer</p>
+		<p><input type="text" name="telefonnr" id="telefonnummer" tabindex="6"/></p>
+		<p>Dit køn
 			<select name="køn" id="køn">
 				<option value="Mand" tabindex="7">Mand</option>&nbsp;nbsp;&nbsp;
 				<option value="Kvinde" tabindex="7">Kvinde</option>&nbsp;nbsp;&nbsp;
 				<option value="Ønsker ikke at identificere mig med et køn" tabindex="7">Ønsker ikke at identificere mig med et køn</option>&nbsp;nbsp;&nbsp;
-				<option value="Animalsk afstamning" tabindex="7">Animalsk afstamning</option></select></p>
-				<p>Din alder</p>
-				<p><input type="text" name="alder" id="alder" tabindex="8"/></p>
-				<p>Hvad drejer henvendelsen sig om?</p>
-				<textarea rows="5" name="spørgsmål" id="spørgsmål" cols="30" tabindex="9">Hvad drejer henvendelsen sig om? Uddyb venligst her. </textarea></p>
-				<p><input type="submit" value="Send besked" name="B1" tabindex="10"/>
-				<input type="reset" value="Slet alt" name="B2" tabindex="11"/></p>
-			</form>
+				<option value="Animalsk afstamning" tabindex="7">Animalsk afstamning</option>
+			</select></p>
+			<p>Din alder</p>
+			<p><input type="text" name="alder" id="alder" tabindex="8"/></p>
+			<p>Hvad drejer henvendelsen sig om?</p>
+			<textarea rows="5" name="spørgsmål" id="spørgsmål" cols="30" tabindex="9">Hvad drejer henvendelsen sig om? Uddyb venligst her. </textarea></p>
+			<p><input type="submit" value="Send besked" name="B1" tabindex="10"/>
+			<input type="reset" value="Slet alt" name="B2" tabindex="11"/></p>
+		</form>
 	</div>
+</div>
 </body>
 </html>
 #

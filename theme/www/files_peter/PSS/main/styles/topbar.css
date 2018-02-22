@@ -1,0 +1,45 @@
+#top-bar {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+	background-color: rgba( 0, 0, 0, 1);
+	height: 60px;
+	text-align: center;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+	left: 0;
+}
+
+#top-bar > .menu-item {
+    width: 85px;
+    line-height: 60px;
+    font-size: 25px;
+}
+
+#top-bar > .menu-item img {
+    width: 60px;
+    height: auto;
+    display: inline-flex;
+}
+
+#top-bar > .menu-item a {
+	text-align: center;
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+}
+
+#top-bar > .menu-item a {
+	text-align: center;
+    color: rgb(255, 255, 255);
+	text-decoration: none;
+}
+
+.menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.current {
+    background-color: rgb(70, 70, 205);
+}

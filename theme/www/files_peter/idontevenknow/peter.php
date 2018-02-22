@@ -3,7 +3,7 @@
 <head>
 	<title>The best website of all time</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" type="text/css" href="files_peter/HelloGoodLookin.css">
+	<link rel="stylesheet" type="text/css" href="HelloGoodLookin.css">
 </head>
 
 <body>
@@ -44,7 +44,7 @@
 </div>
 
 <div class="secret">
-	<p>i might've eaten all your snacks... nom nom tasty >:D</P>
+	<p>i might've eaten all your snacks >:D</P>
 </div>
 
 <!-- IGNORE php for now
