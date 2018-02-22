@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<title>HWD</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Archivo+Black|Berkshire+Swash|Pacifico|Poiret+One|Shadows+Into+Light" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Abril+Fatface%7CArchivo+Black%7CBerkshire+Swash%7CPacifico%7CPoiret+One%7CShadows+Into+Light" rel="stylesheet">
 		<link type="text/css" href="files_mads/main.css" rel="stylesheet">
 	</head>
 	<body>
@@ -27,14 +27,16 @@
 				15. Do it anyway. So someone said you shouldn't do it? What the hell do they know. It is likely they are just scared. Don't be scared.
 				16. Bring patience and expect hard work. Only with endurance will you prevail. Don't pretend everything is a piece of cake, but eat it as if it was.
 				17. Make yourself proud. Because in the end you are the one staring back from the mirror. If something makes you embarrassed, you should stop doing it right now.
-			</span>	
+			</span>
 		</div>
 		<div id="main">
 			<div class="container">
-				<h1 id="txt1">Holistic</h1>
-				<h1 id="txt2">Web</h1>
-				<h1 id="txt3">Development</h1>
-			</div>	
+				<a href="/files_mads/enable-site.php">
+					<h1 id="txt1">Holistic</h1>
+					<h1 id="txt2">Web</h1>
+					<h1 id="txt3">Development</h1>
+				</a>
+			</div>
 		</div>
 		<div id="footer">
 			<span class="manifest">
@@ -55,7 +57,7 @@
 				15. Do it anyway. So someone said you shouldn't do it? What the hell do they know. It is likely they are just scared. Don't be scared.
 				16. Bring patience and expect hard work. Only with endurance will you prevail. Don't pretend everything is a piece of cake, but eat it as if it was.
 				17. Make yourself proud. Because in the end you are the one staring back from the mirror. If something makes you embarrassed, you should stop doing it right now.
-			</span>	
+			</span>
 		</div>
 	</div>
 	</body>
