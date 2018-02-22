@@ -35,6 +35,17 @@ h2{
 	color:rgba(30, 4, 146, 0.507);
 	background-color:rgba(233, 227, 214, 0.514);
 	}
+h3{
+	animation: fadein 5s;
+	transition: color 2s linear;
+	font-size: 300%;
+	text-align: left;
+	color:rgb(255, 11, 11);
+	background-color:rgba(5, 3, 77, 0.5);
+}
+hr{
+position:center;width:200px;
+}
 #img.resize1 {
     width:100%; /* you can use % */
     height: auto;
@@ -78,3 +89,19 @@ img.resize {
   -webkit-transform: scale(2.2);
   transform: scale(2.2);
 }
+@keyframes blink {
+	50% {
+	  opacity: 0.0;
+	}
+  }
+@-webkit-keyframes blink {
+	50% {
+	  opacity: 0.0;
+	}
+}
+  .blink {
+	animation: blink 1s step-start 0s infinite;
+	-webkit-animation: blink 1s step-start 0s infinite;
+  }
+  
+  

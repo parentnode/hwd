@@ -8,8 +8,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 
-</head>
-<body>
+</body>
+</html>
 <h1>Installing the parentNode web stack on Windows 10</h1>
 <hr>
 <p>This guide is currently being updated.</p>
@@ -25,12 +25,12 @@ make an acount on Github
 login in Github</p>
 <p>Download Sourcetree for windows from</p>
 <ul>
-	<li><a href="https://www.sourcetreeapp.com/">Download Sourcetree</a></li>
+	<li><a href="https://www.sourcetreeapp.com/"><h3><span class="blink">Download Sourcetree</span></h3></a></li>
 </ul>
 <hr .linia >
-Install bash shell command line for windows 10 by folowing the guid from the below:
-	<ul> <li><a href="https://www.windowscentral.com/how-install-bash-shell-command-line-Windows-10">Install bash shell command line for windows 10</a></li></ul>
-<p>Check for  the “Windows Subsystem for Linux” is avalable in the Windows 10 computer by folowing instructions.
+<p>Install bash shell command line for windows 10 by folowing the guid from the below:</p>
+<ul> <li><a href="https://www.windowscentral.com/how-install-bash-shell-command-line-Windows-10"><h3><span class="blink">Install bash shell command line for windows 10</span></h3></a></li></ul>
+<p>Check for  the “Windows Subsystem for Linux” is avalable in the Windows 10 computer by folowing instructions.Install bash shell command line for windows 10
 Run CMD in admin mode by cliking right button on CMD icon. 
 type in "bash" in CMD 
 Will be the folowing message if is not instaled in the system.
@@ -46,7 +46,7 @@ it may complain that does no find the Ubuntu app because the link is old, but it
 Then search for “Ubuntu” app on the search field of that page where thelink was mooved so red from below: </p>
 <div>
 	<ul>
-		<li><a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">Installing guid </a></li>
+		<li><a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10"><h3><span class="blink">Installing guide</span></h3 </a></li>
 	</ul>
 </div>
 <hr .linia >
@@ -71,7 +71,7 @@ Then search for “Ubuntu” app on the search field of that page where thelink 
 <li><p>Accessing the windows drive "C: from bash environment or Ubuntu is made with "cd /mnt/c" </p></li>
 <hr .linia >
 <div class="line_endings">
-	The editor line endings has to be changed to UNIX by for Sublime editor:  "Sublime-> view->line endings-> UNIX"
+<p>The editor line endings has to be changed to UNIX by for Sublime editor:  "Sublime-> view->line endings-> UNIX"</p>
  </div>
  <hr .linia >
  <div class="item">
@@ -93,21 +93,17 @@ then has to click yes on the pop up windows</p>
 	<div class="item-overlay top"></div>
 </div>
 <h2>Installing the Apache</h2>
-<hr .linia >
-<p>The Apache windows binaries  are avalable at : <a href="http://www.apachelounge.com/download/">http://www.apachelounge.com/download/ </a </p>
-<p>
-	<a href="http://www.apachelounge.com/download/VC15/binaries/httpd-2.4.29-Win64-VC15.zip">download link: </a>
-</p>
+<hr>
+<p>The Apache windows binaries  are avalable at : <a href="http://www.apachelounge.com/download/"><h3><span class="blink">Download Appache fromn www.apachelounge.com</span></h3 </a </p>
+<p><a href="http://www.apachelounge.com/download/VC15/binaries/httpd-2.4.29-Win64-VC15.zip"><h3><span class="blink">Download Appache windows</span></h3 </a></p>
 	<h2>Installing the PHP</h2>
-<p>
-	<a href="http://windows.php.net/download">http://windows.php.net/download </a
-</p>
-<hr .linia >
+<p>	<a href="http://windows.php.net/download"><h3><span class="blink">Download windows.php </span></h3 </a</p>
+
 <p>The PHP and Apache has to be compiled with the same compiler the redistributed
  pakage VC++ 15 (the latest) downloaded from:</p>
- <a href="https://aka.ms/vs/15/release/VC_redist.x64.exe">https://aka.ms/vs/15/release/VC_redist.x64.exe </a>
+ <a href="https://aka.ms/vs/15/release/VC_redist.x64.exe"><h3><span class="blink">Download Visual C++ run time 2017(15) </span></h3  </a>
  <p>The folowing way to install has to be avoided as much as possible because of mentenance and compatibility isues in a long run.</p>
- <hr .linia >
+ <hr.linia >
  <ol>
 <li><p>choco install php</p></li>
 <li><p>choco install ffmpeg</p></li> 
