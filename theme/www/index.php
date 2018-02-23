@@ -18,6 +18,8 @@
 	<li><a href="octavian.php">Octavian</a></li>
 
 	<li><a href="new-participant.php">New participant</a></li>
+
+	<li><a href="/kbhff">KBHFF guide</a></li>
 </ul>
 
 </body>
