@@ -102,6 +102,7 @@ img.resize {
   .blink {
 	animation: blink 1s step-start 0s infinite;
 	-webkit-animation: blink 1s step-start 0s infinite;
+	color:rgba(180, 5, 5, 0.507);
   }
   
   
