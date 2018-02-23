@@ -18,7 +18,8 @@ Table of content
 
 
 Setting up the development environment
-Install the webstack / Working with Git
+	Install the webstack / Working with Git
+
 
 Set up playground (practice area) (class-test)
 

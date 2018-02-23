@@ -6,17 +6,7 @@
 		<title>Parentnode Guide - Enable site</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-		<style>
-			body {
-				padding: 30px;
-			}
-			h1 {
-				background-color: #BBBBBB;
-			}
-			p {
-				background-color: #AAAAAA;
-			}
-		</style>
+
 	</head>
 	<body>
 		<h1>
