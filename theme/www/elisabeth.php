@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>Elisabeth's madblog</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -39,6 +39,7 @@
 	div.historien {
 		margin-right: 175px;
 		text-align: left;
+		width: 80%
 	}
 	h2.overskrift2 {
 		font-size: 30px;
@@ -71,28 +72,30 @@
 		margin-right: 220px;
 		margin-left: 20px;
 		font-weight: lighter;
+		width: 80%;
 	}
 	table, th, td {
 		border: 1px solid black;
 		background-color: whitesmoke;
-		width: 600px;
+		width: 90%;
 	}
 	div.menu {
 		list-style-type: none;
-		margin: 0 0 15px 0;
-		padding: 0 0 15px 0 ;
 		overflow: hidden;
 		float: left;
+		width: 100%;
 	}
 	li.submenu {
 		float: left;
 		list-style-type: none;
 		margin-right: 10px;
 		margin-left: 100px;
-		margin-bottom: 10 px;
+		margin-bottom: 10px;
 	}
 
 	hr.menuhr {
+		padding: 0;
+		margin: 0;
 		margin-top: 50px;
 	}
 	h2.welcome {
@@ -107,22 +110,29 @@
 	.main {
 		width: 75%;
 		float:left;
+		margin-top: 190px;
 	}
 	.col2 {
 		width: 25%;
 		float: left;
-		margin-top: 5%;
+		margin-top: 250px;
 	}
+	.header {
+		position: fixed;
+		opacity: 20%;
+		background-color: rgb(90, 146, 196);
+		width: 100%;
+}
+
 	.dropdown-content {
 		display: none;
 		position: absolute;
 		background-color: #f9f9f9;
-		min-width: 160px;
-		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		/* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
 		z-index: 1;
 	}
 	.dropdown:hover .dropdown-content {
-		display: block;
+		display: inline;
 	}
 	.desc {
 		padding: 15px;
@@ -133,40 +143,35 @@
 		text-align: center;
 	}
 	li a:hover, .dropdown:hover .dropbtn {
-		background-color: #31B404;
+		background-color: rgb(90, 196, 192);
 	}
 	li.dropdown {
-		display: inline-block;
+		display: inline;
 	}
 	.dropdown-content a {
-		padding: 12px 16px;
 		display: block;
 		text-align: left;
 	}
-	.dropdown-content a:hover {background-color: #f1f1f1}
-	.dropdown:hover .dropdown-content {
-		display: block;
-		width: 400px;
-		height: 600px;
+	.dropdown-content a:hover {
+		background-color: #f1f1f1
 	}
 	.formularspr {
 		font-size: 20px;
 		margin-top: 80px;
 	}
 	.burgerimg {
-		width: 600px;
-		height: 400px;
+		width: 90%;
+		height: 59.4%;
 	}
 	.mypic {
-	width:115px;
-	height:170px;
-	float:left;
+	width: 66.66%;
+	height: 95%;
+	float: left;
 	}
 	div.formular {
 	font-size: 10px;
 	margin-top: 40px;
 	}
-
 
 	</style>
 </head>
@@ -174,22 +179,22 @@
 <div class="header">
 	<h1>Elisabeth's yummie and hearty recipes</h1>
 	<h2 class="beskrivelse">Healthy and cruelty free recipes made from the heart</h2>
-	<hr/>
-		<ul class="menu">
-			<li class="submenu">Home</li>
-			<li class="submenu"><a href="files_elisabeth\shop.html">Shop</li>
-			<li class="submenu dropdown">
-	    <a href="javascript:void(0)" class="dropbtn">Sustainability</a>
-	    <div class="dropdown-content">
-	      <a href="http://www.kbhff.dk">KBHFF</a>
-	      <a href="http://www.think.dk">Think</a>
-	      <a href="http://www.suztain.dk">Suztain</a>
-	    </div>
+	<ul class="menu">
+		<hr/>
+		<li class="submenu">Home</li>
+		<li class="submenu"><a href="files_elisabeth/shop.html">Shop</a></li>
+		<li class="submenu dropdown">
+			<a href="javascript:void(0)" class="dropbtn">Sustainability</a>
+			<div class="dropdown-content">
+				<a href="http://www.kbhff.dk">KBHFF</a>
+				<a href="http://www.think.dk">Think</a>
+				<a href="http://www.suztain.dk">Suztain</a>
+			</div>
 		</li>
-			<li class="submenu"><a href="files_elisabeth\about.html">About</a></li>
-			<li class="submenu">Contact</li>
-		</ul>
-	<hr class="menuhr">
+		<li class="submenu"><a href="files_elisabeth/about.html">About</a></li>
+		<li class="submenu">Contact</li>
+		<hr class="menuhr"/>
+	</ul>
 </div>
 <div class="main">
 	<h2 class="overskrift">Kale burger with veggie paddie</h2>
@@ -303,22 +308,17 @@
 <div class="col2">
 	<h2 class="welcome">Welcome!</h2>
 	<div class="me">
-		<div class="dropdown">
-			<img class="mypic" src="files_elisabeth\27994672_207399000003335_1252007330_n.jpg" alt="Elisabeth in Cali"/>My name is Elisabeth and I care about our Earth and all living creatures on the planet. As we are all born as sinners in these times of destruction, we should try to do our best to reduce our footprints on the Earth.
-			<div class="dropdown-content burgerimg" ><img src="files_elisabeth\27994672_207399000003335_1252007330_n.jpg" alt="Elisabeth at Mount San Jacinto, California"/>
-		<div class="desc">Elisabeth at Mount San Jacinto, California</div>
-			</div>
+			<img class="mypic" src="files_elisabeth/27994672_207399000003335_1252007330_n.jpg" alt="Elisabeth in Cali"/>My name is Elisabeth and I care about our Earth and all living creatures on the planet. As we are all born as sinners in these times of destruction, we should try to do our best to reduce our footprints on the Earth.
 		</div>
-	</div>
 
 <div class="formular">
 
 	<h2 class="formularspr">Har du nogle kommentarer eller ønsker, så udfyld venligst nedenstående</h2>
 	<form action="mailto:e.haabegaard@gmail.com" method="post">
 		<p>Hvem henvender sig?</p>
-		<input type="radio" value="Virksomhed" name="afsender" id="afsender" checked tabindex="1"/>Virksomhed&nbsp;&nbsp;&nbsp;
-		<input type="radio" value="Privatperson" name="afsender" id="afsender" checked tabindex="2"/>Privatperson&nbsp;&nbsp;&nbsp;
-		<input type="radio" value="Investor" name="afsender" id="afsender" checked tabindex="3"/>Investor&nbsp;&nbsp;&nbsp;
+		<input type="radio" value="Virksomhed" name="afsender" id="virksomhed" checked tabindex="1"/>Virksomhed&nbsp;&nbsp;&nbsp;
+		<input type="radio" value="Privatperson" name="afsender" id="privatperson" checked tabindex="2"/>Privatperson&nbsp;&nbsp;&nbsp;
+		<input type="radio" value="Investor" name="afsender" id="investor" checked tabindex="3"/>Investor&nbsp;&nbsp;&nbsp;
 		<p>Dit fulde navn</p>
 		<p><input type="text" name="navn" id="navn" tabindex="4"/></p>
 		<p>Din emailadresse</p>
@@ -327,25 +327,19 @@
 		<p><input type="text" name="telefonnr" id="telefonnummer" tabindex="6"/></p>
 		<p>Dit køn
 			<select name="køn" id="køn">
-				<option value="Mand" tabindex="7">Mand</option>&nbsp;nbsp;&nbsp;
-				<option value="Kvinde" tabindex="7">Kvinde</option>&nbsp;nbsp;&nbsp;
-				<option value="Ønsker ikke at identificere mig med et køn" tabindex="7">Ønsker ikke at identificere mig med et køn</option>&nbsp;nbsp;&nbsp;
-				<option value="Animalsk afstamning" tabindex="7">Animalsk afstamning</option>
+				<option value="Mand" tabindex="7">Mand</option>
+				<option value="Kvinde" tabindex="8">Kvinde</option>
+				<option value="Ønsker ikke at identificere mig med et køn" tabindex="9">Ønsker ikke at identificere mig med et køn</option>
+				<option value="Animalsk afstamning" tabindex="10">Animalsk afstamning</option>
 			</select></p>
 			<p>Din alder</p>
-			<p><input type="text" name="alder" id="alder" tabindex="8"/></p>
+			<p><input type="text" name="alder" id="alder" tabindex="11"/></p>
 			<p>Hvad drejer henvendelsen sig om?</p>
-			<textarea rows="5" name="spørgsmål" id="spørgsmål" cols="30" tabindex="9">Hvad drejer henvendelsen sig om? Uddyb venligst her. </textarea></p>
-			<p><input type="submit" value="Send besked" name="B1" tabindex="10"/>
-			<input type="reset" value="Slet alt" name="B2" tabindex="11"/></p>
+			<textarea rows="5" name="spørgsmål" id="spørgsmål" cols="30" tabindex="12">Hvad drejer henvendelsen sig om? Uddyb venligst her. </textarea>
+			<p><input type="submit" value="Send besked" name="B1" tabindex="13"/>
+			<input type="reset" value="Slet alt" name="B2" tabindex="14"/></p>
 		</form>
 	</div>
 </div>
 </body>
 </html>
-#
-	HEJ
-
-#
-
-#
