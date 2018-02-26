@@ -29,8 +29,12 @@
     <p><a href="https://guides.github.com/activities/hello-world/">Here's how to get started with GitHub</a></p>
     <p>Working with GitHub through the browser isn't always what you want so you should download a GitHub client</p>
     <p>We recommend GitHub desktop starting out as it's free and the simplest way to use Git.</p>
-	<p><a href="https://desktop.github.com/">Here's a link to GitHub dekstop.</a></p>
-	<p>Github Desktop is a bit different from the website, a lot of things are nicer as they've streamlined everything. A lot of the more advanced features are however not present in the current version.</p>
+	<p>Github Desktop is a bit different from the website but there's alot of upsides to using a client, such as easily being able to update and upload your files, there are other clients with more features at the expense of usability.</p>
+    <ul>
+        <li><a href="https://desktop.github.com/">Here's a link to GitHub dekstop.</a></li>
+        <li><a href="https://help.github.com/desktop/guides/getting-started-with-github-desktop/">If you need help to install and set up the program.</li>
+        <li><a href="https://help.github.com/desktop/guides/contributing-to-projects/">Here's how to use the client.</li>
+    </ul>
 </div>
 
 </body>
