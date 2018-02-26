@@ -1,10 +1,11 @@
-#top-bar {
+#navigation {
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-start;
-	background-color: rgba( 0, 0, 0, 1);
+	background-color: rgba( 0, 0, 0, 0.5);
 	height: 60px;
-	text-align: center;
+    text-align: center;
+    z-index: 2;
 
     position: fixed;
     top: 0;
@@ -12,27 +13,26 @@
 	left: 0;
 }
 
-#top-bar > .menu-item {
+#navigation .menu-item a, #navigation .menu-item img {
+    display: block;
+}
+
+#navigation > .menu-item {
     width: 85px;
     line-height: 60px;
     font-size: 25px;
 }
 
-#top-bar > .menu-item img {
+#navigation > .menu-item img {
     width: 60px;
     height: auto;
     display: inline-flex;
 }
 
-#top-bar > .menu-item a {
+#navigation > .menu-item a {
+    height: 60px;
 	text-align: center;
 	color: rgb(255, 255, 255);
-	text-decoration: none;
-}
-
-#top-bar > .menu-item a {
-	text-align: center;
-    color: rgb(255, 255, 255);
 	text-decoration: none;
 }
 
@@ -41,5 +41,5 @@
 }
 
 .current {
-    background-color: rgb(70, 70, 205);
+    background-color: rgba(70, 70, 205, 0.5);
 }
