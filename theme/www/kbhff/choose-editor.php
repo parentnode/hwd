@@ -155,7 +155,15 @@
 				target="_blank">here</a>
 			</p>
 	</div></div>
-	<div="navigation"></div>
+	<div="navigation">
+		<ul class="navigation">
+			<li><a href="software-license">Software license summary</a></li>
+			<li><a href="choose-editor">Choosing an Editor</a></li>
+			<li><a href="development-environment">Setting up the development environment (Install the webstack) (Working with Git)</a></li>
+			<li><a href="before-you-start-coding">Before you start coding (Code conventions)</a></li>
+			<li><a href="playground">Set up playground (practice area) (class-test)</a></li>
+		</ul>
+	</div>
 	<div ="footer"></div>
 
 </div>
