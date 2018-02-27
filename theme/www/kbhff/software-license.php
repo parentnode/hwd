@@ -15,8 +15,7 @@
 			<h1>Software license</h1>
 		</div>
 
-		
-	
+		<div class="section">
 			<h2>Introduction</h2>
 			<p>In the first week of the Holistic Web Development Course, we discussed software licenses: what open- and closed-source means, what the pros and cons of different license types are and what license type we should recommend for the KBHFF project. This page outlines our findings.</p>
 		</div>

@@ -1,0 +1,13 @@
+#content {
+	margin-left: 25%;	
+
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 14px;
+}
+
+#navigation {
+	width: 15%;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
