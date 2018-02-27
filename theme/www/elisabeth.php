@@ -89,7 +89,7 @@
 		float: left;
 		list-style-type: none;
 		margin-right: 10px;
-		margin-left: 100px;
+		margin-left: 200px;
 		margin-bottom: 10px;
 	}
 
@@ -122,6 +122,7 @@
 		opacity: 20%;
 		background-color: rgb(90, 146, 196);
 		width: 100%;
+		margin-left: -250px;
 }
 
 	.dropdown-content {
