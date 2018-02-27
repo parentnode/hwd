@@ -99,10 +99,52 @@ img.resize {
 	  opacity: 0.0;
 	}
 }
-  .blink {
+.blink {
+	font-size: 300%;
 	animation: blink 1s step-start 0s infinite;
 	-webkit-animation: blink 1s step-start 0s infinite;
-	color:rgba(180, 5, 5, 0.507);
-  }
-  
-  
+	color:rgb(255, 5, 5);
+}
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.17em; }
+h5 { font-size: .83em; }
+h6 { font-size: .75em; }
+
+@media (min-width: 900px) {
+	html {
+			font-size: 16px;
+	}
+}
+
+
+@media (min-width: 858px) {
+	html {
+			font-size: 12px;
+	}
+}
+
+@media (min-width: 780px) {
+	html {
+			font-size: 11px;
+	}
+}
+
+@media (min-width: 702px) {
+	html {
+			font-size: 10px;
+	}
+}
+
+@media (min-width: 724px) {
+	html {
+			font-size: 9px;
+	}
+}
+
+@media (max-width: 623px) {
+	html {
+			font-size: 8px;
+	}
+}

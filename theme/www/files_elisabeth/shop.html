@@ -8,8 +8,8 @@
 	<style>
 	body {
 		font-family: Verdana, sans-serif;
-		margin: 100px;
-		box-sizing:border-box
+		margin: 140px;
+		box-sizing:border-box;
 	}
 	img {
 		vertical-align: middle;
@@ -19,15 +19,39 @@
 	.slideshow-container-1 {
 		float: left;
 		width: 25%;
+		text-align: center;
+		position: absolute;
+		left: 40px;
+		right: 40px;
+	}
+	.slideshow-container-2 {
+		float: left;
+		width: 25%;
+		position: absolute;
+		left: 40px;
+		margin-left: 40px;
+		padding-left: 40px;
+	}
+	.slideshow-container-3 {
+		float: left;
+		width: 25%;
+		position: absolute;
+		left: 40px;
+		margin-left: 40px;
+		margin-right: 40px;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	.slideshow-container-4 {
+		float: left;
+		width: 25%;
+		position: absolute;
+		left: 40px;
 	}
 	.slideshow-container {
 		max-width: 236px;
 		position: relative;
 		margin: auto;
-	}
-	.outer-slideshow-container > div {
-		border: 1px solid black;
-		text-align: center;
 	}
 	.mySlides {
 		display: none;
@@ -148,14 +172,21 @@
 				<span class="dot" onclick="currentSlide(3)"></span>
 			</div>
 		</div>
-		<div>2</div>
-		<div>3</div>
-		<div>4</div>
-		<div>5</div>
-		<div>6</div>
-		<div>7</div>
-		<div>8</div>
-	</div>
+		<div class="outer-slideshow-container">
+			<div class="slideshow-container slideshow-container-2">
+				<img src="bylle3.JPG" alt="a dog"/>
+			</div>
+		</div>
+		<div class="outer-slideshow-container">
+			<div class="slideshow-container slideshow-container-3">
+				<img src="bylle3.JPG" alt="a dog"/>
+			</div>
+		</div>
+		<div class="outer-slideshow-container">
+			<div class="slideshow-container slideshow-container-4">
+				<img src="bylle3.JPG" alt="a dog"/>
+			</div>
+		</div>
 	<br>
 	<script>
 		var slideIndex = 1;
