@@ -12,7 +12,7 @@
 	<div id="content">
 
 		<div class="">
-		<h1>Setting up the development environment</h1>
+			<h1>Setting up the development environment</h1>
 		</div>
 
 		<div class="">
