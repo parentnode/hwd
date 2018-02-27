@@ -10,7 +10,7 @@
 	<div="header"></div>
 	<div="content">
 		<h1>Choose editor</h1>
-		<div class="">
+		<div class="section">
 			<h2>Introduction to choosing the right editor</h2>
 			<p>You can find a bunch of text editors out there today, and the
 				task of finding one that fits your needs may seem like an
@@ -158,7 +158,15 @@
 				target="_blank">here</a>
 			</p>
 	</div></div>
-	<div="navigation"></div>
+	<div="navigation">
+		<ul class="navigation">
+			<li><a href="software-license">Software license summary</a></li>
+			<li><a href="choose-editor">Choosing an Editor</a></li>
+			<li><a href="development-environment">Setting up the development environment (Install the webstack) (Working with Git)</a></li>
+			<li><a href="before-you-start-coding">Before you start coding (Code conventions)</a></li>
+			<li><a href="playground">Set up playground (practice area) (class-test)</a></li>
+		</ul>
+	</div>
 	<div ="footer"></div>
 
 </div>
