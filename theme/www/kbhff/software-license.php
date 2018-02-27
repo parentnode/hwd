@@ -10,16 +10,17 @@
 	<div id="header"></div>
 	<div id="content">
 
-		<div class="">
+		<div class="section">
 			<h1>Software license</h1>
 		</div>
 
-		<div class="">
+		
+	
 			<h2>Introduction</h2>
 			<p>In the first week of the Holistic Web Development Course, we discussed software licenses: what open- and closed-source means, what the pros and cons of different license types are and what license type we should recommend for the KBHFF project. This page outlines our findings.</p>
 		</div>
 
-		<div class="">
+		<div class="section">
 			<h2>Understanding license types</h2>
 			<h3>What is opensource?</h3>
 			<p>"Open Source Software is software that can be freely used, changed, and shared (in modified or unmodified form) by anyone." The Open Source Software term was coined by <a href="https://opensource.com/article/18/2/coining-term-open-source-software">Christine Peterson</a> in 1998.</p>
@@ -52,7 +53,7 @@
 				</ul>
 		</div>
 
-		<div class="">
+		<div class="section">
 			<h2>License for KBHFF</h2>
 			<p>The <strong>Open Source GPLv3 license</strong> has been chosen for the KBHFF-IT project for the following reasons:</p>
 			<ul>

@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<div class="">
+<div class="section">
 	<h1>Choose editor</h1>
 	<p>You can find a bunch of text editors out there today, and the
 		task of finding one that fits your needs may seem like an
@@ -111,7 +111,7 @@
 		<a href="https://www.sublimetext.com/" target="_blank">here</a>
 	</p>
 </div>
-<div class="">
+<div class="section">
 	<h3>Notepad++</h3>
 	<p>
 		Notepad++ is <strong>free and open source software</strong> with
