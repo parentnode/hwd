@@ -8,7 +8,7 @@
 
 <h1>Setting up the development environment</h1>
 
-<div>
+<div class="">
 	<h2>Installing the webstack</h2>
 	<p>
 	So what is a webstack? Well it's a collection of software you'll need to have before you can start building anything on the web. 
@@ -27,7 +27,7 @@
 	</ul>
 </div>
 
-<div>
+<div class="">
 	<h2>Working with git</h2>
 	<p>Git is a <em>version control system</em>, it essentially allows multiple people to work on the same project.</p>
 	<p>As Git is just a program we will need a host where we can upload our projects, or contribute to existing ones.</p>
