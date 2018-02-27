@@ -1,50 +1,50 @@
 body {
-    background-color: rgb(25, 25, 30);
-    text-align: center;
+	background-color: rgb(25, 25, 30);
+	text-align: center;
 }
 #content {
-    position: relative;
-    z-index: 1;
+	position: relative;
+	z-index: 1;
 }
 
 #content a {
-    font-size: 50px;
-    font-style: italic;
-    text-decoration: none;
+	font-size: 50px;
+	font-style: italic;
+	text-decoration: none;
 }
 
 #content a.why {
-    display: block;
-    position: absolute;
-    top: 60px;
-    left: 0px;
-    right: 0px;
+	display: block;
+	position: absolute;
+	top: 60px;
+	left: 0px;
+	right: 0px;
 
-    background-color: rgba(209, 52, 52, 0.4);
-    color: rgb(255, 255, 255);
-    line-height: 200px;
+	background-color: rgba(209, 52, 52, 0.4);
+	color: rgb(255, 255, 255);
+	line-height: 200px;
 }
 
 #content a.media {
-    display: block;
-    position: absolute;
-    top: 260px;
-    left: 0px;
-    right: 0px;
+	display: block;
+	position: absolute;
+	top: 260px;
+	left: 0px;
+	right: 0px;
 
-    background-color: rgba(52, 209, 112, 0.4);
-    color: rgb(255, 255, 255);
-    line-height: 200px;
+	background-color: rgba(52, 209, 112, 0.4);
+	color: rgb(255, 255, 255);
+	line-height: 200px;
 }
 
 #content a.about {
-    display: block;
-    position: absolute;
-    top: 460px;
-    left: 0px;
-    right: 0px;
+	display: block;
+	position: absolute;
+	top: 460px;
+	left: 0px;
+	right: 0px;
 
-    background-color: rgba(52, 52, 209, 0.4);
-    color: rgb(255, 255, 255);
-    line-height: 200px;
+	background-color: rgba(52, 52, 209, 0.4);
+	color: rgb(255, 255, 255);
+	line-height: 200px;
 }
