@@ -1,0 +1,48 @@
+h1 {
+	font-size: 30px;
+	color: rgba(0, 0, 0, 1);
+	line-heigth: 1.25em;
+	text-align: center;
+	font-weight: bolder;
+}
+h2 {
+	font-size: 25px;
+	color: rgba(0, 0, 0, 1);
+	line-height: 1.20em;
+	text-align: left;
+}
+h3 {
+	font-size: 22x;
+	color: rgba(0, 0, 0, 1);
+	line-height: 1.15em;
+	text-align: left;
+}
+h4 {
+	font-size: 20px;
+	color: rgba(0, 0, 0, 1);
+	line-height: 1.15em;
+	text-align: left;
+}
+h5 {
+	font-size: 18px;
+	color: rgba(0, 0, 0, 1);
+	line-height: 1.15em;
+	text-align: left;
+}
+h6 {
+	font-size: 18px;
+	color: rgba(0, 0, 0, 1);
+	line-height: 1.15em;
+	text-align: left;
+	font-style: italic;
+}
+li {
+	color: rgba(0, 250, 0, 1)
+}
+ul {
+	list-style-type: circle;
+
+}
+ol {
+
+}
