@@ -11,7 +11,7 @@
 	<div id="content">
 
 		<div class="">
-		<h1>Setting up the development environment</h1>
+			<h1>Setting up the development environment</h1>
 		</div>
 
 		<div class="">
@@ -54,7 +54,7 @@
 				<li><a href="https://help.github.com/desktop/guides/contributing-to-projects/">Here's how to use the client.</li>
 			</ul>
 		</div>
-
+	</div>
 	<div id="navigation">
 	<div id="footer">
 </div>
