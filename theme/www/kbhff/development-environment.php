@@ -12,7 +12,7 @@
     <h2>Installing the webstack</h2>
     <p>So what is a webstack? Well it's a collection of software you'll need to have before you can start building anything on the web. It's the foundation, we build on.</p>
     <p>The most basic forms of webstack are usually comprised of an Operating systen, a Http-server, an Application-server and a Database server.</p>
-    <p>An example could be the "LAMP" stack which runs on Linux and uses the Apache Http-server, MariaDB/MySQL database and PHP application server.</p>
+    <p>An example could be the "LAMP" stack which runs on a Linux operating system and uses the Apache Http-server, MariaDB/MySQL database and PHP application server.</p>
     <p>Since the project is based on the parentNode webstack, you'll first need to install it.</p>
     <ul>
 		<li><a href="https://parentnode.dk/blog/the-parentnode-web-stack">You can read more about the parentNode webstack here.</a></li>
