@@ -3,6 +3,7 @@
 <head>
 	<title>Development environment</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
 
@@ -11,18 +12,18 @@
 	<div id="content">
 
 		<div class="section">
-		<h1>Setting up the development environment</h1>
+			<h1>Setting up the development environment</h1>
 		</div>
 
 		<div class="section">
 			<h2>Installing the webstack</h2>
 			<p>
-				So what is a webstack? Well it's a collection of software you'll need to have before you can start building anything on the web. 
+				So what is a webstack? Well it's a collection of software you'll need to have before you can start building anything on the web.
 				It's the foundation, we build on.
 			</p>
 			<p>The most basic forms of webstack are usually comprised of an Operating systen, a Http-server, an Application-server and a Database server.</p>
 			<p>
-				An example could be the <em>LAMP</em> stack which runs on a Linux operating system and uses the Apache Http-server, 
+				An example could be the <em>LAMP</em> stack which runs on a Linux operating system and uses the Apache Http-server,
 				MariaDB/MySQL database and PHP application server.
 			</p>
 			<p>Since the project is based on the parentNode webstack, you'll first need to install it.</p>
@@ -38,7 +39,7 @@
 			<p>Git is a <em>version control system</em>, it essentially allows multiple people to work on the same project.</p>
 			<p>As Git is just a program we will need a host where we can upload our projects, or contribute to existing ones.</p>
 			<p>
-				The hosting platform we will use is <strong>GitHub</strong>, since it's the most popular host around and is completely free! 
+				The hosting platform we will use is <strong>GitHub</strong>, since it's the most popular host around and is completely free!
 				This is also where kbhff is hosted.
 			</p>
 			<p><a href="https://guides.github.com/activities/hello-world/">Here's how to get started with GitHub</a></p>
