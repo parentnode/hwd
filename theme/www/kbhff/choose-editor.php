@@ -7,8 +7,8 @@
 </head>
 <body>
 <div id="page">
-	<div="header"></div>
-	<div="content">
+	<div id="header"></div>
+	<div id="content">
 		<h1>Choose editor</h1>
 		<div class="section">
 			<h2>Introduction to choosing the right editor</h2>
@@ -133,16 +133,19 @@
 				<li>
 					<h3>Notepad++</h3>
 					<p>
-						Notepad++ is <strong>free and open source software</strong> with
-						a GPL license, and is a familiar name to many. It runs in the
-						Microsoft environment and is basically an enhanced version of
-						their native program Notepad. It has a <strong>small program size
-						and high execution speed</strong>, and Notepad++ is actually
-						trying to <strong>reducing global carbon emissions</strong> by
-						optimizing as many routines as possible by using less CPU power,
-						thereby reducing power consumption. Notepad++ supports tons of
-						programming languages but it is most <strong>popular for writing
-						HTML, CSS and JavaScript.</strong> Some features of the tool
+						Notepad++ is <strong>free and open source
+						software</strong> with a GPL license, and is a familiar
+						name to many. It runs in the Microsoft environment and is
+						basically an enhanced version of their native program
+						Notepad. It has a <strong>small program size and high
+						execution speed</strong>, and Notepad++ is actually
+						trying to <strong>reducing global carbon
+						emissions</strong> by optimizing as many routines as
+						possible by using less CPU power, thereby reducing power
+						consumption. Notepad++ supports tons of programming
+						languages but it is most <strong>popular for writing
+						HTML, CSS and JavaScript.</strong> Some features of the
+						tool
 						include <strong>color coding, language dependent formatting and
 						autocomplete.</strong> Its functionality can be extended by
 						hundreds of plugins, and as it is very fast and lightweight, it
@@ -162,7 +165,7 @@
 						target="_blank">here</a>
 					</p>
 	</div></div>
-	<div="navigation">
+	<div id="navigation">
 		<ul class="navigation">
 			<li><a href="software-license">Software license summary</a></li>
 			<li><a href="choose-editor">Choosing an Editor</a></li>
@@ -171,7 +174,7 @@
 			<li><a href="playground">Set up playground (practice area) (class-test)</a></li>
 		</ul>
 	</div>
-	<div ="footer"></div>
+	<div id="footer"></div>
 
 </div>
 </body>
