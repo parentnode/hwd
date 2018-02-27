@@ -53,75 +53,78 @@
 						completely customizable. This means that you can make it
 						look just the way you like it and that it is <strong>very
 						easy to pick up for a beginner</strong>. An issue which
-						is important to consider is the
-						performance. Sometimes <strong>Atom feels slow</strong>, it
-						consumes a lot of memory and tend to crash if you load large
-						files. However it has gotten a lot better since it was first
-						released, which is only 3 years ago. In fact, Atom is actually a
-						pretty <strong>new player in the field</strong>, only beeing a
-						couple of years old, however it has already gained huge popularity
-						among the many developeres out there. You should choose Atom if
-						you care about open source and you want an editor that is
-						customizable and easy to pick up on for beginners.</br> You can
-						read more about Atom and download the editor
+						is important to consider is the performance. Sometimes
+						<strong>Atom feels slow</strong>, it consumes a lot of
+						memory and tend to crash if you load large files. However
+						it has gotten a lot better since it was first released,
+						which is only 3 years ago. In fact, Atom is actually a
+						pretty <strong>new player in the field</strong>, only
+						beeing a couple of years old, however it has already
+						gained huge popularity among the many developeres out
+						there. You should choose Atom if you care about open
+						source and you want an editor that is customizable and
+						easy to pick up on for beginners.</br> You can read more
+						about Atom and download the editor
 						<a href="https://atom.io/" target="_blank">here</a>
 					</p>
-		</div>
-		<div ="">
-			<h3>Visual Studio Code</h3>
-			<p>
-				Visual Studio Code is the attempt by Microsoft to create a
-				<strong>free and lightweight, but powerfull and flexible text
-				teditor</strong>. Microsoft already sits on the heavy Visual
-				Studio editions, which is 3 GB+ in size and therefore huge and
-				massive and not really ideal for development purposes. This new
-				edition tries to do the same job but it is just much smaller in
-				size. It is also pretty <strong>new to the market (from
-				2015)</strong> and comes with a <strong>lot of avaliable
-				extensions.</strong> The userinterface is customizable, which
-				means that you can <strong>personalize your editor with
-				themes</strong> just as you prefer. It is said to be easy for
-				beginners to pick up on, however I felt that Atom was much more
-				convenient for a beginner. Some of the featues includes the
-				support of <strong>30+ programming languages and auto
-				complete.</strong> The best thing about Visual Studio Code is
-				definentely the <strong>small size and thus the quick
-				installation and usage.</strong> So if you don't care about big
-				capitalistic superpowers keeping and selling your data, you
-				should definentely go for this text editor, since it is fast
-				and flexible!</br>You can read more about Visual Studio Code
-				and download the software
-				<a href="https://code.visualstudio.com/"
-				target="_blank">here</a>
-			</p>
-		</div>
-		<div="">
-			<h3>Sublime</h3>
-			<p>
-				Sublime Text is propietary software and can be purchased for
-				<strong>$70 with free trial.</strong> It is developed by former
-				Google Engineer Jon Skinner and was first released in 2007, which
-				means that it had time to mature for more than 10 years. It is
-				said to be the third most popular development environment
-				according to a survey made by Stackoverflow in 2016. It is
-				<strong>small in size</strong>, as the installation archieve is
-				only 8 MB and the program only use 22 MB of RAM. Sublime is
-				therefore fast and lightweight, but still powerfull. It has tons
-				of plugins and features avaliable, however the <strong>quality of
-				the plugins is questionable</strong>, and sometimes the loading
-				time can be high. Users agree that it has a <strong>clean and
-				simple interface</strong> with great code highlighting and
-				completion, but it is <strong>not always beginner
-				friendly</strong>. Several users agree that it is too complicated
-				to pick up on, not only for beginners, but also for experienced
-				developers. You should choose Sublime Text if you are interested
-				in a an extensive variety of plugins and features and a fast and
-				powerfull tool. However you should <strong>watch out for the
-				quality and consequences of the many extensions</strong>, that
-				tend to slow the performance.</br>You can read more about Sublime
-				Text and download the software
-				<a href="https://www.sublimetext.com/" target="_blank">here</a>
-			</p>
+				</li>
+				<li>
+					<h3>Visual Studio Code</h3>
+					<p>
+						Visual Studio Code is the attempt by Microsoft to create a
+						<strong>free and lightweight, but powerfull and flexible
+						text teditor</strong>. Microsoft already sits on the
+						heavy Visual Studio editions, which is 3 GB+ in size and
+						therefore huge and massive and not really ideal for
+						development purposes. This new edition tries to do the
+						same job but it is just much smaller in size. It is also
+						pretty <strong>new to the market (from 2015)</strong> and
+						comes with a <strong>lot of avaliable
+						extensions.</strong> The userinterface is customizable,
+						which means that you can <strong>personalize your editor
+						with themes</strong> just as you prefer. It is said to be
+						easy for beginners to pick up on, however I felt that
+						Atom was much more convenient for a beginner. Some of the
+						featues includes the support of <strong>30+ programming
+						languages and auto complete.</strong> The best thing
+						about Visual Studio Code is definentely the <strong>small
+						size and thus the quick installation and usage.</strong>
+						So if you don't care about big capitalistic superpowers
+						keeping and selling your data, you should definentely go
+						for this text editor, since it is fast and flexible!
+						</br>You can read more about Visual Studio Code
+						and download the software
+						<a href="https://code.visualstudio.com/"
+						target="_blank">here</a>
+					</p>
+				</li>
+				<li>
+					<h3>Sublime</h3>
+					<p>
+						Sublime Text is propietary software and can be purchased
+						for <strong>$70 with free trial.</strong> It is developed
+						by former Google Engineer Jon Skinner and was first
+						released in 2007, which means that it had time to mature
+						for more than 10 years. It is said to be the third most
+						popular development environment according to a survey
+						made by Stackoverflow in 2016. It is <strong>small in size</strong>, as the installation archieve is
+						only 8 MB and the program only use 22 MB of RAM. Sublime is
+						therefore fast and lightweight, but still powerfull. It has tons
+						of plugins and features avaliable, however the <strong>quality of
+						the plugins is questionable</strong>, and sometimes the loading
+						time can be high. Users agree that it has a <strong>clean and
+						simple interface</strong> with great code highlighting and
+						completion, but it is <strong>not always beginner
+						friendly</strong>. Several users agree that it is too complicated
+						to pick up on, not only for beginners, but also for experienced
+						developers. You should choose Sublime Text if you are interested
+						in a an extensive variety of plugins and features and a fast and
+						powerfull tool. However you should <strong>watch out for the
+						quality and consequences of the many extensions</strong>, that
+						tend to slow the performance.</br>You can read more about Sublime
+						Text and download the software
+						<a href="https://www.sublimetext.com/" target="_blank">here</a>
+					</p>
 		</div>
 		<div class="">
 			<h3>Notepad++</h3>
