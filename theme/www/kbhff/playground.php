@@ -5,9 +5,16 @@
 	<title>Playground</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
-
+<div id="page">
+	<div id="header"></div>
+	<div id="content"></div>
+	<div id="navigation"></div>
+	<div id="footer"></div>
 <body>
+<div class="">
 <h1>Playground</h1>
+</div>
+
 <div class="">
 	<h2>For the secondaries</h2>
 	<p>Clone the class-test project from <a href="https://github.com/parentnode/class-test">GitHub</a> by using the GitHub Desktop app. If you have already been added to the class-test repository, you should be able to choose the class-test project from the list, after choosing "Clone Repository" from the File menu. Otherwise, you can also clone by using the url, but you will not be able to commit your changes back to the group until I have added your Git account to the project.</p>
