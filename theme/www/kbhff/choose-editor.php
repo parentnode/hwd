@@ -107,56 +107,60 @@
 						released in 2007, which means that it had time to mature
 						for more than 10 years. It is said to be the third most
 						popular development environment according to a survey
-						made by Stackoverflow in 2016. It is <strong>small in size</strong>, as the installation archieve is
-						only 8 MB and the program only use 22 MB of RAM. Sublime is
-						therefore fast and lightweight, but still powerfull. It has tons
-						of plugins and features avaliable, however the <strong>quality of
-						the plugins is questionable</strong>, and sometimes the loading
-						time can be high. Users agree that it has a <strong>clean and
-						simple interface</strong> with great code highlighting and
-						completion, but it is <strong>not always beginner
-						friendly</strong>. Several users agree that it is too complicated
-						to pick up on, not only for beginners, but also for experienced
-						developers. You should choose Sublime Text if you are interested
-						in a an extensive variety of plugins and features and a fast and
-						powerfull tool. However you should <strong>watch out for the
-						quality and consequences of the many extensions</strong>, that
-						tend to slow the performance.</br>You can read more about Sublime
-						Text and download the software
-						<a href="https://www.sublimetext.com/" target="_blank">here</a>
+						made by Stackoverflow in 2016. It is <strong>small in
+						size</strong>, as the installation archieve is only 8 MB
+						and the program only use 22 MB of RAM. Sublime is
+						therefore fast and lightweight, but still powerfull. It
+						has tons of plugins and features avaliable, however the
+						<strong>quality of the plugins is questionable</strong>,
+						and sometimes the loading time can be high. Users agree
+						that it has a <strong>clean and simple interface</strong>
+						with great code highlighting and completion, but it is
+						<strong>not always beginner friendly</strong>. Several
+						users agree that it is too complicated to pick up on, not
+						only for beginners, but also for experienced developers.
+						You should choose Sublime Text if you are interested in
+						an extensive variety of plugins and features and a fast
+						and powerfull tool. However you should <strong>watch out
+						for the quality and consequences of the many
+						extensions</strong>, that tend to slow the
+						performance.</br>You can read more about Sublime Text and
+						download the software
+						<a href="https://www.sublimetext.com/"
+						target="_blank">here</a>
 					</p>
-		</div>
-		<div class="">
-			<h3>Notepad++</h3>
-			<p>
-				Notepad++ is <strong>free and open source software</strong> with
-				a GPL license, and is a familiar name to many. It runs in the
-				Microsoft environment and is basically an enhanced version of
-				their native program Notepad. It has a <strong>small program size
-				and high execution speed</strong>, and Notepad++ is actually
-				trying to <strong>reducing global carbon emissions</strong> by
-				optimizing as many routines as possible by using less CPU power,
-				thereby reducing power consumption. Notepad++ supports tons of
-				programming languages but it is most <strong>popular for writing
-				HTML, CSS and JavaScript.</strong> Some features of the tool
-				include <strong>color coding, language dependent formatting and
-				autocomplete.</strong> Its functionality can be extended by
-				hundreds of plugins, and as it is very fast and lightweight, it
-				has quick load times and can manage large files without lags or
-				crashes. However, some users report that it will crash when
-				trying to handle large files over 200MBs. A pitfall of the
-				ligthweight software is, that it <strong>does not offer any
-				themes or customizable interface</strong> like all the other
-				editors support. With its simplicity the userinterface kind of
-				<strong>looks like a Windows 95 program</strong>, which reduces
-				the userexperience and userfriendlieness. You should choose
-				Notepad++ if you care about free and open source and furthermore
-				would like to reduce your carbon footprints, however you should
-				not care too much about userexperience and the userinterface.
-				</br>You can read more abut Notepad++ and download the software
-				<a href="https://notepad-plus-plus.org/"
-				target="_blank">here</a>
-			</p>
+				</li>
+				<li>
+					<h3>Notepad++</h3>
+					<p>
+						Notepad++ is <strong>free and open source software</strong> with
+						a GPL license, and is a familiar name to many. It runs in the
+						Microsoft environment and is basically an enhanced version of
+						their native program Notepad. It has a <strong>small program size
+						and high execution speed</strong>, and Notepad++ is actually
+						trying to <strong>reducing global carbon emissions</strong> by
+						optimizing as many routines as possible by using less CPU power,
+						thereby reducing power consumption. Notepad++ supports tons of
+						programming languages but it is most <strong>popular for writing
+						HTML, CSS and JavaScript.</strong> Some features of the tool
+						include <strong>color coding, language dependent formatting and
+						autocomplete.</strong> Its functionality can be extended by
+						hundreds of plugins, and as it is very fast and lightweight, it
+						has quick load times and can manage large files without lags or
+						crashes. However, some users report that it will crash when
+						trying to handle large files over 200MBs. A pitfall of the
+						ligthweight software is, that it <strong>does not offer any
+						themes or customizable interface</strong> like all the other
+						editors support. With its simplicity the userinterface kind of
+						<strong>looks like a Windows 95 program</strong>, which reduces
+						the userexperience and userfriendlieness. You should choose
+						Notepad++ if you care about free and open source and furthermore
+						would like to reduce your carbon footprints, however you should
+						not care too much about userexperience and the userinterface.
+						</br>You can read more abut Notepad++ and download the software
+						<a href="https://notepad-plus-plus.org/"
+						target="_blank">here</a>
+					</p>
 	</div></div>
 	<div="navigation">
 		<ul class="navigation">
