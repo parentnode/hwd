@@ -63,7 +63,9 @@
 						gained huge popularity among the many developeres out
 						there. You should choose Atom if you care about open
 						source and you want an editor that is customizable and
-						easy to pick up on for beginners.</br> You can read more
+						easy to pick up on for beginners.
+					</p>
+						<p>You can read more
 						about Atom and download the editor
 						<a href="https://atom.io/" target="_blank">here</a>
 					</p>
