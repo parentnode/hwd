@@ -35,7 +35,7 @@
 				the 4 most popular text editors.
 			</p>
 		</div>
-		<div class="">
+		<div class="section">
 			<h2>The 4 popular editors</h2>
 			<ul>
 				<li>
@@ -146,36 +146,45 @@
 						languages but it is most <strong>popular for writing
 						HTML, CSS and JavaScript.</strong> Some features of the
 						tool
-						include <strong>color coding, language dependent formatting and
-						autocomplete.</strong> Its functionality can be extended by
-						hundreds of plugins, and as it is very fast and lightweight, it
-						has quick load times and can manage large files without lags or
-						crashes. However, some users report that it will crash when
-						trying to handle large files over 200MBs. A pitfall of the
-						ligthweight software is, that it <strong>does not offer any
-						themes or customizable interface</strong> like all the other
-						editors support. With its simplicity the userinterface kind of
-						<strong>looks like a Windows 95 program</strong>, which reduces
-						the userexperience and userfriendlieness. You should choose
-						Notepad++ if you care about free and open source and furthermore
-						would like to reduce your carbon footprints, however you should
-						not care too much about userexperience and the userinterface.
-						</br>You can read more abut Notepad++ and download the software
+						include <strong>color coding, language dependent
+						formatting and autocomplete.</strong> Its functionality
+						can be extended by hundreds of plugins, and as it is very
+						fast and lightweight, it has quick load times and can
+						manage large files without lags or
+						crashes. However, some users report that it will crash
+						when trying to handle large files over 200MBs. A pitfall
+						of the ligthweight software is, that it <strong>does not
+						offer any themes or customizable interface</strong> like
+						all the other editors support. With its simplicity the
+						userinterface kind of <strong>looks like a Windows 95
+						program</strong>, which reduces the userexperience and
+						userfriendlieness. You should choose Notepad++ if you
+						care about free and open source and furthermore would
+						like to reduce your carbon footprints, however you should
+						not care too much about userexperience and the
+						userinterface. </br>You can read more abut Notepad++ and
+						download the software
 						<a href="https://notepad-plus-plus.org/"
 						target="_blank">here</a>
 					</p>
-	</div></div>
+				</li>
+			</ul>
+		</div>
+	</div>
 	<div id="navigation">
 		<ul class="navigation">
 			<li><a href="software-license">Software license summary</a></li>
 			<li><a href="choose-editor">Choosing an Editor</a></li>
-			<li><a href="development-environment">Setting up the development environment (Install the webstack) (Working with Git)</a></li>
-			<li><a href="before-you-start-coding">Before you start coding (Code conventions)</a></li>
-			<li><a href="playground">Set up playground (practice area) (class-test)</a></li>
+			<li><a href="development-environment">Setting up the
+			development environment (Install the webstack) (Working with
+			Git)</a></li>
+			<li><a href="before-you-start-coding">Before you start coding
+			(Code conventions)</a></li>
+			<li><a href="playground">Set up playground (practice area)
+			(class-test)</a></li>
 		</ul>
 	</div>
 	<div id="footer"></div>
-
 </div>
 </body>
 </html>

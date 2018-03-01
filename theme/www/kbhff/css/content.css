@@ -37,10 +37,10 @@ h6 {
 	font-style: italic;
 }
 li {
-	color: rgba(0, 250, 0, 1)
+
 }
 ul {
-	list-style-type: circle;
+list-style-image: url('../img_css/leaf.jpg');
 
 }
 ol {
