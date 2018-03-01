@@ -42,7 +42,7 @@ li {
 list-style-type: none;
 text-size: inherit;
 }
-ul {
+#content ul {
 list-style-image: url('../img_css/sqb.jpg');
 padding-left: 0;
 }
