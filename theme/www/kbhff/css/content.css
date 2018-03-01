@@ -44,19 +44,20 @@ text-size: inherit;
 }
 #content ul {
 list-style-image: url('../img_css/sqb.jpg');
-padding-left: 0;
+padding-left: 17px;
 }
 
 #content ol {
+	
 	list-style-type: uper-roman;
-	padding-left: 0;
+	padding-left: 0px;
 	}
 .section {
 	text-align: justify;
 }
 .content {
-	padding-left: inherit;
+	padding-left: 0px;
 }
 p {
-
+	padding-left: 0px;
 }
