@@ -59,7 +59,7 @@
 			<li><a href="choose-editor">Choosing an Editor</a></li>
 			<li><a href="development-environment">Setting up the development environment (Install the webstack) (Working with Git)</a></li>
 			<li><a href="before-you-start-coding">Before you start coding (Code conventions)</a></li>
-			<li><a href="playground">Set up playground (practice area) (class-test)</a></li>
+			<li id="active"><a href="playground">Set up playground (practice area) (class-test)</a></li>
 		</ul>
 	</div>
 	<div id="footer"></div>
