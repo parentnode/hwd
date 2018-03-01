@@ -8,7 +8,7 @@
 <body>
 
 <div id="page">
-	<div id="header">
+	<div id="header"></div>
 	<div id="content">
 		<h1>Introduction</h1>
 		<h2>Table of content</h2>
@@ -21,8 +21,8 @@
 			<li><a href="dictionary">Dictionary</a></li>
 		</ul>
 	</div>
-	<div id="navigation">
-	<div id="footer">
+	<div id="navigation"></div>
+	<div id="footer"></div>
 </div>
 
 

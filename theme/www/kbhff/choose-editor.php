@@ -63,7 +63,9 @@
 						gained huge popularity among the many developeres out
 						there. You should choose Atom if you care about open
 						source and you want an editor that is customizable and
-						easy to pick up on for beginners.</br> You can read more
+						easy to pick up on for beginners.
+					</p>
+						<p>You can read more
 						about Atom and download the editor
 						<a href="https://atom.io/" target="_blank">here</a>
 					</p>
@@ -174,14 +176,10 @@
 	<div id="navigation">
 		<ul class="navigation">
 			<li><a href="software-license">Software license summary</a></li>
-			<li><a href="choose-editor">Choosing an Editor</a></li>
-			<li><a href="development-environment">Setting up the
-			development environment (Install the webstack) (Working with
-			Git)</a></li>
-			<li><a href="before-you-start-coding">Before you start coding
-			(Code conventions)</a></li>
-			<li><a href="playground">Set up playground (practice area)
-			(class-test)</a></li>
+			<li id="active"><a href="choose-editor">Choosing an Editor</a></li>
+			<li><a href="development-environment">Setting up the development environment (Install the webstack) (Working with Git)</a></li>
+			<li><a href="before-you-start-coding">Before you start coding (Code conventions)</a></li>
+			<li><a href="playground">Set up playground (practice area) (class-test)</a></li>
 		</ul>
 	</div>
 	<div id="footer"></div>
