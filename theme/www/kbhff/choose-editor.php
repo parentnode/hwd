@@ -37,7 +37,7 @@
 		</div>
 		<div class="section">
 			<h2>The 4 popular editors</h2>
-			<ul>
+			<ol>
 				<li>
 					<h3>Atom</h3>
 					<p>
@@ -170,7 +170,7 @@
 						target="_blank">here</a>
 					</p>
 				</li>
-			</ul>
+			</ol>
 		</div>
 	</div>
 	<div id="navigation">
