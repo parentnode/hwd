@@ -66,8 +66,8 @@
 						easy to pick up on for beginners.
 					</p>
 						<p>You can read more
-						about Atom and download the editor
-						<a href="https://atom.io/" target="_blank">here</a>
+						about Atom and download the editor at
+						<a href="https://atom.io/" target="_blank">www.Atom.io</a>
 					</p>
 				</li>
 				<li>
@@ -94,10 +94,12 @@
 						So if you don't care about big capitalistic superpowers
 						keeping and selling your data, you should definentely go
 						for this text editor, since it is fast and flexible!
-						</br>You can read more about Visual Studio Code
-						and download the software
+					</p>
+					<p>
+						You can read more about Visual Studio Code
+						and download the software at
 						<a href="https://code.visualstudio.com/"
-						target="_blank">here</a>
+						target="_blank">www.code.visualstudio.com</a>
 					</p>
 				</li>
 				<li>
@@ -126,10 +128,13 @@
 						and powerfull tool. However you should <strong>watch out
 						for the quality and consequences of the many
 						extensions</strong>, that tend to slow the
-						performance.</br>You can read more about Sublime Text and
-						download the software
+						performance.
+					</p>
+					<p>
+						You can read more about Sublime Text and
+						download the software at
 						<a href="https://www.sublimetext.com/"
-						target="_blank">here</a>
+						target="_blank">www.sublimetext.com</a>
 					</p>
 				</li>
 				<li>
@@ -164,10 +169,13 @@
 						care about free and open source and furthermore would
 						like to reduce your carbon footprints, however you should
 						not care too much about userexperience and the
-						userinterface. </br>You can read more abut Notepad++ and
-						download the software
+						userinterface.
+					</p>
+					<p>
+						You can read more abut Notepad++ and
+						download the software at
 						<a href="https://notepad-plus-plus.org/"
-						target="_blank">here</a>
+						target="_blank">www.notepad-plus-plus.org</a>
 					</p>
 				</li>
 			</ol>
@@ -177,9 +185,9 @@
 		<ul class="navigation">
 			<li><a href="software-license">Software license summary</a></li>
 			<li id="active"><a href="choose-editor">Choosing an Editor</a></li>
-			<li><a href="development-environment">Setting up the development environment (Install the webstack) (Working with Git)</a></li>
-			<li><a href="before-you-start-coding">Before you start coding (Code conventions)</a></li>
-			<li><a href="playground">Set up playground (practice area) (class-test)</a></li>
+			<li><a href="development-environment">Setting up the development environment</a></li>
+			<li><a href="before-you-start-coding">Before you start coding</a></li>
+			<li><a href="playground">Set up playground</a></li>
 		</ul>
 	</div>
 	<div id="footer"></div>
