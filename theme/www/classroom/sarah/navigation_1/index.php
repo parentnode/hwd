@@ -12,9 +12,8 @@
 
 <div id="page">
 	<div id="header"></div>
-	<div id="content">
-		<h1>Introduction</h1>
-		<h2>Table of content</h2>
+	<div id="content"></div>
+	<div id="navigation">
 		<ul>
 			<li><a href="software-license">Software license summary</a></li>
 			<li><a href="choose-editor">Choosing an Editor</a></li>
@@ -23,8 +22,8 @@
 			<li><a href="playground">Set up playground</a></li>
 			<li><a href="dictionary">Dictionary</a></li>
 		</ul>
+		
 	</div>
-	<div id="navigation"></div>
 	<div id="footer"></div>
 </div>
 
