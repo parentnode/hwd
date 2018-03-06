@@ -3,45 +3,14 @@
 <head>
 	<title>Software Licenses</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<style type="text/css">
-		.section {
-			max-width: 740px;
-			margin: 0 auto;
-		}
-		img.fullwith {
-			width: 100%;
-			margin: 44px 0 0 80px;
-		}
-		h1 {
-			font-size: 42px;
-			font-weight: 600px;
-			padding-top: 5px;
-		}
-		h2 {
-			font-size: 28px;
-			font-weight: 400px;
-			margin-top: 5px;
-			margin-bottom: 22px;
-		}
-		h3 {
 
-		}
-		p {
-			font-size: 21px;
-			font-weight: 400px;
-			
-		}
 	</style>
 </head>
 <body>
 
 <div id="page">
-	<div id="header">
-		<div class="section">
-
-		</div>
-	</div>
+	<div id="header"></div>
 	<div id="content">
 
 		<div class="section">
