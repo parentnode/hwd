@@ -19,16 +19,6 @@
 	border-right: 2px solid #ddd;
 }
 
-#footer {
-	width: 20%;
-	position: fixed;
-	top: 20px;
-	bottom: 20px;
-	right: 0;
-
-	border-left: 2px solid #ddd;
-}
-
 .navigation a {
 	text-decoration: none;
 }
@@ -47,7 +37,7 @@ ul.navigation {
 }
 
 #active {
-	border-left: 4px solid #0f0;
+	border-left: 4px solid #0b0;
 }
 
 .navigation li:hover {

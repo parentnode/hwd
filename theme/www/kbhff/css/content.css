@@ -1,7 +1,7 @@
 h1 {
 	font-size: 30px;
 	color: rgba(0, 0, 0, 1);
-	line-heigth: 1.30em;
+	line-height: 1.30em;
 	text-align: left;
 	font-weight: bold;
 	padding: inherit;
@@ -38,20 +38,26 @@ h6 {
 	text-align: left;
 	font-style: italic;
 }
-li {
+ul li {
 list-style-type: none;
-text-size: inherit;
+font-size: inherit;
 }
-ul {
-list-style-image: url('../img_css/leaf.jpg');
-padding-left: 0;
+#content ul {
+list-style-image: url('../img_css/sqbgv.png');
+padding-left: 17px;
 }
+
+#content ol {
+	
+	list-style-type: upper-roman;
+	padding-left: 0px;
+	}
 .section {
 	text-align: justify;
 }
 .content {
-	padding-left: inherit;
+	padding-left: 0px;
 }
 p {
-
+	padding-left: 0px;
 }
