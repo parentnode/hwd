@@ -12,18 +12,17 @@
 		width: 270px;
 		
 	}
-	li:hover {
-		color: #fff;
-		background-image: linear-gradient(-45deg,#e10000 0,#ff6a00 100%);
-		}
-	#navigation > ul > li {
+	
+	#navigation  ul  li {
 		padding-top: 20px;
 		border: 1px solid green;
 		text-align: center;
 		display: inline-block;
 		height: 40px;
-		width: 133px;
+		width: 130px;
 		font-size: 14px;
+		vertical-align: middle;
+		text-align: center;
 		
 	}
 	div #navigation{
@@ -35,7 +34,10 @@
 	padding: 0px;
 	color: #fff;
 	}
-
+	li:hover {
+		color: #fff;
+		background-image: linear-gradient(-45deg,#e10000 0,#ff6a00 100%);
+		}
 	</style>
 </head>
 <body>
