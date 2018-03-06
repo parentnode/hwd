@@ -3,150 +3,113 @@
 <head>
 	<title>Software Licenses</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Adamina" rel="stylesheet">
 	<style type="text/css">
-		body {
-			font-family: 'Source Sans Pro',Georgia,Cambria,"Times New Roman",Times,serif;
-			font-size: 18px;
-			line-height: 33px;
-			margin: 0;
+		#page {
+			margin-left: auto;
+			margin-right: auto;
+			width: 940px;
 		}
-		#header {
 
-		}
 		#content {
-			margin-top: 25px;
+		padding: 0 100px 40px;
+		font-family: "Helvetica Neue", helvetica, arial, freesans, clean, sans-serif;
+		color: rgb(51, 51, 51);
+		font-size: 15px;
+		line-height: 1.4;
 		}
-		.section {
-			max-width: 740px;
-			box-sizing: border-box;
 
-			margin: 0 auto;
-			padding-left: 20px;
-			padding-right: 20px;
-			margin-bottom: 20px;
-		}
-		.sectionFullWidht {
-			width: 100%;
-		}
-		.articleMeta {
-			height: 120px;
-			max-width: 740px;
-			box-sizing: border-box;
-
-			margin: 0 auto;
-			padding-left: 20px;
-			padding-right: 20px;
-			padding-top: 35px;
-			padding-bottom: 5px;
-		}
-		.authorAvatar {
-			display: inline-block;
-		}
-		.authorInfo {
-			display: inline-block;
-			vertical-align: top;
-
-			box-sizing: border-box;
-			width: 640px;
-
-			padding-left: 15px;
-
-			font-family: 'Source Sans Pro',Georgia,Cambria,"Times New Roman",Times,serif;
-			font-size: 15px;
-			line-height: 20px;
-		}
-		a.authorName {
-			text-decoration: none;
-			color: #000;
-		}
-		div.authorDescription {
-			font-family: 'Source Sans Pro',Georgia,Cambria,"Times New Roman",Times,serif;
-			color: rgba(0, 0, 0, 0.54);
-			vertical-align: top;
-			
-			margin: 0px;
-		}
-		img.fullWidth {
-			width: 100%;
-			padding: 0px 0 80px 0;
-		}
-		img.hr {
-			margin-top: 43px;
-		}
-		img.avatar {
-			display: block;
-			box-sizing: border-box;
-			width: 60px;
-			height: 60px;
-			border-radius: 30px;
-			margin: 10px 0;
-		}
 		h1 {
-			font-family: 'Source Sans Pro',Georgia,Cambria,"Times New Roman",Times,serif;
+			color: rgb(19, 129, 133);
+			margin: 30px 0 44px;
 			font-size: 42px;
-			font-weight: 600px;
-			line-height: 44px;
-			margin: 0px;
-			padding-bottom: 5px;
+			font-weight: 200;
+			line-height: 1.1;
 		}
+
 		h2 {
-			font-family: 'Source Sans Pro',Georgia,Cambria,"Times New Roman",Times,serif;
-			font-size: 28px;
-			font-weight: 400px;
-			line-height: 34px;
-			color: rgba(0, 0, 0, 0.54);
-
-			margin: 0;
-			padding-bottom: 15px;
-		}
-		h3 {
-			font-family: 'Source Sans Pro',Georgia,Cambria,"Times New Roman",Times,serif;
+			color: rgb(50, 93, 114);
+			margin: 1.5em 0 1em;
 			font-size: 24px;
-			font-weight: 400px;
-			line-height: 34px;
+			font-weight: 700;
+			border-bottom: 1px solid #ddd;
+		}
 
-			margin: 0px;
-			padding-bottom: 5px;
+		h3 {
+			color: rgb(62, 76, 101);
+			font-size: 20px;
+			font-weight: 500;
 		}
-		p {
-			font-family: 'Adamina',Georgia,Cambria,"Times New Roman",Times,serif;
-			font-size: 18px;
-			font-weight: 200px;
-			line-height: 33px;
-			color: rgba(0, 0, 0, 0.84);
-			margin: 0px;
-			padding-bottom: 30px;
 
-		}
-		li {
-			font-family: 'Adamina',Georgia,Cambria,"Times New Roman",Times,serif;
-			font-size: 18px;
-			font-weight: 200px;
-			line-height: 33px;
-			margin: 0px;
-			padding-bottom: 15px;
-		}
 		a {
-			color: rgba(0, 0, 0, 0.84);
-		}
-		.followBtn {
-			display: inline-block;
-			border: 1px solid rgb(133, 133, 133);
-			border-radius: 5px;
-			padding: 0 10px;
-			margin: 0 5px; 
-
+			color: rgb(65, 131, 196);
 			text-decoration: none;
-			color: rgb(133, 133, 133);
 		}
 
-		.block {
-			display: block;
+		ul, ol {
+			list-style: none;
+			padding-left: 0;
+			padding-bottom: 10px;
+			margin: 1em 0;
 		}
-		.horizontalRuler {
-			width: 100%;
+
+		ul li {
+			background: url(img/icon-arrow.png) 0 .4em no-repeat;
+			padding-left: .7em;
+			margin: 5px 0;
+		}
+		
+		ol {
+			counter-reset: li;
+			list-style: none;
+			position: relative;
+			padding-bottom: 10px;
+		}
+
+		ol > li {
+			padding: 5px 0 5px 55px;
+			position: relative;
+			margin-bottom: 5px;
+		}
+
+		ol li::before {
+			content: counter(li);
+			counter-increment: li;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 30px;
+			padding: 0 10px 0 0;
+			color: #999;
+			font-size: 22px;
+			font-weight: 700;
+			line-height: 35px;
+			text-align: right;
+			border-right: 1px solid #ddd;
+		}
+
+		ol li::after {
+			content: ".";
+			display: block;
+			clear: both;
+			visibility: hidden;
+			line-height: 0;
+			height: 0;
+		}
+
+		.alert {
+			position: relative;
+			border-radius: 3px;
+			background-color: #ddd;
+			border: 1px solid #bbb;
+			font-size: 12px;
+			padding: 5px 15px;
+			color: rgb(75, 75, 75);
+		}
+
+		.alert > p::before {
+			content: "Alert: ";
+			font-weight: bold;
 		}
 
 	</style>
@@ -154,27 +117,17 @@
 <body>
 
 <div id="page">
-	<div id="header">
-		<div class="articleMeta">
-			<div class="authorAvatar"><a href="#" class="block"><img src="author-avatar.jpg" class="avatar" /></a></div><div class="authorInfo">
-				<a href="#" class="authorName">Mads Ringblom</a><a href="#" class="followBtn">follow</a>
-				<div class="authorDescription">
-					Copenhagen-based UX-designer and front-end devloper. Founder at meetr.dk<br />
-					Email me at madsringblom@gmail.com <br />
-					Mar 6 &#183; 7 min read
-				</div>
-			</div>
-		</div>
-	</div>
+	<div id="header"></div>
 	<div id="content">
+
+		<div class="alert">
+			<p>Test</p>
+		</div>
 
 		<div class="section">
 			<h1>Software license</h1>
-			<h2>Free as in 'freedom' not as in 'free beer'</h2>
 		</div>
-		<div class="sectionFullWidth">
-			<img class="fullWidth" src="license-hero.jpg" />
-		</div>
+
 		<div class="section">
 			<h2>Introduction</h2>
 			<p>In the first week of the Holistic Web Development Course, we discussed software licenses: what open- and closed-source means, what the pros and cons of different license types are and what license type we should recommend for the KBHFF project. This page outlines our findings.</p>
@@ -187,11 +140,11 @@
 			<p>Closed source is the opposite: software whose code is not published or otherwise made publicly available.</p>
 			<h3>Examples of open source licenses</h3>
 			<p>We looked at a number of different open source licenses. You can read further about them here:</p>
-			<ul>
+			<ol>
 				<li><a href="https://www.gnu.org/licenses/gpl.html">The GNU General Public License (GPL)</a> is a "copyleft" form of opensource licence which allows anyone to access and modify source code and use the (modified or otherwise) source code for either commercial or non-commercial purposes. Any uses of the software/code must also be put into the public domain under the same conditions (i.e. they must also allow further modification).</li>
 				<li> <a href="https://www.gnu.org/licenses/lgpl.html">The GNU Lesser General Public License (LGPL)</a> is less restrictive than the GPL license because it allows software licensed under LGPL to be used in or by closed source software, as long as the original LGPL-licensed software remains in the public domain. Unlike in the GPL, the closed source software will not need to be made open source, even though it utilises some software licensed under LGPL.</li>
 				<li> <a href=https://en.wikipedia.org/wiki/Permissive_software_licence>Permissive Licenses</a>, such as the MIT license, Apache license and Apple Public Source Licence, allow any use of the software and source code, including modifying the original source code and releasing the result under a closed source licence.</li>
-			</ul>
+			</ol>
 			<p>Looking for different kinds of open source software on your computers showed that most of the open source software had been installed by the user. However, it was interesting to find that notepad.exe is in fact open source. There are more examples deeper in the operating systems, but we also see that the adoption of open source projects is done when it is in the interest of the software producer and less so as an act of idealism. We won’t find any GPL licensed software embedded in the operating system, as this would then require the whole operating system to be GPL’d. The exercise also showed that it can sometimes be very hard to identify the license of an application.</p>
 			<p>A good example of open source software is the Adblock browser extension. In particular when it comes to browser extensions, which essentially have the power to monitor every move you make on the internet and sell your private data, the open source aspect is important, as that is the only way to scrutinise the source code and ensure your privacy.</p>
 			<h3>Further reading</h3>
@@ -211,7 +164,6 @@
 					</blockquote></li>
 				<li><a href="https://tldrlegal.com/">Software Licenses in Plain English</a>: Summarises popular software license "at-a-glance".</li>
 			</ul>
-			<img class="horizontalRuler" src="hr.png" />
 		</div>
 
 		<div class="section">
