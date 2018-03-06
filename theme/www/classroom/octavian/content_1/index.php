@@ -3,178 +3,21 @@
 <head>
 	<title>Software Licenses</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Adamina" rel="stylesheet">
+	
 	<style type="text/css">
-		body {
-			font-family: 'Source Sans Pro',Georgia,Cambria,"Times New Roman",Times,serif;
-			font-size: 18px;
-			line-height: 33px;
-			margin: 0;
-		}
-		#header {
-
-		}
-		#content {
-			margin-top: 25px;
-		}
-		.section {
-			max-width: 740px;
-			box-sizing: border-box;
-
-			margin: 0 auto;
-			padding-left: 20px;
-			padding-right: 20px;
-			margin-bottom: 20px;
-		}
-		.sectionFullWidht {
-			width: 100%;
-		}
-		.articleMeta {
-			height: 120px;
-			max-width: 740px;
-			box-sizing: border-box;
-
-			margin: 0 auto;
-			padding-left: 20px;
-			padding-right: 20px;
-			padding-top: 35px;
-			padding-bottom: 5px;
-		}
-		.authorAvatar {
-			display: inline-block;
-		}
-		.authorInfo {
-			display: inline-block;
-			vertical-align: top;
-
-			box-sizing: border-box;
-			width: 640px;
-
-			padding-left: 15px;
-
-			font-family: 'Source Sans Pro',Georgia,Cambria,"Times New Roman",Times,serif;
-			font-size: 15px;
-			line-height: 20px;
-		}
-		a.authorName {
-			text-decoration: none;
-			color: #000;
-		}
-		div.authorDescription {
-			font-family: 'Source Sans Pro',Georgia,Cambria,"Times New Roman",Times,serif;
-			color: rgba(0, 0, 0, 0.54);
-			vertical-align: top;
-			
-			margin: 0px;
-		}
-		img.fullWidth {
-			width: 100%;
-			padding: 0px 0 80px 0;
-		}
-		img.hr {
-			margin-top: 43px;
-		}
-		img.avatar {
-			display: block;
-			box-sizing: border-box;
-			width: 60px;
-			height: 60px;
-			border-radius: 30px;
-			margin: 10px 0;
-		}
-		h1 {
-			font-family: 'Source Sans Pro',Georgia,Cambria,"Times New Roman",Times,serif;
-			font-size: 42px;
-			font-weight: 600px;
-			line-height: 44px;
-			margin: 0px;
-			padding-bottom: 5px;
-		}
-		h2 {
-			font-family: 'Source Sans Pro',Georgia,Cambria,"Times New Roman",Times,serif;
-			font-size: 28px;
-			font-weight: 400px;
-			line-height: 34px;
-			color: rgba(0, 0, 0, 0.54);
-
-			margin: 0;
-			padding-bottom: 15px;
-		}
-		h3 {
-			font-family: 'Source Sans Pro',Georgia,Cambria,"Times New Roman",Times,serif;
-			font-size: 24px;
-			font-weight: 400px;
-			line-height: 34px;
-
-			margin: 0px;
-			padding-bottom: 5px;
-		}
-		p {
-			font-family: 'Adamina',Georgia,Cambria,"Times New Roman",Times,serif;
-			font-size: 18px;
-			font-weight: 200px;
-			line-height: 33px;
-			color: rgba(0, 0, 0, 0.84);
-			margin: 0px;
-			padding-bottom: 30px;
-
-		}
-		li {
-			font-family: 'Adamina',Georgia,Cambria,"Times New Roman",Times,serif;
-			font-size: 18px;
-			font-weight: 200px;
-			line-height: 33px;
-			margin: 0px;
-			padding-bottom: 15px;
-		}
-		a {
-			color: rgba(0, 0, 0, 0.84);
-		}
-		.followBtn {
-			display: inline-block;
-			border: 1px solid rgb(133, 133, 133);
-			border-radius: 5px;
-			padding: 0 10px;
-			margin: 0 5px; 
-
-			text-decoration: none;
-			color: rgb(133, 133, 133);
-		}
-
-		.block {
-			display: block;
-		}
-		.horizontalRuler {
-			width: 100%;
-		}
 
 	</style>
 </head>
 <body>
 
 <div id="page">
-	<div id="header">
-		<div class="articleMeta">
-			<div class="authorAvatar"><a href="#" class="block"><img src="author-avatar.jpg" class="avatar" /></a></div><div class="authorInfo">
-				<a href="#" class="authorName">Mads Ringblom</a><a href="#" class="followBtn">follow</a>
-				<div class="authorDescription">
-					Copenhagen-based UX-designer and front-end devloper. Founder at meetr.dk<br />
-					Email me at madsringblom@gmail.com <br />
-					Mar 6 &#183; 7 min read
-				</div>
-			</div>
-		</div>
-	</div>
+	<div id="header"></div>
 	<div id="content">
 
 		<div class="section">
 			<h1>Software license</h1>
-			<h2>Free as in 'freedom' not as in 'free beer'</h2>
 		</div>
-		<div class="sectionFullWidth">
-			<img class="fullWidth" src="license-hero.jpg" />
-		</div>
+
 		<div class="section">
 			<h2>Introduction</h2>
 			<p>In the first week of the Holistic Web Development Course, we discussed software licenses: what open- and closed-source means, what the pros and cons of different license types are and what license type we should recommend for the KBHFF project. This page outlines our findings.</p>
@@ -211,7 +54,6 @@
 					</blockquote></li>
 				<li><a href="https://tldrlegal.com/">Software Licenses in Plain English</a>: Summarises popular software license "at-a-glance".</li>
 			</ul>
-			<img class="horizontalRuler" src="hr.png" />
 		</div>
 
 		<div class="section">
