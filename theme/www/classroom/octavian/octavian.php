@@ -105,6 +105,7 @@ The Apache windows binaries  are avalable at : <a href="http://www.apachelounge.
 <li><p>choco install ffmpeg</p></li> 
 </ol> 
 <hr>
-https://www.wikihow.com/Install-FFmpeg-on-Windows
+<a>href="https://www.wikihow.com/Install-FFmpeg-on-Windows"<span class="blink">Installing FFmpeg
+<hr>
 </body>
 </html>
