@@ -12,6 +12,9 @@
 			line-height: 33px;
 			margin: 0;
 		}
+		#header {
+
+		}
 		#content {
 			margin-top: 25px;
 		}
@@ -28,7 +31,13 @@
 			width: 100%;
 		}
 		.articleMeta {
-			height: 80px;
+			height: 120px;
+			max-width: 740px;
+			box-sizing: border-box;
+
+			margin: 0 auto;
+			padding-left: 20px;
+			padding-right: 20px;
 			padding-top: 35px;
 			padding-bottom: 5px;
 		}
@@ -146,15 +155,13 @@
 
 <div id="page">
 	<div id="header">
-		<div class="section"> 
-			<div class="articleMeta">
-				<div class="authorAvatar"><a href="#" class="block"><img src="author-avatar.jpg" class="avatar" /></a></div><div class="authorInfo">
-					<a href="#" class="authorName">Mads Ringblom</a><a href="#" class="followBtn">follow</a>
-					<div class="authorDescription">
-						Copenhagen-based UX-designer and front-end devloper. Founder at meetr.dk<br />
-						Email me at madsringblom@gmail.com <br />
-						Mar 6 &#183; 7 min read
-					</div>
+		<div class="articleMeta">
+			<div class="authorAvatar"><a href="#" class="block"><img src="author-avatar.jpg" class="avatar" /></a></div><div class="authorInfo">
+				<a href="#" class="authorName">Mads Ringblom</a><a href="#" class="followBtn">follow</a>
+				<div class="authorDescription">
+					Copenhagen-based UX-designer and front-end devloper. Founder at meetr.dk<br />
+					Email me at madsringblom@gmail.com <br />
+					Mar 6 &#183; 7 min read
 				</div>
 			</div>
 		</div>
