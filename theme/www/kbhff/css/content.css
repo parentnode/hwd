@@ -1,7 +1,7 @@
 h1 {
 	font-size: 30px;
 	color: rgba(0, 0, 0, 1);
-	line-heigth: 1.30em;
+	line-height: 1.30em;
 	text-align: left;
 	font-weight: bold;
 	padding: inherit;
@@ -40,7 +40,7 @@ h6 {
 }
 ul li {
 list-style-type: none;
-text-size: inherit;
+font-size: inherit;
 }
 #content ul {
 list-style-image: url('../img_css/sqbgv.png');
@@ -49,7 +49,7 @@ padding-left: 17px;
 
 #content ol {
 	
-	list-style-type: uper-roman;
+	list-style-type: upper-roman;
 	padding-left: 0px;
 	}
 .section {
