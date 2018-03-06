@@ -7,7 +7,10 @@
 	<style type="text/css">
 
 /* Style navigation to look like https://www.politico.com/ */
-
+		body {
+			margin: 0;
+		}
+		
 		#navigation ul {
 			list-style: none;
 			background: #840000;
