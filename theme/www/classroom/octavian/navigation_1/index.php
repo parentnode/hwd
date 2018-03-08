@@ -13,30 +13,103 @@
 		
 	}
 	
-	#navigation  ul  li {
-		padding-top: 20px;
-		border: 1px solid green;
-		text-align: center;
+	#navigation > ul > li {
+		
+		border: 1px solid; color:#e5e7eb;
+		text-align: top;
 		display: inline-block;
-		height: 40px;
+		height: 60px;
 		width: 130px;
 		font-size: 14px;
-		vertical-align: middle;
+		vertical-align: top;
 		text-align: center;
+		border-right-color: transparent;
+		border-bottom-color: transparent;
+	}
+	
+	
+
+	li:nth-child(1) > a {
+		display: block;
+		background-image: url("img/license.png");
+		background-size: 40px;
+	
+		background-position: center top;
+	}
+	li:nth-child(2) > a {
+		display: block;
+		background-image: url("img/editor");
+		background-size: 40px;
+		
+		background-position: center top;
+	}
+	li:nth-child(3) > a {
+		display: block;
+		background-image: url("img/license.png");
+		background-size: 40px;
+	
+		background-position: center 1px;
+	}
+	li:nth-child(4) > a {
+		display: block;
+		background-image: url("img/	editor");
+		background-size: 40px;
+		
+		background-position: center 1px;
+	}
+	li:nth-child(5) > a {
+		display: block;
+		background-image: url("img/	github");
+		background-size: 20px;
+		
+		background-position: center 2px;
+	}
+	li:nth-child(6) > a {
+		
+		background-image: url("img/dictonary");
+		background-size: 20px;
+	
+		background-position: center 3px;
+	}
+
+
+
+
+
+	#navigation > ul > li:nth-child(2n+1) {
+		border-left-color: transparent;
 		
 	}
+
+	#navigation > ul > li > a {
+		color: rgb(225, 0, 0);
+		padding-top: 20px;
+		display: block;
+		background-repeat: no-repeat;
+		
+
+	}
+	#navigation > ul > li:hover > a {
+		color: rgb(255, 255, 255);
+	}
+
 	div #navigation{
 		border-bottom-color: rgb(254, 49, 12)
 	}
 	#navigation ul {
 	font-size: 0;
+	border: 1px solid;
 	list-style: none;
 	padding: 0px;
 	color: #fff;
+	border-top: 2px solid #fe310c;
+	border-bottom: 2px solid #fe310c;
 	}
-	li:hover {
+	#navigation > ul > li:hover {
 		color: #fff;
 		background-image: linear-gradient(-45deg,#e10000 0,#ff6a00 100%);
+		background-size: 100%;
+
 		}
 	</style>
 </head>
