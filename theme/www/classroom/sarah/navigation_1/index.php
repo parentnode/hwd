@@ -7,23 +7,35 @@
 	<style type="text/css">
 
 /* Style navigation to look like https://www.politico.com/ */
+		* {
+			font-size: 16px;
+		}
+
 		body {
 			margin: 0;
 		}
-		
+
+		#header {
+			height: 56px;
+			background: #9e0000;
+			border-bottom: 1px solid #6b0000;
+		}
+
+		#navigation {
+			position: absolute;
+			top: 55px;
+/* To move the navigation block so it covers the border of the header */
+		}
+
 		#navigation ul {
 			list-style: none;
 			background: #840000;
 			font-family: Arial,sans-serif;
-			font-size: 16px;
-			padding: 1.6875em;
+			font-size: 0px;
+			width: 1295px;
+			/* padding: 1.6875em; Have to convert to px due to font size 0. */
+			padding: 27px;
 			margin: 0;
-		}
-/* Need to add min width to window of 42.875em */
-
-		#navigation a {
-			color: #fff;
-			text-decoration: none;
 		}
 
 		#navigation li {
@@ -39,12 +51,20 @@
 			font-weight: bold;
 			width: 15.489642184557%;
 			display: inline-block;
+			/* top: 55px; */
+/* To move the navigation block so it covers the border of the header */
 		}
 
 		#navigation li:first-child {
 			margin-left: 0;
 		}
 
+		#navigation a {
+			color: #fff;
+			text-decoration: none;
+		}
+
+														/* UNUSED CODE */
 		/* .vertical-group { */
 			/* font-size: 24px; */
 			/* width: 15.489642184557%; */
