@@ -22,8 +22,8 @@
 		}
 
 		#navigation {
-			position: absolute;
-			top: 55px;
+			position: relative;
+			top: -1px;
 /* To move the navigation block so it covers the border of the header */
 		}
 
@@ -32,10 +32,10 @@
 			background: #840000;
 			font-family: Arial,sans-serif;
 			font-size: 0px;
-			width: 1295px;
+			/* width: 1295px; */
+			margin: 0 17px 0 0;
 			/* padding: 1.6875em; Have to convert to px due to font size 0. */
 			padding: 27px;
-			margin: 0;
 		}
 
 		#navigation li {
