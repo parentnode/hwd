@@ -10,23 +10,20 @@
 	
 		font-family: 'Roboto', sans-serif;
 		width: 270px;
-		
-	}
-	div #navigation{
-		border-bottom-color: rgb(254, 49, 12)
+		border-bottom-color: rgb(254, 49, 12);	
 	}
 	#navigation ul {
-	font-size: 0;
-	border: 1px solid;
-	list-style: none;
-	padding: 0px;
-	color: #fff;
-	border-top: 2px solid #fe310c;
-	border-bottom: 2px solid #fe310c;
+		font-size: 0;
+		border: 1px solid;
+		list-style: none;
+		padding: 0px;
+		color: #fff;
+		border-top: 2px solid #fe310c;
+		border-bottom: 2px solid #fe310c;
 	}	
 	#navigation > ul > li {
-		border: 0px solid; color:#e5e7eb;
-		text-align: top;
+		border: 0px solid;
+		color:#e5e7eb;
 		display: inline-block;
 		height: 60px;
 		width: 130px;
@@ -35,6 +32,21 @@
 		text-align: center;
 		border-right-color: transparent;
 		border-bottom-color: transparent;
+	}
+	#navigation > ul > li:nth-child(2n+1) {
+		border-left-color: transparent;
+	}
+	#navigation > ul > li:hover {
+		color: #fff;
+		background-image: linear-gradient(-45deg,#e10000 0,#ff6a00 100%);
+		background-size: 100%;
+	}
+	#navigation > ul > li > a {
+		color: rgb(225, 0, 0);
+		padding-top: 20px;
+		display: block;
+		background-repeat: no-repeat;
+		display: block;
 	}
 	#navigation > ul >li:nth-child(1) > a {
 		background-image: url("img/license.png");
@@ -66,24 +78,10 @@
 		background-size: 20px;
 		background-position: center 3px;
 	}
-	#navigation > ul > li:nth-child(2n+1) {
-		border-left-color: transparent;
-	}
-	#navigation > ul > li > a {
-		color: rgb(225, 0, 0);
-		padding-top: 20px;
-		display: block;
-		background-repeat: no-repeat;
-		display: block;
-	}
 	#navigation > ul > li:hover > a {
 		color: rgb(255, 255, 255);
 	}
-	#navigation > ul > li:hover {
-		color: #fff;
-		background-image: linear-gradient(-45deg,#e10000 0,#ff6a00 100%);
-		background-size: 100%;
-		}
+	
 	</style>
 </head>
 <body>
