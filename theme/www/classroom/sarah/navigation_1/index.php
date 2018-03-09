@@ -22,8 +22,11 @@
 		}
 
 		#navigation {
-			position: relative;
-			top: -1px;
+			/* position: relative; */
+			/* top: -1px; */
+			position: absolute;
+			top: 55px;
+			/* width: 100%; */
 /* To move the navigation block so it covers the border of the header */
 		}
 
@@ -91,7 +94,7 @@
 	<div id="navigation">
 		<ul>
 			<!-- <div class="vertical-group"> -->
-			<li><a href="software-license">Software license</a></li>
+			<li><a href="software-license">Software li cense</a></li>
 			<!-- </div> -->
 			<!-- <div class="vertical-group"> -->
 			<li><a href="choose-editor">Choosing an Editor</a></li>
