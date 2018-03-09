@@ -82,7 +82,7 @@
 	#navigation > ul > li:hover > a {
 		color: rgb(255, 255, 255);
 	}
-	
+
 	</style>
 </head>
 <body>

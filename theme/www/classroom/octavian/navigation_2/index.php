@@ -7,6 +7,7 @@
 	body{
 		margin: 0px;
 	}
+	@media (min-width: 900px) {
 	#header {
 		padding: 0px;
 		height: 55px;
@@ -53,6 +54,62 @@
 		border-bottom-style: solid;
 		border-bottom-color: #6b0000;
 	}
+}
+@media (max-width: 900px) {
+
+
+#header {
+		padding: 0px;
+		height: 55px;
+		background: #9e0000;
+		border-bottom: 1px solid #6b0000;
+	}
+	#navigation ul{
+		font-size: 0px;
+		border: 0px solid;
+		padding: 0px;
+		color: #fff;
+		list-style: none;
+		width: 100%;
+		background: #840000;
+	}
+	#navigation > ul > li{
+		margin-left: 10px;
+		display: block;
+		width: calc(16.66% - 10px);
+		border: 0px transparent;
+		padding: 0px;
+		color: #fff;
+		list-style: none;
+		vertical-align: center;
+		text-align: left;
+		height: 50px;
+		line-height: 1em;
+		font-weight: normal;
+		
+		
+	}
+
+	#navigation > ul > li > a {
+	font-family:  Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	text-decoration: none;
+	line-height: 16px;
+	padding: 6px;
+	color: #fff;
+	padding-top: 10px;
+	display: block;
+	background-repeat: no-repeat;
+	border-bottom-width: 2px;
+		border-bottom-style: solid;
+		border-bottom-color: #6b0000;
+	}
+
+
+
+
+
+}
 	</style>
 </head>
 <body>
