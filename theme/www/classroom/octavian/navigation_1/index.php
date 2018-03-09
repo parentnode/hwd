@@ -15,7 +15,7 @@
 	
 	#navigation > ul > li {
 		
-		border: 1px solid; color:#e5e7eb;
+		border: 0px solid; color:#e5e7eb;
 		text-align: top;
 		display: inline-block;
 		height: 60px;
