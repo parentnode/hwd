@@ -5,6 +5,25 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<style type="text/css">
 
+		#navigation {
+			width: 250px;
+			height: 400px;
+		}
+
+		ul {
+			font-size: 0;
+			margin: 0;
+			padding: 0;
+		}
+
+		li {
+			font-size: 10px;
+			width: 50%;
+			height: 50px;
+			display: inline-block;
+			vertical-align: top;
+		}
+
 	</style>
 </head>
 <body>
