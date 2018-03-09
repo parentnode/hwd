@@ -32,6 +32,7 @@
 		text-align: center;
 		border-right-color: transparent;
 		border-bottom-color: transparent;
+	
 	}
 	#navigation > ul > li:nth-child(2n+1) {
 		border-left-color: transparent;
@@ -46,7 +47,7 @@
 		padding-top: 20px;
 		display: block;
 		background-repeat: no-repeat;
-		display: block;
+		text-decoration: none;
 	}
 	#navigation > ul >li:nth-child(1) > a {
 		background-image: url("img/license.png");
