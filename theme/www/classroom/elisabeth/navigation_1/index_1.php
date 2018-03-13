@@ -9,7 +9,7 @@ body {
 }
 ul {
 	list-style-type: none;
-	height: 196px;
+	height: 156px;
 	background-color: #840000;
 	padding: 27px;
 	margin-right: 18px;
