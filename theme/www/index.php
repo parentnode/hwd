@@ -10,6 +10,8 @@
 
 <ul>
 	<li><a href="/classroom">Class room</a></li>
+	<li><a href="/exercises">Exercises</a></li>
+	<li><a href="/homework">Homework area</a></li>
 
 	<li><a href="/kbhff">KBHFF guide</a></li>
 </ul>
