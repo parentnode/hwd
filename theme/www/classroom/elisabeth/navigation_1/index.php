@@ -10,10 +10,8 @@
 	width: 25%;
 	margin-left: 100px;
 	background-color: #FFFFFF;
-	border-bottom: 2px solid #F42D2D;
-	border-top: 2px solid #F42D2D;
-	border-right: 1px solid #e5e7eb;
-	border-left: 1px solid #e5e7eb;
+	border-bottom: 1.5px solid #F42D2D;
+	border-top: 1.5px solid #F42D2D;
 	width: 280px;
 	padding-left: 0;
 	}
@@ -49,8 +47,8 @@ li:nth-child(3) {
 	background-position: top;
 }
 li:nth-child(4) {
-	background-image: url("img/html_css.jpg");
-	background-size: 40px;
+	background-image: url("img/html_css.png");
+	background-size: 30px;
 	background-repeat: no-repeat;
 	background-position: top;
 }
@@ -62,7 +60,7 @@ li:nth-child(5) {
 	background-position: top;
 }
 li:nth-child(6) {
-	background-image: url("img/dictonary.jpg");
+	background-image: url("img/dictonary.png");
 	background-size: 30px;
 	background-repeat: no-repeat;
 	background-position: top;
