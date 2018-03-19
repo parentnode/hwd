@@ -9,7 +9,7 @@
 		#page {width: 500px; margin: 0 auto;}
 		#content {height: 672px;}
 		#content:hover {background: transparent url(img/bg_101.png) no-repeat left top;}
-		#content:hover * {opacity: 0;}
+		#content:hover * {opacity: 0.5;}
 
 
 		/* ADD YOUR CSS HERE */
@@ -18,23 +18,34 @@
 			color: black;
 		}
 		h1 {
-			margin: 0px;
+			margin: 10px;
 			padding-top: 48px;
 			padding-bottom: 16px;
 			font-family: 'Times New Roman', Times, serif;
 			font-size: 36px; 
 			font-weight: 800;
 		}
-		h2 {
+		#content > h2 {
+			margin: 60px;
+			padding-top: 54px;
+			padding-bottom: 14px;
+			font-family: Arial, sans-serif;
+			font-size: 2px;
+			font-style: italic;
+			line-height: 1.2em;
+		}
+		#content + h2 {
 			margin: 0px;
-			padding-top: 14px;
+			padding-top: 24px;
 			padding-bottom: 14px;
 
 			font-family: Arial, sans-serif;
 			font-size: 22px;
 			font-style: italic;
-			line-height: 26px;
+			line-height: 1.2em;
 		}
+		
+	
 		h3 {
 			margin: 0px;
 			padding-top: 12px;
@@ -51,12 +62,12 @@
 
 			font-family: Arial, sans-serif;
 			font-size: 16px;
-			line-height: 19px;
+			line-height: 1.2em;
 		}
 		ol {
 			margin: 0px;
 			padding-left: 30px;
-			padding-bottom: 14px;
+			padding-bottom: 35px;
 		}
 		ol li {
 			padding-bottom: 7px;
