@@ -21,7 +21,7 @@ ul {
 	padding-left: 0;
 }
 li {
-	width: calc(16.66% - 20px);
+	width: calc(16.4% - 20px);
 	display: inline-block;
 	border-bottom: 2px solid #6b0000;
 	margin-bottom: 0.4em;
