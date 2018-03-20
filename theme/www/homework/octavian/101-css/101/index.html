@@ -9,95 +9,118 @@
 		#page {width: 500px; margin: 0 auto;}
 		#content {height: 672px;}
 		#content:hover {background: transparent url(img/bg_101.png) no-repeat left top;}
-		#content:hover * {opacity: 0.5;}
+		#content:hover * {opacity: 0;}
+
 
 		/* ADD YOUR CSS HERE */
-		* {
+	
+		#content {
+			padding-top: 47px;
 			font-family: 'Arial', sans-serif;
 			color: black;
 		}
-		h1 {
-			margin: 10px;
-			padding-top: 48px;
-			padding-bottom: 16px;
-
-			font-family: 'Times New Roman', Times, serif;
-			font-size: 36px; 
-			font-weight: 800;
-		}
-		#content > h2 {
-			margin: 60px;
-			padding-top: 54px;
-			padding-bottom: 14px;
-			font-family: Arial, sans-serif;
-			font-size: 2px;
-			font-style: italic;
-			line-height: 1.2em;
-		}
-		#content + h2 {
-			margin: 0px;
-			padding-top: 24px;
-			padding-bottom: 14px;
-
-			font-size: 22px;
-			font-style: italic;
-			line-height: 1.2em;
-		}
-		
-	
-		h3 {
-			margin: 0px;
-			padding-top: 12px;
-			padding-bottom: 15px;
-
-			font-family: 'Times New Roman', Times, serif;
-			font-size: 18px;
-			line-height: 24px;
-		}
 		p {
-			margin: 0px;
 			padding-top: 0px;
-			padding-bottom: 15px;
-
-			font-size: 16px;
-			line-height: 1.2em;
+			padding-bottom: 0;
+			line-height: 1.19em;
+		}
+		p:nth-child(1){
+			margin: 0;
+			padding-top: 0px;
+			padding-bottom: 0;
+			line-height: 1.19em;
 		}
 		ol {
-			margin: 0px;
-			padding-left: 30px;
-			padding-bottom: 35px;
-		}
-		ol li {
-			padding-bottom: 7px;
-			color: red;
 			font-size: 26px;
-			line-height: 30px;
+			color: red;
+			margin: 0;
+			padding-left: 30px;
+			padding-top: 15px;
+			padding-bottom: 0;
+		}
+		ul {
+			padding-top: 0px;
+			margin: -5px;
+			padding-left: 20px;
+		}
+		ol>li>p {
+			padding-top: 0px;
+			padding-bottom: 0px;
+			line-height: 1.2em;
+			font-size: 16px;
+			color: black;
 		}
 		em {
 			background-color: blue;
 			padding: 3px 2px;
 			color: white;
 		}
-		a {
-			background-color: green;
+		li > h3 {
+			padding-top: 0px;
+			padding-bottom: 0px;
+			font-family: "Times New Roman";
+			font-size: 18px;
+			color: black;
+		}
+		ol {
+			font-size: 0px;
+			margin: -5px;
+			padding-top: 0px;
+			padding-left: 35px;
+			padding-bottom: 0px;
+		}
+		ol > li {
+			padding-top: .000321em;
+			padding-bottom: 0px;
+			color: red;
+			font-size: 26px;
+			line-height: 1.23em;
+			font-weight: 550 ;
+			
+		}
+		ol > li > p  {
+			padding-top: 0px;
+			padding-bottom: 0px;
+		}
+		ol > li > p > a {
+			padding-top: 1px;
+			padding-bottom: 0px;
 			padding: 0px 2px;
+			background-color: green;
 			border-bottom: 2px solid red;
-
 			color: white;
+			line-height: 1.4em;
 			text-decoration: none;
 		}
-		ul {
+		h1 {
+			padding-bottom: 0;
 			margin: 0px;
-			padding-left: 15px;
+			font-family: 'Times New Roman', Times, serif;
+			font-size: 36px; 
+			font-weight: bolder;
+		}
 		
-			font-size: 16px;
-			line-height: 19px;
+		h2:first-of-type  {
+			padding-top: 12px;
+			padding-bottom: -5px;
+			font-style: italic;
+			font-size: 22px;
+			line-height: 1em
+		}
+		h2:last-of-type  {
+			padding-top: 37px;
+			padding-bottom: 0px;
+			
+			font-style: italic;
+			font-size: 22px;
+			line-height: 1.1em
+		}
+		h3 {
+			padding-bottom: 0px;
+			line-height: 1em;
 		}
 		.times {
-			font-family: 'Times New Roman', Times, serif;
-		}
-		.arial {
-			font-family: Arial, Helvetica, sans-serif;
+			font-family: "Times New Roman";
 		}
 		.red {
 			color: red;
@@ -112,7 +135,8 @@
 			color: white;
 			background-color: black;
 		}
-</style>
+
+	</style>
 </head>
 <body>
 
