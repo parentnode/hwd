@@ -7,21 +7,23 @@
 body {
 	margin: 0;
 }
-ul {
+#navigation {
 	list-style-type: none;
 	height: 156px;
 	background-color: #840000;
-	padding: 27px;
+	padding-top: 27px;
 	margin-right: 18px;
 	margin-top: 0;
 	border-top: 56px solid #9e0000;
-
+}
+ul {
+	margin-left: 30px;
+	padding-left: 0;
 }
 li {
-	width: 15%;
+	width: calc(16.4% - 20px);
 	display: inline-block;
 	border-bottom: 2px solid #6b0000;
-	padding: 0 0 0.4em 0;
 	margin-bottom: 0.4em;
 	line-height: 1em;
 	margin-right: 20px;
