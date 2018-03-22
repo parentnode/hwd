@@ -15,23 +15,60 @@
 		/* ADD YOUR CSS HERE */
 		#content {
 			padding-top: 50px;
+			font-family: Verdana;
 		}
+
 		table {
 			height: 225px;
 			width: 500px;
-			border-collapse: collapse;
-			border: 1px solid black;
+			border-spacing: 0px;
+			overflow: hidden;
+			/* border-collapse: collapse; */
+			border: 1.5px solid black;
 			border-radius: 10px;
+			text-align: center;
 		}
 
 		tr:first-child	 {
 			background-color: blue;
+			height: 40px;
+		}
+
+		th, td {
+			padding-right: 14px;
+			padding-bottom: 4px;
+			padding-top: 4px;
+
+			width: 50px;
+		}
+		
+		th:first-child, td:first-child {
+			text-align: left;
+			width: 250px;
+
+			padding-left: 5px;
+			padding-top: 5px;
 		}
 
 		th {
-			font-family: Verdana;
 			color: white;
 			text-transform: uppercase;
+		}
+
+		.top td, .center td, .bottom td {
+			border-bottom: 1.2px dashed grey;
+		}
+
+		.top {
+			vertical-align: top;
+		}
+
+		.center {
+			vertical-align: middle;
+		}
+
+		.bottom {
+			vertical-align: bottom;
 		}
 
 	</style>
