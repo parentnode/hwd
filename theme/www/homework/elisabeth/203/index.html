@@ -5,8 +5,58 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
+	<form action="#" method="[POST|GET]" class="[labelstyle:inject]">
 
+		<fieldset>
 
+		<div class="field string [required]">
+			<label for="input_string">String [required]</label>
+			<input type="text" name="string" id="input_string" />
+			<div class="help">
+			<div class="hint">hint message</div>
+			<div class="error">error message</div>
+			</div>
+		</div>
+		<div class="field email [required]">
+			<label for="input_email">Email</label>
+			<input type="email" name="email" id="input_email" maxlength="255" />
+			<div class="help">
+				<div class="hint">hint message</div>
+				<div class="error">error message</div>
+			</div>
+		</div>
+		<div class="field password [required]">
+			<label for="input_password">Password [required]</label>
+			<input type="password" name="password" id="input_password" maxlength="255" />
+			<div class="help">
+				<div class="hint">hint message</div>
+				<div class="error">error message</div>
+			</div>
+		</div>
+		<div class="field select [required]">
+			<label for="input_select">Select [required]</label>
+			<select name="select" id="input_select">
+				<option value="0" selected="selected">test</option>
+				<option value="1" selected="selected">abe</option>
+				<option value="2" selected="selected">baby</option>
+			</select>
+			<div class="help">
+				<div class="hint">hint message</div>
+				<div class="error">error message</div>
+			</div>
+		</div>
+		<div class="field text [required]">
+			<label for="input_text">Text [required]</label>
+			<textarea name="text" id="input_text"></textarea>
+			<div class="help">
+				<div class="hint">hint message</div>
+				<div class="error">error message</div>
+			</div>
+		</div>
+	</fieldset>
+	<ul class="actions"></ul>
+
+	</form>
 
 
 </body>
