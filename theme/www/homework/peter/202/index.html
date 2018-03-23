@@ -15,7 +15,6 @@
 		/* ADD YOUR CSS HERE */
 		#content {
 			padding-top: 50px;
-			font-family: Verdana;
 		}
 
 		table {
@@ -30,14 +29,16 @@
 			text-align: center;
 		}
 
-		tr:first-child	 {
+		th {
+			height: 30px;
 			background-color: blue;
-			height: 40px;
+			color: white;
+			text-transform: uppercase;
 		}
 
 		th:first-child, td:first-child {
 			text-align: left;
-			width: 250px;
+			width: 100%;
 
 			padding-left: 5px;
 		}
@@ -46,14 +47,9 @@
 			padding-right: 15px;
 			padding-bottom: 5px;
 			padding-top: 5px;
+			padding-left: 5px;
 
-			width: 48px;
-			line-height: 20px;
-		}
-
-		th {
-			color: white;
-			text-transform: uppercase;
+			line-height: 1.25em;
 		}
 
 		.top td, .center td, .bottom td {
