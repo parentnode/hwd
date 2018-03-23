@@ -65,6 +65,7 @@ th  {
 td {
 	border-bottom: 1px dashed black;
 	font: 18px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 tr {
     height: 50px;
@@ -72,12 +73,16 @@ tr {
     text-align: center;
 
 }
+table > tr:last-of-type {
+	border-bottom: none;
+}
 th:first-of-type {
 	padding: 5px;
     width: 40%;
     text-align: left;
 	line-height:20px;
 	text-align: left;
+	line-height: 1.25em;
 	
 	
 }
@@ -96,10 +101,13 @@ td:last-of-type {
     text-align: left;
 	line-height:20px;
 	text-align: left;
-	
-
-
 }
+	
+tr:last-child td {
+	border-bottom: none;
+}
+
+
 
 
 
