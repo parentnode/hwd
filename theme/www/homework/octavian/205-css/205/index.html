@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 205</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+		#content {min-height: 400px;}
+		#header:hover + #content {background: transparent url(assets/bg_205.png) no-repeat left 50px;}
+		#header:hover + #content * {opacity: 0;}
+		#content div.reference_video {padding-top: 50px;}
+		#content div.reference_video video {margin: 0 -26px;}
+		/* ADD YOUR CSS HERE */
+		fieldset{
+			margin-top: 150px;
+			margin-bottom: 2px;
+			margin-left: -10px;
+			margin-right: 0px;	  
+			border: none;	
+			display: block;
+		}
+		.field string > label for {
+		font-size: 12px;
+		padding-bottom: 20px;
+		vertical-align: top;
+
+		}
+		input{
+			border-bottom-left-radius: 5px;
+			border-bottom-right-radius: 5px;
+			width: 280px;
+
+		}
+		div.field {padding: 0 68px 15px; position: relative; font-size: 0; z-index: 1;}
+div.field label {
+	margin-top: 150px;}
+	ul > .actions{
+		text-decoration-style: none;
+
+	}
+		div.field {
+line-height: 20px;
+background-clip: border-box;
+background-color: rgb(5, 255, 255);
+background-image: none;
+background-origin: padding-box;
+background-position: 0% 0%;
+background-position-x: 0%;
+background-position-y: 0%;
+background-repeat: repeat;
+background-size: auto auto;
+border-bottom-color: rgb(220, 220, 50);
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-image-outset: 0;
+border-image-repeat: stretch stretch;
+border-image-slice: 100%;
+border-image-source: none;
+border-image-width: 2;
+border-left-color: rgb(150, 220, 0);
+border-left-style: solid;
+border-left-width: 1px;
+border-right-color: rgb(120, 220, 120);
+border-right-style: solid;
+border-right-width: 1px;
+border-top-color: rgb(231, 6, 130);
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+border-top-style: solid;
+border-top-width: 1px;
+box-shadow: rgb(222, 22, 22) 0px 1px 2px 0px inset;
+color: rgb(170, 170, 170);
+display: inline-block;
+font-family: "OpenSans", Verdana, Arial, sans-serif;
+font-size: 14px;
+font-weight: 400;
+height: 24px;
+margin-bottom: 2px;
+margin-left: 2px;
+margin-right: 2px;
+margin-top: 20px;
+outline-color: rgb(170, 170, 170);
+outline-style: none;
+outline-width: 0px;
+padding-bottom: 2px;
+padding-left: 6px;
+padding-right: 6px;
+padding-top: 2px;
+position: relative;
+vertical-align: top;
+width: 280px;
+z-index: 1;
+-moz-text-size-adjust: none;	
+}
+
+
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header">
+		Hover the mouse here to see reference design
+	</div>
+	<div id="content">
+
+		<form action="#" method="post" novalidate="novalidate">
+			<fieldset>
+				<div class="field string">
+					<label for="input_firstname">First name</label>
+					<input type="text" name="string" id="input_firstname" />
+					<div class="help">
+						<div class="hint">Type your first name</div>
+						<div class="error">That's a weird name</div>
+					</div>
+				</div>
+				<div class="field string">
+					<label for="input_lastname">Last name</label>
+					<input type="text" name="lastname" id="input_lastname" />
+					<div class="help">
+						<div class="hint">Type your last name</div>
+						<div class="error">That's a pretty cool last name</div>
+					</div>
+				</div>
+				<div class="field email">
+					<label for="input_email">Email</label>
+					<input type="email" name="email" id="input_email" />
+					<div class="help">
+						<div class="hint">Make sure to type your email correctly</div>
+						<div class="error">It's not a valid email</div>
+					</div>
+				</div>
+				<div class="field checkbox">
+					<input type="hidden" name="terms" value="0" />
+					<input type="checkbox" name="terms" id="input_terms" value="1" />
+					<label for="input_terms">Accept terms</label>
+					<div class="help">
+						<div class="hint">Please accept the terms</div>
+						<div class="error">You have to accept the terms</div>
+					</div>
+				</div>
+			</fieldset>
+
+			<ul class="actions">
+				<li class="save"><input type="submit" value="Save" class="button primary" /></li>
+			</ul>
+
+		</form>
+
+
+		<div class="reference_video">
+			<h2>Reference video</h2>
+			<video src="assets/vid_205.mp4" width="352" controls></video>
+		</div>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+
+</body>
+</html>
