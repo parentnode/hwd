@@ -10,5 +10,9 @@
 	<dt>rendering engine</dt>
 	<dd>beskrivelse</dd>
 </dl>
+<dl>
+	<dt>snippet</dt>
+	<dd>html navigationsstump, som repræsenterer css styles</dd>
+</dl>
 </body>
 </html>
