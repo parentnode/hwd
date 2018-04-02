@@ -11,7 +11,7 @@
 			font-family: Roboto,Helvetica,Tahoma,Arial;
 		}
 
-		ul {
+		#navigation ul {
 			font-size: 0;
 			margin: 0;
 			padding: 0;
@@ -20,7 +20,7 @@
 			border-bottom: 1px solid #fe310c;
 		}
 
-		li {
+		#navigation li {
 			font-size: 12px;
 			width: 49.5%;
 			height: 70px;
@@ -31,95 +31,96 @@
 			border-bottom: 2px solid #e5e7eb;
 		}
 
-		li a {
+		#navigation li a {
 			color: #e10000;
 			display: block;
 			text-decoration: none;
 			padding-top: 35px;
+			height: 35px;
 		}
-		li:hover {
+		#navigation li:hover {
 			background: linear-gradient(-45deg,#e10000 0,#ff6a00 100%);
 		}
 
-		li:hover a {
+		#navigation li:hover a {
 			color: #fff;
 		}
 
-		li:nth-child(2n+1) {
+		#navigation li:nth-child(2n+1) {
 			border-right: 2px solid #e5e7eb;
 		}
 
-		li:nth-last-child(-n+2) {
+		#navigation li:nth-last-child(-n+2) {
 			border-bottom: none;
 		}
 
-		li:nth-child(1) a {
+		#navigation li:nth-child(1) a {
 			background-image: url(img/red/icon-license.png);
 			background-repeat: no-repeat;
 			background-position: center 10px;
 		}
 
-		li:nth-child(1):hover a {
+		#navigation li:nth-child(1):hover a {
 			background-image: url(img/white/icon-license.png);
 			background-repeat: no-repeat;
 			background-position: center 10px;
 		}
 
-		li:nth-child(2) a {
+		#navigation li:nth-child(2) a {
 			background-image: url(img/red/icon-editor.png);
 			background-repeat: no-repeat;
 			background-position: center 10px;
 		}
 
-		li:nth-child(2):hover a {
+		#navigation li:nth-child(2):hover a {
 			background-image: url(img/white/icon-editor.png);
 			background-repeat: no-repeat;
 			background-position: center 10px;
 		}
 
-		li:nth-child(3) a {
+		#navigation li:nth-child(3) a {
 			background-image: url(img/red/icon-setup.png);
 			background-repeat: no-repeat;
 			background-position: center 10px;
 		}
 
-		li:nth-child(3):hover a {
+		#navigation li:nth-child(3):hover a {
 			background-image: url(img/white/icon-setup.png);
 			background-repeat: no-repeat;
 			background-position: center 10px;
 		}
 
-		li:nth-child(4) a {
+		#navigation li:nth-child(4) a {
 			background-image: url(img/red/icon-conventions.png);
 			background-repeat: no-repeat;
 			background-position: center 10px;
 		}
 
-		li:nth-child(4):hover a {
+		#navigation li:nth-child(4):hover a {
 			background-image: url(img/white/icon-conventions.png);
 			background-repeat: no-repeat;
 			background-position: center 10px;
 		}
 
-		li:nth-child(5) a {
+		#navigation li:nth-child(5) a {
 			background-image: url(img/red/icon-playground.png);
 			background-repeat: no-repeat;
 			background-position: center 10px;
 		}
 
-		li:nth-child(5):hover a {
+		#navigation li:nth-child(5):hover a {
 			background-image: url(img/white/icon-playground.png);
 			background-repeat: no-repeat;
 			background-position: center 10px;
 		}
 
-		li:nth-child(6) a {
+		#navigation li:nth-child(6) a {
 			background-image: url(img/red/icon-dictionary.png);
 			background-repeat: no-repeat;
 			background-position: center 10px;
 		}
 
-		li:nth-child(6):hover a {
+		#navigation li:nth-child(6):hover a {
 			background-image: url(img/white/icon-dictionary.png);
 			background-repeat: no-repeat;
 			background-position: center 10px;

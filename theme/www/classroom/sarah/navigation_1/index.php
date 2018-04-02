@@ -22,10 +22,10 @@
 		}
 
 		#navigation {
-			/* position: relative; */
-			/* top: -1px; */
-			position: absolute;
-			top: 55px;
+			position: relative;
+			top: -1px;
+			/* position: absolute; */
+			/* top: 55px; */
 			/* width: 100%; */
 /* To move the navigation block so it covers the border of the header */
 		}
@@ -50,9 +50,11 @@
 /* Same as padding: 0 0 0.4em 0; */
 			margin-bottom: 0.4em;
 			margin-left: 1.412429378531%;
+			width: 15.489642184557%;
+			/* width: calc(16.67% - 20px); */
+			/* margin-left: 20px; */
 			line-height: 1em;
 			font-weight: bold;
-			width: 15.489642184557%;
 			display: inline-block;
 			/* top: 55px; */
 /* To move the navigation block so it covers the border of the header */
@@ -94,7 +96,7 @@
 	<div id="navigation">
 		<ul>
 			<!-- <div class="vertical-group"> -->
-			<li><a href="software-license">Software li cense</a></li>
+			<li><a href="software-license">Software license</a></li>
 			<!-- </div> -->
 			<!-- <div class="vertical-group"> -->
 			<li><a href="choose-editor">Choosing an Editor</a></li>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 204</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 500px; margin: 0 auto;}
+
+
+		/* ADD YOUR CSS HERE */
+
+		form {
+			width: 100%;
+		}
+		label {
+			display: block;
+		}
+		.checkbox label {
+			display: inline-block;
+		}
+		.radiobuttons label {
+			display: inline-block;
+		}
+		input:focus {
+			background-color: CadetBlue;
+			font-size: 26px;
+			color: yellow;
+		}
+		.help {
+			display: none;
+		}
+		.error {
+			visibility: hidden;
+		}
+		input:focus + div {
+			display: block;
+		}
+		.radiobuttons:hover {
+			background-color: #F0FFFF;
+			border: 3px solid #ADD8E6;
+			color: #F08080;
+			width: 30%;
+			text-align: center;
+			font-family: garamond;
+			font-weight: 400;
+		}
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content">
+		<form action="#" class="[labelstyle:inject]">
+			<fieldset>
+				<div class="field string">
+					<label for="input_string">String</label>
+					<input type="text" name="string" id="input_string" />
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+				<div class="field email">
+					<label for="input_email">Email</label>
+					<input type="email" name="email" id="input_email" maxlength="255" />
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+				<div class="field password">
+					<label for="input_password">Password</label>
+					<input type="password" name="password" id="input_password" maxlength="255" />
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+				<div class="field select">
+					<label for="input_select">Select</label>
+					<select name="select" id="input_select">
+						<option value="0">test</option>
+						<option value="1" selected="selected">abe</option>
+						<option value="2">baby</option>
+					</select>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+				<div class="field text">
+					<label for="input_text">Text</label>
+					<textarea name="text" id="input_text"></textarea>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+				<div class="field checkbox">
+					<input type="hidden" name="checkbox" value="0" />
+					<input type="checkbox" name="checkbox" id="input_checkbox" value="1" />
+					<label for="input_checkbox">Checkbox</label>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+				<div class="field radiobuttons">
+					<label>Radiobuttons</label>
+					<div class="item">
+						<input type="radio" name="radiobuttons" id="input_radiobuttons_value1" value="value1" />
+						<label for="input_radiobuttons_value1">text1</label>
+					</div>
+					<div class="item">
+						<input type="radio" name="radiobuttons" id="input_radiobuttons_value2" value="value2" />
+						<label for="input_radiobuttons_value2">text2</label>
+					</div>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+				<div class="field radiobuttons">
+					<label>Radiobuttons</label>
+					<div class="item">
+						<input type="radio" name="radiobuttons" id="input_radiobuttons_value3" value="value1" />
+						<label for="input_radiobuttons_value1">text1</label>
+					</div>
+					<div class="item">
+						<input type="radio" name="radiobuttons" id="input_radiobuttons_value4" value="value2" />
+						<label for="input_radiobuttons_value2">text2</label>
+					</div>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+			</fieldset>
+			<ul class="actions">
+					<li class="submit"><input type="submit" value="Submit" class="button" /></li>
+			</ul>
+		</form>
+
+		<!-- ADD THE FORM YOU CREATED IN EXERCISE 203 HERE -->
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+
+</body>
+</html>
