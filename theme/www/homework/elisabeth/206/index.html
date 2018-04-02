@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="keywords" content="Sign in, Log Ind, KBHFF, Københavns Fødevarefællesskab" />
+  <meta name="description" content="Sign in page for KBHFF" />
+  <meta name="viewport" content="initial-scale=1, user-scalable=no" />
+  <title>Sign in KBHFF</title>
+  <style>
+  #page {
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  }
+  #content {
+    background-image: url(img/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  fieldset {
+    border:0;
+    padding: 0;
+		margin: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  form {
+  	min-height: 500px;
+    min-width: 400px;
+    width: 400px;
+    margin: auto;
+    text-align: center;
+    border: 1px solid #3E8E17;
+  }
+  h1 {
+    text-transform: uppercase;
+    color: #3E8E17;
+    font-size: 28px;
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
+  input {
+    width: 80%;
+    border: 1px solid #006600;
+    border-radius: 5px;
+    height: 30px;
+    margin-bottom: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: block;
+  }
+  label {
+    display: block;
+    text-align: left;
+    margin-left: 40px;
+    font-weight: 400;
+
+  }
+  .help {
+    display: none;
+    background: #3E8E17;
+    font-size: 14px;
+    height: 15px;
+    width: 80%;
+    margin: -20px 10% 12px 10%;
+    border: 1px solid #006600;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+  }
+  .error {
+    visibility: hidden;
+  }
+  input:focus {
+    outline: none;
+    border-bottom: none;
+		border-bottom-left-radius: 0px;
+		border-bottom-right-radius: 0px;
+  }
+  input:focus + div {
+    display: block;
+  }
+  .checkbox label {
+    display: inline-block;
+    margin: 0;
+    float: left;
+  }
+.checkbox input {
+		width: 15px;
+		height: 15px;
+		float: left;
+		margin-left: 40px;
+		margin-top: 2px;
+		margin-right: 10px;
+}
+.actions {
+		list-style-type: none;
+		padding: 0;
+}
+input.button.primary  {
+		background-color: #3E8E17;
+		height: 50px;
+		font-size: 26px;
+		color: #ffffff;
+}
+.newUser a {
+		text-decoration: none;
+		font-size: 14px;
+		color: black;
+}
+.forgot a {
+		float: left;
+		font-size: 12px;
+		margin-left: 5px;
+		margin-top: 10px;
+		color: #3E8E17;
+		text-decoration: none;
+}
+  </style>
+</head>
+<body>
+  <div id="page">
+
+	<div id="header">
+  	<ul class="servicenavigation">
+      <li class="kaynav front"><a href="/">Københavns Fødevarefællesskab</a></li>
+  		<li class="keynav navigation"><a href="#navigation" rel="nofollow">To navigation</a></li>
+  		<li class="keynav search"><a href="/search" rel="search">Search</a></li>
+      <li class="keynav for_leverandører"><a href="for_leverandører">For suppliers</a></li>
+  		<li class="keynav language en"><a href="?language=en">English</a></li>
+  		<li class="keynav language da"><a href="?language=da">Dansk</a></li>
+  	</ul>
+  </div>
+	<div id="content">
+    <form action="#" method="[POST|GET]" class="[labelstyle:inject]">
+    	<fieldset>
+        <h1>Kbhff medlemsside</h1>
+        <div class="field string">
+          <label for="input_string">User ID</label>
+          <input type="text" name="string" id="input_string" />
+          <div class="help">
+          	<div class="hint">Type ind your KBHFF user ID here</div>
+          	<div class="error">Wrong ID. Type in your 5 digit user ID for KBHFF.</div>
+          </div>
+        </div>
+        <div class="field password">
+        	<label for="input_password">Password</label>
+        	<input type="password" name="password" id="input_password" maxlength="255" />
+        	<div class="help">
+        		<div class="hint">Type in your password here</div>
+        		<div class="error">Wrong password. Did you forget it?</div>
+        	</div>
+        </div>
+        <div class="field checkbox">
+        	<input type="hidden" name="checkbox" value="0" />
+        	<input type="checkbox" name="checkbox" id="input_checkbox" value="1" />
+        	<label for="input_checkbox">Husk mig</label>
+        	<div class="help">
+        		<div class="hint">Klik her hvis du vil gemme dine oplysninger til næste gang du logger ind.</div>
+        		<div class="error">Vil du have browseren til at gemme dine oplysninger til næste gang du logger ind?</div>
+        	</div>
+        </div>
+	    </fieldset>
+
+    	<ul class="actions">
+        <li class="save"><input type="submit" value="Sign In" class="button primary" /></li>
+      </ul>
+      <div class="newUser">
+        <a href="https://medlem.kbhff.dk/blivmedlem/intro" alt="new user">Not a member yet? Sign up here</a>
+      </div>
+      <div class="forgot">
+        <a href="https://medlem.kbhff.dk/login/glemtpassword" alt="Forgot password">Forgot password or user ID?</a>
+      </div>
+
+</form>
+  </div>
+	<div id="navigation">
+    <ul class="navigation">
+  		<li class="front"><a href="/">KBHFF</a></li>
+  		<li class="ugens_pose"><a href="/ugens_pose">Bag of the week</a></li>
+      <li class="vagtplan"><a href="/vagtplan">Roster</a></li>
+      <li class="nyheder"><a href="/nyheder">News</a></li>
+      <li class="afdelinger"><a href="/afdelinger">Departments</a></li>
+      <li class="om_producenter"><a href="/om_producenter">Meet the farmers</a></li>
+      <li class="opskrifter"><a href="/opskrifter">Recepies</a></li>
+      <li class="om"><a href="/om">About</a>
+        <ul class="om_subjects">
+          <li class="grundprincipper"><a href="/grundprincipper">The 10 principles</a></li>
+          <li class="organisationen"><a href="/organisationen">The organization</a></li>
+          <li class="tidslinie"><a href="/tidslinie">Timeline</a></li>
+          <li class="pressen"><a href="/pressen">KBHFF in the press - ikke opdateret i 2 år</a></li>
+        </ul>
+      </li>
+      <li class="kontakt"><a href="kontakt">Contact</a></li>
+	  </ul>
+  </div>
+	<div id="footer">
+    <ul class="servicenavigation">
+    	<li class="terms"><a href="/terms">Terms</a></li>
+    	<li class="press"><a href="/press">Press</a></li>
+      <li class="kontakt"><a href="/kontakt">Contact</a></li>
+      <li class="FAQ"><a href="/FAQ">FAQ</a></li>
+      <li class="nyhedsarkiv"><a href="/nyhedsarkiv">Old blogs posts</a></li>
+      <li class="for_leverandører"><a href="/for_leverandører">For suppliers</a></li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

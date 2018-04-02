@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 205</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+		#content {min-height: 400px;}
+		#header:hover + #content {background: transparent url(assets/bg_205.png) no-repeat left 50px;}
+		#header:hover + #content * {opacity: 0;}
+		#content div.reference_video {padding-top: 50px;}
+		#content div.reference_video video {margin: 0 -26px;}
+
+
+		/* ADD YOUR CSS HERE */
+		#content {
+			font-family: verdana;
+			padding-top: 50px;
+			font-size: 12px;
+			font-weight: 400;
+		}
+		form {
+			width: 100%;
+		}
+		fieldset {
+			margin: 0;
+			padding: 0;
+			border: 0;
+		}
+		label {
+			display: block;
+			padding-left: 5px;
+		}
+		input {
+			width: 100%;
+			height: 30px;
+			border: 1px solid #bbbbbb;
+			border-radius: 3px;
+			margin-bottom: 15px;
+			box-sizing: border-box;
+		}
+		.help {
+			display: none;
+			background: lightgreen;
+			font-size: 10px;
+			height: 15px;
+			margin-top: -17px;
+			margin-bottom: 12px;
+			border: 1px solid green;
+			border-top: none;
+			border-radius: 3px;
+			padding: 5px;
+		}
+		.error {
+			visibility: hidden;
+		}
+		input:focus {
+			border-color: green;
+			border-bottom: none;
+			border-bottom-left-radius: 0px;
+			border-bottom-right-radius: 0px;
+			font-size: 16px;
+			outline: none;
+			vertical-align: middle;
+		}
+		input:focus + div {
+			display: block;
+		}
+		.checkbox label {
+			display: inline-block;
+			padding-left: 10px;
+			height: 20px;
+		}
+		.checkbox input {
+			width: 12px;
+			height: 12px;
+			float: left;
+			margin: 0;
+			margin-top: 2px;
+			/* -webkit-appearance: none; */
+			border-radius: 3px;
+			border: 1px solid #bbbbbb;
+		}
+
+		ul {
+			padding: 0;
+		}
+		input.button.primary {
+		background-color: lightgreen;
+		width: 80px;
+		height: 30px;
+		font-size: 16px;
+		font-weight: 400;
+		}
+		li {
+			list-style-type: none;
+		}
+		.checkbox label:hover + div {
+			display: block;
+		}
+		.checkbox .help {
+			margin-top: 10px;
+			height: 10px;
+			border: 1px solid green;
+			padding-top: 1px;
+		}
+		input.button.primary:hover {
+			background-color: green;
+			color: white;
+			font-weight: 500;
+			cursor: pointer;
+		}
+
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header">
+		Hover the mouse here to see reference design
+	</div>
+	<div id="content">
+
+		<form action="#" method="post" novalidate="novalidate">
+			<fieldset>
+				<div class="field string">
+					<label for="input_firstname">First name</label>
+					<input type="text" name="string" id="input_firstname" />
+					<div class="help">
+						<div class="hint">Type your first name</div>
+						<div class="error">That's a weird name</div>
+					</div>
+				</div>
+				<div class="field string">
+					<label for="input_lastname">Last name</label>
+					<input type="text" name="lastname" id="input_lastname" />
+					<div class="help">
+						<div class="hint">Type your last name</div>
+						<div class="error">That's a pretty cool last name</div>
+					</div>
+				</div>
+				<div class="field email">
+					<label for="input_email">Email</label>
+					<input type="email" name="email" id="input_email" />
+					<div class="help">
+						<div class="hint">Make sure to type your email correctly</div>
+						<div class="error">It's not a valid email</div>
+					</div>
+				</div>
+				<div class="field checkbox">
+					<input type="hidden" name="terms" value="0" />
+					<input type="checkbox" name="terms" id="input_terms" value="1" />
+					<label for="input_terms">Accept terms</label>
+					<div class="help">
+						<div class="hint">Please accept the terms</div>
+						<div class="error">You have to accept the terms</div>
+					</div>
+				</div>
+			</fieldset>
+
+			<ul class="actions">
+				<li class="save"><input type="submit" value="Save" class="button primary" /></li>
+			</ul>
+
+		</form>
+
+
+		<div class="reference_video">
+			<h2>Reference video</h2>
+			<video src="assets/vid_205.mp4" width="352" controls></video>
+		</div>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+
+</body>
+</html>
