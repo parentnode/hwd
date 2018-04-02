@@ -19,7 +19,8 @@
 			margin-left: -10px;
 			margin-right: 0px;	  
 			border: none;	
-			display: block;
+		
+			
 		}
 		.field string > label for {
 		font-size: 12px;
@@ -41,66 +42,87 @@
 			border-color: rgb(127, 127, 127);
 			border-top-color: rgb(127, 127, 127);
 			padding-bottom: 5px;
-			padding-left: 5px;
+			padding-left: px;
 			padding-right: 5px;
 			padding-top: 5px;		
-			width: 280px;
+			width: 290px;
 			outline-color: rgb(0, 170, 17);
-			display: inline-block;
+			
 		}
-		input#input_terms typecheckbox{
-			width: 50%;	
-		}
+	
 		input.button.primary{
 			width: 80px;
 			background-color: lightgreen;	
-			
+		
 		}
+		ul  {	
+				list-style-type: none;
+			}
 		li.save{
 			margin-left: -35px;
 			font-size: 20px;
-		}
-		div.field {padding: 0 0px 0px; position: relative; font-size: 0; z-index: 1;}
-div.field label {
-	margin-top: 150px;}
-	ul  {	
-		list-style-type: none;
-	}
+		}	
 		div.field {
-line-height: 20px;
-background-clip: border-box;
-background-color: rgb(255, 255, 255);
-background-image: none;
-background-origin: padding-box;
-background-position: 0% 0%;
-background-position-x: 0%;
-background-position-y: 0%;
+			line-height: 20px;
+			display: block;
+			font-family: "OpenSans", Verdana, Arial, sans-serif;
+			font-size: 12px;
+			font-weight: 400;
+			height: 30px;
+			margin-bottom: 2px;
+			margin-left: 3px;
+			margin-right: 2px;
+			margin-top: 30px;
+			outline-color:rgb(127, 127, 127);
+			outline-width: 1px;
+		}
+		div.field label {
+			margin-top: 150px;
+			}
+		.help {
+			visibility: hidden;
+			}
+		input[type=text]:focus, input[type=email]:focus {
+					border: 1px solid green;
+					padding-bottom: 15px;
+					background: linear-gradient(white 63%, lightgreen 37%);
+					padding-left: 1px;
+				}
+		input:focus + div > div.hint {
+			visibility: visible;
+			position: relative;
+			bottom: 20px;
+			padding-left: 6px;
+			font-size: 10px;
+			padding-top: 2px;
+		}
+		input[type=checkbox] {
+					vertical-align: bottom ;		
+				}
 
-background-size: auto auto;
-
-
-display: inline-block;
-font-family: "OpenSans", Verdana, Arial, sans-serif;
-font-size: 12px;
-font-weight: 400;
-height: 30px;
-margin-bottom: 2px;
-margin-left: 5px;
-margin-right: 2px;
-margin-top: 30px;
-outline-color: rgb(17, 170, 170);
-outline-style: none;
-outline-width: 1px;
-padding-bottom: 2px;
-
-
-position: relative;
-vertical-align: top;
-width: 280px;
-z-index: 1;
--moz-text-size-adjust: none;	
-}
-
+		div.checkbox:hover > div.help > div.hint {
+				visibility: visible;
+				font-size: 10px;
+				width: 300px;
+				box-sizing: border-box;
+				margin: 10px 0px 0px 0px;
+				padding: 0px;
+				background-color: lightgreen;
+				border: 1px solid green;
+				border-radius: 3px;
+				padding-left: 5px;
+				display: inline-block;			
+			}
+			input.button{
+				display: block;
+				
+			}
+			input.button:hover {
+				background-color: green;
+				border: 1px solid grey;
+				color: white;
+			}
+	
 
 	</style>
 </head>
