@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 202</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 500px; margin: 0 auto;}
+		#content {min-height: 400px;}
+		#content:hover {background: transparent url(img/bg_202.png) no-repeat left 50px;}
+		#content:hover * {opacity: 0;}
+
+
+		/* ADD YOUR CSS HERE */
+		#content{
+			padding-top: 50px;
+		}
+		table>tr {
+			background-color:white;
+			
+			background-size:inherit;
+		}
+		table {
+			border-spacing:0px;
+			box-sizing: border-box;
+			background-color:blue;
+			overflow: hidden;	
+    		width: 100%;
+			border: 1px solid black;
+			border-radius: 10px;
+	
+		}
+
+th  {
+	
+    height: 20px;
+	font-size: 18px;
+	font-family:  Arial, sans-serif;
+	font-weight: bolder;
+	color: white;
+	text-transform:uppercase;
+	background-color: blue;
+    text-align: center;
+	padding: 10px, 15px, 10px, 10px;
+	
+	
+}
+
+.top{
+	vertical-align: top;
+	background-color:white;
+}
+
+.center{
+	background-color:white;
+    height: 50px;
+    text-align: center;
+	vertical-align: center;
+}
+.bottom{
+	vertical-align: bottom;
+	background-color:white;
+}
+
+td {
+	border-bottom: 1px dashed black;
+	font: 18px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+tr {
+    height: 50px;
+	background-color:white;
+    text-align: center;
+
+}
+table > tr:last-of-type {
+	border-bottom: none;
+}
+th:first-of-type {
+	padding: 5px;
+    width: 45%;
+    text-align: left;
+	line-height:20px;
+	text-align: left;
+	line-height: 1.25em;
+	
+	
+}
+td:first-of-type {
+	padding: 5px;
+    width: 40%;
+    text-align: left;
+	line-height:20px;
+	text-align: left;
+
+}
+td:last-of-type {
+	padding: 5px;
+    width: 25%;
+	font: 18px;
+    text-align: center;
+	line-height:20px;
+	
+}
+tr:first-child  {
+	height: 40px;
+	
+}
+
+tr:last-child  {
+	height: 30px;
+	
+}
+	
+tr:last-child td {
+	height: 10px;
+	border-bottom: none;
+	line-height:10px;
+	
+}
+
+
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content">
+
+		<table>
+		<tr>
+			<th>name</th>
+			<th>number</th>
+			<th>car</th>
+			<th>alignment</th>
+		</tr>
+		<tr class="top">
+			<td>Martin</td>
+			<td>1</td>
+			<td>no</td>
+			<td>I'm top aligned</td>
+		</tr>
+		<tr class="center">
+			<td>Anja</td>
+			<td>2</td>
+			<td>no</td>
+			<td>I'm center aligned</td>
+		</tr>
+		<tr class="bottom">
+			<td>Romeo</td>
+			<td>3</td>
+			<td>no</td>
+			<td>I'm bottom aligned</td>
+		</tr>
+		<tr>
+			<td>Elo</td>
+			<td>4</td>
+			<td>yes</td>
+			<td>none</td>
+		</tr>
+		</table>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+
+</body>
+</html>
