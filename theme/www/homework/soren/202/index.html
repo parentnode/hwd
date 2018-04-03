@@ -13,16 +13,56 @@
 
 
 		/* ADD YOUR CSS HERE */
-		
-		
+		#content {
+			padding-top: 50px;
+		}
+
 		table {
 			border: 1px solid black;
-
+			width: 100%;
+			border-spacing: 0px;
+			border-radius: 10px;
+			overflow: hidden;
+			font-family: Verdana, Geneva, Tahoma, sans-serif; 
 		}
+
 		th  {
-			
-
+			background-color: blue; 
+			color: white;
+			text-transform: uppercase;
+			line-height: 1.25em;
+			padding: 10px 15px 10px 5px;
 		}
+
+		th:first-child,td:first-child {
+			width: 100%;
+			text-align: left;
+		}
+
+		td {
+			border-bottom: 1px dashed grey;
+			padding: 5px 15px 5px 5px;
+			line-height: 1.25em;
+			text-align: center;
+		}
+
+		.top {
+			vertical-align: top;
+		}
+
+		.center {
+			vertical-align: middle;
+		}
+
+		.bottom {
+			vertical-align: bottom;
+		}
+
+		tr:last-child td {
+			border: none;
+		} 
+
+
 
 
 	</style>
