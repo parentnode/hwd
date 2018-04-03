@@ -55,7 +55,7 @@
 		background-position: center top;
 	}
 	#navigation > ul >li:nth-child(2) > a {
-		background-image: url("img/editor");
+		background-image: url("205/assets");
 		background-size: 40px;
 		background-position: center top;
 	}
