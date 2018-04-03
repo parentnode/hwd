@@ -16,21 +16,59 @@
 		#content {
 			padding-top: 50px;
 		}
+		* {
+			font-size: 16px;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			line-height: 1.25em;
+		}
 		table {
-			border: 1px solid black;
-			border-collapse: collapse;
+			width: 500px;
 			box-sizing: border-box;
-			overflow: hidden;
+			-moz-box-sizing: border-box;
+			border: 1px solid black;
+			border-spacing: 0px; 
 			border-radius: 10px;
+			table-layout: fixed;
+			overflow: hidden;
+		}
+		td, th {
+			padding: 5px;
+			text-align: center;
+			box-sizing: border-box;
 		}
 		tr:first-child {
-			color: white;
+			height: 40px;
 			background-color: blue;
-		}
-		tr:last-child {
-			background: white;
-		}
 
+			color: white;
+			text-transform: uppercase;
+		}
+		th:first-child, td:first-child {
+			text-align: left;
+			width: 40%;
+		}
+		th:nth-child(2) {
+			width: 25%;
+		}
+		th:nth-child(3) {
+			width: 10%;
+		}
+		th:nth-child(4) {
+			width: 25%px;
+		}
+		.top td, .center td, .bottom td {
+			height: 40px;
+			border-bottom: 1px dashed black;
+		}
+		.top {
+			vertical-align: top;
+		}
+		.center {
+			vertical-align: middle;
+		}
+		.bottom {
+			vertical-align: bottom;
+		}
 
 
 	</style>
