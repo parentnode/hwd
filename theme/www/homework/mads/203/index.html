@@ -6,8 +6,85 @@
 </head>
 <body>
 
+<form action="#" method="POST" class="">
 
+	<fieldset>
+		<div class="field string">
+			<label for="input_string">String</label>
+			<input type="text" name="string" id="input_string" />
+			<div class="help">
+				<div class="hint">hint message</div>
+				<div class="error">error message</div>
+			</div>
+		</div>
 
+		<div class="field email">
+			<label for="input_email">Email</label>
+			<input type="email" name="email" id="input_email" maxlength="255" />
+			<div class="help">
+				<div class="hint">hint message</div>
+				<div class="error">error message</div>
+			</div>
+		</div>
+
+		<div class="field password">
+			<label for="input_password">Password</label>
+			<input type="password" name="password" id="input_password" maxlength="255" />
+			<div class="help">
+				<div class="hint">hint message</div>
+				<div class="error">error message</div>
+			</div>
+		</div>
+
+		<div class="field select">
+			<label for="input_select">How do you like this form</label>
+			<select name="select" id="input_select">
+				<option value="0" selected="selected">Love it!</option>
+				<option value="1">It's fine</option>
+				<option value="2">Well...</option>
+				<option value="3">Stop bothering me</option>
+			</select>
+			<div class="help">
+				<div class="hint">hint message</div>
+				<div class="error">error message</div>
+			</div>
+		</div>
+
+		<div class="field checkbox">
+			<input type="hidden" name="checkbox" value="0" />
+			<input type="checkbox" name="checkbox" id="input_checkbox1" value="1" />
+			<label for="input_checkbox1">Check me</label>
+			<input type="checkbox" name="checkbox" id="input_checkbox2" value="2" />
+			<label for="input_checkbox2">Check Mate</label>
+			<div class="help">
+				<div class="hint">hint message</div>
+				<div class="error">error message</div>
+			</div>
+		</div>
+		
+		<div class="field radiobuttons [required]">
+			<label>Radiobuttons [required]</label>
+			<div class="item">
+				<input type="radio" name="radiobuttons" id="input_radiobuttons_value1" value="value1" />
+				<label for="input_radiobuttons_value1">text1</label>
+			</div>
+			<div class="item">
+				<input type="radio" name="radiobuttons" id="input_radiobuttons_value2" value="value2" />
+				<label for="input_radiobuttons_value2">text2</label>
+			</div>
+			<div class="help">
+				<div class="hint">hint message</div>
+				<div class="error">error message</div>
+			</div>
+		</div>
+			
+	</fieldset>
+
+	<ul class="actions">
+		<li class="save"><input type="submit" value="Submit" class="button primary" /></li>
+	</ul>
+
+</form>
 
 </body>
 </html>

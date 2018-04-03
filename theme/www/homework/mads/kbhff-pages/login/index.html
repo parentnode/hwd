@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 205</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+
+
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+
+		/* ADD YOUR CSS HERE */
+
+		/* ----------------------- LAYOUT ----------------------- */
+
+		#header {
+			height: 33vh;
+			position: relative;
+		/*  background: lightgray; */
+		}
+		#header:after {
+			content: "";
+			background: url(assets/people-having-fun.jpg);
+			background-size: cover;
+			opacity: 0.3;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			position: absolute;
+			z-index: -1;   
+		}
+		.breadcrumb {
+			padding: 1rem;
+		}
+		.hero {
+			padding: 1rem;
+		}
+		#content {
+			padding: 2rem;
+		}
+
+		/* ----------------------- BASE TYPOGRAFI ----------------------- */
+		* {font-family: Helvetica, sans-serif;}
+		
+		html {font-size: 30px;}
+		@media (max-height: 1740px) {
+			html {font-size: 16px; background: lightgrey;}
+			body {
+				width: 800px; 
+				margin: 20px auto;
+				box-shadow: 2px 2px 6px #666;
+			}
+			#content {
+				background: white;				
+			}
+		}
+
+		h1 {}
+		h1.page-title {
+			font-size: 2rem;
+			display: inline-block;
+			font-weight: lighter;
+			margin: 0px;
+		}
+		h2 {}
+		h3 {}
+		h4 {}
+		p {}
+		p.teaser-text {
+			text-align: center;
+			margin: 0px;
+			padding-bottom: 1rem;
+			font-size: 1.5rem;
+			font-weight: lighter;
+			line-height: 2rem;
+		}
+		a {}
+		.error {
+			color: red;
+		}
+		.green {color: green;}
+
+		/* ----------------------- FORM ELEMENTS ----------------------- */
+		fieldset {border: 0; margin: 0; padding: 1.5rem 0 0 0;} 
+		label {font-size: 1.3rem;}
+		.field {position: relative; padding-bottom: 3rem;}
+		.help {position: absolute; top: 5.5rem; z-index: 1; width: 100%; box-sizing: border-box; padding: 10px 5px;}
+		.hint {display: none; font-size: 1rem; width: 100%; box-sizing: border-box;}
+		.error {display: none; font-size: 1rem; width: 100%; box-sizing: border-box;}
+
+		input[type="text"], 
+		input[type="number"], 
+		input[type="password"] {
+			box-sizing: border-box; 
+			width: 100%; 
+			border-top: 0px;
+			border-left: 0px;
+			border-right: 0px;
+			border-bottom: 1px solid #bbbbbb;
+			padding: 0.5rem 0.5rem 0 3rem;            
+			font-size: 2.5rem;
+			line-height: 3rem;
+		}
+		input[type="text"]:focus, 
+		input[type="number"]:focus, 
+		input[type="password"]:focus {
+			box-sizing: border-box;
+			width: 100%;
+			border-bottom: 2px solid green;
+			outline: none;
+		}
+		input[type="text"]:focus + .help > .hint, 
+		input[type="number"]:focus + .help > .hint, 
+		input[type="password"]:focus + .help > .hint {
+			display: block;
+		}
+		/*
+		input[type="text"]:invalid + .help .error, 
+		input[type="number"]:invalid + .help .error, 
+		input[type="password"]:invalid + .help .error {
+			display: block;
+		} 
+		*/
+		
+		/* remove number spinner (up and down arrows) */
+		input[type=number]::-webkit-inner-spin-button, 
+		input[type=number]::-webkit-outer-spin-button { 
+			-webkit-appearance: none; 
+			margin: 0; 
+		}
+
+		/* ----------------------- ACTION ELEMENTS ----------------------- */
+		ul.actions {
+			list-style: none;
+			margin: 0px;
+			padding: 2rem 0px 0px 0px;
+			text-align: center;
+		}
+		ul.actions li {
+			padding: 0 0 1.5rem 0;
+		}
+		.button.primary {
+
+			background-color: green;
+			padding: 0.5rem 5rem;
+			border: 1px solid #bbbbbb;
+			border-radius: 3px;
+
+			font-size: 2rem;
+			font-weight: lighter;
+			color: white;
+		}
+		.button.primary:hover{
+			background-color: lightgreen;
+			color: white;
+		}
+		a.link-button {
+			font-size: 1.3rem;
+			color: green;
+			text-decoration: underline;
+		}
+
+		/* ----------------------- ICONS ----------------------- */
+
+		.nav-icon {
+			display: inline-block;
+			margin-right: 0.5rem;
+			font-size: 2rem;
+			color: black;
+		}
+		.field-icon {
+			position: absolute;
+			top: 2rem;
+			left: 0.5rem;
+			font-size: 2rem;
+			line-height: 3rem;
+			color: grey;
+		}
+
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header">
+		<div class="breadcrumb">
+			<a href="#"><i class="nav-icon fas fa-chevron-left"></i></a>
+			<h1 class="page-title"><span class="green">MEDLEMS</span>LOGIN</h1>
+		</div>
+		<div class="hero">
+
+			<p class="teaser-text">På medlemssystemet kan du opdatere dine kontaktinformationer, 
+			bestille varer, booke vagter og meget andet.</p>
+			<p class="teaser-text"><span class="green">Velkommen indenfor :)</span></p>
+		</div>
+	</div>
+	<div id="content">
+		<form action="#" method="post" novalidate="novalidate">
+			<fieldset>
+				<div class="field string">
+					<label for="input_medlemsnummer">Medlemsnummer</label>
+					<i class="field-icon fas fa-user"></i>
+					<input type="number" name="string" id="input_medlemsnummer" required max="999999"/>
+					<div class="help">
+						<div class="hint">6 cifret nummer du har fået på mail</div>
+						<div class="error">Skal være 6 cifre, kun tal</div>
+					</div>
+				</div>
+				<div class="field string">
+					<label for="input_password">Kodeord</label>
+					<i class="field-icon fas fa-key"></i>
+					<input type="password" name="password" id="input_password" required minlength="8"/>
+					<div class="help">
+						<div class="hint">Det kodeord du selv har lavet</div>
+						<div class="error">Minimum 8 tegn</div>
+					</div>
+				</div>
+			</fieldset>
+
+			<ul class="actions">
+				<li><input type="submit" value="LOG IND" class="button primary" /></li>
+				<li><a class="link-button">Jeg kender ikke/har glemt mit medlemsnr.</a></li>
+				<li><a class="link-button">Jeg har glemt mit kodeord</a></li>
+				<li><a class="link-button">Jeg er ikke medlem</a></li>
+
+			</ul>
+
+		</form>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+
+</body>
+</html>
