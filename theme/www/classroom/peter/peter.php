@@ -11,7 +11,7 @@
 <ul>
 	<li><a href="/classroom/peter/files_peter/idontevenknow/peter.php">I have no clue what this is</a></li>
 	<li><a href="/classroom/peter/files_peter/PSS/main/startpage.html">PeterStreamingService</a></li>
-	<li><a href="/classroom/peter/files_peter/KBHFF_draft/login.html">KBHFF Login</a></li>
+	<li><a href="/classroom/peter/files_peter/KBHFF_draft/index.html">KBHFF Login</a></li>
 </ul>
 
 </body>
