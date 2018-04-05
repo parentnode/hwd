@@ -15,22 +15,15 @@
 		/* ----------------------- LAYOUT ----------------------- */
 
 		#header {
-			height: 33vh;
 			position: relative;
-/* 			background: green;
- */		}
-		#header:after {
-			content: "";
+ 			background: green;
+		}
+		.hero {
 			background: url(assets/people-having-fun.jpg);
 			background-size: cover;
 			background-position: 50% 30%; 
-			opacity: 0.4;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			position: absolute;
-			z-index: -1;   
+			opacity: 0.9;
+			height: 28vh;
 		}
 		.breadcrumb {
 			padding: 1rem;
@@ -38,7 +31,7 @@
 		.hero {
 			padding: 1rem;
 		}
-		#content {
+		.login-form {
 			padding: 2rem;
 		}
 
@@ -48,7 +41,7 @@
 		html {font-size: 30px;}
 		@media (max-height: 1740px) {
 			html {font-size: 14px;}
-			#content {
+			.login-form {
 				background: white;
 				width: 400px; 	
 				margin: 20px auto;		
@@ -74,19 +67,22 @@
 			font-weight: lighter;
 			line-height: 2rem;
 		}
-		a {}
+		a {
+			color: green;
+		}
 		.error {
 			color: red;
 		}
-		.highlight {color: green;}
+		.highlight {color: white;}
 
 		/* ----------------------- FORM ELEMENTS ----------------------- */
 		fieldset {border: 0; margin: 0; padding: 1.5rem 0 0 0;} 
 		label {font-size: 1.3rem;}
 		.field {position: relative; padding-bottom: 3rem;}
 		.help {position: absolute; top: 5.5rem; z-index: 1; width: 100%; box-sizing: border-box; padding: 10px 5px;}
-		.hint {display: none; font-size: 1rem; width: 100%; box-sizing: border-box;}
-		.error {display: none; font-size: 1rem; width: 100%; box-sizing: border-box;}
+		.hint {display: none; font-size: 1rem; box-sizing: border-box;}
+		.hint-link {display: none; font-size: 1rem; float: right;}
+		.error {display: none; font-size: 1rem; width: 30%; box-sizing: border-box;}
 
 		input[type="text"], 
 		input[type="number"], 
@@ -112,7 +108,12 @@
 		input[type="text"]:focus + .help > .hint, 
 		input[type="number"]:focus + .help > .hint, 
 		input[type="password"]:focus + .help > .hint {
-			display: block;
+			display: inline-block;
+		}
+		input[type="text"]:focus + .help > .hint-link, 
+		input[type="number"]:focus + .help > .hint-link, 
+		input[type="password"]:focus + .help > .hint-link {
+			display: inline-block;
 		}
 		/*
 		input[type="text"]:invalid + .help .error, 
@@ -187,22 +188,21 @@
 			<a href="#"><i class="nav-icon fas fa-chevron-left"></i></a>
 			<h1 class="page-title"><span class="highlight">MEDLEMS</span>LOGIN</h1>
 		</div>
-		<div class="hero">
-
-			<p class="teaser-text">På medlemssystemet kan du opdatere dine kontaktinformationer, 
-			bestille varer, booke vagter og meget andet.</p>
-			<p class="teaser-text"><span class="highlight">Velkommen indenfor :)</span></p>
-		</div>
 	</div>
 	<div id="content">
-		<form action="#" method="post" novalidate="novalidate">
+		<div class="hero">
+			<!-- <p class="teaser-text">På medlemssystemet kan du opdatere dine kontaktinformationer, 
+			bestille varer, booke vagter og meget andet.</p>
+			<p class="teaser-text"><span class="highlight">Velkommen indenfor :)</span></p> -->
+		</div>
+		<form class="login-form" action="#" method="post" novalidate="novalidate">
 			<fieldset>
 				<div class="field string">
 					<label for="input_medlemsnummer">Medlemsnummer</label>
 					<i class="field-icon fas fa-user"></i>
 					<input type="number" name="string" id="input_medlemsnummer" required max="999999"/>
 					<div class="help">
-						<div class="hint">6 cifret nummer du har fået på mail</div>
+						<div class="hint">6 cifret nummer du har fået på mail</div><a href="#" class="hint-link">Glemt medlemsnr.?</a>
 						<div class="error">Skal være 6 cifre, kun tal</div>
 					</div>
 				</div>
@@ -211,7 +211,7 @@
 					<i class="field-icon fas fa-key"></i>
 					<input type="password" name="password" id="input_password" required minlength="8"/>
 					<div class="help">
-						<div class="hint">Det kodeord du selv har lavet</div>
+						<div class="hint">Det kodeord du selv har lavet</div><a href="#" class="hint-link">Glemt kodeord?</a>
 						<div class="error">Minimum 8 tegn</div>
 					</div>
 				</div>
