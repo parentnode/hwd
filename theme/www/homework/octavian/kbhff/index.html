@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page title</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+	body{
+		margin: 0px;
+		
+	}
+	#header{
+	display: flex;
+		
+		vertical-align: center;	
+	}
+	h1{
+		margin: 0px;
+		padding: 0px;
+		vertical-align: center;
+		color: rgb(190, 255, 61);
+	}
+	@media (min-width: 901px) {
+		
+	#header {
+		padding: 0px;
+		
+		height: 55px;
+		background: #259e00;
+		border-bottom: 1px solid #006b0e;
+	}
+	#top_navigation{
+		margin: 0px;
+		font-size: 0px;
+		display: flex;
+		font-size: 0px;
+		border: 3px solid rgb(42, 112, 9);
+		
+		
+		width: 100%;
+		background: #048400;	
+	}
+	#top_navigation > ul > li{
+		margin-left: 10px;
+		display: inline;
+		border: 0px transparent;
+		padding: 10px;
+		color: rgb(255, 9, 9);
+		list-style: none;
+		vertical-align: center;
+		text-align: center;
+		padding: 6px;
+		line-height: 1em;
+		font-weight: normal;
+	}
+	#top_navigation > ul > li > a {
+		margin: 10px;
+	font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	text-decoration: none;
+	line-height: 16px;
+	padding: 6px;
+	color: rgb(172, 209, 6);
+	display: inline-block;
+	border-bottom-width: 2px;
+		border-bottom-style: solid;
+		border-bottom-color: rgb(0,200,0);
+		background: #048400;
+	}
+	
+	#random_image{		
+  	display: flex;
+  	padding-left: calc(50% - 499px);
+  	width: calc(100% - 10px);
+	background-color: green;
+	}
+	#logo{
+		background-image: url("img/logo.png");
+	}
+	#navigation ul{
+		display: inline-flex;
+		font-size: 0px;
+		border: 0px solid;
+		padding: 0px;
+		color: #fff;
+		list-style: none;
+		width: 100%;
+		background: #048400;
+	}
+	#navigation > ul > li{
+		margin-left: 10px;
+		display: inline-block;
+		width: calc(16.66% - 10px);
+		border: 0px transparent;
+		padding: 0px;
+		color: #fff;
+		list-style: none;
+		vertical-align: center;
+		text-align: center;
+		height: 50px;
+		line-height: 1em;
+		font-weight: normal;
+		
+		
+	}
+
+	#navigation > ul > li > a {
+	font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	text-decoration: none;
+	line-height: 16px;
+	padding: 6px;
+	color: #fff;
+	padding-top: 10px;
+	display: block;
+	background-repeat: no-repeat;
+	border-bottom-width: 2px;
+		border-bottom-style: solid;
+		border-bottom-color: rgb(0,200,0);
+	}
+}
+@keyframes blink {
+	50% {
+	  opacity: 0.0;
+	}
+  }
+@-webkit-keyframes blink {
+	50% {
+	  opacity: 0.0;
+	}
+}
+.blink {
+	font-size: 300%;
+	animation: blink 1s step-start 0s infinite;
+	-webkit-animation: blink 1s step-start 0s infinite;
+	color:rgb(118, 255, 5);
+}
+@media (max-width: 900px) {
+
+
+#header {
+		padding-bottom: 20px;
+		height: 55px;
+		background: #009e0d;
+		border-bottom: 1px solid #006b09;
+	}
+	h1{
+		font-size: 23px;
+		margin: 0px;
+		padding: 0px;
+		vertical-align: center;
+		color: rgb(190, 255, 61);
+	}
+	#random_image{	
+		display: flex;
+  	padding-left: calc(50% - 499px);
+  
+	background-color: green;
+	border-width: 2px;
+	border-color: white;
+	
+	
+	}
+	#top_navigation{
+		font-size: 0px;
+		display: flex;
+		font-size: 0px;
+		border: 0px solid;
+		padding: 0px;
+		color: rgba(231, 170, 3, 0.808);
+		list-style: none;
+		border-bottom: 3px solid #006b0e;
+		
+		background: #048400;
+	}
+	#top_navigation+ul{
+		margin: 10px;
+		text-align: left;
+		list-style-type: none;
+		display: inline-block;
+		margin: 0px;
+		border: 0px solid;
+		padding: 10px;
+		color: rgba(4, 0, 255, 0.479);
+		list-style: none;
+		width: 100%;
+		background: #048400;	
+	}
+	#top_navigation > ul > li{
+		margin-left: 10px;
+		display: inline-block;
+		border: 0px transparent;
+		padding: 10px;
+		color: rgb(255, 9, 9);
+		list-style: none;
+		vertical-align: center;
+		text-align: center;
+		padding: 6px;
+		line-height: 1em;
+		font-weight: normal;
+	}
+	#top_navigation > ul > li > a {
+		margin: 10px;
+	font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	text-decoration: none;
+	line-height: 18px;
+	padding: 6px;
+	color: rgb(172, 209, 6);
+	display: inline-block;
+	border-bottom-width: 2px;
+		border-bottom-style: solid;
+		border-bottom-color: rgb(0,200,0);
+		background: #048400;
+	}
+
+	#navigation ul{
+		font-size: 0px;
+		border: 0px solid;
+		padding: 0px;
+		color: #fff;
+		list-style: none;
+		width: 100%;
+		background: #008400;
+	}
+	#navigation > ul > li{
+		margin-left: 10px;
+		display: block;
+		min-width: 200px;
+		width: calc(16.66% - 10px);
+		border: 0px transparent;
+		padding: 0px;
+		color: #fff;
+		list-style: none;
+		text-align: left;
+		height: 50px;
+		line-height: 1em;
+		font-weight: normal;
+		
+		
+	}
+
+	#navigation > ul > li > a {
+	font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	text-decoration: none;
+	line-height: 16px;
+	padding: 6px;
+	color: #fff;
+	padding-top: 10px;
+	display: block;
+	background-repeat: no-repeat;
+	border-bottom-width: 2px;
+		border-bottom-style: solid;
+		border-bottom-color: #006b00;
+	}
+
+
+
+
+
+}
+	</style>
+</head>
+<body>
+
+<div id="page">
+		<div id="random_image">
+				<img src="img/banner.png">
+			</div>
+	<div id="header">
+		<h1>
+				KØBENHAVNS
+				FØDEVAREFÆLLESSKAB
+		</h1>
+	</div>
+	<div id="content"></div>
+	<div id="top_navigation">
+		<ul>
+			<li><a href="http://kbhff.dk/for-leverandorer/"> For leverandører </a></li>
+			<li><a href="http://kbhff.dk/english/"> English </a></li>
+			<li><a href="http://kbhff.wikispaces.com/"> Wiki </a></li>
+			<li><a href="https://medlem.kbhff.dk/"> Login til medlemssystem </a> </li>
+			<li><a href="http://kbhff.dk/wp-admin"> Login til Wordpress </a></li> 
+			<li></li>
+		</ul>
+	</div>
+	<div id="navigation">
+		<ul>
+			<li><a href="http://kbhff.dk/afdelinger/">AFDELINGER</a></li>
+			<li><a href="http://kbhff.dk/for-medlemmer-2/">FOR MEDLEMMER</a></li>
+			<li><a href="http://kbhff.dk/grontsager/">OM GRØNTSAGERNE</a></li>
+			<li><a href="http://kbhff.dk/grontsager/">FAQ</a></li>
+			<li><a href="http://kbhff.dk/om-kbhff/spoergsmaal-og-svar/">OM</a></li>
+			<li><a href="http://kbhff.dk/om-kbhff/kontakt/">KONTAKT</a></li>
+		</ul>
+		
+	</div>
+	<div id="footer"></div>
+</div>
+</body>
+</html>
