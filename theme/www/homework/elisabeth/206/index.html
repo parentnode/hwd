@@ -7,19 +7,104 @@
   <meta name="viewport" content="initial-scale=1, user-scalable=no" />
   <title>Sign in KBHFF</title>
   <style>
-  #page {
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	@font-face {
+font-family: 'voresfont';
+src: url('font/voresfont.woff') format('woff'),
+url('font/voresfont.ttf') format('truetype'),
+url('font/voresfont.svg#osbold') format('svg');
   }
-  #content {
+	#page {
+		text-transform: uppercase;
+	}
+/* CSS FOR HEADER */
+
+	.front a {
+		text-transform: uppercase;
+		font-size: 32px;
+		color: #000000;
+		position: absolute;
+		top: 30px;
+		text-decoration: none;
+		cursor: pointer;
+		padding-left: 120px;
+		width: 200px;
+	}
+	.front img {
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		top: 20px;
+	}
+	.front a:hover {
+		color: #3E8E17;
+	}
+
+	div#header ul.servicenavigation {
+		list-style-type: none;
+		position: absolute;
+		top: 10px;
+		right: 40px;
+	}
+	div#header	ul.servicenavigation li {
+		float: right;
+		margin-right: 10px;
+}
+	div#header ul.servicenavigation a {
+		cursor: pointer;
+		text-decoration: none;
+		color: #000000;
+		font-size: 12px;
+		transition: font-size 200ms ease-in;
+	}
+	div#header ul.servicenavigation a:hover {
+		font-size: 20px;
+	}
+
+	/* CSS FOR NAVIGATION */
+
+		div#navigation {
+		position: absolute;
+		top: 140px;
+		}
+		ul.navigation {
+			list-style-type: none;
+			padding: 0;
+		}
+		ul.navigation li {
+			display: inline-block;
+			float: left;
+			margin-right: 2px;
+			line-height: 18px;
+		}
+		ul.navigation li a{
+			text-decoration: none;
+			color: #ffffff;
+			background-color: #000000;
+			border: 1px solid black;
+			font-size: 16px;
+			padding: 10px;
+			transition: backgrund-color, 1s, ease-out;
+		}
+		ul.navigation li a:hover {
+			background-color: #3E8E17;
+			border: none;
+		}
+		ul.om_subjects {
+			display: none;
+		}
+/* CSS FOR CONTENT */
+
+	div#content {
     background-image: url(img/banner.jpg);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left 185px;
+		background-size: 100%;
+		padding-top: 550px;
   }
   fieldset {
     border:0;
     padding: 0;
 		margin: 0;
-    background-color: rgba(255, 255, 255, 0.5);
   }
   form {
   	min-height: 500px;
@@ -28,13 +113,21 @@
     margin: auto;
     text-align: center;
     border: 1px solid #3E8E17;
+		transition: width 2s, height 2s, background-color 2s, transform 2s;
   }
+		form:hover {
+			background-color: #000000;
+			color: #FFFFFF;
+			width: 750px;
+			height: 600px;
+			transform: rotate(360deg);
+		}
   h1 {
     text-transform: uppercase;
     color: #3E8E17;
     font-size: 28px;
     padding-top: 60px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
   }
   input {
     width: 80%;
@@ -45,6 +138,7 @@
     margin-left: 10%;
     margin-right: 10%;
     display: block;
+		transition: all, ease-out, 1s
   }
   label {
     display: block;
@@ -55,30 +149,36 @@
   }
   .help {
     display: none;
-    background: #3E8E17;
+    background: #000000;
+		color: #FFFFFF;
     font-size: 14px;
     height: 15px;
     width: 80%;
     margin: -20px 10% 12px 10%;
-    border: 1px solid #006600;
-    border-top: none;
+		border: 1px solid black;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     padding-bottom: 5px;
     padding-top: 5px;
+		padding-right: 2px;
   }
   .error {
     visibility: hidden;
   }
-  input:focus {
+  input:hover {
     outline: none;
     border-bottom: none;
 		border-bottom-left-radius: 0px;
 		border-bottom-right-radius: 0px;
+		border: 1px solid black;
   }
-  input:focus + div {
+  input:hover + div {
     display: block;
   }
+	input:focus{
+		color: #FFFFFF;
+		background-color: #3E8E17;
+	}
   .checkbox label {
     display: inline-block;
     margin: 0;
@@ -101,11 +201,19 @@ input.button.primary  {
 		height: 50px;
 		font-size: 26px;
 		color: #ffffff;
+		transition: all 1s linear;
+		text-transform: uppercase;
+}
+input.button.primary:hover {
+	background-color: #006600;
+	height: 100px;
+	color: #ffffff;
+	border: 1px solid #3E8E17;
 }
 .newUser a {
 		text-decoration: none;
 		font-size: 14px;
-		color: black;
+		color: #3E8E17;
 }
 .forgot a {
 		float: left;
@@ -115,20 +223,55 @@ input.button.primary  {
 		color: #3E8E17;
 		text-decoration: none;
 }
+div#footer {
+	background-color: #484848;
+	height: 100px;
+}
+div#footer ul.servicenavigation li a {
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 12px;
+	margin-right: 20px;
+	transition: all, 200ms, ease-out;
+}
+div#footer ul.servicenavigation li {
+	display: inline-block;
+	padding: 20px 10px 10px 10px;
+}
+div#footer ul.servicenavigation li a:hover {
+	font-size: 16px;
+}
   </style>
 </head>
 <body>
   <div id="page">
 
 	<div id="header">
+		<div class="keynav front"><img src="img/logo.png" alt="logo"/><a href="/">Københavns Fødevarefællesskab</a></div>
   	<ul class="servicenavigation">
-      <li class="kaynav front"><a href="/">Københavns Fødevarefællesskab</a></li>
-  		<li class="keynav navigation"><a href="#navigation" rel="nofollow">To navigation</a></li>
-  		<li class="keynav search"><a href="/search" rel="search">Search</a></li>
-      <li class="keynav for_leverandører"><a href="for_leverandører">For suppliers</a></li>
+			<li class="keynav contact"><a href="http://kbhff.dk/om-kbhff/kontakt/">Contact</a></li>
   		<li class="keynav language en"><a href="?language=en">English</a></li>
   		<li class="keynav language da"><a href="?language=da">Dansk</a></li>
+			<li class="keynav login"><a href="/">Log In</a></li>
   	</ul>
+  </div>
+	<div id="navigation">
+    <ul class="navigation">
+  		<li class="ugens_pose"><a href="/ugens_pose">Weekly Bag</a></li>
+      <li class="vagtplan"><a href="/vagtplan">Shift Schedule</a></li>
+      <li class="nyheder"><a href="/nyheder">News</a></li>
+      <li class="afdelinger"><a href="/afdelinger">Departments</a></li>
+      <li class="om_producenter"><a href="/om_producenter">Farmers</a></li>
+      <li class="opskrifter"><a href="/opskrifter">Recepies</a></li>
+      <li class="om"><a href="/om">About</a>
+        <ul class="om_subjects">
+          <li class="grundprincipper"><a href="/grundprincipper">The 10 principles</a></li>
+          <li class="organisationen"><a href="/organisationen">The organization</a></li>
+          <li class="tidslinie"><a href="/tidslinie">Timeline</a></li>
+          <li class="pressen"><a href="/pressen">KBHFF in the press - ikke opdateret i 2 år</a></li>
+        </ul>
+      </li>
+	  </ul>
   </div>
 	<div id="content">
     <form action="#" method="[POST|GET]" class="[labelstyle:inject]">
@@ -150,15 +293,6 @@ input.button.primary  {
         		<div class="error">Wrong password. Did you forget it?</div>
         	</div>
         </div>
-        <div class="field checkbox">
-        	<input type="hidden" name="checkbox" value="0" />
-        	<input type="checkbox" name="checkbox" id="input_checkbox" value="1" />
-        	<label for="input_checkbox">Husk mig</label>
-        	<div class="help">
-        		<div class="hint">Klik her hvis du vil gemme dine oplysninger til næste gang du logger ind.</div>
-        		<div class="error">Vil du have browseren til at gemme dine oplysninger til næste gang du logger ind?</div>
-        	</div>
-        </div>
 	    </fieldset>
 
     	<ul class="actions">
@@ -173,26 +307,6 @@ input.button.primary  {
 
 </form>
   </div>
-	<div id="navigation">
-    <ul class="navigation">
-  		<li class="front"><a href="/">KBHFF</a></li>
-  		<li class="ugens_pose"><a href="/ugens_pose">Bag of the week</a></li>
-      <li class="vagtplan"><a href="/vagtplan">Roster</a></li>
-      <li class="nyheder"><a href="/nyheder">News</a></li>
-      <li class="afdelinger"><a href="/afdelinger">Departments</a></li>
-      <li class="om_producenter"><a href="/om_producenter">Meet the farmers</a></li>
-      <li class="opskrifter"><a href="/opskrifter">Recepies</a></li>
-      <li class="om"><a href="/om">About</a>
-        <ul class="om_subjects">
-          <li class="grundprincipper"><a href="/grundprincipper">The 10 principles</a></li>
-          <li class="organisationen"><a href="/organisationen">The organization</a></li>
-          <li class="tidslinie"><a href="/tidslinie">Timeline</a></li>
-          <li class="pressen"><a href="/pressen">KBHFF in the press - ikke opdateret i 2 år</a></li>
-        </ul>
-      </li>
-      <li class="kontakt"><a href="kontakt">Contact</a></li>
-	  </ul>
-  </div>
 	<div id="footer">
     <ul class="servicenavigation">
     	<li class="terms"><a href="/terms">Terms</a></li>
@@ -201,6 +315,7 @@ input.button.primary  {
       <li class="FAQ"><a href="/FAQ">FAQ</a></li>
       <li class="nyhedsarkiv"><a href="/nyhedsarkiv">Old blogs posts</a></li>
       <li class="for_leverandører"><a href="/for_leverandører">For suppliers</a></li>
+			<li class="keynav search"><a href="/search" rel="search">Search</a></li>
     </ul>
   </div>
 </div>
