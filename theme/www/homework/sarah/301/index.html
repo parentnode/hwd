@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+	<title>KBHFF login side</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+
+		body {margin: 0;}
+
+
+		#page {width: 100%; margin: 0;}
+
+
+		/* #content {min-height: 400px;} */
+
+		#header
+
+
+		@font-face {
+			font-family: 'DIN';
+			src: url('voresfont.eot');
+			src: url('voresfont.eot?#iefix') format('embedded-opentype'),
+			url('voresfont.woff') format('woff'),
+			url('voresfont.ttf') format('truetype'),
+			url('voresfont.svg#voresfont') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+/* #34BB00 - green colour*/
+/* #3E8E17 - darker green */
+
+		#page {
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;;
+			font-size: 16px;
+			margin: 0;
+		}
+
+
+		fieldset {
+			border: none;
+			padding: 20px 0px 0px 0px;
+			margin: 0;
+		}
+
+		form {
+			width: 60%;
+			margin: 0 auto;
+		}
+
+		input[type=text], input[type=password] {
+			box-sizing: border-box;
+			width: 70%;
+			/* border: 1px #bbbbbb solid; */
+			/* border-radius: 3px; */
+			border: none;
+			border-bottom: 1px #34BB00 solid;
+			font-size: 16px;
+			line-height: 1.55em;
+			padding-left: 5px;
+			display: inline-block;
+		}
+
+		input[name=terms] {
+			/* outline: 1px #bbbbbb solid; */
+			/* border-radius: 3px; */
+			margin: 0px;
+		}
+
+		label[for=input_medlem], label[for=input_pw] {
+			display: inline-block;
+			box-sizing: border-box;
+			padding-left: 0px;
+			width: 29.5%;
+		}
+
+		label[for=input_terms] {
+			padding-left: 10px;
+			vertical-align: top;
+		}
+
+		input[type=submit] {
+			border: 1px #bbbbbb solid;
+			border-radius: 3px;
+			font-size: 18px;
+			font-weight: bold;
+			width: 25%;
+			background-color: #3E8E17;
+			line-height: 1.5em;
+		}
+
+		.help {
+			visibility: hidden;
+			margin: -15px 0 0 0;
+		}
+
+		input[type=text]:focus, input[type=password]:focus {
+			/* border-color: #34BB00; */
+			/* border-bottom: none; */
+			/* border-radius: 3px 3px 0px 0px; */
+			border-bottom: 3px #3E8E17 solid;
+		}
+
+		input[type=text]:focus + .help, input[type=password]:focus + .help{
+			margin-top: 2px;
+			/* margin-bottom: -12px; */
+		}
+
+		input[type=text]:focus + .help .hint, input[type=password]:focus + .help .hint{
+			visibility: visible;
+			padding-left: 5px;
+			/* margin-top: 2px; */
+			font-size: 10px;
+			line-height: 2em;
+			background-color: lightgrey;
+			border: 1px solid darkgrey;
+			/* border-radius: 0px 0px 3px 3px; */
+		}
+
+		label[for=input_terms]:hover + .help {
+			margin-top: 5px;
+		}
+
+		label[for=input_terms]:hover + .help .hint {
+			visibility: visible;
+			padding-left: 5px;
+			font-size: 10px;
+			line-height: 2em;
+			background-color: lightgrey;
+			border: 1px solid darkgrey;
+			/* border-radius: 3px; */
+		}
+
+		input[type=submit]:hover {
+			background-color: #34BB00;
+			color: white;
+			cursor: pointer;
+		}
+
+		ul {
+			list-style-type: none;
+			padding: 0px;
+		}
+
+		ul.actions {
+			margin: 0 auto;
+		}
+
+
+		.servicenavigation ul a, .navigation ul a {
+			text-decoration: none;
+		}
+
+		.servicenavigation ul a {
+			color: #000;
+		}
+
+		.navigation ul a {
+			color: #FFFFFF;
+		}
+
+		a:hover {
+			cursor: pointer;
+		}
+
+		/* a:visited { */
+			/* color: darkgrey; */x
+		/* } */
+
+		.servicenavigation ul, .navigation ul {
+			list-style-type: none;
+			margin: 0;
+		}
+
+		.servicenavigation ul {
+			margin: 0;
+		}
+/* Why does this not work in above with .navigation? */
+
+
+		.servicenavigation ul li, .navigation ul li {
+			display: inline-block;
+		}
+
+		.servicenavigation li {
+			padding-left: 20px;
+		}
+
+		.navigation ul {
+			padding-bottom: 5px;
+		}
+
+		.title {
+			padding-top: 20px;
+			padding-bottom: 5px;
+		}
+
+		.title p {
+			text-transform: uppercase;
+			font-size: 29px;
+			font-family: 'DIN', Helvetica, Arial;
+			font-weight: 900;
+			display: inline-block;
+			width: 80%;
+			vertical-align: middle;
+			margin: 0;
+		}
+
+		.title p span {
+			color: #3E8E17;
+		}
+
+		.title img {
+			display: inline-block;
+			width: 80px;
+			vertical-align: middle;
+		}
+
+		h1 {
+			font-size: 33px;
+			font-family: 'DIN', helvetica, arial;
+			font-weight: 300;
+			text-transform:uppercase;
+			border-bottom: 5px solid;
+			margin-top: 15px;
+		}
+
+		.servicenavigation {
+			font-size: 12px;
+			float: right;
+		}
+
+		.navigation {
+			font-size: 13px;
+			font-weight: bold;
+		}
+
+		.navigation li {
+			background-color: #000000;
+			/* float: left; */
+			display: inline-block;
+			text-transform: uppercase;
+			padding: 10px 15px 10px 15px;
+		}
+
+		#content p {
+			margin: 8px auto;
+		}
+
+		#header {
+			width: 1000px;
+			padding: 10px 10px 0px 10px;
+			margin: 15px auto 0 auto;
+		}
+
+		#content {
+			width: 1000px;
+			padding: 0px 10px 10px 10px;
+			margin: 0 auto;
+		}
+
+	</style>
+</head>
+
+<!-- #navigation, #header ul.servicenavigation and #footer ul.servicenavigation -->
+
+<body>
+
+<div id="page">
+	<div id="header">
+
+		<div class="servicenavigation">
+			<ul>
+				<li><a href="http://kbhff.dk/for-leverandorer/">For leverandører</a></li>
+				<li><a href="http://kbhff.dk/english/">English</a></li>
+				<li><a href="http://kbhff.wikispaces.com/">Wiki</a></li>
+				<li><a href="https://medlem.kbhff.dk/">Login til medlemssystem</a></li>
+				<li><a href="http://kbhff.dk/wp-admin">Login til Wordpress</a></li>
+			</ul>
+		</div>
+
+		<div class="title">
+			<img src="logo_sort_stempel_lille.png" alt="Københavns Fødevarefællesskab logo">
+			<p>Københavns <br>Fødevarefællesskab <span class="pagetitlespec">/ Medlemssystem</span></p>
+		</div>
+
+		<div class="navigation">
+			<ul>
+				<li><a href="http://kbhff.dk/afdelinger">Afdelinger</a></li>
+				<li><a href="http://kbhff.dk/for-medlemmer-2">For medlemmer</a></li>
+				<li><a href="http://kbhff.dk/grontsager">Om grøntsagerne</a></li>
+				<li><a href="http://kbhff.dk/om-kbhff/spoergsmaal-og-svar/">FAQ</a></li>
+				<li><a href="http://kbhff.dk/om-kbhff">Om</a></li>
+			</ul>
+		</div>
+
+		<div class="banner">
+			<img src="banner_d.jpg" alt="Københavns Fødevarefællesskab">
+		</div>
+	</div>
+
+	<div id="content">
+		<h1>KBHFF Medlemsside</h1>
+		<p>Her kan du opdatere din kontaktinformation og bestille samt betale varer.</p>
+		<p>Du skal være medlem, og have medlemsnummer og kodeord for at kunne gå videre.</p>
+
+		<form action="#" method="post" novalidate="novalidate">
+			<fieldset>
+				<div class="field string">
+					<label for="input_medlem">Medlemsnr. eller email</label>
+					<input type="text" name="string" id="input_medlem" />
+					<div class="help">
+						<div class="hint">Her skal du indtaste dit medlemsnummer (op til 5 cifre) eller den email adresse dit medlemsskab er knyttet til. </div>
+						<div class="error">Der er en fejl i dit medlemsnummer eller email adresse. Prøv venligst igen.</div>
+					</div>
+				</div>
+				<div class="field password">
+					<label for="input_pw">Kodeord</label>
+					<input type="password" name="email" id="input_pw" />
+					<div class="help">
+						<div class="hint">Her skal du indtaste dit password/kodeord.</div>
+						<div class="error">Du skal indtaste et password/kodeord.</div>
+					</div>
+				</div>
+				<div class="field checkbox">
+					<input type="hidden" name="terms" value="0" />
+					<input type="checkbox" name="terms" id="input_terms" value="1" />
+					<label for="input_terms">Samtykke til brug og opbevaring af persondata</label>
+					<div class="help">
+						<div class="hint">Læs venligst samtykketeksten nedenfor, og afgiv derefter samtykke.</div>
+						<div class="error">Du skal afgive samtykke til brug og opbevaring af persondata for at kunne fortsætte.</div>
+					</div>
+				</div>
+			</fieldset>
+
+			<ul class="actions">
+				<li class="save"><input type="submit" value="Log ind" class="button primary" /></li>
+			</ul>
+
+		</form>
+
+
+	</div>
+
+	<div id="footer">
+		<div class="servicenavigation">
+
+		</div>
+	</div>
+
+</div>
+
+
+</body>
+</html>
