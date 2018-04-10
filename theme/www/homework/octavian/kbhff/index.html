@@ -19,6 +19,7 @@
 		vertical-align: center;
 		color: rgb(190, 255, 61);
 	}
+	
 	@media (min-width: 900px) {
 		
 	#header {
@@ -163,9 +164,252 @@
 	-webkit-animation: blink 1s step-start 0s infinite;
 	color:rgb(118, 255, 5);
 }
+@media (max-width: 400px){
+	body {margin: 0;}
+		#page {width: 100%; margin: 0 auto;}
+		
+		#content {min-height: 0px;}
+		#header:hover + #content {background: transparent url(assets/bg_205.png) no-repeat left 50px;}
+		#header:hover + #content * {opacity: 0;}
+		#content div.reference_video {padding-top: 50px;}
+		#content div.reference_video video {margin: 0 -26px;}
+		/* ADD YOUR CSS HERE */
+		fieldset{
+			margin-top: 0px;
+			margin-bottom: 2px;
+			margin-left: -10px;
+			margin-right: 0px;	  
+			border: none;	
+			background-color: #006b09;
+			
+		}
+		.field string > label for {
+		font-size: 12px;
+		padding-bottom: 20px;
+		vertical-align: top;
+		}
+		#input_terms{
+			margin-top: 0px;
+			margin-bottom: 0px;
+			margin-left: 0px;
+			margin-right: 0px;
+			vertical-align: center;
+			width: 30px;
+			font-size: 12px;
+		}
+		input{
+			border-radius: 3px;
+			border-width: 1px;
+			border-color: rgb(127, 127, 127);
+			border-top-color: rgb(127, 127, 127);
+			padding-bottom: 5px;
+			padding-left: 0px;
+			padding-right: 5px;
+			padding-top: 5px;		
+			width: 290px;
+			outline-color: rgb(0, 170, 17);
+		}
+	
+		input.button.primary{
+			width: 80px;
+			background-color: lightgreen;	
+		
+		}
+		ul  {	
+				list-style-type: none;
+			}
+		li.save{
+			margin-left: -35px;
+			font-size: 20px;
+		}	
+		div.field {
+			background-color: #006b09;
+			line-height: 20px;
+			display: block;
+			font-family: "OpenSans", Verdana, Arial, sans-serif;
+			font-size: 12px;
+			font-weight: 400;
+			height: 30px;
+			margin-bottom: 2px;
+			margin-left: 3px;
+			margin-right: 2px;
+			margin-top: 30px;
+			outline-color:rgb(127, 127, 127);
+			outline-width: 1px;
+		}
+		div.field label {
+			margin-top: 0px;
+			}
+		.help {
+			visibility: hidden;
+			}
+		input[type=text]:focus, input[type=email]:focus {
+					border: 1px solid green;
+					padding-bottom: 15px;
+					background: linear-gradient(white 63%, lightgreen 37%);
+					padding-left: 30px;
+				}
+		input:focus + div > div.hint {
+			visibility: visible;
+			position: relative;
+			bottom: 20px;
+			padding-left: 6px;
+			font-size: 10px;
+			padding-top: 2px;
+		}
+		input[type=checkbox] {
+					vertical-align: bottom ;		
+				}
+
+		div.checkbox:hover > div.help > div.hint {
+				visibility: visible;
+				font-size: 10px;
+				width: 300px;
+				box-sizing: border-box;
+				margin: 10px 0px 0px 0px;
+				padding: 0px;
+				background-color: lightgreen;
+				border: 1px solid green;
+				border-radius: 3px;
+				padding-left: 5px;
+				display: inline-block;			
+			}
+			input.button{
+				display: block;
+				
+			}
+			input.button:hover {
+				background-color: green;
+				border: 1px solid grey;
+				color: white;
+			}
+	
+}
+
+@media (min-width: 400px){
+	body {margin: 0;}
+		
+		
+	
+		/* ADD YOUR CSS HERE */
+		fieldset{
+			
+			margin-top: 0px;
+			margin-bottom: 2px;
+			margin-left: -10px;
+			margin-right: 0px;	  
+			border: none;	
+			background-color: #006b09;
+			
+		}
+		.field string > label for {
+		font-size: 12px;
+		padding-bottom: 20px;
+		vertical-align: top;
+		}
+		#input_terms{
+			margin-top: 0px;
+			margin-bottom: 0px;
+			margin-left: 0px;
+			margin-right: 0px;
+			vertical-align: center;
+			width: 30px;
+			font-size: 12px;
+		}
+		input{
+			border-radius: 3px;
+			border-width: 1px;
+			border-color: rgb(127, 127, 127);
+			border-top-color: rgb(127, 127, 127);
+			padding-bottom: 5px;
+			padding-left: 0px;
+			padding-right: 5px;
+			padding-top: 5px;		
+			width: 290px;
+			outline-color: rgb(0, 170, 17);
+		}
+	
+		input.button.primary{
+			width: 80px;
+			background-color: lightgreen;	
+		
+		}
+		ul  {	
+				list-style-type: none;
+			}
+		li.save{
+			margin-left: -35px;
+			font-size: 20px;
+		}	
+		div.field {
+			width: 500px; margin: 0 auto;
+			background-color: #006b09;
+			line-height: 20px;
+			display: block;
+			font-family: "OpenSans", Verdana, Arial, sans-serif;
+			font-size: 12px;
+			font-weight: 400;
+			height: 30px;
+			margin-bottom: 2px;
+			margin-left: 3px;
+			margin-right: 2px;
+			margin-top: 30px;
+			outline-color:rgb(127, 127, 127);
+			outline-width: 1px;
+		}
+		div.field label {
+			margin-top: 0px;
+			}
+		.help {
+			visibility: hidden;
+			}
+		input[type=text]:focus, input[type=email]:focus {
+					border: 1px solid green;
+					padding-bottom: 15px;
+					background: linear-gradient(white 63%, lightgreen 37%);
+					padding-left: 30px;
+				}
+		input:focus + div > div.hint {
+			visibility: visible;
+			position: relative;
+			bottom: 20px;
+			padding-left: 6px;
+			font-size: 10px;
+			padding-top: 2px;
+		}
+		input[type=checkbox] {
+					vertical-align: bottom ;		
+				}
+
+		div.checkbox:hover > div.help > div.hint {
+				visibility: visible;
+				font-size: 10px;
+				width: 300px;
+				box-sizing: border-box;
+				margin: 10px 0px 0px 0px;
+				padding: 0px;
+				background-color: lightgreen;
+				border: 1px solid green;
+				border-radius: 3px;
+				padding-left: 5px;
+				display: inline-block;			
+			}
+			input.button{
+				display: block;
+				
+			}
+			input.button:hover {
+				background-color: green;
+				border: 1px solid grey;
+				color: white;
+			}
+	
+}
 @media (max-width: 900px) {
 
-
+.form_fild{
+	width: 100%;
+}
 #header {
 		padding-bottom: 20px;
 		height: 55px;
@@ -291,6 +535,7 @@
 	color: #fff;
 	padding-top: 10px;
 	display: block;
+	background-color: #006b09;
 	background-repeat: no-repeat;
 	border-bottom-width: 2px;
 		border-bottom-style: solid;
@@ -354,6 +599,52 @@
 		</ul>
 		
 	</div>
+<div class="form_fild">
+	<form action="#" method="post" novalidate="novalidate">
+		<fieldset>
+			<div class="field string">
+				<label for="input_firstname">First name</label>
+				<input type="text" name="string" id="input_firstname" />
+				<div class="help">
+					<div class="hint">Type your first name</div>
+					<div class="error">That's a weird name</div>
+				</div>
+			</div>
+			<div class="field string">
+				<label for="input_lastname">Last name</label>
+				<input type="text" name="lastname" id="input_lastname" />
+				<div class="help">
+					<div class="hint">Type your last name</div>
+					<div class="error">That's a pretty cool last name</div>
+				</div>
+			</div>
+			<div class="field email">
+				<label for="input_email">Email</label>
+				<input type="email" name="email" id="input_email" />
+				<div class="help">
+					<div class="hint">Make sure to type your email correctly</div>
+					<div class="error">It's not a valid email</div>
+				</div>
+			</div>
+			<!-- 
+			<div class="field checkbox">
+				<input type="hidden" name="terms" value="0" />
+				<input type="checkbox" name="terms" id="input_terms" value="1" />
+				<label for="input_terms">Accept terms</label>
+				<div class="help">
+					<div class="hint">Please accept the terms</div>
+					<div class="error">You have to accept the terms</div>
+				</div>
+			</div> -->
+			<ul class="actions">
+				<li class="save"><input type="submit" value="Save" class="button primary" /></li>
+			</ul>
+		</fieldset>
+
+		
+
+	</form>
+</div>
 	<div id="footer"></div>
 </div>
 </body>
