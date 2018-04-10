@@ -80,6 +80,11 @@ h1:hover {
 	background-color: black;
 }
 
+.navigation li[class^=b] {
+	display: none;
+	background-color: black;
+}
+
 .navigation a {
 	color: white;
 	text-transform: uppercase;
