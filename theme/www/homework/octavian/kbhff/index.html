@@ -41,8 +41,6 @@
 		display: flex;
 		font-size: 0px;
 		border: 3px solid rgb(42, 112, 9);
-		
-		
 		width: 100%;
 		background: #048400;	
 	}
@@ -180,12 +178,16 @@
 		
 		/* ADD YOUR CSS HERE */
 		fieldset{
+			display: block;
+			
+			padding-left: calc(40% - 100px);
 			margin-top: 0px;
 			margin-bottom: 2px;
 			margin-left: -10px;
 			margin-right: 0px;	  
 			border: none;	
 			background-color: #006b09;
+
 			
 		}
 		.field string > label for {
@@ -248,11 +250,15 @@
 		.help {
 			visibility: hidden;
 			}
+			input[type=email]{
+				padding-left: 30px;
+			}
 		input[type=text]:focus, input[type=email]:focus {
 					border: 1px solid green;
 					padding-bottom: 15px;
-					background: linear-gradient(white 63%, lightgreen 37%);
 					padding-left: 30px;
+					background: linear-gradient(white 63%, lightgreen 37%);
+					
 				}
 		input:focus + div > div.hint {
 			visibility: visible;
@@ -299,7 +305,11 @@
 	
 		/* ADD YOUR CSS HERE */
 		fieldset{
-			display: inline-block;
+			display: block;
+			
+			
+			padding-left: calc(40% - 100px);
+			
 			margin-top: 0px;
 			margin-bottom: 2px;
 			margin-left: -10px;
@@ -334,6 +344,9 @@
 			width: 290px;
 			outline-color: rgb(0, 170, 17);
 		}
+		input[type=email]{
+				padding-left: 30px;
+			}
 	
 		input.button.primary{
 			width: 80px;
@@ -632,7 +645,7 @@
 					<div class="error">It's not a valid email</div>
 				</div>
 			</div>
-			<!-- 
+			
 			<div class="field checkbox">
 				<input type="hidden" name="terms" value="0" />
 				<input type="checkbox" name="terms" id="input_terms" value="1" />
@@ -641,7 +654,7 @@
 					<div class="hint">Please accept the terms</div>
 					<div class="error">You have to accept the terms</div>
 				</div>
-			</div> -->
+			</div> 
 			<ul class="actions">
 				<li class="save"><input type="submit" value="Save" class="button primary" /></li>
 			</ul>
