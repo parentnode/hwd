@@ -7,25 +7,25 @@
 
 		body {margin: 0;}
 
-
-		#page {width: 100%; margin: 0;}
-
-
-		/* #content {min-height: 400px;} */
-
-		#header
-
-
 		@font-face {
 			font-family: 'DIN';
-			src: url('voresfont.eot');
-			src: url('voresfont.eot?#iefix') format('embedded-opentype'),
+			/* src: url('voresfont.eot'); */
+			/* src: url('voresfont.eot?#iefix') format('embedded-opentype'), */
 			url('voresfont.woff') format('woff'),
 			url('voresfont.ttf') format('truetype'),
 			url('voresfont.svg#voresfont') format('svg');
 			font-weight: normal;
 			font-style: normal;
 		}
+
+
+		#page {width: 100%; margin: 0;}
+
+
+		/* #content {min-height: 400px;} */
+
+		#header {}
+
 
 /* #34BB00 - green colour*/
 /* #3E8E17 - darker green */
@@ -71,7 +71,7 @@
 			display: inline-block;
 			box-sizing: border-box;
 			padding-left: 0px;
-			width: 29.5%;
+			width: 29%;
 		}
 
 		label[for=input_terms] {
@@ -327,7 +327,7 @@
 					<input type="checkbox" name="terms" id="input_terms" value="1" />
 					<label for="input_terms">Samtykke til brug og opbevaring af persondata</label>
 					<div class="help">
-						<div class="hint">Læs venligst samtykketeksten nedenfor, og afgiv derefter samtykke.</div>
+						<div class="hint">Læs samtykketeksten nedenfor og afgiv derefter samtykke.</div>
 						<div class="error">Du skal afgive samtykke til brug og opbevaring af persondata for at kunne fortsætte.</div>
 					</div>
 				</div>
