@@ -1,0 +1,157 @@
+@font-face {
+	font-family: 'voresfont';
+	src:	url('font/voresfont.woff') format('woff'),
+			url('font/voresfont.ttf') format('truetype');
+	}
+
+body {
+	width: 960px;
+	margin: 0 auto;
+	font-family: voresfont;
+}
+
+#header {
+	box-shadow: 0 0 10px;
+}
+
+div.service_navigation {
+	text-align: right;
+	font-size: 13px;
+}
+
+div.service_navigation > a {
+	position: relative;
+	top: 25px;
+	padding-right: 14px;
+}
+
+div.service_navigation > a:hover {
+	color: #3e8e17;
+}
+
+h1 {
+	display: inline-block;
+	width: 100px;
+	margin: 0;
+}
+
+h1 > a > img {
+	width: 100%;
+	height: auto;
+}
+
+h2 {
+	display: inline-block;
+	color: #3e8e17;
+	font-size: 33px;
+	font-weight: 300;
+	margin: 0;
+}
+
+h2 > a, h2 > a:visited {
+	color: #000000;
+	font-size: 32px;
+}
+
+h2 > a:hover {
+	color: #3e8e17;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+#navigation {
+	overflow: hidden;
+}
+
+div.main_navigation {
+	padding-left: 107px;
+}
+
+div.main_navigation > a {
+	text-decoration: none;
+	font-size: 16px;
+	border-right: 2px solid #000000;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+div.main_navigation > a:first-child {
+	border-left: 2px solid #000000;
+}
+
+div.main_navigation > a:visited {
+	color: #000000;
+}
+
+div.main_navigation > a:hover {
+	color: #ffffff;
+	background-color: #3e8e17;
+}
+
+#content {
+	margin: 5% 20%;
+}
+
+fieldset {
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+form {
+	display: inline-block;
+	margin: auto 25%;
+}
+
+input {
+	border: none;
+	height: 30px;
+	width: 100%;
+	font-family: voresfont;
+	font-size: 16px;
+	padding: 4px;
+	color: #000000;
+}
+
+.input_fields {
+	box-sizing: border-box;
+	width: 300px;
+	height: 100%;
+	border: 2px solid #000000;
+	border-radius: 5px 5px 0 0;
+	overflow: hidden;
+}
+
+input:focus {
+	border-left: 4px solid #3e8e17;
+}
+
+ul.actions {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+
+ul.actions > li.save > input {
+	width: 300px;
+	background-color: #ffffff;
+	border: 2px solid #000000;
+	border-radius: 0 0 5px 5px;
+	border-top: none;
+}
+
+ul.actions > li.save > input:hover {
+	color: #ffffff;
+	background-color: #3e8e17;
+}
+
+#footer {
+	position: absolute;
+	bottom: 0;
+	width: 960px; 
+	height: 100px;
+	border-top: 2px solid black;
+}
