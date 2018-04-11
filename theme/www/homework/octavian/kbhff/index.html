@@ -4,6 +4,19 @@
 	<title>Page title</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<style type="text/css">
+	@font-face {
+	font-family: 'voresfont';
+	src: url('./font/voresfont.woff') format('woff'),
+	url('./font/voresfont.svg#osbold') format('svg'),
+	url('./font/voresfont.ttf') format('truetype'),
+	font-weight: 700; font-style: normal;
+}
+	.footer{
+		background-color: #ffffff;
+	}
+	.footer>ul{
+		background-color: #ffffff;
+	}
 	body{
 		margin: 0px;
 		
@@ -17,16 +30,16 @@
 		margin: 0px;
 		padding: 0px;
 		vertical-align: center;
-		color: rgb(190, 255, 61);
+		color: rgb(11, 22, 22);
 	}
 	
-	@media (min-width: 900px) {
+	@media ( min-aspect-ratio: 6/5) {
 		
 	#header {
 		padding: 0px;
 		
 		height: 55px;
-		background: #259e00;
+		background: #ffffff;
 		border-bottom: 1px solid #006b0e;
 	}
 	#top_navigation{
@@ -35,10 +48,8 @@
 		display: flex;
 		font-size: 0px;
 		border: 3px solid rgb(42, 112, 9);
-		
-		
 		width: 100%;
-		background: #048400;	
+		background: #ffffff;	
 	}
 	#top_navigation > ul > li{
 		margin-left: 10px;
@@ -60,12 +71,12 @@
 	text-decoration: none;
 	line-height: 16px;
 	padding: 6px;
-	color: rgb(172, 209, 6);
+	color: rgb(255, 255, 255);
 	display: inline-block;
 	border-bottom-width: 2px;
 		border-bottom-style: solid;
 		border-bottom-color: rgb(0,200,0);
-		background: #048400;
+		background: #000000;
 	}
 	#top_navigation > ul > li > a:hover {
 		margin: 10px;
@@ -79,14 +90,14 @@
 	border-bottom-width: 2px;
 		border-bottom-style: solid;
 		border-bottom-color: rgb(0, 200, 0);
-		background: #0aff01;
+		background: #00ff00;
 	}
 	
 	#random_image{		
   	display: flex;
   	padding-left: calc(50% - 499px);
   	width: calc(100%);
-	background-color: green;
+	background-color: rgb(255, 255, 255);
 	}
 	#logo{
 		background-image: url("img/logo.png");
@@ -99,7 +110,7 @@
 		color: #fff;
 		list-style: none;
 		width: 100%;
-		background: #048400;
+		background: #ffffff;
 	}
 	#navigation > ul > li{
 		margin-left: 10px;
@@ -131,6 +142,7 @@
 	border-bottom-width: 2px;
 		border-bottom-style: solid;
 		border-bottom-color: rgb(0,200,0);
+		background-color: #000000
 	}
 	#navigation > ul > li > a:hover {
 	font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -164,23 +176,26 @@
 	-webkit-animation: blink 1s step-start 0s infinite;
 	color:rgb(118, 255, 5);
 }
-@media (max-width: 400px){
+@media (max-aspect-ratio: 1/4){
+	
 	body {margin: 0;}
-		#page {width: 100%; margin: 0 auto;}
+		#page {width: 100%; margin: 0 auto;
+			background-color: #ffffff;
+			}
 		
-		#content {min-height: 0px;}
-		#header:hover + #content {background: transparent url(assets/bg_205.png) no-repeat left 50px;}
-		#header:hover + #content * {opacity: 0;}
-		#content div.reference_video {padding-top: 50px;}
-		#content div.reference_video video {margin: 0 -26px;}
+		
 		/* ADD YOUR CSS HERE */
 		fieldset{
+			display: block;
+			
+			padding-left: calc(40% - 100px);
 			margin-top: 0px;
 			margin-bottom: 2px;
 			margin-left: -10px;
 			margin-right: 0px;	  
 			border: none;	
-			background-color: #006b09;
+			background-color: #ffffff;
+
 			
 		}
 		.field string > label for {
@@ -223,7 +238,7 @@
 			font-size: 20px;
 		}	
 		div.field {
-			background-color: #006b09;
+			background-color: #ffffff;
 			line-height: 20px;
 			display: block;
 			font-family: "OpenSans", Verdana, Arial, sans-serif;
@@ -243,11 +258,15 @@
 		.help {
 			visibility: hidden;
 			}
+			input[type=email]{
+				padding-left: 30px;
+			}
 		input[type=text]:focus, input[type=email]:focus {
 					border: 1px solid green;
 					padding-bottom: 15px;
-					background: linear-gradient(white 63%, lightgreen 37%);
 					padding-left: 30px;
+					background: linear-gradient(white 63%, lightgreen 37%);
+					
 				}
 		input:focus + div > div.hint {
 			visibility: visible;
@@ -256,6 +275,7 @@
 			padding-left: 6px;
 			font-size: 10px;
 			padding-top: 2px;
+			
 		}
 		input[type=checkbox] {
 					vertical-align: bottom ;		
@@ -286,20 +306,24 @@
 	
 }
 
-@media (min-width: 400px){
-	body {margin: 0;}
-		
+@media (min-aspect-ratio: 1/4){
+	body {margin: 0;
+		background-color: rgb(255, 255, 255);}
 		
 	
 		/* ADD YOUR CSS HERE */
 		fieldset{
+			display: block;
+			
+			
+			padding-left: calc(40% - 100px);
 			
 			margin-top: 0px;
 			margin-bottom: 2px;
 			margin-left: -10px;
 			margin-right: 0px;	  
 			border: none;	
-			background-color: #006b09;
+			background-color: rgb(255, 255, 255);
 			
 		}
 		.field string > label for {
@@ -328,6 +352,9 @@
 			width: 290px;
 			outline-color: rgb(0, 170, 17);
 		}
+		input[type=email]{
+				padding-left: 30px;
+			}
 	
 		input.button.primary{
 			width: 80px;
@@ -343,7 +370,7 @@
 		}	
 		div.field {
 			width: 500px; margin: 0 auto;
-			background-color: #006b09;
+			background-color: white;
 			line-height: 20px;
 			display: block;
 			font-family: "OpenSans", Verdana, Arial, sans-serif;
@@ -367,13 +394,13 @@
 					border: 1px solid green;
 					padding-bottom: 15px;
 					background: linear-gradient(white 63%, lightgreen 37%);
-					padding-left: 30px;
+					padding-left: 0px;
 				}
 		input:focus + div > div.hint {
 			visibility: visible;
 			position: relative;
 			bottom: 20px;
-			padding-left: 6px;
+			padding-left: 80px;
 			font-size: 10px;
 			padding-top: 2px;
 		}
@@ -405,7 +432,7 @@
 			}
 	
 }
-@media (max-width: 900px) {
+@media ( max-aspect-ratio: 6/5) {
 
 .form_fild{
 	width: 100%;
@@ -413,7 +440,7 @@
 #header {
 		padding-bottom: 20px;
 		height: 55px;
-		background: #009e0d;
+		background: #ffffff;
 		border-bottom: 1px solid #006b09;
 	}
 	h1{
@@ -427,9 +454,9 @@
 		display: flex;
   	padding-left: calc(50% - 499px);
   
-	background-color: green;
+	background-color: rgb(255, 255, 255);
 	border-width: 2px;
-	border-color: white;
+	border-color: rgb(0, 0, 0);
 	
 	
 	}
@@ -443,7 +470,7 @@
 		list-style: none;
 		border-bottom: 3px solid #006b0e;
 		
-		background: #048400;
+		background: #ffffff;
 	}
 	#top_navigation+ul{
 		margin: 10px;
@@ -456,7 +483,7 @@
 		color: rgba(4, 0, 255, 0.479);
 		list-style: none;
 		width: 100%;
-		background: #048400;	
+		background: #ffffff;	
 	}
 	#top_navigation > ul > li{
 		margin-left: 10px;
@@ -478,12 +505,12 @@
 	text-decoration: none;
 	line-height: 18px;
 	padding: 6px;
-	color: rgb(172, 209, 6);
+	color: rgb(255, 255, 255);
 	display: block;
 	border-bottom-width: 2px;
 		border-bottom-style: solid;
 		border-bottom-color: rgb(0,200,0);
-		background: #048400;
+		background: #000000;
 	}
 	#top_navigation > ul > li > a:hover {
 		margin: 10px;
@@ -507,7 +534,7 @@
 		color: #fff;
 		list-style: none;
 		width: 100%;
-		background: #008400;
+		background: #ffffff;
 	}
 	#navigation > ul > li{
 		margin-left: 10px;
@@ -535,7 +562,7 @@
 	color: #fff;
 	padding-top: 10px;
 	display: block;
-	background-color: #006b09;
+	background-color: #000000;
 	background-repeat: no-repeat;
 	border-bottom-width: 2px;
 		border-bottom-style: solid;
@@ -626,7 +653,7 @@
 					<div class="error">It's not a valid email</div>
 				</div>
 			</div>
-			<!-- 
+			
 			<div class="field checkbox">
 				<input type="hidden" name="terms" value="0" />
 				<input type="checkbox" name="terms" id="input_terms" value="1" />
@@ -635,7 +662,7 @@
 					<div class="hint">Please accept the terms</div>
 					<div class="error">You have to accept the terms</div>
 				</div>
-			</div> -->
+			</div> 
 			<ul class="actions">
 				<li class="save"><input type="submit" value="Save" class="button primary" /></li>
 			</ul>
@@ -644,8 +671,49 @@
 		
 
 	</form>
+
 </div>
-	<div id="footer"></div>
+	<div id="footer">
+			<ul id="menu-main-menu-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6042"><a href="http://kbhff.dk/afdelinger/">Afdelinger</a>
+				<ul class="sub-menu">
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13291"><a href="http://kbhff.dk/afdelinger/amager-2300/">Amager</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13292"><a href="http://kbhff.dk/afdelinger/frederiksberg/">Frederiksberg</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13293"><a href="http://kbhff.dk/afdelinger/nordvest/">Nordvest</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13294"><a href="http://kbhff.dk/afdelinger/norrebro/">Nørrebro</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13296"><a href="http://kbhff.dk/afdelinger/sydhavnen/">Sydhavnen</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13300"><a href="http://kbhff.dk/afdelinger/vanlose/">Vanløse</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13301"><a href="http://kbhff.dk/afdelinger/vesterbro/">Vesterbro</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13299"><a href="http://kbhff.dk/afdelinger/osterbro/">Østerbro</a></li>
+				</ul>
+				</li>
+				<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6057"><a href="http://kbhff.dk/for-medlemmer-2/">For medlemmer</a>
+				<ul class="sub-menu">
+					<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6070"><a href="http://kbhff.wikispaces.com/Vagtplan">Vagtplan</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10518"><a href="http://kbhff.dk/for-medlemmer-2/medlemsfordele/">Medlemsfordele</a></li>
+					<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6069"><a href="http://opskrifter.kbhff.dk">Opskrifter</a></li>
+				</ul>
+				</li>
+				<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6058"><a href="http://kbhff.dk/grontsager/">Om grøntsagerne</a>
+				<ul class="sub-menu">
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6059"><a href="http://kbhff.dk/grontsager/om-producenterne/">Om producenterne</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6060"><a href="http://kbhff.dk/grontsager/ugens-pose/">Ugens pose</a></li>
+					<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12137"><a href="http://kbhff.dk/ugens-pose/">Arkiv over ugens poser</a></li>
+				</ul>
+				</li>
+				<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12457"><a href="http://kbhff.dk/om-kbhff/spoergsmaal-og-svar/">FAQ</a></li>
+				<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6062"><a href="http://kbhff.dk/om-kbhff/">Om</a>
+				<ul class="sub-menu">
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6063"><a href="http://kbhff.dk/om-kbhff/10-grundprincipper/">10 Grundprincipper</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6067"><a href="http://kbhff.dk/om-kbhff/organisationen/">Organisationen</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13290"><a href="http://kbhff.dk/om-kbhff/tidslinie/">Tidslinie</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12949"><a href="http://kbhff.dk/nyheder/">Nyhedsarkiv</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13289"><a href="http://kbhff.dk/om-kbhff/kbhff-i-pressen/">KBHFF i pressen</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10659"><a href="http://kbhff.dk/for-medlemmer-2/handelsbetingelser/">Handelsbetingelser</a></li>
+				</ul>
+				</li>
+				<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6065"><a href="http://kbhff.dk/om-kbhff/kontakt/">Kontakt</a></li>
+				</ul>
+	</div>
 </div>
 </body>
 </html>
