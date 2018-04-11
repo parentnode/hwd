@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 205</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/website.css">
+</head>
+<body>
+
+<div id="page">
+
+	<div id="header">
+		<div class="brand">KØBENHAVNS FØDEVAREFÆLLESSKAB</div>
+		<div class="brand brand-small">KBH FF</div>
+		<div class="service-navigation">
+			<ul class="service-menu">
+				<li><a href="login.html">English</a></li>
+				<li><a href="login.html">Wiki</a></li>
+				<li><a href="login.html">For leverandører</a></li>
+				<li><a href="login.html">Login</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="navigation">
+		<ul class="main-menu">
+			<li>Afdelinger</li>
+			<li>For medlemmer</li>
+			<li>Om grøntsagerne</li>
+			<li>F.A.Q.</li>
+			<li>Om KBH-FF</li>
+		</ul>
+		<div class="main-menu-small">
+			<i class="fas fa-bars"></i>
+		</div>
+	</div>
+	
+	<div id="content">
+		<div class="hero">
+		</div>
+		<div class="form">
+			<form class="login-form" action="min-side.html" method="post" novalidate="novalidate">
+				<fieldset>
+					<div class="field string">
+						<label for="input_medlemsnummer">Medlemsnummer</label>
+						<i class="field-icon fas fa-user"></i>
+						<input type="number" name="string" id="input_medlemsnummer" required max="999999"/>
+						<div class="help">
+							<div class="error">Skal være 6 cifre, kun tal</div>
+							<div class="hint">6 cifret nummer du har fået på mail</div><a href="#" class="hint-link">Glemt medlemsnr.?</a>
+						</div>
+					</div>
+					<div class="field string">
+						<label for="input_password">Kodeord</label>
+						<i class="field-icon fas fa-key"></i>
+						<input type="password" name="password" id="input_password" required minlength="8"/>
+						<div class="help">
+							<div class="error">Minimum 8 tegn</div>
+							<div class="hint">Det kodeord du selv har lavet</div><a href="#" class="hint-link">Glemt kodeord?</a>
+						</div>
+					</div>
+				</fieldset>
+
+				<ul class="actions">
+					<li><input type="submit" value="LOG IND" class="button primary" /></li>
+				</ul>
+				<ul class="actions">
+					<li><a class="link-button">Jeg kender ikke/har glemt mit medlemsnr.</a></li>
+					<li><a class="link-button">Jeg har glemt mit kodeord</a></li>
+					<li><a class="link-button">Jeg er ikke medlem</a></li>
+				</ul>	
+			</form>		
+		</div>
+<!-- 		
+		<div class="form-info">
+			<p class="teaser-text">På medlemssystemet kan du opdatere dine kontaktinformationer, 
+			bestille varer, booke vagter og meget andet.</p>
+			<p class="teaser-text"><span class="highlight">Velkommen indenfor :)</span></p> 
+		</div>
+ -->
+	</div> 
+	<div id="footer"></div>
+</div>
+
+
+</body>
+</html>

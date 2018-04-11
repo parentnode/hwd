@@ -1,0 +1,367 @@
+@font-face {
+    font-family: 'Voresfont';
+    src: url('../assets/fonts/voresfont.eot'); /* IE9 Compat Modes */
+    src: url('../assets/fonts/voresfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../assets/fonts/voresfont.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../assets/fonts/voresfont.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../assets/fonts/voresfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('../assets/fonts/voresfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+         font-weight: 700; font-style: normal;
+  }
+
+
+/* ----------------------- BASE ----------------------- */
+html {font-size: 16px;} 
+/* hack to set the baseline for all rem-values 
+(used in line-heights, vertical-paddings, heights etc), 
+making it easier to accomplish a good vertical rythm */
+
+body {
+    margin: 0;
+    padding: 0 1rem;
+    font-size: 14px; /* base font-size - after this fonts are written in em's */
+    line-height: 1rem;
+    background-color: green;
+}
+
+/* ----------------------- LAYOUT ----------------------- */
+#page {
+    box-sizing: border-box;
+}
+#header {
+    position: relative;
+    padding-bottom: 0rem;
+    width: 920px;
+    margin: 1rem auto 0;
+}
+#navigation {
+    position: relative;
+    box-sizing: border-box;
+    padding: 0.5rem 0;
+    width: 920px;
+    margin: 0 auto;
+}
+.main-menu-small {
+    position: absolute;
+    top: -2.2rem;
+    right: 0.5rem;
+    font-size: 2em;
+    display: none;
+
+}
+.brand {
+    box-sizing: border-box;
+    width: 50%;
+    padding: 0;
+    margin: 0;
+}
+.brand-small {
+    display: none;
+}
+#header .service-navigation {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+
+    box-sizing: border-box;
+    max-width: 50%;
+    padding: 0;
+    margin: 0;
+}
+#content {
+    box-sizing: border-box;
+    background-color: white;
+    box-shadow: 0px 0px 3px #333;
+    width: 920px;
+    min-height: 700px;
+    margin: 0 auto 2rem;
+    }
+.hero {
+    background: url(../assets/veggies.jpg);
+    background-size: cover;
+    background-position: 50% 30%; 
+
+    opacity: 0.9;
+    height: 10rem;
+    padding: 1rem;
+}
+#footer {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    background-color: #333;
+    height: 10rem;
+    box-shadow: 0px 0px 3px #333;
+    margin: 1rem;
+    margin: 0 auto;
+}
+.form {
+    position: relative;
+    box-sizing: border-box;
+    background: white;
+    margin-bottom: 1rem;
+}
+
+.login-form {
+    box-sizing: border-box;
+    width: 60%;
+    padding: 2rem 2rem 0;
+    margin: 0 auto;
+    background: white;
+}
+.form-info {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+
+    box-sizing: border-box;
+    width: 40%;
+
+    background-color: lightgrey;
+    vertical-align: top;
+    padding: 2rem;
+
+
+}
+/* ----------------------- BASE TYPOGRAFI ----------------------- */
+* {font-family: Helvetica, sans-serif;}
+
+.brand {
+    font-family: 'Voresfont';
+    font-size: 2.5em;
+    line-height: 3rem;
+    color: black;
+    }
+
+h1 {}
+h1.page-title {
+    font-size: 2em;
+    display: inline-block;
+    font-weight: lighter;
+    margin: 0px;
+}
+h2 {}
+h3 {}
+h4 {}
+p {}
+p.teaser-text {
+    text-align: center;
+    margin: 0px;
+    padding-bottom: 1rem;
+    font-size: 1.5em;
+    font-weight: lighter;
+    line-height: 2rem;
+}
+a {
+    color: green;
+}
+.error {
+    color: darkred;
+}
+.highlight {color: white;}
+
+/* ----------------------- ICONS ----------------------- */
+
+.nav-icon {
+    display: inline-block;
+    margin-right: 0.5rem;
+    font-size: 2rem;
+    color: black;
+}
+.field-icon {
+    position: absolute;
+    top: 2rem;
+    left: 0.5rem;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: grey;
+}
+/* ----------------------- ACTION ELEMENTS (buttons, navigations etc.) ----------------------- */
+ul.actions {
+    list-style: none;
+    margin: 0px;
+    padding: 0px 0px 2rem 0px;
+    text-align: center;
+}
+ul.actions li {
+    padding: 0 0 1.5rem 0;
+}
+ul.actions li:last-child {
+    padding: 0;
+}
+.button.primary {
+    background-color: green;
+    padding: 0.5rem 6rem;
+    border: 1px solid #bbbbbb;
+    border-radius: 3px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 3rem;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color: white;
+}
+.button.primary:hover{
+    background-color: lightgreen;
+    color: white;
+}
+a.link-button {
+    font-size: 1rem;
+    color: green;
+    text-decoration: underline;
+}
+ul.service-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;		
+}
+ul.service-menu li {
+    display: inline-block;
+    padding-left: 1rem;
+    line-height: 1rem;
+}
+.service-navigation a {
+    text-decoration: none;
+}
+ul.main-menu  {
+    list-style: none;
+    padding: 0;	
+    margin: 0;
+}
+ul.main-menu li {
+    display: inline-block;
+    padding-left: 10px;
+    padding: 0 1rem;
+    background-color: #000;
+    box-shadow: 0px 0px 5px #333;
+    color: white;
+    line-height: 2rem;
+}
+
+
+
+/* ----------------------- FORM ELEMENTS ----------------------- */
+fieldset {border: 0; margin: 0; padding: 0;} 
+label {font-size: 1.2em; line-height: 2rem;}
+.field {position: relative; padding-bottom: 3rem; height: 5rem;}
+.help {
+    position: relative; 
+    z-index: 1;
+    box-sizing: border-box; 
+    width: 100%;
+    height: 3rem;
+    padding: 0;
+    }
+.hint {
+    display: none; 
+    padding: 5px;
+    font-size: 1em;
+    line-height: 1rem;
+    box-sizing: border-box; 
+    width: 70%; 
+    color: #666;}
+.hint-link {
+    display: none;
+    padding: 5px;
+    font-size: 1em; 
+    line-height: 1rem;
+    float: right;
+    }
+.error {
+    display: none; 
+    box-sizing: border-box;
+    padding: 5px;
+    border-left: 1px solid darkred;
+    border-right: 1px solid darkred;
+    border-bottom: 1px solid darkred;
+    border-bottom-right-radius: 5px; 
+    border-bottom-left-radius: 5px; 
+    background-color: darkred;
+    font-size: 1em;
+    line-height: 1rem;
+    color: white;
+    
+    }
+
+input[type="text"], 
+input[type="number"], 
+input[type="password"] {
+    box-sizing: border-box; 
+    width: 100%; 
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid #bbbbbb;
+    padding: 0rem 0.5rem 0 3rem;            
+    font-size: 2.5em;
+    line-height: 3rem;
+}
+input[type="text"]:focus, 
+input[type="number"]:focus, 
+input[type="password"]:focus {
+    box-sizing: border-box;
+    width: 100%;
+    border-bottom: 2px solid green;
+    outline: none;
+}
+
+input[type="text"]:focus + .help > .hint, 
+input[type="number"]:focus + .help > .hint, 
+input[type="password"]:focus + .help > .hint {
+    display: inline-block;
+}
+input[type="text"]:focus + .help > .hint-link, 
+input[type="number"]:focus + .help > .hint-link, 
+input[type="password"]:focus + .help > .hint-link {
+    display: inline-block;
+}
+/* 		
+input[type="text"]:invalid + .help .error, 
+input[type="number"]:invalid + .help .error, 
+input[type="password"]:invalid + .help .error {
+    display: block;
+} 
+input[type="text"]:invalid, 
+input[type="number"]:invalid, 
+input[type="password"]:invalid {
+    border-bottom: 2px solid darkred;
+} 
+*/		
+/* remove number spinner (up and down arrows) */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+/* ----------------------- MEDIA QUERIES ----------------------- */
+@media screen and (max-width: 960px){
+    .brand {
+        display: none;
+    }
+    .brand-small {
+        display: block;
+    }
+    #header, #navigation, #content {
+        width: 620px;
+    }
+}
+@media screen and (max-width: 660px){
+    .main-menu {
+        display: none;
+    }
+    .main-menu-small {
+        display: inline-block;
+    }
+    #header, #navigation, #content {
+        width: 420px;
+    }
+
+    .service-navigation {
+        display: none;
+    }
+    .login-form {
+        width: 100%;
+    }
+}
