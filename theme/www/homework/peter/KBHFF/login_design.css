@@ -11,8 +11,11 @@ body {
 }
 
 #header {
+		top: 0;
+	width: inherit;
 	box-shadow: 0 0 10px;
 }
+
 
 div.service_navigation {
 	text-align: right;
@@ -94,6 +97,11 @@ div.main_navigation > a:hover {
 	margin: 5% 20%;
 }
 
+h3 {
+	font-size: 24px;
+	color: #3e8e17;
+}
+
 fieldset {
 	border: none;
 	padding: 0;
@@ -153,5 +161,6 @@ ul.actions > li.save > input:hover {
 	bottom: 0;
 	width: 960px; 
 	height: 100px;
-	border-top: 2px solid black;
+	border-top: 2px solid #000000;
+	background-color: #ffffff;
 }
