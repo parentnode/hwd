@@ -7,7 +7,7 @@
          url('../assets/fonts/voresfont.ttf')  format('truetype'), /* Safari, Android, iOS */
          url('../assets/fonts/voresfont.svg#svgFontName') format('svg'); /* Legacy iOS */
          font-weight: 700; font-style: normal;
-  }
+}
 
 
 /* ----------------------- BASE ----------------------- */
@@ -31,14 +31,14 @@ body {
 #header {
     position: relative;
     padding-bottom: 0rem;
-    width: 920px;
+    width: 1220px;
     margin: 1rem auto 0;
 }
 #navigation {
     position: relative;
     box-sizing: border-box;
     padding: 0.5rem 0;
-    width: 920px;
+    width: 1220px;
     margin: 0 auto;
 }
 .main-menu-small {
@@ -49,10 +49,21 @@ body {
     display: none;
 
 }
+.logo-container {
+    display: inline-block;
+    vertical-align: top;
+}
+.logo {
+    width: 3rem;
+    height: 3rem;
+    padding: 0 0.5rem 0 0 ;
+    margin: 0;
+}
 .brand {
+    display: inline-block;
     box-sizing: border-box;
     width: 50%;
-    padding: 0;
+    padding: 0.5rem 0;
     margin: 0;
 }
 .brand-small {
@@ -71,8 +82,7 @@ body {
 #content {
     box-sizing: border-box;
     background-color: white;
-    box-shadow: 0px 0px 3px #333;
-    width: 920px;
+    width: 1220px;
     min-height: 700px;
     margin: 0 auto 2rem;
     }
@@ -91,23 +101,21 @@ body {
     right: 0px;
     background-color: #333;
     height: 10rem;
-    box-shadow: 0px 0px 3px #333;
     margin: 1rem;
     margin: 0 auto;
 }
 .form {
     position: relative;
     box-sizing: border-box;
-    background: white;
     margin-bottom: 1rem;
 }
 
 .login-form {
     box-sizing: border-box;
-    width: 60%;
+    max-width: 620px;
     padding: 2rem 2rem 0;
     margin: 0 auto;
-    background: white;
+
 }
 .form-info {
     position: absolute;
@@ -129,8 +137,8 @@ body {
 
 .brand {
     font-family: 'Voresfont';
-    font-size: 2.5em;
-    line-height: 3rem;
+    font-size: 2.2em;
+    line-height: 2rem;
     color: black;
     }
 
@@ -159,7 +167,7 @@ a {
 .error {
     color: darkred;
 }
-.highlight {color: white;}
+.highlight {color: white; font-family: inherit;}
 
 /* ----------------------- ICONS ----------------------- */
 
@@ -234,7 +242,6 @@ ul.main-menu li {
     padding-left: 10px;
     padding: 0 1rem;
     background-color: #000;
-    box-shadow: 0px 0px 5px #333;
     color: white;
     line-height: 2rem;
 }
@@ -337,12 +344,12 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* ----------------------- MEDIA QUERIES ----------------------- */
 @media screen and (max-width: 960px){
-    .brand {
+/*     .brand {
         display: none;
     }
     .brand-small {
         display: block;
-    }
+    } */
     #header, #navigation, #content {
         width: 620px;
     }
