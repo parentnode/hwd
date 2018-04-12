@@ -177,16 +177,22 @@ ul.actions > li.save > input:hover {
 #footer {
 	position: absolute;
 	bottom: 0;
+	padding: 20px 0; 
 	width: 960px; 
 	border-top: 2px solid #000000;
 	background-color: #ffffff;
 }
 
-#footer a {
+div.footer-links > a {
 	display: block;
 	padding-left: 20px;
+	width: 200px;
 }
 
-#footer a:visited {
+div.footer-links > a:visited {
 	color: #000000;
+}
+
+div.footer-links > a:hover {
+	border-left: 2px solid #000000;
 }
