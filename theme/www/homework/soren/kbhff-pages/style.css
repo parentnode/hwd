@@ -1,7 +1,7 @@
 @font-face {
 	font-family: 'voresfont';
 	src: url('./font/voresfont.woff') format('woff'),
-	url('./font/voresfont.svg#osbold') format('svg');
+	url('./font/voresfont.svg#osbold') format('svg'),
 	url('./font/voresfont.ttf') format('truetype'),
 	font-weight: 700; font-style: normal;
 }
