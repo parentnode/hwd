@@ -162,6 +162,7 @@ ul.actions > li.save > input:hover {
 }
 
 #content > a {
+	text-decoration: none;
 	border-top: 1px solid #000000;
 }
 
@@ -189,6 +190,12 @@ div.footer-links > a {
 	padding-left: 10px;
 	color: #ffffff;
 	margin: auto 25%;
+}
+
+div.footer-links > a {
+	text-decoration: none;
+	color: #ffffff;
+
 }
 
 div.footer-links > a:visited {
