@@ -98,7 +98,11 @@ div.main_navigation > a:hover {
 }
 
 #content {
-	margin: 5% 20%;
+}
+
+#content > img {
+	width: 100%;
+	height: auto;
 }
 
 h3 {
@@ -164,6 +168,8 @@ ul.actions > li.save > input:hover {
 #content > a {
 	text-decoration: none;
 	border-top: 1px solid #000000;
+	display: block;
+	width: 100px;
 }
 
 #content > a:visited {
@@ -195,7 +201,6 @@ div.footer-links > a {
 div.footer-links > a {
 	text-decoration: none;
 	color: #ffffff;
-
 }
 
 div.footer-links > a:visited {
