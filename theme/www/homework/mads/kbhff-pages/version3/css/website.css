@@ -3,18 +3,18 @@
 body {
     background-color: white;
 }
-#content {
+/* #content {
     box-shadow: 0px 0px 3px #666;
     }
 #footer {
     box-shadow: 0px 0px 3px #666;
 }
+ul.main-menu li {
+    box-shadow: 0px 0px 5px #666;
+} */
 
 .highlight {color: green;}
 
-ul.main-menu li {
-    box-shadow: 0px 0px 5px #666;
-}
 
 .service-navigation a {
     text-decoration: none;
