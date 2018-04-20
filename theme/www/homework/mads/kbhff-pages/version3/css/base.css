@@ -9,7 +9,6 @@
          font-weight: 700; font-style: normal;
 }
 
-
 /* ----------------------- BASE ----------------------- */
 html {font-size: 16px;} 
 /* hack to set the baseline for all rem-values 
@@ -47,7 +46,6 @@ body {
     right: 0.5rem;
     font-size: 2em;
     display: none;
-
 }
 .logo-container {
     display: inline-block;
@@ -167,7 +165,6 @@ a {
 .error {
     color: darkred;
 }
-.highlight {color: white; font-family: inherit;}
 
 /* ----------------------- ICONS ----------------------- */
 
