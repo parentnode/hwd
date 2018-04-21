@@ -18,7 +18,6 @@
 
 		.form {
 			font-family: voresfont;
-			line-height: 24px;
 			overflow: hidden;
 			border-top: 6px solid #3e8e17;
 			box-shadow: 2px 2px 20px #bcbcbc;
@@ -34,8 +33,21 @@
 			margin: 10px;
 		}
 
-		.help {
+		.help > .hint {
 			display: none;
+			font-size: 11px;
+			color: #ffffff;
+			background-color: #3e8e17;
+			border: 1px solid #3e8e17;
+		}
+
+		.help > .error {
+			display: none;
+			font-size: 11px;
+			color: #ffffff;
+			background-color: #992424;
+			border: 1px solid #3e8e17;
+			border-top: none;
 		}
 
 		label {
@@ -72,6 +84,14 @@
 
 		input:focus {
 			border: 2px solid;
+		}
+
+		input:focus + .help > .hint {
+			display: block;
+		}
+
+		.error input + .help > .error {
+			display: block;
 		}
 
 		.item {
@@ -162,7 +182,7 @@
 				</div>
 
 				<div class="field select">
-					<label for="input_select">Select required</label>
+					<label for="input_select">Select</label>
 					<select name="select" id="input_select">
 						<option value="0">test</option>
 						<option value="1">apple</option>
