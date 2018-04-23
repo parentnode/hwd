@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Exercise 301</title>
+	<title>Exercise 302</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<style type="text/css">
 		/* DON'T CHANGE THIS CSS */
@@ -22,11 +22,31 @@
 	<div id="header"></div>
 	<div id="content">
 
-		<div class="a4">A4</div>
-		<div class="a1">A1</div>
-		<div class="a3">A3</div>
-		<div class="a5">A5</div>
-		<div class="a2">A2</div>
+		<div class="a4">I'm clueless</div>
+		<div class="scene">
+			<div class="a4">A4</div>
+			<ul>
+				<li class="no">
+					<div class="a3">I'm clueless</div>
+				</li>
+				<li class="yes">
+					<div class="a3">A3</div>
+				</li>
+			</ul>
+
+			<div class="section">
+				<div class="a2">I'm clueless</div>
+				<div class="a1">A1<div class="a2">A2</div></div>
+				<ul>
+					<li class="yes">
+						<div class="a5 b">I'm clueless</div>
+					</li>
+					<li class="yes">
+						<div class="a5 a">A5</div>
+					</li>
+				</ul>
+			</div>
+		</div>
 
 	</div>
 	<div id="footer"></div>
@@ -37,19 +57,19 @@
 	// ADD YOUR JS HERE
 
 	// Querying divs and storing them in variables
-	var content = document.getElementById("content");
+	var content = document.getElementById("content")
 	var a1 = document.querySelector("div.a1");
-	var a2 = document.querySelector("div.a2");
-	var a3 = document.querySelector("div.a3");
-	var a4 = document.querySelector("div.a4");
-	var a5 = document.querySelector("div.a5");
+	var a2 = document.querySelector("div.a1 > div.a2");
+	var a3 = document.querySelector("li.yes > div.a3");
+	var a4 = document.querySelector("div.a4 + div > div.a4");
+	var a5 = document.querySelector("div.a5.a");
 
 	// Moving divs
 	content.insertBefore(a1, content.firstChild);
-	content.insertBefore(a2, a1.nextSibling);
+	content.insertBefore(a2, a2.parentNode.nextSibling);
 	content.insertBefore(a3, a2.nextSibling);
 	content.insertBefore(a4, a3.nextSibling);
-	content.insertBefore(a5, content.lastChild);
+	content.insertBefore(a5, a4.nextSibling);
 
 </script>
 
