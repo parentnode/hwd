@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 303</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+		#content {min-height: 400px;}
+		div.a1 {background-color: yellow; color: black;}
+		div.a2 {background-color: orange; color: black;}
+		div.a3 {background-color: red; color: white;}
+		div.a4 {background-color: brown; color: white;}
+		div.a5 {background-color: black; color: white;}
+
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content">
+
+		<div class="a1">I'm clueless</div>
+		<div class="scene">
+			<div class="a2">I'm clueless</div>
+			<div class="a3">I'm clueless</div>
+			<div>
+				<div>
+					<div class="a4">I'm clueless</div>
+				</div>
+			</div>
+			<div class="a5">I'm clueless</div>
+		</div>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+
+	// ADD YOUR JS HERE
+/**
+* 1. Get reference to #content div as var content.
+* 2. Use firstChild and childNodes[] and nextSibling to reach additional divs.
+* 3. Define scene as var.
+* 4. Use innerHtml to set html to A1, A2, etc.
+*/
+	var content = document.body.childNodes[1].childNodes[3];
+	// console.log(content);
+	// console.log(content.childNodes);
+	// console.log(content.childNodes[1].innerHTML);
+	content.childNodes[1].innerHTML = "A1";
+	// console.log(content.childNodes[1].innerHTML);
+	var div_a2 = content.childNodes[3].firstChild.nextSibling;
+	div_a2.innerHTML = "A2";
+	div_a2.nextSibling.nextSibling.innerHTML = "A3";
+	div_a2.parentNode.childNodes[5].childNodes[1].childNodes[1].innerHTML = "A4";
+	div_a2.parentNode.childNodes[7].innerHTML = "A5";
+
+</script>
+
+
+</body>
+</html>
