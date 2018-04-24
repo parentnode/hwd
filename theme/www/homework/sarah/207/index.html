@@ -50,6 +50,7 @@
 			line-height: 1.55em;
 			padding-left: 5px;
 			display: inline-block;
+			margin-bottom: 5px;
 		}
 
 		input[name=terms] {
@@ -77,22 +78,33 @@
 			border-bottom: 3px #3E8E17 solid;
 		}
 
+		.error input:focus {
+			border: 1px solid darkred;
+			border-bottom: 3px solid darkred;
+		}
+
 		.string input:focus + .help,
-		.password input:focus + .help
+		.password input:focus + .help,
 		.email input:focus + .help {
 			/* margin-top: 2px; */
 			/* margin-bottom: -12px; */
 		}
 
 		.string input:focus + .help .hint,
-		.password input:focus + .help .hint
+		.password input:focus + .help .hint,
 		.email input:focus + .help .hint {
 			visibility: visible;
+			margin-top: -2px;
 			/* background-color: inherit; */
 		}
 
+		.error input:focus + .help .error {
+			color: darkred;
+			visibility: visible;
+		}
+
 		input[type=submit]:hover {
-			background-color: #34BB00;
+			background-color: #202020;
 			color: white;
 			cursor: pointer;
 		}
@@ -101,13 +113,14 @@
 			padding-left: 5px;
 			/* margin-top: 2px; */
 			/* line-height: 2em; */
-			background-color: lightgrey;
-			border: 1px solid darkgrey;
+			/* background-color: lightgrey; */
+			/* border: 1px solid darkgrey; */
 			/* border-radius: 0px 0px 3px 3px; */
 			/* margin: -15px 0 0 0; */
 			font-size: 10px;
 			line-height: 15px;
 			visibility: hidden;
+			margin-bottom: 2px;
 		}
 
 		div.required label:after {
@@ -120,6 +133,9 @@
 		.email label {
 			display: inline-block;
 			box-sizing: border-box;
+			/* border: 1px solid black; */
+			/* border-radius: 10px; */
+			/* padding: 10px; */
 			padding-left: 0px;
 			width: 29%;
 		}
@@ -142,6 +158,7 @@
 			visibility: visible;
 			/* border-radius: 3px; */
 		}
+
 
 	</style>
 </head>
