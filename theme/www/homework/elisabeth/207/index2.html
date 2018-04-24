@@ -40,7 +40,7 @@
 		input {
 			width: 80%;
 			border: 1px solid #006600;
-			border-radius: 10px;
+			border-radius: 5px;
 			height: 30px;
 			margin-bottom: 36px;
 			margin-left: 10%;
@@ -84,17 +84,21 @@
 	div.field.radiobuttons.required .help {
 		margin-top: -47px;
 	}
-	div.help .error {
+		div.help .error {
 			visibility: hidden;
 		}
-			div.field.string.required.error div.help .error {
+		div.field.string.required.error div.help .error {
 				visibility: visible;
 			}
 		div.field.string.required.error .hint {
 			display: none;
 		}
-		div.field.string.required.error input:hover + div {
+		div.field.string.required.error input:focus + div {
 			display: block;
+			color: red;
+		}
+		div.field.string.required.error input:focus {
+			border: 1px solid red;
 		}
 		input:focus {
 			outline: none;
@@ -154,10 +158,10 @@
 		.select label {
 			display: inline-block;
     	float: left;
-			margin-left: 66px;
+			margin-left: 40px;
 		}
 		.select select {
-			margin-right: 96px;
+			width: 80%;
 		}
 		div.field.radiobuttons.required {
 			margin-top: 24px;
