@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 207</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 500px; margin: 0 auto;}
+
+
+		/* ADD YOUR CSS HERE */
+		@font-face {
+			font-family: 'voresfont';
+			src:	url('../KBHFF/font/voresfont.woff') format('woff'),
+					url('../KBHFF/font/voresfont.ttf') format('truetype');
+		}
+
+		.form {
+			font-family: voresfont;
+			overflow: hidden;
+			border-top: 6px solid #3e8e17;
+			box-shadow: 2px 2px 20px #bcbcbc;
+		}
+
+		fieldset {
+			border: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		fieldset > div {
+			margin: 10px;
+		}
+
+		.help > .hint {
+			display: none;
+			font-size: 11px;
+			color: #ffffff;
+			background-color: #3e8e17;
+			border: 1px solid #3e8e17;
+		}
+
+		.help > .error {
+			display: none;
+			font-size: 11px;
+			color: #ffffff;
+			background-color: #992424;
+			border: 1px solid #3e8e17;
+			border-top: none;
+		}
+
+		label {
+			font-size: 14px;
+			color: #3e8e17;
+		}
+
+		.required > label::after {
+			content: " *";
+		}
+
+		.error > label {
+			color: #992424;
+			border-color: #992424;
+		}
+
+		.string > label, .email > label, .password > label {
+			position: relative;
+			top: 10px;
+			left: 10px; 
+			background-color: #ffffff;
+		}
+
+		.string > input, .email > input, .password > input {
+			font-family: voresfont;
+			box-sizing: border-box;
+			width: 100%;
+			font-size: 16px;
+			padding: 8px;
+			color: #295812;
+			border: 1px solid #3e8e17;
+			/* border-radius: 5px; */
+		}
+
+		input:focus {
+			border: 2px solid #3e8e17;
+		}
+
+		input:focus + .help > .hint {
+			display: block;
+		}
+
+		.error input + .help > .error {
+			display: block;
+		}
+
+		.item {
+			display: inline-block;
+			padding-left: 10px;
+		}
+
+		ul.actions {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+
+
+		ul.actions > li.save > input {
+			font-family: voresfont;
+			font-size: 22px;
+
+			width: 100%;
+			height: 50px;
+			color: #ffffff;
+			background-color: #3e8e17;
+
+			padding: 0;
+			border: none;
+		}
+
+		ul.actions > li.save > input:hover {
+			color: #ffffff;
+			background-color: #32ae40;
+		}
+
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content">
+
+
+		<form action="#" method="POST" class="form">
+			<fieldset>
+
+				<div class="field string">
+					<label for="input_text1">Text</label>
+					<input type="text" name="string1" id="input_text1" />
+					<div class="help">
+						<div class="hint">hint message which is pretty long and explaining a lot of things</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field string required">
+					<label for="input_text2">Text required</label>
+					<input type="text" name="string2" id="input_text2" />
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field string required error">
+					<label for="input_text3">Text required w. error</label>
+					<input type="text" name="string3" id="input_text3" />
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message which is pretty long and explaining a lot of things</div>
+					</div>
+				</div>
+
+				<div class="field email required">
+					<label for="input_email">Email required</label>
+					<input type="email" name="email" id="input_email" maxlength="255" />
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field password required">
+					<label for="input_password">Password required</label>
+					<input type="password" name="password" id="input_password" maxlength="255" />
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field select">
+					<label for="input_select">Select</label>
+					<select name="select" id="input_select">
+						<option value="0">test</option>
+						<option value="1">apple</option>
+						<option value="2" selected="selected">pear</option>
+						<option value="3">banana</option>
+					</select>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field checkbox required">
+					<input type="hidden" name="checkbox" value="0" />
+					<input type="checkbox" name="checkbox" id="input_checkbox" value="1" />
+					<label for="input_checkbox">Checkbox required</label>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field radiobuttons required">
+					<label>Radiobuttons required</label>
+					<div class="item">
+						<input type="radio" name="radiobuttons" id="input_radiobuttons_value1" value="value1" />
+						<label for="input_radiobuttons_value1">text1</label>
+					</div>
+					<div class="item">
+						<input type="radio" name="radiobuttons" id="input_radiobuttons_value2" value="value2" />
+						<label for="input_radiobuttons_value2">text2</label>
+					</div>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+
+				<ul class="actions">
+					<li class="save">
+						<input type="submit" value="Submit" class="button primary" />
+					</li>
+				</ul>
+
+			</fieldset>
+		</form>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+
+</body>
+</html>

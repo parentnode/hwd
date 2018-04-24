@@ -34,29 +34,22 @@
 
 <script type="text/javascript">
 
-// ****** Define variables referencing divs with class a1-a5 and #content div ********
-	var div_a1 = document.querySelector("#content div.a1");
-	var div_a2 = document.querySelector("#content div.a2");
-	var div_a3 = document.querySelector("#content div.a3");
-	var div_a4 = document.querySelector("#content div.a4");
-	var div_a5 = document.querySelector("#content div.a5");
+	// ADD YOUR JS HERE
 
+	// Querying divs and storing them in variables
 	var content = document.getElementById("content");
+	var a1 = document.querySelector("div.a1");
+	var a2 = document.querySelector("div.a2");
+	var a3 = document.querySelector("div.a3");
+	var a4 = document.querySelector("div.a4");
+	var a5 = document.querySelector("div.a5");
 
-/**
-********* Move elements into correct order ***************
-* 1. Move a1 before a4 using insertbefore
-* 2. Use Appendchild on a2 to add to the end of the list.
-* 3. Use Appendchild on a3 to add to the end of the list.
-* 4. Use Appendchild on a4 to add to the end of the list.
-* 5. Use Appendchild on a5 to add to the end of the list.
-*/
-
-	content.insertBefore(div_a1, div_a4);
-	content.appendChild(div_a2);
-	content.appendChild(div_a3);
-	content.appendChild(div_a4);
-	content.appendChild(div_a5);
+	// Moving divs
+	content.insertBefore(a1, content.firstChild);
+	content.insertBefore(a2, a1.nextSibling);
+	content.insertBefore(a3, a2.nextSibling);
+	content.insertBefore(a4, a3.nextSibling);
+	content.insertBefore(a5, content.lastChild);
 
 </script>
 
