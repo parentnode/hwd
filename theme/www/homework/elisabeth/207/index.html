@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 204</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 500px; margin: 0 auto;}
+
+
+		/* ADD YOUR CSS HERE */
+
+		#content {
+			margin-top: 100px;
+		}
+		fieldset {
+			border:0;
+			padding: 0;
+			margin: 0;
+			padding-top: 50px;
+		}
+		form {
+			min-height: 400px;
+			min-width: 500px;
+			width: 500px;
+			margin: auto;
+			text-align: center;
+			border: 1px solid #3E8E17;
+			border-radius: 5px;
+
+			}
+		h1 {
+			text-transform: uppercase;
+			color: #3E8E17;
+			font-size: 28px;
+			padding-top: 60px;
+			padding-bottom: 30px;
+		}
+		input {
+			width: 90%;
+			border: 1px solid #006600;
+			border-radius: 10px;
+			height: 30px;
+			margin-bottom: 36px;
+			margin-left: 5%;
+			margin-right: 5%;
+			display: block;
+		}
+		label {
+			display: block;
+			text-align: left;
+			margin-left: 40px;
+			font-weight: 400;
+
+		}
+
+		.help {
+			display: none;
+			font-size: 12px;
+			float: left;
+			margin-top: -36px;
+			margin-left: 24px;
+		}
+
+		div.field.string, div.field.string.required {
+			width: 45%;
+			display: inline-block;
+		}
+		/* div.field.string input {
+			width: 90%;
+		} */
+
+		div.field.checkbox.required label:hover + div {
+			display: block;
+		}
+		div.field.select select:hover + div  {
+			display: block;
+		}
+		div.field.radiobuttons.required .item:hover + div {
+			display: block;
+		}
+		div.field.select .help {
+			margin-top: 36px;
+			margin-right: 12px;
+		}
+		div.field.checkbox.required .help {
+			margin-right: 248px;
+			margin-top: 12px;
+		}
+
+		div.field.radiobuttons.required .help {
+			margin-top: -24px;
+			margin-left: 6px;
+		}
+		div.help .error {
+			visibility: hidden;
+			}
+		div.field.string.required.error div.help .error {
+			visibility: visible;
+
+			}
+		div.field.string.required.error .hint {
+			display: none;
+		}
+
+		div.field.string.required.error input:hover + div {
+			display: block;
+		}
+		input:focus {
+			outline: none;
+			border: 1px solid #00FF00;
+		}
+		input:focus + div {
+			display: block;
+
+		}
+
+		.checkbox label {
+			display: inline-block;
+			margin: 0;
+			float: left;
+		}
+		.checkbox input {
+			width: 15px;
+			height: 15px;
+			float: left;
+			margin-left: 40px;
+			margin-top: 2px;
+			margin-right: 10px;
+		}
+		.actions {
+			list-style-type: none;
+			padding: 0;
+		}
+		input.button.primary  {
+			background-color: #3E8E17;
+			height: 50px;
+			font-size: 26px;
+			color: #ffffff;
+			text-transform: uppercase;
+		}
+		input.button.primary:hover {
+		background-color: #006600;
+		color: #ffffff;
+		border: 1px solid #3E8E17;
+		}
+		.newUser a {
+			text-decoration: none;
+			font-size: 14px;
+			color: #3E8E17;
+		}
+		.forgot a {
+			float: left;
+			font-size: 12px;
+			margin-left: 5px;
+			margin-top: 10px;
+			color: #3E8E17;
+			text-decoration: none;
+		}
+
+		div.field.select {
+			padding-bottom: 24px;
+			display: inline-block;
+			margin-right: -112px;
+		}
+		.select label {
+			display: inline-block;
+    	float: left;
+			margin: 0;
+		}
+		.select select {
+			margin-left: 12px;
+		}
+		div.field.radiobuttons.required {
+			float: left;
+			margin-left: 24px;
+			display: inline-block;
+		}
+		div.field.string.required.error {
+			width: 100%;
+    	margin: 0;
+		}
+
+		div.field.checkbox.required {
+			padding-bottom: 24px;
+		}
+		div.field.radiobuttons.required label {
+			display: block;
+			margin-left: 0px;
+		}
+	.radiobuttons div.item label {
+			/* display: inline-block; */
+			margin: 0;
+			/* float: left; */
+			margin-top: -12px;
+			margin-bottom: 12px;
+		}
+	.radiobuttons div.item input {
+			height: 15px;
+			float: left;
+			margin: 0;
+			display: inline-block;
+			margin-bottom: 20px;
+		}
+		.item {
+			/* margin-top: 10px; */
+			float: left;
+		}
+		span {
+			font-size: 12px;
+			color: #3E8E17;
+		}
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content">
+
+
+		<form action="#" method="POST" class="form">
+			<fieldset>
+
+				<div class="field string">
+					<label for="input_text1">Text</label>
+					<input type="text" name="string1" id="input_text1" />
+					<div class="help">
+						<div class="hint">hint message which is pretty long and explaining a lot of things</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field string required">
+					<label for="input_text2">Text <span>required</span></label>
+					<input type="text" name="string2" id="input_text2" />
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field string required error">
+					<label for="input_text3">Text required w. error</label>
+					<input type="text" name="string3" id="input_text3" />
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message which is pretty long and explaining a lot of things</div>
+					</div>
+				</div>
+
+				<div class="field email required">
+					<label for="input_email">Email <span>required</span></label>
+					<input type="email" name="email" id="input_email" maxlength="255" />
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field password required">
+					<label for="input_password">Password <span>required</span></label>
+					<input type="password" name="password" id="input_password" maxlength="255" />
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field select">
+					<label for="input_select">Select <span>required</span></label>
+					<select name="select" id="input_select">
+						<option value="0">test</option>
+						<option value="1">apple</option>
+						<option value="2" selected="selected">pear</option>
+						<option value="3">banana</option>
+					</select>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field checkbox required">
+					<input type="hidden" name="checkbox" value="0" />
+					<input type="checkbox" name="checkbox" id="input_checkbox" value="1" />
+					<label for="input_checkbox">Checkbox <span>required</span></label>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field radiobuttons required">
+					<label>Radiobuttons <span>required</span></label>
+					<div class="item">
+						<input type="radio" name="radiobuttons" id="input_radiobuttons_value1" value="value1" />
+						<label for="input_radiobuttons_value1">text1</label>
+					</div>
+					<div class="item">
+						<input type="radio" name="radiobuttons" id="input_radiobuttons_value2" value="value2" />
+						<label for="input_radiobuttons_value2">text2</label>
+					</div>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+
+				<ul class="actions">
+					<li class="save">
+						<input type="submit" value="Submit" class="button primary" />
+					</li>
+				</ul>
+
+			</fieldset>
+		</form>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+function moveElement(node, reference) {
+	reference.parentNode.insertBefore(node, reference)
+}
+
+var radio = document.querySelector(".field.radiobuttons.required");
+var error_required = document.querySelector(".field.string.required.error");
+var select = document.querySelector("div.field.select")
+var submit = document.querySelector(".save")
+
+moveElement(radio, error_required)
+moveElement(select, radio)
+// moveElement(error_required, submit)
+</script>
+</body>
+</html>

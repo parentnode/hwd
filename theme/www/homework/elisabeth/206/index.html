@@ -11,10 +11,14 @@
 font-family: 'voresfont';
 src: url('font/voresfont.woff') format('woff'),
 url('font/voresfont.ttf') format('truetype'),
-url('font/voresfont.svg#osbold') format('svg');
-  }
+url('font/voresfont.svg#voresfont') format('svg');
+font-weight: normal;
+font-style: normal;
+}
+
 	#page {
 		text-transform: uppercase;
+		font-family: voresfont;
 	}
 /* CSS FOR HEADER */
 
@@ -76,7 +80,7 @@ url('font/voresfont.svg#osbold') format('svg');
 			margin-right: 2px;
 			line-height: 18px;
 		}
-		ul.navigation li a{
+		ul.navigation li a {
 			text-decoration: none;
 			color: #ffffff;
 			background-color: #000000;
@@ -92,6 +96,12 @@ url('font/voresfont.svg#osbold') format('svg');
 		ul.om_subjects {
 			display: none;
 		}
+
+		@media all and (max-width: 600px) {
+    ul.navigation li {
+        display: block;
+    }
+}
 /* CSS FOR CONTENT */
 
 	div#content {
