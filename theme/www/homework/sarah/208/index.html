@@ -50,9 +50,10 @@
 			background-color: #ECFBE4;
 			/* border-radius: 3px; */
 			line-height: 1.55em;
-			padding: 3px 5px 3px 5px;
+			padding: 3px 5px 3px 6px;
 			display: block;
 			margin-bottom: 5px;
+			margin-top: 2px;
 		}
 
 		.select select {
@@ -65,10 +66,13 @@
 		.text textarea:focus,
 		.select select:focus {
 			border: 3px solid #3E8E17;
+			margin-top: 0px;
+			padding-left: 4px;
 		}
 
 		.error input:focus {
 			border: 3px solid darkred;
+			background-color: #FFD9D9;
 		}
 
 		.string input:focus + .help,
@@ -76,7 +80,7 @@
 		.email input:focus + .help,
 		.text textarea:focus + .help,
 		.select select:focus + .help {
-			margin-top: -4px;
+			margin-top: -2px;
 			/* margin-top: 2px; */
 			/* margin-bottom: -12px; */
 		}
@@ -91,35 +95,43 @@
 		}
 
 		.error input:focus + .help .hint,
-		.error textarea:focus + .help .hint {
+		.error textarea:focus + .help .hint,
+		.error select:focus + .help .hint {
 			visibility: hidden;
 		}
 
 		.error input:focus + .help .error,
-		.error textarea:focus + .help .error {
+		.error textarea:focus + .help .error,
+		.error select:focus + .help .error {
 			color: darkred;
 			visibility: visible;
 		}
 
-		.checkbox input:hover + .help .hint,
-		.radiobuttons input:hover ~ .help .hint {
+		.checkbox:hover .help .hint,
+		.radiobuttons:hover .help .hint {
 			visibility: visible;
 			/* border-radius: 3px; */
 		}
 
-		.error.checkbox input:hover + .help .hint,
-		.error.radiobuttons input:hover ~ .help .hint {
+		.error.checkbox:hover .help .hint,
+		.error.radiobuttons:hover .help .hint {
 			visibility: hidden;
 		}
 
-		.error.checkbox input:hover + .help .error,
-		.error.radiobuttons input:hover ~ .help .error {
+		.error.checkbox:hover .help .error,
+		.error.radiobuttons:hover .help .error {
 			visibility: visible;
 			color: darkred;
 		}
 
-		input[type=submit]:hover {
-			background-color: #3e8e17;
+		ul.actions .save input:hover {
+			background-color: #000000;
+			color: white;
+			cursor: pointer;
+		}
+
+		ul.actions .cancel input:hover {
+			background-color: #000000;
 			color: white;
 			cursor: pointer;
 		}
@@ -144,7 +156,7 @@
 			margin-bottom: 10px;
 		}
 
-		div.required label:after {
+		.required > label:after {
 			content: " *";
 			color: red;
 			font-size: 20px;
@@ -163,30 +175,22 @@
 		}
 
 		.checkbox label {
-			padding-left: 18px;
+			padding-left: 20px;
 			/* display: inline-block; */
 			margin-top: -28px;
 		}
 
-		.checkbox label:hover + .help {
-			margin-top: 0px;
+		.radiobuttons .item label {
+			padding-left: 3px;
 		}
 
-		.checkbox label:hover + .help .hint,
-		.radiobuttons label:hover ~ .help .hint {
-			visibility: visible;
-			/* border-radius: 3px; */
-		}
-
-		.error.checkbox label:hover + .help .hint,
-		.error.radiobuttons label:hover ~ .help .hint {
-			visibility: hidden;
-		}
-
-		.error.checkbox label:hover + .help .error,
-		.error.radiobuttons label:hover ~ .help .error {
-			visibility: visible;
+		.error.checkbox:hover label,
+		.error.radiobuttons:hover > label {
 			color: darkred;
+		}
+
+		.checkbox:hover + .help {
+			margin-top: 0px;
 		}
 
 		#content ul.actions {
@@ -211,7 +215,7 @@
 
 		input[type=submit] {
 			color: #ffffff;
-			background-color: #000000;
+			background-color: #3E8E17;
 		}
 
 		input[type=button] {
