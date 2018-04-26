@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 208</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="http://udvikler-kbhff.local/css/includes.css" />
+	<style type="text/css">
+/* DON'T CHANGE THIS CSS */
+body {margin: 0;}
+		/*#page {width: 500px; margin: 0 auto;}
+
+
+		 ADD YOUR CSS HERE */
+		body {
+			margin: 0;
+			padding: 0;
+			font-size: 14px; 
+			line-height: 1.24px;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		#content {
+			width: 500px;
+			min-height: 700px;
+			margin: 40px auto;
+			padding: 24px;
+ 			background: rgba(240, 255, 255, 0.65);
+ 		}
+		form {
+			position: relative;
+			box-sizing: border-box;
+			background-blend-mode: lighten;
+			border: 2px solid black;
+			padding: 22px;
+			border-color: green;
+		}
+		a {
+			color: green;
+		}
+		.nav-icon {
+			display: inline-block;
+			margin-right: 0.5rem;
+			font-size: 2rem;
+			color: black;
+		}
+		.field-icon {
+			position: absolute;
+			top: 2rem;
+			left: 0.5rem;
+			font-size: 2rem;
+			line-height: 3rem;
+			color: grey;
+		}
+		/* ----------------------- ACTION ELEMENTS (buttons, navigations etc.) ----------------------- */
+		ul.actions {
+			
+			margin: 0px;
+			padding: 0px 0px 2rem 0px;
+			text-align: center;
+		}
+		ul.actions li {
+			list-style: none;
+			padding: 0 0 1.5rem 0;
+		}
+		ul.actions li:last-child {
+			
+			padding: 0;
+		}
+		.button.primary {
+			background-color: green;
+			padding: 0.5rem 6rem;
+			border: 1px solid #bbbbbb;
+			border-radius: 3px;
+			box-sizing: border-box;
+			width: 100%;
+			height: 3rem;
+			font-size: 1.5rem;
+			font-weight: lighter;
+			color: white;
+		}
+		.button.primary:hover{
+			background-color: lightgreen;
+			color: white;
+		}
+
+
+		/* ----------------------- FORM ELEMENTS ----------------------- */
+		fieldset {border: 0; margin: 0; padding: 0;} 
+		label {
+			position: relative;
+			display: inline-block;
+			font-size: 14px; 
+			line-height: 2rem;
+		}
+		.field {position: relative; padding-bottom: 12px;}
+		.help {
+			position: relative; 
+			z-index: 1;
+			box-sizing: border-box; 
+			width: 100%;
+			min-height: 8px;
+			padding: 0;
+			}
+		.help .hint {
+			display: none; 
+			padding: 0 5px;
+			font-size: 14px;
+			line-height: 24px;
+			box-sizing: border-box; 
+			color: #666;}
+		.help .error {
+			display: none; 
+			position: absolute;
+			top: -48px;
+			left: calc(100% + 20px);
+			width: 300px;
+			box-sizing: border-box;
+			padding: 0 5px;
+			margin-left: 10px;
+			font-size: 14px;
+			line-height: 24px;
+			border-radius: 5px;
+			background-color: darkred;
+			color: white;
+		}
+		.help .error:after {
+			content:"";
+			position:absolute;
+			top:16px;
+			left:-12px; /* value = - border-left-width - border-right-width */
+			bottom:auto;
+			border-width:8px 12px 8px 0; /* vary these values to change the angle of the vertex */
+			border-color:transparent darkred;
+			border-style:solid;
+			/* reduce the damage in FF3.0 */
+			display:block;
+			width:0;
+		}
+		input[type="text"], 
+		input[type="number"], 
+		input[type="email"], 
+		input[type="password"] {
+			box-sizing: border-box; 
+			width: 100%;
+			height: 48px;
+			border: 1px solid #bbbbbb;
+			border-radius: 5px;
+			background: rgba(255, 255, 255, 0.65);
+			padding: 0 8px;
+			font-size: 28px;
+			line-height: 48px;
+		}
+		select {
+			box-sizing: border-box; 
+			width: 100%;
+			height: 48px;
+			font-size: 28px;
+			line-height: 48px;
+			background: rgba(240, 240, 240, 0.65);
+		}
+		select:focus {
+			background: rgba(255, 240, 255, 1);
+		}
+		input[type="text"]:focus, 
+		input[type="number"]:focus, 
+		input[type="email"]:focus, 
+		input[type="password"]:focus {
+			border: 2px solid green;
+			background: rgba(255, 245, 255, 1);
+			outline: none;
+		}
+
+		input[type="text"]:focus + .help > .hint, 
+		input[type="number"]:focus + .help > .hint, 
+		input[type="email"]:focus + .help > .hint, 
+		input[type="password"]:focus + .help > .hint {
+			display: inline-block;
+		}
+		input[type="text"]:focus + .help > .hint-link, 
+		input[type="number"]:focus + .help > .hint-link, 
+		input[type="email"]:focus + .help > .hint-link, 
+		input[type="password"]:focus + .help > .hint-link {
+			display: inline-block;
+		}
+		 		
+		.error input[type="text"] + .help .error, 
+		.error input[type="number"] + .help .error, 
+		.error input[type="email"] + .help .error, 
+		.error input[type="password"] + .help .error {
+			display: inline-block;
+		} 
+		.error input[type="text"]:focus, 
+		.error input[type="number"]:focus, 
+		.error input[type="email"]:focus, 
+		.error input[type="password"]:focus {
+			border: 2px solid darkred;
+		} 
+		.error input[type="text"], 
+		.error input[type="number"], 
+		.error input[type="email"], 
+		.error input[type="password"] {
+			border: 1px solid darkred;
+		} 				
+		/* remove number spinner (up and down arrows) */
+		input[type=number]::-webkit-inner-spin-button, 
+		input[type=number]::-webkit-outer-spin-button { 
+			-webkit-appearance: inherit; 
+			margin: 0; 
+		}
+
+		.required label::before {
+		tab-size: 400%;
+			content: '*';
+			color: red;
+		}
+		/* .radiobuttons .item {
+			position: relative;
+		}
+		.radiobuttons .item label {
+			display: inline-block;  
+			position: relative;
+			padding-left: 20px;
+			cursor: pointer;
+			font-size: 18px;
+			line-height: 28px;
+		} 
+		.radiobuttons .item input {
+			position: relative;
+			z-index: -1;
+			opacity: 0;
+		}
+		.custom-radiobutton {
+			position: absolute;
+			top: 10px;
+			left: 0px;
+			height: 28px;
+			width: 28px;
+			border: 1px solid white;
+			background: #e6e6e6;
+			border-radius: 50%;
+		}
+		
+		.custom-radiobutton:after {
+			content: '';
+			position: absolute;
+			left: 8px;
+			top: 8px;
+			height: 12px;
+			width: 12px;
+			border-radius: 50%;
+			background: #e6e6e6;
+		}
+		
+		input:checked ~ .custom-radiobutton {
+			background: darkgreen;
+		}
+		*/	
+
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header">
+		<a class="logo" href="/">KBHFF <span class="highlight">udviklerguide</span></a>
+		<ul class="servicenavigation">
+			<li class="keynav navigation nofollow"><a href="#navigation">To navigation</a></li>
+			<li><a href="/kontakt">Contact</a></li>
+			<li><a href="http://kbhff.dk">kbhff.dk</a></li>
+		</ul>
+	</div>
+	<div id="navigation">
+		<ul class="navigation">
+			<li><a href="software-license">Software license</a></li>
+			<li><a href="choose-editor">Code editors</a></li>
+			<li><a href="development-environment">Dev environment</a></li>
+			<li><a href="before-you-start-coding">Coding conventions</a></li>
+			<li><a href="playground">Set up playground</a></li>
+			<li><a href="dictionary">Dictionary</a></li>
+		</ul>
+	</div>
+	<div id="content">
+
+		<h1>Form layout</h1>
+		<p>
+			This is a page containing a range of different input fields. We use it to make our proposals for our
+			new form elements – to be shared with and approved by the IT Work Group.
+		</p>
+
+		<form action="#" method="POST" class="form">
+			<fieldset>
+				<h3>Primary data</h3>
+
+				<div class="field string">
+					<label for="input_text1">Text</label>
+					<input type="text" name="string1" id="input_text1" />
+					<div class="help">
+						<div class="hint">hint message which is pretty long and explaining a lot of things</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field string required">
+					<label for="input_text2">Text required</label>
+					<input type="text" name="string2" id="input_text2" />
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field string required error">
+					<label for="input_text3">Text required w. error</label>
+					<input type="text" name="string3" id="input_text3" />
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message which is pretty long and explaining a lot of things</div>
+					</div>
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<h3>Secondary data</h3>
+
+				<div class="field email required">
+					<label for="input_email">Email required</label>
+					<input type="email" name="email" id="input_email" maxlength="255" />
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field password required">
+					<label for="input_password">Password required</label>
+					<input type="password" name="password" id="input_password" maxlength="255" />
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field select">
+					<label for="input_select">Select required</label>
+					<select name="select" id="input_select">
+						<option value="0">test</option>
+						<option value="1">apple</option>
+						<option value="2" selected="selected">pear</option>
+						<option value="3">banana</option>
+					</select>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field text required">
+					<label for="input_text">Text required</label>
+					<textarea name="text" id="input_text"></textarea>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field checkbox required">
+					<input type="hidden" name="checkbox1" value="0" />
+					<input type="checkbox" name="checkbox1" id="input_checkbox1" value="1" />
+					<label for="input_checkbox1">Checkbox required</label>
+					<div class="help">
+						<div class="hint">hint message which is pretty long and explaining a lot of things</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field checkbox required error">
+					<input type="hidden" name="checkbox2" value="0" />
+					<input type="checkbox" name="checkbox2" id="input_checkbox2" value="1" />
+					<label for="input_checkbox2">Checkbox required w/ error</label>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message which is pretty long and explaining a lot of things</div>
+					</div>
+				</div>
+
+				<div class="field radiobuttons required">
+					<label>Radiobuttons required</label>
+					<div class="item">
+						<input type="radio" name="radiobuttons" id="input_radiobuttons_value1" value="value1" />
+						<label for="input_radiobuttons_value1">text1</label>
+					</div>
+					<div class="item">
+						<input type="radio" name="radiobuttons" id="input_radiobuttons_value2" value="value2" />
+						<label for="input_radiobuttons_value2">text2</label>
+					</div>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field radiobuttons required">
+					<label>Radiobuttons required w/ error</label>
+					<div class="item">
+						<input type="radio" name="radiobuttons" id="input_radiobuttons_value1" value="value1" />
+						<label for="input_radiobuttons_value1">text1</label>
+					</div>
+					<div class="item">
+						<input type="radio" name="radiobuttons" id="input_radiobuttons_value2" value="value2" />
+						<label for="input_radiobuttons_value2">text2</label>
+					</div>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<ul class="actions">
+					<li class="save">
+						<input type="submit" value="Submit" class="button primary" />
+					</li>
+					<li class="cancel">
+						<input type="button" value="Cancel" class="button" />
+					</li>
+				</ul>
+
+			</fieldset>
+		</form>
+
+	</div>
+	<div id="footer">
+		<ul class="servicenavigation">
+			<li class="copyright">KBHFF, 2018</li>
+			<li><a href="/kontakt">Kontakt</a></li>
+			<li><a href="http://kbhff.dk">kbhff.dk</a></li>
+		</ul>
+	</div>
+</div>
+
+
+</body>
+</html>
