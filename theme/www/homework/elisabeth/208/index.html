@@ -34,13 +34,13 @@
 			height: 30px;
 			margin-bottom: 36px;
 			display: block;
-			font-size: 18px;
+			font-size: 22px;
 		}
 		div.field input:focus {
-			background-color: rgba(62,142,23, 0.25);
+			background-color: rgba(62,142,23, 0.15);
 		}
 		div.field.error input:focus {
-			background-color: rgba(155,37,30, 0.25);
+			background-color: rgba(194,36,20, 0.15);
 		}
 		div.field label {
 			display: block;
@@ -50,6 +50,7 @@
 		label::after {
 			content: "*";
 			color: red;
+			font-size: 18px;
 		}
 		div.item label::after {
 			content: " ";
@@ -62,13 +63,15 @@
 			float: left;
 			margin-top: -36px;
 			text-align: left;
-			line-height: 1em;
+			line-height: 0.5em;
 		}
-		div.help div.error {
-			color: #9B251E;
+		#content div.help div.error {
+			color: #C22414;
+			line-height: 1em;
 			}
-		div.help div.hint {
+		#content div.help div.hint {
 			color: #3E8E17;
+			line-height: 1em;
 			}
 		div.field.checkbox.required:hover > div.help, div.field.select:hover > div.help, div.field.radiobuttons.required:hover > div.help {
 			display: block;
@@ -92,7 +95,7 @@
 			display: block;
 		}
 		div.field.string.required.error input:focus {
-			border: 2px solid red;
+			border: 2px solid #C22414;
 		}
 		div.field input:focus {
 			outline: none;
@@ -227,7 +230,7 @@
 					<input type="text" name="string3" id="input_text3" />
 					<div class="help">
 						<div class="hint">hint message</div>
-						<div class="error">error message which is pretty long and explaining a lot of things</div>
+						<div class="error">error message which is pretty long and explaining a lot of things. Many extraordinary, super duper important things. Sooooo important.</div>
 					</div>
 				</div>
 			</fieldset>
@@ -281,7 +284,7 @@
 					<input type="checkbox" name="checkbox1" id="input_checkbox1" value="1" />
 					<label for="input_checkbox1">Checkbox required</label>
 					<div class="help">
-						<div class="hint">hint message which is pretty long and explaining a lot of things</div>
+						<div class="hint">hint message which is pretty long and explaining a lot of things. Many extraordinary, super duper important things. Sooooo important.</div>
 						<div class="error">error message</div>
 					</div>
 				</div>
@@ -292,7 +295,7 @@
 					<label for="input_checkbox2">Checkbox required w/ error</label>
 					<div class="help">
 						<div class="hint">hint message</div>
-						<div class="error">error message which is pretty long and explaining a lot of things</div>
+						<div class="error">error message which is pretty long and explaining a lot of things. Many extraordinary, super duper important things. Sooooo important.</div>
 					</div>
 				</div>
 
