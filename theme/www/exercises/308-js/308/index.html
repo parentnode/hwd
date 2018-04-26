@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 308</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+		#content {min-height: 2000px;}
+
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content">
+
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+
+	// ADD YOUR JS HERE
+	function loaded() {
+		console.log("loaded");
+
+		window.addEventListener("resize", function(event) {console.log(event)}, false);
+		window.addEventListener("scroll", function(event) {console.log(event)}, false);
+	}
+
+	window.addEventListener("DOMContentLoaded", loaded, false);
+
+</script>
+
+
+</body>
+</html>
