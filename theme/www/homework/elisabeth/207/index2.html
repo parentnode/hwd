@@ -26,33 +26,28 @@
 			width: 400px;
 			margin: auto;
 			text-align: center;
-			border: 1px solid #3E8E17;
-			border-radius: 10px;
-
-			}
-		h1 {
-			text-transform: uppercase;
-			color: #3E8E17;
-			font-size: 28px;
-			padding-top: 60px;
-			padding-bottom: 30px;
+			border: 1px solid #696969;
 		}
 		input {
 			width: 80%;
-			border: 1px solid #006600;
-			border-radius: 5px;
+			border: 1px solid	#696969;
 			height: 30px;
 			margin-bottom: 36px;
 			margin-left: 10%;
 			margin-right: 10%;
 			display: block;
+			font-size: 18px;
+
 		}
 		label {
 			display: block;
 			text-align: left;
-			margin-left: 40px;
+			padding-left: 40px;
 			font-weight: 400;
-
+		}
+		label::after {
+			content: "*";
+			color: red;
 		}
 
 		.help {
@@ -73,17 +68,17 @@
 		div.field.radiobuttons.required .item:hover + div {
 			display: block;
 		}
-	div.field.select .help {
-		margin-top: -17px;
-		padding-left: 240px;
-	}
-	div.field.checkbox.required .help {
-		margin-top: -16px;
-		padding-left: 168px;
-	}
-	div.field.radiobuttons.required .help {
-		margin-top: -47px;
-	}
+		div.field.select .help {
+			margin-top: -17px;
+			padding-left: 240px;
+		}
+		div.field.checkbox.required .help {
+			margin-top: -16px;
+			padding-left: 168px;
+		}
+		div.field.radiobuttons.required .help {
+			margin-top: -47px;
+		}
 		div.help .error {
 			visibility: hidden;
 		}
@@ -98,9 +93,9 @@
 			color: red;
 		}
 		div.field.string.required.error input:focus {
-			border: 1px solid red;
+			border: 2px solid red;
 		}
-		input:focus {
+		div.field.string.required input:focus, div.field.string input:focus, {
 			outline: none;
 			border: 1px solid #00FF00;
 		}
