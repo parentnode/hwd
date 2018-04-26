@@ -1,0 +1,454 @@
+b<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 208</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="http://udvikler-kbhff.local/css/includes.css" />
+	<style type="text/css">
+
+		/* ADD YOUR CSS HERE */
+
+		/* Form layout */
+		#content form {
+			/* border: 2px solid black; */
+			padding: 24px;
+			width: 500px;
+			margin: 0 auto;
+		}
+		
+		#content form fieldset {
+			margin: 0px;;
+			padding: 0 0 29px 0;
+			border: 0px;
+		}
+		
+		#content form .field {
+			padding-bottom: 56px;
+		}
+
+		#content form h3 {
+			padding: 0 0 17px 0;
+		}
+
+		#content form .field {
+			position: relative;
+		}
+
+		/* Place labels and input boxes */
+		#content form label[for*="text"],
+		#content form label[for*="email"],
+		#content form label[for*="password"],
+		#content form label[for*="select"] {
+			display: block;
+			line-height: 1em;
+			padding: 1px 6px;
+			position: absolute;
+			top: -8px;
+			left: 8px;
+			background-color: #fff;
+			/* border: 1px solid #888888; */			
+		}
+
+		#content form div.radiobuttons .item{
+			padding-top: 12px;
+			
+		}
+		
+		#content form input[type=text],
+		#content form input[type=email],
+		#content form input[type=password],
+		#content form select,
+		#content form textarea {
+			width: 100%;
+			padding: 8px 6px 6px 6px;
+			font-size: 20px;
+
+		}
+
+		#content form textarea {
+			min-height: 120px;
+		}
+
+		#content form input[type=checkbox] {
+			position: relative;
+			top: 2px;
+		}
+
+		#content form .checkbox label {
+			position: relative;
+			left: 12px;
+		}
+
+		#content form .field.checkbox {
+			padding-bottom: 24px;
+		}
+
+		#content form .field.checkbox + .field:not(.checkbox) {
+			padding-top: 24px;
+		}
+
+		#content form .radiobuttons .item label {
+			font-size: 14px;
+			position: relative;
+			bottom: 2px;
+			left: 12px;
+		}
+
+		#content form div.field.radiobuttons {
+			padding-bottom: 48px;
+		}
+
+		#content form div.field.radiobuttons .item input {
+			position: relative;
+			bottom: 1px;
+		}
+
+		/* Standard field formatting */
+		#content form input[type=text],
+		#content form input[type=email],
+		#content form input[type=password],
+		#content form select {
+			outline: none;
+			box-shadow: none;
+			border: 1px solid #666;
+		}
+
+
+		/* Focused fields */
+		#content form input[type=text]:focus,
+		#content form input[type=email]:focus,
+		#content form input[type=password]:focus,
+		#content form select:focus,
+		#content form textarea:focus {
+			background-color: #ECF4E8;
+			outline: none;
+			box-shadow: none;
+		}
+
+		/* Required fields */
+		#content form .required > label::after {
+			content: "*";
+			color: #f44336;	
+			font-size: 28px;
+			position: absolute;
+			top: 7px;
+			padding: 0px 7px 0px 6px;
+			background-color: white;
+			
+			/* margin-left: -12px; */
+		}
+
+		#content form .checkbox.required > label::after {
+			top: 2px;
+		}
+
+		#content form .radiobuttons.required > label::after {
+			top: 6px;
+		}
+
+
+
+		/* Hint and error messages */
+		#content form .help {
+			position: relative;
+		}
+
+		#content form div.help * {
+			display:none;
+			font-size: 14px;
+		}
+
+		.help .hint {
+			padding: 0 5px;
+			font-size: 14px;
+			line-height: 24px;
+			box-sizing: border-box; 
+			color: #666;}
+		
+		#content form .field input:focus ~ .help .hint,
+		#content form .field select:focus ~ .help .hint,
+		#content form .field textarea:focus ~ .help .hint {
+			display: inline-block;
+			position: absolute;
+			top: 3px;
+			left: 3px;
+			line-height: 1.2;
+		}
+
+		#content form .field.checkbox input:focus ~ .help .hint {
+			left: 25px;
+			top: 0px;
+		}
+
+
+		#content form .field.error input {
+			border: 2px solid #f44336;
+		}
+
+		#content form .field.error input:focus {
+			background-color: #feeceb;
+			border: 2px solid #f44336; 
+		}
+
+		#content form .field.error input ~ .help .error {
+			position: absolute;
+			display: block;
+			z-index: 10;
+			border: 2px solid #f44336;
+			padding: 6px;
+			background-color: white;
+			/* width: 240px;
+			bottom: -76px;
+			right: 0px; */
+
+			width: 240px;
+			right: 104%;
+			bottom: 0px;
+			min-height: 26px;
+		}
+
+		#content form .help .error::after {
+			content: " ";
+			position: absolute;
+			bottom: 8px;
+			left: 100%;
+			margin: auto;
+    		border-width: 11px;
+    		border-style: solid;
+    		border-color: transparent transparent transparent #f44336	;
+		}
+
+		#content form .field.error input[type=checkbox] ~ .help .error {
+			bottom: -9px;
+		}
+
+		/* BUTTONS */
+		#content form ul.actions {
+			display: block;
+			/* padding: 13px 0px 0px 0px; */
+			margin: 0;
+			/* text-align: center; */
+			list-style: none;
+		}
+
+		#content form ul.actions li {
+			display: inline-block;
+			padding-left: 0px;
+			padding-right: 6px;
+		}
+
+		#content form .button {	
+			height: 35px;
+			border: 0px;
+			padding: 0px 14px;
+			font-family: 'voresfont';
+			font-size: 14px;
+			text-transform: uppercase;
+			min-width: 82px;
+
+			background-color: rgb(192, 192, 192);
+			color: black;
+		}
+
+		#content form .button:hover {
+			cursor: pointer;
+			background-color: #cacaca;
+		}
+
+		#content form .button.primary{
+			background-color: #3e8e17;
+			color: white;
+		}
+		
+		#content form .button.primary:hover{
+			/* background-color: #ECF4E8; */
+			background-color: #B2D2A2;
+			/* color: #000; */
+			cursor: pointer;
+			/* color: black; */
+		}	
+
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header">
+		<a class="logo" href="/">KBHFF <span class="highlight">udviklerguide</span></a>
+		<ul class="servicenavigation">
+			<li class="keynav navigation nofollow"><a href="#navigation">To navigation</a></li>
+			<li><a href="/kontakt">Contact</a></li>
+			<li><a href="http://kbhff.dk">kbhff.dk</a></li>
+		</ul>
+	</div>
+	<div id="navigation">
+		<ul class="navigation">
+			<li><a href="software-license">Software license</a></li>
+			<li><a href="choose-editor">Code editors</a></li>
+			<li><a href="development-environment">Dev environment</a></li>
+			<li><a href="before-you-start-coding">Coding conventions</a></li>
+			<li><a href="playground">Set up playground</a></li>
+			<li><a href="dictionary">Dictionary</a></li>
+		</ul>
+	</div>
+	<div id="content">
+
+		<h1>Form layout</h1>
+		<p>
+			This is a page containing a range of different input fields. We use it to make our proposals for our
+			new form elements – to be shared with and approved by the IT Work Group.
+		</p>
+
+		<form action="#" method="POST" class="form">
+			<fieldset>
+				<h3>Primary data</h3>
+
+				<div class="field string">
+					<label for="input_text1">Text</label>
+					<input type="text" name="string1" id="input_text1" />
+					<div class="help">
+						<div class="hint">hint message which is pretty long hint message which is pretty long hint message which is pretty long hint message which is pretty long </div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field string required">
+					<label for="input_text2">Text required</label>
+					<input type="text" name="string2" id="input_text2" />
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field string required error">
+					<label for="input_text3">Text required w. error</label>
+					<input type="text" name="string3" id="input_text3" />
+					<div class="help">
+						<div class="hint">hint message which is pretty long and explaining a lot of things</div>
+						<div class="error">error message which is pretty long</div>
+					</div>
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<h3>Secondary data</h3>
+
+				<div class="field email required">
+					<label for="input_email">Email required</label>
+					<input type="email" name="email" id="input_email" maxlength="255" />
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field password required">
+					<label for="input_password">Password required</label>
+					<input type="password" name="password" id="input_password" maxlength="255" />
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field select">
+					<label for="input_select">Select required</label>
+					<select name="select" id="input_select">
+						<option value="0">test</option>
+						<option value="1">apple</option>
+						<option value="2" selected="selected">pear</option>
+						<option value="3">banana</option>
+					</select>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field text required">
+					<label for="input_text">Text required</label>
+					<textarea name="text" id="input_text"></textarea>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field checkbox required">
+					<input type="hidden" name="checkbox1" value="0" />
+					<input type="checkbox" name="checkbox1" id="input_checkbox1" value="1" />
+					<label for="input_checkbox1">Checkbox required</label>
+					<div class="help">
+						<div class="hint">hint message which is pretty long and explaining a lot of things</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field checkbox required error">
+					<input type="hidden" name="checkbox2" value="0" />
+					<input type="checkbox" name="checkbox2" id="input_checkbox2" value="1" />
+					<label for="input_checkbox2">Checkbox required w/ error</label>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message which is pretty long and explaining a lot of things</div>
+					</div>
+				</div>
+
+				<div class="field radiobuttons required">
+					<label>Radiobuttons required</label>
+					<div class="item">
+						<input type="radio" name="radiobuttons" id="input_radiobuttons_value1" value="value1" />
+						<label for="input_radiobuttons_value1">text1</label>
+					</div>
+					<div class="item">
+						<input type="radio" name="radiobuttons" id="input_radiobuttons_value2" value="value2" />
+						<label for="input_radiobuttons_value2">text2</label>
+					</div>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field radiobuttons required">
+					<label>Radiobuttons required w/ error</label>
+					<div class="item">
+						<input type="radio" name="radiobuttons" id="input_radiobuttons_value1" value="value1" />
+						<label for="input_radiobuttons_value1">text1</label>
+					</div>
+					<div class="item">
+						<input type="radio" name="radiobuttons" id="input_radiobuttons_value2" value="value2" />
+						<label for="input_radiobuttons_value2">text2</label>
+					</div>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<ul class="actions">
+					<li class="save">
+						<input type="submit" value="Submit" class="button primary" />
+					</li>
+					<li class="cancel">
+						<input type="button" value="Cancel" class="button" />
+					</li>
+				</ul>
+
+			</fieldset>
+		</form>
+
+	</div>
+	<div id="footer">
+		<ul class="servicenavigation">
+			<li class="copyright">KBHFF, 2018</li>
+			<li><a href="/kontakt">Kontakt</a></li>
+			<li><a href="http://kbhff.dk">kbhff.dk</a></li>
+		</ul>
+	</div>
+</div>
+
+
+</body>
+</html>
