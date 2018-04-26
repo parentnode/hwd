@@ -5,7 +5,16 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" type="text/css" href="http://udvikler-kbhff.local/css/includes.css" />
 	<style type="text/css">
-
+	@font-face {
+		font-family: 'voresfont';
+		src: url('/css/fonts/voresfont.eot');
+		src: url('/css/fonts/voresfont.eot?#iefix') format('embedded-opentype'),
+			 url('/css/fonts/voresfont.woff') format('woff'),
+			 url('/css/fonts/voresfont.svg#voresfont') format('svg'),
+			 url('/css/fonts/voresfont.ttf') format('truetype');
+		font-weight: 400;
+		font-style: normal;
+	}
 		/* ADD YOUR CSS HERE */
 		fieldset {
 			border:0;
@@ -55,10 +64,10 @@
 			text-align: left;
 			line-height: 1em;
 		}
-			div.help div.error {
+		div.help div.error {
 			color: #9B251E;
 			}
-			div.help div.hint {
+		div.help div.hint {
 			color: #3E8E17;
 			}
 		div.field.checkbox.required:hover > div.help, div.field.select:hover > div.help, div.field.radiobuttons.required:hover > div.help {
@@ -114,6 +123,8 @@
 			color: #ffffff;
 			text-transform: uppercase;
 			padding: 7px 14px;
+			border: none;
+			font-family: voresfont;
 		}
 		#content ul.actions {
 			margin: 0;
@@ -304,12 +315,12 @@
 				<div class="field radiobuttons required error">
 					<label>Radiobuttons required w/ error</label>
 					<div class="item">
-						<input type="radio" name="radiobuttons" id="input_radiobuttons_value1" value="value1" />
-						<label for="input_radiobuttons_value1">text1</label>
+						<input type="radio" name="radiobuttons1" id="input_radiobuttons_value3" value="value1" />
+						<label for="input_radiobuttons_value3">text1</label>
 					</div>
 					<div class="item">
-						<input type="radio" name="radiobuttons" id="input_radiobuttons_value2" value="value2" />
-						<label for="input_radiobuttons_value2">text2</label>
+						<input type="radio" name="radiobuttons1" id="input_radiobuttons_value4" value="value2" />
+						<label for="input_radiobuttons_value4">text2</label>
 					</div>
 					<div class="help">
 						<div class="hint">hint message</div>
