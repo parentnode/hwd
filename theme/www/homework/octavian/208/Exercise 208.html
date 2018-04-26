@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
 	<title>Exercise 208</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" type="text/css" href="http://udvikler-kbhff.local/css/includes.css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="Exercise%20208_files/includes.css">
 	<style type="text/css">
 /* DON'T CHANGE THIS CSS */
 body {margin: 0;}
@@ -13,7 +12,6 @@ body {margin: 0;}
 		 ADD YOUR CSS HERE */
 		body {
 			margin: 0;
-			margin: 0 auto;
 			padding: 0;
 			font-size: 14px; 
 			line-height: 1.24px;
@@ -21,19 +19,17 @@ body {margin: 0;}
 		}
 		#content {
 			width: 500px;
-			
 			min-height: 700px;
 			margin: 40px auto;
 			padding: 24px;
  			background: rgba(230, 240, 240, 0.65);
  		}
 		form {
-		
+			position: relative;
 			box-sizing: border-box;
 			background-blend-mode: lighten;
 			border: 2px solid black;
 			padding: 22px;
-			margin: 0 left;
 			border-color: green;
 		}
 		a {
@@ -161,7 +157,7 @@ body {margin: 0;}
 		input[type="email"], 
 		input[type="password"] {
 			box-sizing: border-box; 
-			width: 449px;
+			width: 100%;
 			height: 48px;
 			border: 1px solid #bbbbbb;
 			border-radius: 0px;
@@ -169,10 +165,6 @@ body {margin: 0;}
 			padding: 0 8px;
 			font-size: 28px;
 			line-height: 48px;
-		}
-		#input_text {
-			width: 449px; 
-			height: 138px;
 		}
 		
 		select {
@@ -246,21 +238,21 @@ body {margin: 0;}
 
 <div id="page">
 	<div id="header">
-		<a class="logo" href="/">KBHFF <span class="highlight">udviklerguide</span></a>
+		<a class="logo" href="http://class-test.local/">KBHFF <span class="highlight">udviklerguide</span></a>
 		<ul class="servicenavigation">
 			<li class="keynav navigation nofollow"><a href="#navigation">To navigation</a></li>
-			<li><a href="/kontakt">Contact</a></li>
-			<li><a href="http://kbhff.dk">kbhff.dk</a></li>
+			<li><a href="http://class-test.local/kontakt">Contact</a></li>
+			<li><a href="http://kbhff.dk/">kbhff.dk</a></li>
 		</ul>
 	</div>
 	<div id="navigation">
 		<ul class="navigation">
-			<li><a href="software-license">Software license</a></li>
-			<li><a href="choose-editor">Code editors</a></li>
-			<li><a href="development-environment">Dev environment</a></li>
-			<li><a href="before-you-start-coding">Coding conventions</a></li>
-			<li><a href="playground">Set up playground</a></li>
-			<li><a href="dictionary">Dictionary</a></li>
+			<li><a href="http://class-test.local/homework/octavian/208/software-license">Software license</a></li>
+			<li><a href="http://class-test.local/homework/octavian/208/choose-editor">Code editors</a></li>
+			<li><a href="http://class-test.local/homework/octavian/208/development-environment">Dev environment</a></li>
+			<li><a href="http://class-test.local/homework/octavian/208/before-you-start-coding">Coding conventions</a></li>
+			<li><a href="http://class-test.local/homework/octavian/208/playground">Set up playground</a></li>
+			<li><a href="http://class-test.local/homework/octavian/208/dictionary">Dictionary</a></li>
 		</ul>
 	</div>
 	<div id="content">
@@ -277,7 +269,7 @@ body {margin: 0;}
 
 				<div class="field string">
 					<label for="input_text1">Text</label>
-					<input type="text" name="string1" id="input_text1" />
+					<input name="string1" id="input_text1" type="text">
 					<div class="help">
 						<div class="hint">hint message which is pretty long and explaining a lot of things</div>
 						<div class="error">error message</div>
@@ -286,7 +278,7 @@ body {margin: 0;}
 
 				<div class="field string required">
 					<label for="input_text2">Text required</label>
-					<input type="text" name="string2" id="input_text2" />
+					<input name="string2" id="input_text2" type="text">
 					<div class="help">
 						<div class="hint">hint message</div>
 						<div class="error">error message</div>
@@ -295,7 +287,7 @@ body {margin: 0;}
 
 				<div class="field string required error">
 					<label for="input_text3">Text required w. error</label>
-					<input type="text" name="string3" id="input_text3" />
+					<input name="string3" id="input_text3" value="kli&lt;sfd" type="text">
 					<div class="help">
 						<div class="hint">hint message</div>
 						<div class="error">error message which is pretty long and explaining a lot of things</div>
@@ -308,7 +300,7 @@ body {margin: 0;}
 
 				<div class="field email required">
 					<label for="input_email">Email required</label>
-					<input type="email" name="email" id="input_email" maxlength="255" />
+					<input name="email" id="input_email" maxlength="255" type="email">
 					<div class="help">
 						<div class="hint">hint message</div>
 						<div class="error">error message</div>
@@ -317,7 +309,7 @@ body {margin: 0;}
 
 				<div class="field password required">
 					<label for="input_password">Password required</label>
-					<input type="password" name="password" id="input_password" maxlength="255" />
+					<input name="password" id="input_password" maxlength="255" type="password">
 					<div class="help">
 						<div class="hint">hint message</div>
 						<div class="error">error message</div>
@@ -340,7 +332,7 @@ body {margin: 0;}
 
 				<div class="field text required">
 					<label for="input_text">Text required</label>
-					<textarea name="text" id="input_text"></textarea>
+					<textarea name="text" id="input_text" style="width: 449px; height: 138px;">pouaspfoi</textarea>
 					<div class="help">
 						<div class="hint">hint message</div>
 						<div class="error">error message</div>
@@ -348,8 +340,8 @@ body {margin: 0;}
 				</div>
 
 				<div class="field checkbox required">
-					<input type="hidden" name="checkbox1" value="0" />
-					<input type="checkbox" name="checkbox1" id="input_checkbox1" value="1" />
+					<input name="checkbox1" value="0" type="hidden">
+					<input name="checkbox1" id="input_checkbox1" value="1" type="checkbox">
 					<label for="input_checkbox1">Checkbox required</label>
 					<div class="help">
 						<div class="hint">hint message which is pretty long and explaining a lot of things</div>
@@ -358,8 +350,8 @@ body {margin: 0;}
 				</div>
 
 				<div class="field checkbox required error">
-					<input type="hidden" name="checkbox2" value="0" />
-					<input type="checkbox" name="checkbox2" id="input_checkbox2" value="1" />
+					<input name="checkbox2" value="0" type="hidden">
+					<input name="checkbox2" id="input_checkbox2" value="1" type="checkbox">
 					<label for="input_checkbox2">Checkbox required w/ error</label>
 					<div class="help">
 						<div class="hint">hint message</div>
@@ -370,11 +362,11 @@ body {margin: 0;}
 				<div class="field radiobuttons required">
 					<label>Radiobuttons required</label>
 					<div class="item">
-						<input type="radio" name="radiobuttons" id="input_radiobuttons_value1" value="value1" />
+						<input name="radiobuttons" id="input_radiobuttons_value1" value="value1" type="radio">
 						<label for="input_radiobuttons_value1">text1</label>
 					</div>
 					<div class="item">
-						<input type="radio" name="radiobuttons" id="input_radiobuttons_value2" value="value2" />
+						<input name="radiobuttons" id="input_radiobuttons_value2" value="value2" type="radio">
 						<label for="input_radiobuttons_value2">text2</label>
 					</div>
 					<div class="help">
@@ -386,11 +378,11 @@ body {margin: 0;}
 				<div class="field radiobuttons required">
 					<label>Radiobuttons required w/ error</label>
 					<div class="item">
-						<input type="radio" name="radiobuttons" id="input_radiobuttons_value1" value="value1" />
+						<input name="radiobuttons" id="input_radiobuttons_value1" value="value1" checked="checked" type="radio">
 						<label for="input_radiobuttons_value1">text1</label>
 					</div>
 					<div class="item">
-						<input type="radio" name="radiobuttons" id="input_radiobuttons_value2" value="value2" />
+						<input name="radiobuttons" id="input_radiobuttons_value2" value="value2" type="radio">
 						<label for="input_radiobuttons_value2">text2</label>
 					</div>
 					<div class="help">
@@ -401,10 +393,10 @@ body {margin: 0;}
 
 				<ul class="actions">
 					<li class="save">
-						<input type="submit" value="Submit" class="button primary" />
+						<input value="Submit" class="button primary" type="submit">
 					</li>
 					<li class="cancel">
-						<input type="button" value="Cancel" class="button" />
+						<input value="Cancel" class="button" type="button">
 					</li>
 				</ul>
 
@@ -415,12 +407,12 @@ body {margin: 0;}
 	<div id="footer">
 		<ul class="servicenavigation">
 			<li class="copyright">KBHFF, 2018</li>
-			<li><a href="/kontakt">Kontakt</a></li>
-			<li><a href="http://kbhff.dk">kbhff.dk</a></li>
+			<li><a href="http://class-test.local/kontakt">Kontakt</a></li>
+			<li><a href="http://kbhff.dk/">kbhff.dk</a></li>
 		</ul>
 	</div>
 </div>
 
 
-</body>
-</html>
+
+</body></html>
