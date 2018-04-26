@@ -27,6 +27,10 @@
 			margin: 0;
 		}
 
+		#content fieldset * {
+			line-height: 1.3em;
+		}
+
 		.help > .hint {
 			display: none;
 			font-size: 14px;
@@ -36,7 +40,7 @@
 		.help > .error {
 			display: none;
 			font-size: 14px;
-			color: #9B251E;
+			color: #C22414;
 		}
 
 		label {
@@ -46,18 +50,16 @@
 
 		.required > label::after {
 			content: " *";
-			
-			color: #e91e13;
+			color: #C22414;
 			vertical-align: middle;
 			font-size: 22px;
-			
 			position: relative;
-			top: 3px;	
+			top: 4px;	
 		}
 
 		.error > label {
-			color: #992424;
-			border-color: #992424;
+			color: #C22414;
+			border-color: #C22414;
 		}
 
 		.string > label, .email > label, .password > label, .text label {
@@ -68,7 +70,6 @@
 		}
 
 		.string > input, .email > input, .password > input, select, .text textarea {
-			font-family: voresfont;
 			box-sizing: border-box;
 			width: 100%;
 			font-size: 20px;
@@ -91,24 +92,17 @@
 			background: linear-gradient(#ffffff,#ffdede);
 		}
 
-		input:focus + .help > .hint, .text > textarea:focus + div > .hint {
+		input:focus + .help > .hint, .text > textarea:focus + div > .hint, .select:hover .hint, .checkbox:hover .hint, .radiobuttons:hover .hint { /* show hint on focus/hover */
+			display: block;
+			animation: sweyIn .4s;
+		}
+
+		.error input + .help > .error, .checkbox + .checkbox .error, .radiobuttons + .radiobuttons .error { /* show error on error inputs */
 			display: block;
 		}
 
-		.error input + .help > .error {
-			display: block;
-		}
-
-		.item {
-			padding-left: 10px;
-		}
-
-		.select:hover .hint, .checkbox:hover .hint, .radiobuttons:hover .hint {
-			display: block;
-		}
-
-		.checkbox + .checkbox .error, .radiobuttons + .radiobuttons .error {
-			display: block;
+		.error input + .help > .hint, .checkbox + .checkbox .hint, .radiobuttons + .radiobuttons .hint { /* Hide hint on error inputs */
+			display: none;
 		}
 
 		#content ul {
@@ -126,6 +120,10 @@
 			padding-bottom: 10px;
 		}
 
+		.item {
+			padding-left: 10px;
+		}
+
 		ul.actions > li > input.primary {
 			color: #ffffff;
 			background-color: #3e8e17;
@@ -139,6 +137,7 @@
 			list-style-type: none;
 			font-family: voresfont;
 			font-size: 16px;
+			text-transform: uppercase;
 
 			padding: 7px 14px;
 			color: #ffffff;
@@ -151,6 +150,14 @@
 			color: #ffffff;
 			background-color: #333333;
 		}
+
+		/* Animations */
+		
+		@keyframes sweyIn {
+			from {position: relative; top: -10px; opacity: 0;}
+			to {position: relative; top: 0; opacity: 1;}
+		}
+
 
 	</style>
 </head>
