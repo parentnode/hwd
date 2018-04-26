@@ -20,7 +20,6 @@
 			border:0;
 			padding: 0;
 			margin: 0;
-			padding-top: 50px;
 		}
 		form {
 			min-height: 400px;
@@ -32,15 +31,25 @@
 			width: 100%;
 			border: 1px solid	#666666;
 			height: 30px;
-			margin-bottom: 36px;
+			margin-bottom: 28px;
 			display: block;
 			font-size: 22px;
 		}
-		div.field input:focus {
+		.field.text.required textarea {
+			width: 100%;
+			height: 100px;
+			margin-bottom: 20px;
+			font-size: 22px;
+		}
+		div.field input:focus, .field.text.required textarea:focus, div.field.select select:focus {
 			background-color: rgba(62,142,23, 0.15);
+			border: 2px solid #559C33;
+			outline: none;
 		}
 		div.field.error input:focus {
 			background-color: rgba(194,36,20, 0.15);
+			outline: none;
+			border: 2px solid #C22414;
 		}
 		div.field label {
 			display: block;
@@ -61,26 +70,23 @@
 			width: 100%;
 			height: 12px;
 			float: left;
-			margin-top: -36px;
+			margin-top: -25px;
 			text-align: left;
 			line-height: 0.5em;
 		}
 		#content div.help div.error {
 			color: #C22414;
 			line-height: 1em;
-			}
+		}
 		#content div.help div.hint {
 			color: #3E8E17;
 			line-height: 1em;
-			}
+		}
 		div.field.checkbox.required:hover > div.help, div.field.select:hover > div.help, div.field.radiobuttons.required:hover > div.help {
 			display: block;
 		}
-		div.field.select .help, div.field.checkbox.required .help {
+		div.field.select .help, div.field.checkbox.required .help, div.field.radiobuttons.required .help {
 			margin-top: 0;
-		}
-		div.field.radiobuttons.required .help {
-			margin-top: -6px;
 		}
 		div.field.radiobuttons.required.error div.help .error, div.field.checkbox.required.error div.help .error, div.field.string.required.error div.help .error   {
 			visibility: visible;
@@ -94,12 +100,8 @@
 		div.field.string.required.error input:focus + div, div.field input:focus + div {
 			display: block;
 		}
-		div.field.string.required.error input:focus {
-			border: 2px solid #C22414;
-		}
-		div.field input:focus {
-			outline: none;
-			border: 2px solid #559C33;
+		div.field.string.required.error .help, div.field.checkbox.required.error .help, div.field.radiobuttons.required.error .help {
+			display: block;
 		}
 		div.checkbox label {
 			display: inline-block;
@@ -150,6 +152,8 @@
 		}
 		.select select {
 			width: 100%;
+			height: 30px;
+			font-size: 22px;
 		}
 		div.field.checkbox.required {
 			padding-bottom: 54px;
@@ -166,11 +170,6 @@
 		}
 		div.field.radiobuttons.required {
 			margin: 20px 0;
-		}
-		.field.text.required textarea {
-			width: 100%;
-			height: 100px;
-			margin-bottom: 20px;
 		}
 	</style>
 </head>
@@ -211,7 +210,7 @@
 					<label for="input_text1">Text</label>
 					<input type="text" name="string1" id="input_text1" />
 					<div class="help">
-						<div class="hint">hint message which is pretty long and explaining a lot of things</div>
+						<div class="hint">hint message which is pretty long and explaining a lot of things. Many extraordinary, super duper important things. Sooooo important.</div>
 						<div class="error">error message</div>
 					</div>
 				</div>

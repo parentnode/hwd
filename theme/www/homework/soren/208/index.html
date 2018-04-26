@@ -18,7 +18,7 @@ b<!DOCTYPE html>
 		
 		#content form fieldset {
 			margin: 0px;;
-			padding: 0 0 29px 0;
+			padding: 0 0 5px 0;
 			border: 0px;
 		}
 		
@@ -58,7 +58,7 @@ b<!DOCTYPE html>
 		}
 
 		#content form div.radiobuttons .item{
-			padding-top: 12px;
+			padding-top: 5px;
 			
 		}
 		
@@ -77,14 +77,9 @@ b<!DOCTYPE html>
 			min-height: 120px;
 		}
 
-		#content form input[type=checkbox] {
-			position: relative;
-			top: 2px;
-		}
-
 		#content form .checkbox label {
 			position: relative;
-			left: 12px;
+			/* display: inline-block; */
 		}
 
 		#content form .field.checkbox {
@@ -100,16 +95,10 @@ b<!DOCTYPE html>
 			font-size: 14px;
 			position: relative;
 			bottom: 2px;
-			left: 12px;
 		}
 
 		#content form div.field.radiobuttons {
-			padding-bottom: 48px;
-		}
-
-		#content form div.field.radiobuttons .item input {
-			position: relative;
-			bottom: 1px;
+			padding-bottom: 38px;
 		}
 
 		/* Standard field formatting */
@@ -152,12 +141,9 @@ b<!DOCTYPE html>
 			padding-right: 24px;
 		}
 
-		#content form .checkbox.required > label::after {
-			top: 2px;
-		}
-
+		#content form .checkbox.required > label::after,
 		#content form .radiobuttons.required > label::after {
-			top: 7px;
+			top: 6px;
 		}
 
 
@@ -179,21 +165,39 @@ b<!DOCTYPE html>
 			box-sizing: border-box; 
 			color: #666;}
 		
-		#content form .field input:focus ~ .help .hint,
+		#content form .field.string input:focus ~ .help .hint,
+		#content form .field.email input:focus ~ .help .hint,
+		#content form .field.password input:focus ~ .help .hint,
 		#content form .field select:focus ~ .help .hint,
-		#content form .field textarea:focus ~ .help .hint {
+		#content form .field select:hover ~ .help .hint,
+		#content form .field textarea:focus ~ .help .hint,
+		#content form .field.checkbox label:hover ~ .help .hint,
+		#content form .field.checkbox input:hover ~ .help .hint,
+		#content form .field.radiobuttons:hover .help .hint {
 			display: inline-block;
 			position: absolute;
 			top: 3px;
 			left: 3px;
-			line-height: 1.2;
+			line-height: 1.2em;
 		}
 
-		#content form .field.checkbox input:focus ~ .help .hint {
-			left: 25px;
-			top: 0px;
+		#content form .field.checkbox input:hover ~ .help .hint,
+		#content form .field.checkbox label:hover ~ .help .hint {
+			left: -4px;
+			top: 2px;
 		}
 
+		#content form .field.radiobuttons {
+			position: relative;
+		}
+
+		#content form .field.radiobuttons:hover .help .hint {
+			position:absolute;
+
+			/* top: -100px; */
+			left: -5px;
+
+		}
 
 		#content form .field.error input {
 			border: 2px solid #f44336;
@@ -209,8 +213,11 @@ b<!DOCTYPE html>
 			display: block;
 			z-index: 10;
 			border: 2px solid #f44336;
-			padding: 6px;
+			padding: 6px 10px;
 			background-color: white;
+			color: #f44336;
+			background-color: rgba(255, 255, 255, 0.8);
+
 
 			width: 240px;
 			left: 104%;
@@ -229,10 +236,13 @@ b<!DOCTYPE html>
 		}
 
 		#content form .field.error input[type=checkbox] ~ .help .error {
-			width: 240px;
-			left: 0;
-			bottom: -12px;
-			min-height: 26px;
+			width: 497;
+			left: -12px;
+			top: 9px;
+			height: 15px;
+			line-height: 15px;
+			min-height: auto;
+			
 		}
 
 		#content form input[type=checkbox] ~ .help .error::after {
@@ -244,6 +254,10 @@ b<!DOCTYPE html>
     		border-width: 11px;
     		border-style: solid;
     		border-color: transparent transparent #f44336 transparent;
+		}
+
+		#content form .field.error input[type=checkbox] ~ .help .hint {
+			display: none;
 		}
 
 		/* BUTTONS */
@@ -268,13 +282,13 @@ b<!DOCTYPE html>
 			text-transform: uppercase;
 			min-width: 82px;
 
-			background-color: #999999;
+			background-color: ##BBBBBB;
 			color: black;
 		}
 
 		#content form .button:hover {
 			cursor: pointer;
-			background-color: #666666;
+			background-color: #999999;
 		}
 
 		#content form .button.primary{
@@ -393,16 +407,17 @@ b<!DOCTYPE html>
 						<div class="error">error message</div>
 					</div>
 				</div>
-
+				
 				<div class="field checkbox required">
-					<input type="hidden" name="checkbox1" value="0" />
-					<input type="checkbox" name="checkbox1" id="input_checkbox1" value="1" />
-					<label for="input_checkbox1">Checkbox required</label>
-					<div class="help">
-						<div class="hint">hint message which is pretty long and explaining a lot of things</div>
-						<div class="error">error message</div>
+						<input type="hidden" name="checkbox1" value="0" />
+						<input type="checkbox" name="checkbox1" id="input_checkbox1" value="1" />
+						<label for="input_checkbox1">Checkbox required</label>
+						<div class="help">
+							<div class="hint">hint message which is pretty long and explaining a lot of things</div>
+							<div class="error">error message</div>
+						</div>
 					</div>
-				</div>
+
 
 				<div class="field checkbox required error">
 					<input type="hidden" name="checkbox2" value="0" />
@@ -413,6 +428,17 @@ b<!DOCTYPE html>
 						<div class="error">error message which is pretty long and explaining a lot of things</div>
 					</div>
 				</div>
+
+				<div class="field checkbox required">
+					<input type="hidden" name="checkbox2" value="0" />
+					<input type="checkbox" name="checkbox2" id="input_checkbox2" value="1" />
+					<label for="input_checkbox2">Checkbox required</label>
+					<div class="help">
+						<div class="hint">hint message which is pretty long and explaining a lot of things</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
 
 				<div class="field radiobuttons required">
 					<label>Radiobuttons required</label>
