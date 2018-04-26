@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Exercise 204</title>
+	<title>Exercise 208</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
-
+	<link rel="stylesheet" type="text/css" href="http://udvikler-kbhff.local/css/includes.css" />
 	<style type="text/css">
-		/* DON'T CHANGE THIS CSS */
-		body {margin: 0;}
-		#page {width: 500px; margin: 0 auto;}
+/* DON'T CHANGE THIS CSS */
+body {margin: 0;}
+		/*#page {width: 500px; margin: 0 auto;}
 
 
-		/* ADD YOUR CSS HERE */
+		 ADD YOUR CSS HERE */
 		body {
 			margin: 0;
 			padding: 0;
@@ -20,14 +19,19 @@
 			font-family: Arial, Helvetica, sans-serif;
 		}
 		#content {
+			width: 500px;
 			min-height: 700px;
 			margin: 40px auto;
 			padding: 24px;
- 			background: white;
+ 			background: rgba(240, 255, 255, 0.65);
  		}
 		form {
 			position: relative;
 			box-sizing: border-box;
+			background-blend-mode: lighten;
+			border: 2px solid black;
+			padding: 22px;
+			border-color: green;
 		}
 		a {
 			color: green;
@@ -48,15 +52,17 @@
 		}
 		/* ----------------------- ACTION ELEMENTS (buttons, navigations etc.) ----------------------- */
 		ul.actions {
-			list-style: none;
+			
 			margin: 0px;
 			padding: 0px 0px 2rem 0px;
 			text-align: center;
 		}
 		ul.actions li {
+			list-style: none;
 			padding: 0 0 1.5rem 0;
 		}
 		ul.actions li:last-child {
+			
 			padding: 0;
 		}
 		.button.primary {
@@ -91,7 +97,7 @@
 			z-index: 1;
 			box-sizing: border-box; 
 			width: 100%;
-			min-height: 48px;
+			min-height: 8px;
 			padding: 0;
 			}
 		.help .hint {
@@ -149,17 +155,17 @@
 			height: 48px;
 			font-size: 28px;
 			line-height: 48px;
-			background: rgba(255, 255, 255, 0.65);
+			background: rgba(240, 240, 240, 0.65);
 		}
 		select:focus {
-			background: rgba(255, 255, 255, 1);
+			background: rgba(255, 240, 255, 1);
 		}
 		input[type="text"]:focus, 
 		input[type="number"]:focus, 
 		input[type="email"]:focus, 
 		input[type="password"]:focus {
 			border: 2px solid green;
-			background: rgba(255, 255, 255, 1);
+			background: rgba(255, 245, 255, 1);
 			outline: none;
 		}
 
@@ -197,27 +203,28 @@
 		/* remove number spinner (up and down arrows) */
 		input[type=number]::-webkit-inner-spin-button, 
 		input[type=number]::-webkit-outer-spin-button { 
-			-webkit-appearance: none; 
+			-webkit-appearance: inherit; 
 			margin: 0; 
 		}
 
-		.required label:after {
+		.required label::before {
+		tab-size: 400%;
 			content: '*';
 			color: red;
 		}
-		.radiobuttons .item {
+		/* .radiobuttons .item {
 			position: relative;
 		}
 		.radiobuttons .item label {
-			display: block;  
+			display: inline-block;  
 			position: relative;
-			padding-left: 36px;
+			padding-left: 20px;
 			cursor: pointer;
-			font-size: 28px;
-			line-height: 48px;
-		}
+			font-size: 18px;
+			line-height: 28px;
+		} 
 		.radiobuttons .item input {
-			position: absolute;
+			position: relative;
 			z-index: -1;
 			opacity: 0;
 		}
@@ -231,6 +238,7 @@
 			background: #e6e6e6;
 			border-radius: 50%;
 		}
+		
 		.custom-radiobutton:after {
 			content: '';
 			position: absolute;
@@ -241,27 +249,52 @@
 			border-radius: 50%;
 			background: #e6e6e6;
 		}
+		
 		input:checked ~ .custom-radiobutton {
 			background: darkgreen;
 		}
+		*/	
 
 	</style>
 </head>
 <body>
 
 <div id="page">
-	<div id="header"></div>
+	<div id="header">
+		<a class="logo" href="/">KBHFF <span class="highlight">udviklerguide</span></a>
+		<ul class="servicenavigation">
+			<li class="keynav navigation nofollow"><a href="#navigation">To navigation</a></li>
+			<li><a href="/kontakt">Contact</a></li>
+			<li><a href="http://kbhff.dk">kbhff.dk</a></li>
+		</ul>
+	</div>
+	<div id="navigation">
+		<ul class="navigation">
+			<li><a href="software-license">Software license</a></li>
+			<li><a href="choose-editor">Code editors</a></li>
+			<li><a href="development-environment">Dev environment</a></li>
+			<li><a href="before-you-start-coding">Coding conventions</a></li>
+			<li><a href="playground">Set up playground</a></li>
+			<li><a href="dictionary">Dictionary</a></li>
+		</ul>
+	</div>
 	<div id="content">
 
+		<h1>Form layout</h1>
+		<p>
+			This is a page containing a range of different input fields. We use it to make our proposals for our
+			new form elements – to be shared with and approved by the IT Work Group.
+		</p>
 
 		<form action="#" method="POST" class="form">
 			<fieldset>
+				<h3>Primary data</h3>
 
 				<div class="field string">
 					<label for="input_text1">Text</label>
 					<input type="text" name="string1" id="input_text1" />
 					<div class="help">
-						<div class="hint">hint message which is pretty long and explaining a lot of things, like really a lot of thing. More than most hints</div>
+						<div class="hint">hint message which is pretty long and explaining a lot of things</div>
 						<div class="error">error message</div>
 					</div>
 				</div>
@@ -280,9 +313,13 @@
 					<input type="text" name="string3" id="input_text3" />
 					<div class="help">
 						<div class="hint">hint message</div>
-						<div class="error">error message which is pretty long and explaining a lot of things, like really a lot of thing. More than most errror messages.</div>
+						<div class="error">error message which is pretty long and explaining a lot of things</div>
 					</div>
 				</div>
+			</fieldset>
+
+			<fieldset>
+				<h3>Secondary data</h3>
 
 				<div class="field email required">
 					<label for="input_email">Email required</label>
@@ -316,13 +353,32 @@
 					</div>
 				</div>
 
-				<div class="field checkbox required">
-					<input type="hidden" name="checkbox" value="0" />
-					<input type="checkbox" name="checkbox" id="input_checkbox" value="1" />
-					<label for="input_checkbox">Checkbox required</label>
+				<div class="field text required">
+					<label for="input_text">Text required</label>
+					<textarea name="text" id="input_text"></textarea>
 					<div class="help">
 						<div class="hint">hint message</div>
 						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field checkbox required">
+					<input type="hidden" name="checkbox1" value="0" />
+					<input type="checkbox" name="checkbox1" id="input_checkbox1" value="1" />
+					<label for="input_checkbox1">Checkbox required</label>
+					<div class="help">
+						<div class="hint">hint message which is pretty long and explaining a lot of things</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field checkbox required error">
+					<input type="hidden" name="checkbox2" value="0" />
+					<input type="checkbox" name="checkbox2" id="input_checkbox2" value="1" />
+					<label for="input_checkbox2">Checkbox required w/ error</label>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message which is pretty long and explaining a lot of things</div>
 					</div>
 				</div>
 
@@ -331,12 +387,10 @@
 					<div class="item">
 						<input type="radio" name="radiobuttons" id="input_radiobuttons_value1" value="value1" />
 						<label for="input_radiobuttons_value1">text1</label>
-						<div class="custom-radiobutton"></div>
 					</div>
 					<div class="item">
 						<input type="radio" name="radiobuttons" id="input_radiobuttons_value2" value="value2" />
 						<label for="input_radiobuttons_value2">text2</label>
-						<div class="custom-radiobutton"></div>
 					</div>
 					<div class="help">
 						<div class="hint">hint message</div>
@@ -344,10 +398,28 @@
 					</div>
 				</div>
 
+				<div class="field radiobuttons required">
+					<label>Radiobuttons required w/ error</label>
+					<div class="item">
+						<input type="radio" name="radiobuttons" id="input_radiobuttons_value1" value="value1" />
+						<label for="input_radiobuttons_value1">text1</label>
+					</div>
+					<div class="item">
+						<input type="radio" name="radiobuttons" id="input_radiobuttons_value2" value="value2" />
+						<label for="input_radiobuttons_value2">text2</label>
+					</div>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
 
 				<ul class="actions">
 					<li class="save">
 						<input type="submit" value="Submit" class="button primary" />
+					</li>
+					<li class="cancel">
+						<input type="button" value="Cancel" class="button" />
 					</li>
 				</ul>
 
@@ -355,7 +427,13 @@
 		</form>
 
 	</div>
-	<div id="footer"></div>
+	<div id="footer">
+		<ul class="servicenavigation">
+			<li class="copyright">KBHFF, 2018</li>
+			<li><a href="/kontakt">Kontakt</a></li>
+			<li><a href="http://kbhff.dk">kbhff.dk</a></li>
+		</ul>
+	</div>
 </div>
 
 
