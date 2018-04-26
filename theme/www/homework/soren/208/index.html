@@ -93,7 +93,7 @@ b<!DOCTYPE html>
 		}
 
 		#content form .field.checkbox + .field:not(.checkbox) {
-			padding-top: 24px;
+			margin-top: 24px;
 		}
 
 		#content form .radiobuttons .item label {
@@ -157,7 +157,7 @@ b<!DOCTYPE html>
 		}
 
 		#content form .radiobuttons.required > label::after {
-			top: 6px;
+			top: 7px;
 		}
 
 
@@ -230,19 +230,20 @@ b<!DOCTYPE html>
 
 		#content form .field.error input[type=checkbox] ~ .help .error {
 			width: 240px;
-			left: -3%;
-			bottom: -24px;
+			left: 0;
+			bottom: -12px;
 			min-height: 26px;
 		}
 
-		#content form input[type=checkbox] .help .error::after {
+		#content form input[type=checkbox] ~ .help .error::after {
 			content: " ";
 			position: absolute;
 			bottom: 8px;
 			bottom: 100%;
+			left: 9px;
     		border-width: 11px;
     		border-style: solid;
-    		border-color: #f44336 transparent transparent transparent;
+    		border-color: transparent transparent #f44336 transparent;
 		}
 
 		/* BUTTONS */
@@ -267,13 +268,13 @@ b<!DOCTYPE html>
 			text-transform: uppercase;
 			min-width: 82px;
 
-			background-color: rgb(192, 192, 192);
+			background-color: #999999;
 			color: black;
 		}
 
 		#content form .button:hover {
 			cursor: pointer;
-			background-color: #cacaca;
+			background-color: #666666;
 		}
 
 		#content form .button.primary{
@@ -282,7 +283,7 @@ b<!DOCTYPE html>
 		}
 		
 		#content form .button.primary:hover{
-			background-color: #224E0D;
+			background-color: #357914;
 			cursor: pointer;
 		}	
 
