@@ -11,9 +11,9 @@ b<!DOCTYPE html>
 		/* Form layout */
 		#content form {
 			/* border: 2px solid black; */
-			padding: 24px;
+			padding: 24px 0px 24px 0;
 			width: 500px;
-			margin: 0 auto;
+			margin: 0;
 		}
 		
 		#content form fieldset {
@@ -40,13 +40,21 @@ b<!DOCTYPE html>
 		#content form label[for*="password"],
 		#content form label[for*="select"] {
 			display: block;
-			line-height: 3px;
+			line-height: 2px;
 			padding: 1px 6px;
 			position: absolute;
-			top: -3px;
+			top: -2px;
 			left: 8px;
 			background-color: #fff;
 			/* border: 1px solid #888888; */			
+		}
+
+		#content form .error label[for*="text"],
+		#content form .error label[for*="email"],
+		#content form .error label[for*="password"],
+		#content form .error label[for*="select"] {
+			top: -2px;
+			line-height: 3px;
 		}
 
 		#content form div.radiobuttons .item{
@@ -81,6 +89,7 @@ b<!DOCTYPE html>
 
 		#content form .field.checkbox {
 			padding-bottom: 24px;
+			padding-left: 0;
 		}
 
 		#content form .field.checkbox + .field:not(.checkbox) {
@@ -107,7 +116,8 @@ b<!DOCTYPE html>
 		#content form input[type=text],
 		#content form input[type=email],
 		#content form input[type=password],
-		#content form select {
+		#content form select,
+		#content form textarea {
 			outline: none;
 			box-shadow: none;
 			border: 1px solid #666;
@@ -131,11 +141,15 @@ b<!DOCTYPE html>
 			color: #f44336;	
 			font-size: 28px;
 			position: absolute;
-			top: 2px;
+			top: 7px;
 			padding: 0px 7px 0px 6px;
-			background-color: white;
+			background-color: transparent;
 			
 			/* margin-left: -12px; */
+		}
+
+		#content form .required > label {
+			padding-right: 24px;
 		}
 
 		#content form .checkbox.required > label::after {
@@ -197,12 +211,9 @@ b<!DOCTYPE html>
 			border: 2px solid #f44336;
 			padding: 6px;
 			background-color: white;
-			/* width: 240px;
-			bottom: -76px;
-			right: 0px; */
 
 			width: 240px;
-			right: 104%;
+			left: 104%;
 			bottom: 0px;
 			min-height: 26px;
 		}
@@ -211,23 +222,33 @@ b<!DOCTYPE html>
 			content: " ";
 			position: absolute;
 			bottom: 8px;
-			left: 100%;
-			margin: auto;
+			right: 100%;
     		border-width: 11px;
     		border-style: solid;
-    		border-color: transparent transparent transparent #f44336	;
+    		border-color: transparent #f44336 transparent transparent;
 		}
 
 		#content form .field.error input[type=checkbox] ~ .help .error {
-			bottom: -9px;
+			width: 240px;
+			left: -3%;
+			bottom: -24px;
+			min-height: 26px;
+		}
+
+		#content form input[type=checkbox] .help .error::after {
+			content: " ";
+			position: absolute;
+			bottom: 8px;
+			bottom: 100%;
+    		border-width: 11px;
+    		border-style: solid;
+    		border-color: #f44336 transparent transparent transparent;
 		}
 
 		/* BUTTONS */
 		#content form ul.actions {
 			display: block;
-			/* padding: 13px 0px 0px 0px; */
 			margin: 0;
-			/* text-align: center; */
 			list-style: none;
 		}
 
@@ -261,11 +282,8 @@ b<!DOCTYPE html>
 		}
 		
 		#content form .button.primary:hover{
-			/* background-color: #ECF4E8; */
-			background-color: #B2D2A2;
-			/* color: #000; */
+			background-color: #224E0D;
 			cursor: pointer;
-			/* color: black; */
 		}	
 
 	</style>
@@ -414,12 +432,12 @@ b<!DOCTYPE html>
 				<div class="field radiobuttons required">
 					<label>Radiobuttons required w/ error</label>
 					<div class="item">
-						<input type="radio" name="radiobuttons" id="input_radiobuttons_value1" value="value1" />
-						<label for="input_radiobuttons_value1">text1</label>
+						<input type="radio" name="radiobuttons1" id="input_radiobuttons_value1a" value="value1a" />
+						<label for="input_radiobuttons_value1a">text1</label>
 					</div>
 					<div class="item">
-						<input type="radio" name="radiobuttons" id="input_radiobuttons_value2" value="value2" />
-						<label for="input_radiobuttons_value2">text2</label>
+						<input type="radio" name="radiobuttons1" id="input_radiobuttons_value2a" value="value2a" />
+						<label for="input_radiobuttons_value2a">text2</label>
 					</div>
 					<div class="help">
 						<div class="hint">hint message</div>
