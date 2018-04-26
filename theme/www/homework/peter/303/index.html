@@ -43,8 +43,8 @@
 	// ADD YOUR JS HERE
 
 	/*
-	 Could have used firstElementChild, but .firstChild.nextSibling.children gives better compatibility
-	 .children gives elements only (and comment nodes in IE6 to IE8), children[0] has the same effect as firstElementChild
+	 Could have used firstElementChild, but .firstChild.nextSibling.children gives better compatibility, so does children[]
+	 children[] gives elements only (and comment nodes in IE6 to IE8), children[0] has the same effect as firstElementChild
 	*/
 
 	// Creating references
@@ -56,11 +56,11 @@
 	var a5 = content.children[1].children[3];
 
 	// Setting the texts
-	a1.innerHTML = "Im first";
-	a2.innerHTML = "Im after first";
-	a3.innerHTML = "Im in the middle";
-	a4.innerHTML = "Im before last";
-	a5.innerHTML = "Im last";
+	a1.innerHTML = "A1";
+	a2.innerHTML = "A2";
+	a3.innerHTML = "A3";
+	a4.innerHTML = "A4";
+	a5.innerHTML = "A5";
 
 
 </script>
