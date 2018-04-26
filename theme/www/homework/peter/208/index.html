@@ -108,7 +108,7 @@
 			display: block;
 		}
 
-		.checkbox + .checkbox .error {
+		.checkbox + .checkbox .error, .radiobuttons + .radiobuttons .error {
 			display: block;
 		}
 
@@ -124,7 +124,7 @@
 
 		#content ul > li {
 			display: inline-block;
-			padding: 10px;
+			padding-bottom: 10px;
 		}
 
 		ul.actions > li > input.primary {
@@ -296,7 +296,7 @@
 					</div>
 				</div>
 
-				<div class="field radiobuttons required">
+				<div class="field radiobuttons required error">
 					<label>Radiobuttons required w/ error</label>
 					<div class="item">
 						<input type="radio" name="radiobuttons" id="input_radiobuttons_value1" value="value1" />
