@@ -28,7 +28,7 @@
 		}
 
 		fieldset > div {
-			margin: 10px;
+			padding: 5px 10px;
 		}
 
 		.help > .hint {
@@ -58,25 +58,25 @@
 			border-color: #992424;
 		}
 
-		.string > label, .email > label, .password > label {
+		.string > label, .email > label, .password > label, .text label {
 			position: relative;
 			top: 8px;
 			left: 10px; 
 			background-color: #ffffff;
 		}
 
-		.string > input, .email > input, .password > input {
+		.string > input, .email > input, .password > input, .text textarea {
 			font-family: voresfont;
 			box-sizing: border-box;
 			width: 100%;
 			font-size: 20px;
-			color: #1f1f1f;
+			color: rgba(0, 0, 0, 0.9);
 			padding: 8px;
 			border: 1px solid #8d8d8d;
 			/* border-radius: 5px; */
 		}
 
-		.string input:focus, .email input:focus, .password input:focus {
+		.string input:focus, .email input:focus, .password input:focus, .text textarea:focus {
 			border: 2px solid #3e8e17;
 			background: linear-gradient(#ffffff,#deffdf);
 		}
@@ -86,7 +86,7 @@
 			background: linear-gradient(#ffffff,#ffdede);
 		}
 
-		input:focus + .help > .hint {
+		input:focus + .help > .hint, .text > textarea:focus + div > .hint {
 			display: block;
 		}
 
@@ -98,7 +98,7 @@
 			padding-left: 10px;
 		}
 
-		.select:hover .hint, .checkbox:hover .hint, .radiobuttons:hover .hint, .text:hover .hint {
+		.select:hover .hint, .checkbox:hover .hint, .radiobuttons:hover .hint {
 			display: block;
 		}
 
@@ -325,6 +325,28 @@
 		</ul>
 	</div>
 </div>
+
+<script>
+	/*
+	 Adding addition 20px to each field div to make space for hints and errors.
+	*/
+
+	var fieldDivs = document.querySelectorAll("fieldset > div");
+
+	// var = i;
+	function addHeight(elements, pixels) {
+
+		for(var i = 0; i < elements.length; i++) {
+			console.log("adding " + pixels + "px to " + elements[i].clientHeight);
+			elements[i].style.height = (elements[i].clientHeight + pixels) + "px";
+			console.log(elements[i]);
+		}
+	}
+
+	addHeight(fieldDivs, 10);
+
+</script>
+
 
 
 </body>
