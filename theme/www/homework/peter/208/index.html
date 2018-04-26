@@ -28,10 +28,6 @@
 			margin: 0;
 		}
 
-		fieldset > div {
-			padding: 5px 10px;
-		}
-
 		.help > .hint {
 			display: none;
 			font-size: 14px;
@@ -41,7 +37,7 @@
 		.help > .error {
 			display: none;
 			font-size: 14px;
-			color: #992424;
+			color: #9B251E;
 		}
 
 		label {
@@ -50,8 +46,14 @@
 		}
 
 		.required > label::after {
-			color: red;
 			content: " *";
+			
+			color: #e91e13;
+			vertical-align: middle;
+			font-size: 22px;
+			
+			position: relative;
+			top: 3px;	
 		}
 
 		.error > label {
@@ -61,12 +63,12 @@
 
 		.string > label, .email > label, .password > label, .text label {
 			position: relative;
-			top: 8px;
+			top: 10px;
 			left: 10px; 
 			background-color: #ffffff;
 		}
 
-		.string > input, .email > input, .password > input, .text textarea {
+		.string > input, .email > input, .password > input, select, .text textarea {
 			font-family: voresfont;
 			box-sizing: border-box;
 			width: 100%;
@@ -74,16 +76,19 @@
 			color: rgba(0, 0, 0, 0.9);
 			padding: 8px;
 			border: 1px solid #8d8d8d;
-			/* border-radius: 5px; */
 		}
 
-		.string input:focus, .email input:focus, .password input:focus, .text textarea:focus {
+		select {
+			height: 50px;
+		}
+
+		.string input:focus, .email input:focus, .password input:focus, select:focus, .text textarea:focus {
 			border: 2px solid #3e8e17;
 			background: linear-gradient(#ffffff,#deffdf);
 		}
 
 		.error input:focus {
-			border: 2px solid #992424;
+			border: 2px solid #9B251E;
 			background: linear-gradient(#ffffff,#ffdede);
 		}
 
@@ -122,6 +127,15 @@
 			padding: 10px;
 		}
 
+		ul.actions > li > input.primary {
+			color: #ffffff;
+			background-color: #3e8e17;
+		}
+		ul.actions > li > input.primary:hover {
+			color: #ffffff;
+			background-color: #357914;
+		}
+
 		ul.actions > li > input {
 			list-style-type: none;
 			font-family: voresfont;
@@ -129,21 +143,14 @@
 
 			padding: 7px 14px;
 			color: #ffffff;
-			background-color: #3e8e17;
+			background-color: #666666;
 
 			border: none;
 		}
 
 		ul.actions > li > input:hover {
 			color: #ffffff;
-			background-color: #32ae40;
-		}
-
-
-		/* footer box shadow overlap */
-		#footer {
-			position: relative;
-			z-index: 100;
+			background-color: #333333;
 		}
 
 	</style>
@@ -344,7 +351,7 @@
 		}
 	}
 
-	addHeight(fieldDivs, 10);
+	addHeight(fieldDivs, 20);
 
 </script>
 
