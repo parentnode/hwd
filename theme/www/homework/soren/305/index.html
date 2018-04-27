@@ -40,6 +40,13 @@
 <script type="text/javascript">
 
 	// ADD YOUR JS HERE
+	var currentNode = document.querySelector('.starthere');
+	var destinationNode = document.querySelector('body');
+
+	while (currentNode != destinationNode) {
+		currentNode = currentNode.parentNode;
+		console.log(currentNode);
+	}
 
 </script>
 
