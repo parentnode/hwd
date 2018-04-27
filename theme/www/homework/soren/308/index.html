@@ -8,6 +8,7 @@
 		body {margin: 0;}
 		#page {width: 300px; margin: 0 auto;}
 		#content {min-height: 2000px;}
+		#content div {padding-bottom: 300px;}
 
 	</style>
 </head>
@@ -25,6 +26,32 @@
 <script type="text/javascript">
 
 	// ADD YOUR JS HERE
+	addEventListener("DOMContentLoaded", contentLoaded, false);
+
+	var contentDiv = document.getElementById("content");
+	var loadedDiv = document.createElement("DIV");
+	var browserSizeDiv = document.createElement("DIV");
+	var scrollPosDiv = document.createElement("DIV");
+
+	function contentLoaded() {
+		contentDiv.appendChild(loadedDiv).innerHTML = "Content loaded.";
+		contentDiv.appendChild(browserSizeDiv).innerHTML = "Current browser size is " + window.outerWidth + " x " + window.outerHeight + " pixels.";
+		contentDiv.appendChild(scrollPosDiv).innerHTML = "Current horizontal/vertical scroll position is " + window.pageXOffset + "/" + window.pageYOffset + " pixels."
+
+		window.addEventListener("resize", updateBrowserSize, false);
+		window.addEventListener("scroll", updateScrollPos, false);
+	}
+
+	function updateBrowserSize() {
+		browserSizeDiv.innerHTML = "Current browser size is " + window.outerWidth + " x " + window.outerHeight + " pixels.";
+	}
+
+	function updateScrollPos() {
+		scrollPosDiv.innerHTML = "Current horizontal/vertical scroll position is " + window.pageXOffset + "/" + window.pageYOffset + " pixels.";
+	}
+
+
+
 
 
 </script>
