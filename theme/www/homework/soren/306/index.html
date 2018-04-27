@@ -34,6 +34,14 @@
 	
 
 	// ADD YOUR JS HERE
+	var contentNode = document.getElementById("content");
+	var newUL = document.createElement("UL");
+	contentNode.appendChild(newUL);
+
+	for(var i = 0; i < content_set.length; i++) {	
+		var newLI = document.createElement("LI");
+		newUL.appendChild(newLI).innerHTML = content_set[i];
+	}
 
 
 </script>
