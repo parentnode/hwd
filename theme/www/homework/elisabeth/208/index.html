@@ -3,15 +3,23 @@
 <head>
 	<title>Exercise 208</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" type="text/css" href="http://udvikler-kbhff.local/css/includes.css" />
+	<link rel="stylesheet" type="text/css" href="http://udvikler-kbhff.think.dk/css/includes.css" />
 	<style type="text/css">
-
+	@font-face {
+		font-family: 'voresfont';
+		src: url('/css/fonts/voresfont.eot');
+		src: url('/css/fonts/voresfont.eot?#iefix') format('embedded-opentype'),
+			 url('/css/fonts/voresfont.woff') format('woff'),
+			 url('/css/fonts/voresfont.svg#voresfont') format('svg'),
+			 url('/css/fonts/voresfont.ttf') format('truetype');
+		font-weight: 400;
+		font-style: normal;
+	}
 		/* ADD YOUR CSS HERE */
 		fieldset {
 			border:0;
 			padding: 0;
 			margin: 0;
-			padding-top: 50px;
 		}
 		form {
 			min-height: 400px;
@@ -23,15 +31,25 @@
 			width: 100%;
 			border: 1px solid	#666666;
 			height: 30px;
-			margin-bottom: 36px;
+			margin-bottom: 28px;
 			display: block;
-			font-size: 18px;
+			font-size: 22px;
 		}
-		div.field input:focus {
-			background-color: rgba(62,142,23, 0.25);
+		.field.text.required textarea {
+			width: 100%;
+			height: 100px;
+			margin-bottom: 20px;
+			font-size: 22px;
+		}
+		div.field input:focus, .field.text.required textarea:focus, div.field.select select:focus {
+			background-color: rgba(62,142,23, 0.15);
+			border: 2px solid #559C33;
+			outline: none;
 		}
 		div.field.error input:focus {
-			background-color: rgba(155,37,30, 0.25);
+			background-color: rgba(194,36,20, 0.15);
+			outline: none;
+			border: 2px solid #C22414;
 		}
 		div.field label {
 			display: block;
@@ -41,6 +59,7 @@
 		label::after {
 			content: "*";
 			color: red;
+			font-size: 18px;
 		}
 		div.item label::after {
 			content: " ";
@@ -51,24 +70,23 @@
 			width: 100%;
 			height: 12px;
 			float: left;
-			margin-top: -36px;
+			margin-top: -25px;
 			text-align: left;
+			line-height: 0.5em;
+		}
+		#content div.help div.error {
+			color: #C22414;
 			line-height: 1em;
 		}
-			div.help div.error {
-			color: #9B251E;
-			}
-			div.help div.hint {
+		#content div.help div.hint {
 			color: #3E8E17;
-			}
+			line-height: 1em;
+		}
 		div.field.checkbox.required:hover > div.help, div.field.select:hover > div.help, div.field.radiobuttons.required:hover > div.help {
 			display: block;
 		}
-		div.field.select .help, div.field.checkbox.required .help {
+		div.field.select .help, div.field.checkbox.required .help, div.field.radiobuttons.required .help {
 			margin-top: 0;
-		}
-		div.field.radiobuttons.required .help {
-			margin-top: -6px;
 		}
 		div.field.radiobuttons.required.error div.help .error, div.field.checkbox.required.error div.help .error, div.field.string.required.error div.help .error   {
 			visibility: visible;
@@ -82,12 +100,8 @@
 		div.field.string.required.error input:focus + div, div.field input:focus + div {
 			display: block;
 		}
-		div.field.string.required.error input:focus {
-			border: 2px solid red;
-		}
-		div.field input:focus {
-			outline: none;
-			border: 2px solid #559C33;
+		div.field.string.required.error .help, div.field.checkbox.required.error .help, div.field.radiobuttons.required.error .help {
+			display: block;
 		}
 		div.checkbox label {
 			display: inline-block;
@@ -114,17 +128,19 @@
 			color: #ffffff;
 			text-transform: uppercase;
 			padding: 7px 14px;
+			border: none;
+			font-family: voresfont;
 		}
 		#content ul.actions {
 			margin: 0;
 		}
-		li.cancel	input.button {   !!!!!!!
+		li.cancel	input.button {
 			background-color: #999999;
 		}
 		input.button:hover {
 			background-color: #357914;
 		}
-		li.cancel input.button:hover {   !!!!!!!
+		li.cancel input.button:hover {
 			background-color: #666666;
 		}
 		div.field.select {
@@ -136,6 +152,8 @@
 		}
 		.select select {
 			width: 100%;
+			height: 30px;
+			font-size: 22px;
 		}
 		div.field.checkbox.required {
 			padding-bottom: 54px;
@@ -153,11 +171,6 @@
 		div.field.radiobuttons.required {
 			margin: 20px 0;
 		}
-		.field.text.required textarea {
-			width: 100%;
-			height: 100px;
-			margin-bottom: 20px;
-		}
 	</style>
 </head>
 <body>
@@ -173,12 +186,12 @@
 	</div>
 	<div id="navigation">
 		<ul class="navigation">
-			<li><a href="software-license">Software license</a></li>
-			<li><a href="choose-editor">Code editors</a></li>
-			<li><a href="development-environment">Dev environment</a></li>
-			<li><a href="before-you-start-coding">Coding conventions</a></li>
-			<li><a href="playground">Set up playground</a></li>
-			<li><a href="dictionary">Dictionary</a></li>
+			<li><a href="#">Software license</a></li>
+			<li><a href="#">Code editors</a></li>
+			<li><a href="#">Dev environment</a></li>
+			<li><a href="#">Coding conventions</a></li>
+			<li><a href="#">Set up playground</a></li>
+			<li><a href="#">Dictionary</a></li>
 		</ul>
 	</div>
 	<div id="content">
@@ -197,7 +210,7 @@
 					<label for="input_text1">Text</label>
 					<input type="text" name="string1" id="input_text1" />
 					<div class="help">
-						<div class="hint">hint message which is pretty long and explaining a lot of things</div>
+						<div class="hint">hint message which is pretty long and explaining a lot of things. Many extraordinary, super duper important things. Sooooo important.</div>
 						<div class="error">error message</div>
 					</div>
 				</div>
@@ -216,7 +229,7 @@
 					<input type="text" name="string3" id="input_text3" />
 					<div class="help">
 						<div class="hint">hint message</div>
-						<div class="error">error message which is pretty long and explaining a lot of things</div>
+						<div class="error">error message which is pretty long and explaining a lot of things. Many extraordinary, super duper important things. Sooooo important.</div>
 					</div>
 				</div>
 			</fieldset>
@@ -270,7 +283,7 @@
 					<input type="checkbox" name="checkbox1" id="input_checkbox1" value="1" />
 					<label for="input_checkbox1">Checkbox required</label>
 					<div class="help">
-						<div class="hint">hint message which is pretty long and explaining a lot of things</div>
+						<div class="hint">hint message which is pretty long and explaining a lot of things. Many extraordinary, super duper important things. Sooooo important.</div>
 						<div class="error">error message</div>
 					</div>
 				</div>
@@ -281,7 +294,7 @@
 					<label for="input_checkbox2">Checkbox required w/ error</label>
 					<div class="help">
 						<div class="hint">hint message</div>
-						<div class="error">error message which is pretty long and explaining a lot of things</div>
+						<div class="error">error message which is pretty long and explaining a lot of things. Many extraordinary, super duper important things. Sooooo important.</div>
 					</div>
 				</div>
 
@@ -304,12 +317,12 @@
 				<div class="field radiobuttons required error">
 					<label>Radiobuttons required w/ error</label>
 					<div class="item">
-						<input type="radio" name="radiobuttons" id="input_radiobuttons_value1" value="value1" />
-						<label for="input_radiobuttons_value1">text1</label>
+						<input type="radio" name="radiobuttons1" id="input_radiobuttons_value3" value="value1" />
+						<label for="input_radiobuttons_value3">text1</label>
 					</div>
 					<div class="item">
-						<input type="radio" name="radiobuttons" id="input_radiobuttons_value2" value="value2" />
-						<label for="input_radiobuttons_value2">text2</label>
+						<input type="radio" name="radiobuttons1" id="input_radiobuttons_value4" value="value2" />
+						<label for="input_radiobuttons_value4">text2</label>
 					</div>
 					<div class="help">
 						<div class="hint">hint message</div>

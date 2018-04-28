@@ -3,7 +3,7 @@
 <head>
 	<title>Exercise 208</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" type="text/css" href="http://udvikler-kbhff.local/css/includes.css" />
+	<link rel="stylesheet" type="text/css" href="http://udvikler-kbhff.think.dk/css/includes.css" />
 	<style type="text/css">
 
 		/* ADD YOUR CSS HERE */
@@ -15,7 +15,6 @@
 
 		.form {
 			width: 50%;
-			font-family: voresfont;
 			overflow: hidden;
 			border-top: 5px solid #3e8e17;
 			border-bottom: 5px solid #3e8e17;
@@ -28,6 +27,10 @@
 			margin: 0;
 		}
 
+		#content fieldset * {
+			line-height: 1.3em;
+		}
+
 		.help > .hint {
 			display: none;
 			font-size: 14px;
@@ -37,7 +40,7 @@
 		.help > .error {
 			display: none;
 			font-size: 14px;
-			color: #9B251E;
+			color: #C22414;
 		}
 
 		label {
@@ -47,18 +50,16 @@
 
 		.required > label::after {
 			content: " *";
-			
-			color: #e91e13;
+			color: #C22414;
 			vertical-align: middle;
 			font-size: 22px;
-			
 			position: relative;
-			top: 3px;	
+			top: 4px;	
 		}
 
 		.error > label {
-			color: #992424;
-			border-color: #992424;
+			color: #C22414;
+			border-color: #C22414;
 		}
 
 		.string > label, .email > label, .password > label, .text label {
@@ -69,7 +70,6 @@
 		}
 
 		.string > input, .email > input, .password > input, select, .text textarea {
-			font-family: voresfont;
 			box-sizing: border-box;
 			width: 100%;
 			font-size: 20px;
@@ -92,24 +92,17 @@
 			background: linear-gradient(#ffffff,#ffdede);
 		}
 
-		input:focus + .help > .hint, .text > textarea:focus + div > .hint {
+		input:focus + .help > .hint, .text > textarea:focus + div > .hint, .select:hover .hint, .checkbox:hover .hint, .radiobuttons:hover .hint { /* show hint on focus/hover */
+			display: block;
+			animation: sweyIn .4s;
+		}
+
+		.error input + .help > .error, .checkbox + .checkbox .error, .radiobuttons + .radiobuttons .error { /* show error on error inputs */
 			display: block;
 		}
 
-		.error input + .help > .error {
-			display: block;
-		}
-
-		.item {
-			padding-left: 10px;
-		}
-
-		.select:hover .hint, .checkbox:hover .hint, .radiobuttons:hover .hint {
-			display: block;
-		}
-
-		.checkbox + .checkbox .error {
-			display: block;
+		.error input + .help > .hint, .checkbox + .checkbox .hint, .radiobuttons + .radiobuttons .hint { /* Hide hint on error inputs */
+			display: none;
 		}
 
 		#content ul {
@@ -124,7 +117,11 @@
 
 		#content ul > li {
 			display: inline-block;
-			padding: 10px;
+			padding-bottom: 10px;
+		}
+
+		.item {
+			padding-left: 10px;
 		}
 
 		ul.actions > li > input.primary {
@@ -140,6 +137,7 @@
 			list-style-type: none;
 			font-family: voresfont;
 			font-size: 16px;
+			text-transform: uppercase;
 
 			padding: 7px 14px;
 			color: #ffffff;
@@ -152,6 +150,14 @@
 			color: #ffffff;
 			background-color: #333333;
 		}
+
+		/* Animations */
+		
+		@keyframes sweyIn {
+			from {position: relative; top: -10px; opacity: 0;}
+			to {position: relative; top: 0; opacity: 1;}
+		}
+
 
 	</style>
 </head>
@@ -168,12 +174,12 @@
 	</div>
 	<div id="navigation">
 		<ul class="navigation">
-			<li><a href="software-license">Software license</a></li>
-			<li><a href="choose-editor">Code editors</a></li>
-			<li><a href="development-environment">Dev environment</a></li>
-			<li><a href="before-you-start-coding">Coding conventions</a></li>
-			<li><a href="playground">Set up playground</a></li>
-			<li><a href="dictionary">Dictionary</a></li>
+			<li><a href="#">Software license</a></li>
+			<li><a href="#">Code editors</a></li>
+			<li><a href="#">Dev environment</a></li>
+			<li><a href="#">Coding conventions</a></li>
+			<li><a href="#">Set up playground</a></li>
+			<li><a href="#">Dictionary</a></li>
 		</ul>
 	</div>
 	<div id="content">
@@ -296,15 +302,15 @@
 					</div>
 				</div>
 
-				<div class="field radiobuttons required">
+				<div class="field radiobuttons required error">
 					<label>Radiobuttons required w/ error</label>
 					<div class="item">
-						<input type="radio" name="radiobuttons" id="input_radiobuttons_value1" value="value1" />
-						<label for="input_radiobuttons_value1">text1</label>
+						<input type="radio" name="radiobuttons" id="input_radiobuttons2_value1" value="value1" />
+						<label for="input_radiobuttons2_value1">text1</label>
 					</div>
 					<div class="item">
-						<input type="radio" name="radiobuttons" id="input_radiobuttons_value2" value="value2" />
-						<label for="input_radiobuttons_value2">text2</label>
+						<input type="radio" name="radiobuttons" id="input_radiobuttons2_value2" value="value2" />
+						<label for="input_radiobuttons2_value2">text2</label>
 					</div>
 					<div class="help">
 						<div class="hint">hint message</div>

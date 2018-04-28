@@ -96,15 +96,15 @@
 	<div id="navigation">
 		<ul>
 			<!-- <div class="vertical-group"> -->
-			<li><a href="software-license">Software license</a></li>
+			<li><a href="#">Software license</a></li>
 			<!-- </div> -->
 			<!-- <div class="vertical-group"> -->
-			<li><a href="choose-editor">Choosing an Editor</a></li>
+			<li><a href="#">Choosing an Editor</a></li>
 			<!-- </div> -->
-			<li><a href="development-environment">Setting up environment</a></li>
-			<li><a href="before-you-start-coding">Before you start coding</a></li>
-			<li><a href="playground">Set up playground</a></li>
-			<li><a href="dictionary">Dictionary</a></li>
+			<li><a href="#">Setting up environment</a></li>
+			<li><a href="#">Before you start coding</a></li>
+			<li><a href="#">Set up playground</a></li>
+			<li><a href="#">Dictionary</a></li>
 		</ul>
 
 	</div>

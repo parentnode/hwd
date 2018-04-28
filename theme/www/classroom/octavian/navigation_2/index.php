@@ -119,12 +119,12 @@
 	<div id="content"></div>
 	<div id="navigation">
 		<ul>
-			<li><a href="software-license">Software license summary</a></li>
-			<li><a href="choose-editor">Choosing an Editor</a></li>
-			<li><a href="development-environment">Setting up the environment</a></li>
-			<li><a href="before-you-start-coding">Before you start coding</a></li>
-			<li><a href="playground">Set up playground</a></li>
-			<li><a href="dictionary">Dictionary</a></li>
+			<li><a href="#">Software license summary</a></li>
+			<li><a href="#">Choosing an Editor</a></li>
+			<li><a href="#">Setting up the environment</a></li>
+			<li><a href="#">Before you start coding</a></li>
+			<li><a href="#">Set up playground</a></li>
+			<li><a href="#">Dictionary</a></li>
 		</ul>
 		
 	</div>

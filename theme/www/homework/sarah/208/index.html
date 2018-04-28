@@ -3,7 +3,7 @@
 <head>
 	<title>Exercise 208</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" type="text/css" href="http://udvikler-kbhff.local/css/includes.css" />
+	<link rel="stylesheet" type="text/css" href="http://udvikler-kbhff.think.dk/css/includes.css" />
 	<style type="text/css">
 
 		/* ADD YOUR CSS HERE */
@@ -58,6 +58,7 @@
 
 		.select select {
 			font-size: 14px;
+			/* height: 34px; */
 		}
 
 		.string input:focus,
@@ -70,9 +71,12 @@
 			padding-left: 4px;
 		}
 
+		.select select:focus {
+		}
+
 		.error input:focus {
-			border: 3px solid darkred;
-			background-color: #FFD9D9;
+			border: 3px solid #C22414;
+			background-color: #F8E9E7;
 		}
 
 		.string input:focus + .help,
@@ -103,7 +107,7 @@
 		.error input:focus + .help .error,
 		.error textarea:focus + .help .error,
 		.error select:focus + .help .error {
-			color: darkred;
+			color: #C22414;
 			visibility: visible;
 		}
 
@@ -121,18 +125,18 @@
 		.error.checkbox:hover .help .error,
 		.error.radiobuttons:hover .help .error {
 			visibility: visible;
-			color: darkred;
+			color: #C22414;
 		}
 
 		ul.actions .save input:hover {
-			background-color: #000000;
+			background-color: #357914;
 			color: white;
 			cursor: pointer;
 		}
 
 		ul.actions .cancel input:hover {
-			background-color: #000000;
-			color: white;
+			background-color: #BBBBBB;
+			color: black;
 			cursor: pointer;
 		}
 
@@ -145,11 +149,14 @@
 			/* border-radius: 0px 0px 3px 3px; */
 			/* margin: -15px 0 0 0; */
 			font-size: 14px;
-			line-height: inherit;
 			visibility: hidden;
 			margin-bottom: 2px;
 			color: #494949;
 		}
+
+		/* #content .help .hint, #content .help .error { */
+			/* line-height: 18px; */
+		/* } */
 
 		.help .error {
 			margin-top: -28px;
@@ -158,7 +165,7 @@
 
 		.required > label:after {
 			content: " *";
-			color: red;
+			color: #c22414;
 			font-size: 20px;
 		}
 
@@ -174,10 +181,9 @@
 			display: block;
 		}
 
-		.checkbox label {
-			padding-left: 20px;
-			/* display: inline-block; */
-			margin-top: -28px;
+		#content .checkbox label {
+			padding-left: 28px;
+			display: inline-block;
 		}
 
 		.radiobuttons .item label {
@@ -186,7 +192,7 @@
 
 		.error.checkbox:hover label,
 		.error.radiobuttons:hover > label {
-			color: darkred;
+			/* color: #C22414; */
 		}
 
 		.checkbox:hover + .help {
@@ -197,14 +203,17 @@
 			margin: 0 auto;
 			list-style-type: none;
 			padding: 0px;
+			font-size: 0px;
 		}
 
 		#content ul.actions li {
+			padding-left: 0px;
 			display: inline-block;
+			padding-right: 10px;
 		}
 
-		input[type=submit],
-		input[type=button] {
+		.actions .save input,
+		.actions .cancel input {
 			font-family: 'voresfont';
 			text-transform: uppercase;
 			font-size: 14px;
@@ -213,14 +222,14 @@
 			border: none;
 		}
 
-		input[type=submit] {
+		.actions .save input {
 			color: #ffffff;
 			background-color: #3E8E17;
 		}
 
-		input[type=button] {
-			background-color: #494949;
-			color: #ffffff;
+		.actions .cancel input {
+			background-color: #DDDDDD;
+			color: #000000;
 		}
 
 
@@ -239,12 +248,12 @@
 	</div>
 	<div id="navigation">
 		<ul class="navigation">
-			<li><a href="software-license">Software license</a></li>
-			<li><a href="choose-editor">Code editors</a></li>
-			<li><a href="development-environment">Dev environment</a></li>
-			<li><a href="before-you-start-coding">Coding conventions</a></li>
-			<li><a href="playground">Set up playground</a></li>
-			<li><a href="dictionary">Dictionary</a></li>
+			<li><a href="#">Software license</a></li>
+			<li><a href="#">Code editors</a></li>
+			<li><a href="#">Dev environment</a></li>
+			<li><a href="#">Coding conventions</a></li>
+			<li><a href="#">Set up playground</a></li>
+			<li><a href="#">Dictionary</a></li>
 		</ul>
 	</div>
 	<div id="content">
@@ -336,7 +345,7 @@
 					<input type="checkbox" name="checkbox1" id="input_checkbox1" value="1" />
 					<label for="input_checkbox1">Checkbox required</label>
 					<div class="help">
-						<div class="hint">hint message which is pretty long and explaining a lot of things</div>
+						<div class="hint">hint message which is pretty long and explaining a lot of things.</div>
 						<div class="error">error message</div>
 					</div>
 				</div>
@@ -354,12 +363,12 @@
 				<div class="field radiobuttons required">
 					<label>Radiobuttons required</label>
 					<div class="item">
-						<input type="radio" name="radiobuttons" id="input_radiobuttons_value1" value="value1" />
-						<label for="input_radiobuttons_value1">text1</label>
+						<input type="radio" name="radiobuttons_a" id="input_radiobuttons_a_value1" value="value1" />
+						<label for="input_radiobuttons_a_value1">text1</label>
 					</div>
 					<div class="item">
-						<input type="radio" name="radiobuttons" id="input_radiobuttons_value2" value="value2" />
-						<label for="input_radiobuttons_value2">text2</label>
+						<input type="radio" name="radiobuttons_a" id="input_radiobuttons_a_value2" value="value2" />
+						<label for="input_radiobuttons_a_value2">text2</label>
 					</div>
 					<div class="help">
 						<div class="hint">hint message</div>
@@ -370,12 +379,12 @@
 				<div class="field radiobuttons required error">
 					<label>Radiobuttons required w/ error</label>
 					<div class="item">
-						<input type="radio" name="radiobuttons" id="input_radiobuttons_value1" value="value1" />
-						<label for="input_radiobuttons_value1">text1</label>
+						<input type="radio" name="radiobuttons_b" id="input_radiobuttons_b_value1" value="value1" />
+						<label for="input_radiobuttons_b_value1">text1</label>
 					</div>
 					<div class="item">
-						<input type="radio" name="radiobuttons" id="input_radiobuttons_value2" value="value2" />
-						<label for="input_radiobuttons_value2">text2</label>
+						<input type="radio" name="radiobuttons_b" id="input_radiobuttons_b_value2" value="value2" />
+						<label for="input_radiobuttons_b_value2">text2</label>
 					</div>
 					<div class="help">
 						<div class="hint">hint message</div>
