@@ -8,7 +8,6 @@
 		body {margin: 0;}
 		#page {width: 300px; margin: 0 auto;}
 		#content div.field.focus input {border: 2px solid orange; outline: none;}
-		/* ADD YOUR CSS HERE */
 
 
 	</style>
@@ -41,6 +40,41 @@
 	<div id="footer"></div>
 </div>
 
+<script>
+	var inputElements = document.querySelectorAll("form .field input");
+	var contentDiv = document.getElementById("content");
+	var activeInputMirror
+	
+	for(var i = 0; i < inputElements.length; i++) {
+		inputElements[i].addEventListener("focus", addFocusClass, false);
+		inputElements[i].addEventListener("blur", removeFocusClass, false);
+		inputElements[i].addEventListener("keyup", mirrorContent, false);
+		
+		var mirror = document.createElement("DIV");
+		contentDiv.appendChild(mirror).className = inputElements[i].id;
+		mirror.innerHTML = "Mirror for " + inputElements[i].id + ": ";
+	} 
+
+	document.querySelector("form").addEventListener("submit", showSubmitAlert, false);
+
+	function addFocusClass() {
+		this.parentNode.classList.add("focus");
+	};
+
+	function removeFocusClass() {
+		this.parentNode.classList.remove("focus");
+	};
+
+	function mirrorContent() {
+		document.querySelector("." + this.id).innerHTML = "Mirror for " + this.id + ": " + this.value;
+	};
+
+	function showSubmitAlert() {
+		alert("Submitted!");
+		return false;
+	};
+
+</script>
 
 </body>
 </html>
