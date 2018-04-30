@@ -26,6 +26,21 @@
 <script type="text/javascript">
 
 	// ADD YOUR JS HERE
+	window.addEventListener("wheel", zoomText, false);
+
+	function zoomText() {
+
+		var computedFontSize = parseFloat(window.getComputedStyle(document.querySelector("p"), null).getPropertyValue('font-size'));
+
+		if (event.deltaY < 0) {
+			document.querySelector("p").style.fontSize = computedFontSize - 1 + "px";
+		}
+
+		else {
+			document.querySelector("p").style.fontSize = computedFontSize + 1 + "px";
+		}
+ 
+	}
 
 
 </script>
