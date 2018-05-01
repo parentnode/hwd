@@ -25,15 +25,49 @@
 <script type="text/javascript">
 
 	var content_set = {
-		"no1":"I'm number one".
-		"no2":"I'm number two".
-		"no3":"I'm number three".
-		"no4":"I'm number four".
-		"no5":"I'm number five".
+		"no1":"I'm number one",
+		"no2":"I'm number two",
+		"no3":"I'm number three",
+		"no4":"I'm number four",
+		"no5":"I'm number five"
 	}
 
 	// ADD YOUR JS HERE
 
+	// UTIL FUNCTION
+	function addClass(element, newClass){
+		if(element.className == ""){
+			element.className = newClass;
+			return
+		}
+		var oldClassValue = element.className;
+		var classes = oldClassValue.split(" ");
+		var duplicateClass = false;
+		classes.forEach(function(item){
+			if(item == newClass){
+				duplicateClass = true;
+				return
+			}
+		})
+		if (duplicateClass != true){
+			var newClassValue = oldClassValue + " " + newClass;
+			element.className = newClassValue;
+		}
+	}
+
+	// EXERCISE 
+	var element = document.querySelector("div#content");
+
+	function addObjectToDOM(parentElement, contentObject) {
+		var newUlElement = parentElement.appendChild(document.createElement("ul"));
+		for(x in contentObject){
+			var newLiElement = newUlElement.appendChild(document.createElement("li"));
+			newLiElement.innerHTML = contentObject[x];
+			addClass(newLiElement, x);
+		}
+	}
+	addObjectToDOM(element, content_set);
+	
 
 </script>
 
