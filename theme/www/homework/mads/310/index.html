@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 310</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+		#content div.field.focus input {border: 2px solid orange; outline: none;}
+		/* ADD YOUR CSS HERE */
+
+
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content">
+
+		<form action="#" method="post" novalidate="novalidate">
+			<fieldset>
+				<div class="field string">
+					<label for="input_firstname">First name</label>
+					<input type="text" name="string" id="input_firstname" />
+				</div>
+				<div class="field string">
+					<label for="input_lastname">Last name</label>
+					<input type="text" name="lastname" id="input_lastname" />
+				</div>
+			</fieldset>
+
+			<ul class="actions">
+				<li class="save"><input type="submit" value="Save" class="button primary" /></li>
+			</ul>
+
+		</form>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+
+</body>
+</html>
+<script>
+
+	function addClass(element, newClass){
+		if(element.className == ""){
+			element.className = newClass;
+			return
+		}
+		var oldClassValue = element.className;
+		var classes = oldClassValue.split(" ");
+		var duplicateClass = false;
+		classes.forEach(function(item){
+			if(item == newClass){
+				duplicateClass = true;
+				return
+			}
+		})
+		if (duplicateClass != true){
+			var newClassValue = oldClassValue + " " + newClass;
+			element.className = newClassValue;
+		}
+	}
+
+	function deleteClass(element, className){
+		classes = element.classList;
+		classes.remove(className);
+		if(element.className == ""){
+			element.removeAttribute("class");
+		}
+		return
+	}
+
+	// To make things easier in the long run I make two helper-functions
+	
+	/**
+	 * This function adds event listeners to all objects on a nodeList
+	 */
+
+	function addEventListenersToElements(elements, eventType, listenerFunction){
+		for (var i = 0; i < elements.length; i++){
+			elements[i].addEventListener(eventType, listenerFunction);
+		}
+	}
+	/**
+	 * This function adds a div just after each element in a collection of elelements (array, nodeList or HTMLCollection)
+	 */
+
+	function addDivAsNextSibling(elements){
+		for (var i = 0; i < elements.length; i++){
+			var new_element = document.createElement("div");
+			elements[i].insertAdjacentElement('afterend', new_element);
+			new_element.innerHTML = "I'm the div right below";
+		}
+	}
+
+
+
+
+	var inputFields = document.querySelectorAll(".field input");
+	// using my new function to add listeners. The 'this' statement refers to the object where the listerner is added.
+	addEventListenersToElements(inputFields, "focus", function(){
+		addClass(this.parentNode, "focus");
+	})
+
+	addEventListenersToElements(inputFields, "blur", function(){
+		deleteClass(this.parentNode, "focus");
+	})
+
+	addDivAsNextSibling(inputFields);
+
+	addEventListenersToElements(inputFields, "keyup", function(){
+		this.nextSibling.innerHTML = this.value;
+	})
+
+	var formElement = document.querySelector("#content form");
+	
+	formElement.addEventListener("submit", function(){
+		alert("the form has been validated and send");
+		return false;
+	});
+
+
+</script>
