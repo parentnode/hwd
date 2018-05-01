@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 303</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+		#content {min-height: 400px;}
+		div.a1 {background-color: yellow; color: black;}
+		div.a2 {background-color: orange; color: black;}
+		div.a3 {background-color: red; color: white;}
+		div.a4 {background-color: brown; color: white;}
+		div.a5 {background-color: black; color: white;}
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content">
+
+		<div class="a1">I'm clueless</div>
+		<div class="scene">
+			<div class="a2">I'm clueless</div>
+			<div class="a3">I'm clueless</div>
+			<div>
+				<div>
+					<div class="a4">I'm clueless</div>
+				</div>
+			</div>
+			<div class="a5">I'm clueless</div>
+		</div>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+
+	// ADD YOUR JS HERE
+
+	var bdy = document.body
+
+	var sel = bdy.childNodes[1].childNodes[3];
+	sel.childNodes[1].innerHTML = "A1";
+
+	var selC = sel.childNodes[3];
+	 j=1;
+	arr = ["A2", "A3", "A4", "A5"]
+	
+	i=0;
+	for ( i=0; i <=4;  i++ ){
+		
+	console.log( arr[i], j);	
+	if (i === 2) {
+		selC.childNodes[j].childNodes[1].childNodes[1].innerHTML = arr[i];
+		//Sconsole.log(arr2[i], arr[i], j);
+	
+	}
+	else if (i < 4) {
+		selC.childNodes[j].innerHTML = arr[i];
+		
+	}
+	j=j+2;
+	};
+	
+
+
+
+</script>
+
+
+</body>
+</html>
