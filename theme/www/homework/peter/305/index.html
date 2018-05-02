@@ -41,7 +41,7 @@
 
 	// ADD YOUR JS HERE
 	var startpos = document.querySelector("li.starthere");
-	var endpos = document.querySelector("body");
+	var endpos = document.body;
 	var currentpos = startpos;
 
 	while(currentpos != endpos) {
@@ -49,7 +49,7 @@
 		currentpos = currentpos.parentNode;
 	}
 
-	if (currentpos = document.body) {
+	if (currentpos = endpos) {
 		console.log(currentpos);
 	}
 
