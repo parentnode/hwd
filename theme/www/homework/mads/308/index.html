@@ -13,7 +13,9 @@
 
 		.info-box1 {
 			position: fixed;
-			top: 100px;
+			top: 0px;
+			left: 200px;
+			box-sizing: border-box;
 			width: 200px;
 			height: 60px;
 			background-color: lightblue;
@@ -21,11 +23,23 @@
 		}
 		.info-box2 {
 			position: fixed;
-			top: 200px;
-			width: 200px;
+			top: 0px;
+			left: 400px;
+			box-sizing: border-box;
+			width: 300px;
 			height: 60px;
 			background-color: pink;
 			padding: 20px;
+		}
+		.info-box3 {
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			box-sizing: border-box;
+			width: 200px;
+			height: 60px;
+			background-color: lightgreen;
+			padding: 20px;	
 		}
 	</style>
 </head>
@@ -56,19 +70,21 @@
 		// creating and appending a div to show content has loaded
 		showLoadedDiv = document.createElement("div");
 		showLoadedDiv.innerHTML = "Content loaded";
+		showLoadedDiv.className = "info-box3";	
 		contentDiv.appendChild(showLoadedDiv);
+
 
 		// creating and appending a div to show the vertical scroll posistion
 		showScrollDiv = document.createElement("div");
-		contentDiv.appendChild(showScrollDiv);
 		showScrollDiv.innerHTML = "Vertical scroll: " + window.scrollY;
 		showScrollDiv.className = "info-box1";	
+		contentDiv.appendChild(showScrollDiv);
 
 		// creating and appending a div to show the window size
 		showResizeDiv = document.createElement("div");
-		contentDiv.appendChild(showResizeDiv);	
 		showResizeDiv.innerHTML = "window size: " + window.innerWidth + "px X " + window.innerHeight + "px";
 		showResizeDiv.className = "info-box2";	
+		contentDiv.appendChild(showResizeDiv);	
 
 		// adding listener to scroll event - this is added on document could perhaps also be on html or body
 		document.addEventListener("scroll", onScrolling);
@@ -78,11 +94,15 @@
 
 			// to optimize performance we restrict the callback to run every 66ms
 			if(!resizeThrottle){
-				reziseThrottle = true;
+				console.log("update");
+				resizeThrottle = true;
 				onRezisingWindow();
 				setTimeout(function(){
 					resizeThrottle = false;
-				}, 66);
+				}, 200);
+			}
+			else {
+				console.log("skip")
 			}
 		});
 	}

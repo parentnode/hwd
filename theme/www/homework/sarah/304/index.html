@@ -54,6 +54,8 @@
 	// var modifyme_lis = document."#content"."ul.modifyme".querySelectorAll("li");
 	var modifyme_lis = document.querySelectorAll(".modifyme li");
 
+	// CORRECTED / COMMENTS: qsALL(".modifyme > li") -- only takes immediate li children.
+
 	// ITERATE over list and replace "special" with "" if it is in class list, using a second for loop over class list.
 	// Replace will work here, but not always.
 	// If "special" is not in the list, add "modified" with space in front.
@@ -70,10 +72,21 @@
 	};
 			// Now have list of indices in modifyme_lis list array, pointing to lis that need to have "modified" added.
 		// The above won't work with multiple instances of "special"
-		var k;
-		for(k=0; k < lis_with_special.length; k++) {
-			modifyme_lis[lis_with_special[k]].className += " modified";
+	// var k;
+	// for(k=0; k < lis_with_special.length; k++) {
+	// 	modifyme_lis[lis_with_special[k]].className += " modified";
+	// }
+
+	// ************* CORRECTED VERSION ****************
+	// Should add modified class to those NOT with class special...
+	// Use indexOf on lis_with_special array, if index k is not in, then will return -1.
+
+	var k;
+	for(k=0; k < modifyme_lis.length; k++) {
+		if (lis_with_special.indexOf(k) < 0) {
+			modifyme_lis[k].className += " modified";
 		}
+	}
 
 	// 	if(modifyme_lis[i].className == "special") {
 	// 		console.log(modifyme_lis[i]);
