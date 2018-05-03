@@ -13,19 +13,33 @@
 
 		.info-box1 {
 			position: fixed;
-			top: 100px;
-			width: 200px;
+			top: 0px;
+			left: 300px;
+			box-sizing: border-box;
+			width: 300px;
 			height: 60px;
 			background-color: lightblue;
 			padding: 20px;
 		}
 		.info-box2 {
 			position: fixed;
-			top: 200px;
-			width: 200px;
+			top: 0px;
+			left: 600px;
+			box-sizing: border-box;
+			width: 300px;
 			height: 60px;
 			background-color: pink;
 			padding: 20px;
+		}
+		.info-box3 {
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			box-sizing: border-box;
+			width: 300px;
+			height: 60px;
+			background-color: lightgreen;
+			padding: 20px;	
 		}
 	</style>
 </head>
@@ -56,7 +70,9 @@
 		// creating and appending a div to show content has loaded
 		showLoadedDiv = document.createElement("div");
 		showLoadedDiv.innerHTML = "Content loaded";
+		showLoadedDiv.className = "info-box3";	
 		contentDiv.appendChild(showLoadedDiv);
+
 
 		// creating and appending a div to show the vertical scroll posistion
 		showScrollDiv = document.createElement("div");
