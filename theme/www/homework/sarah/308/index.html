@@ -79,14 +79,17 @@
 	}
 
 // Use element.scrollTop and element.scrollLeft
-// AHH Not working.
+
+// ******UPDATED: Don't use scrollTop, as just for div, but use pageXOffset (or scrollX) and pageYOffset (or scrollY) ***********
+
+// AHH Not working. ****** Now working...
 
 	function scrolling() {
-		console.log(document.getElementById("content").scrollTop);
-		console.log(document.body.scrollTop);
-		console.log(window.scrollTop);
-		scroll_div.innerHTML = "Scroll position: " + window.scrollLeft + " px left and "
-		+ window.scrollTop + " px from the top."
+		// console.log(document.getElementById("content").scrollTop);
+		// console.log(document.body.scrollTop);
+		// console.log(window.scrollTop);
+		scroll_div.innerHTML = "Scroll position: " + window.pageXOffset + " px right and "
+		+ window.pageYOffset + " px from the top."
 	}
 
 </script>

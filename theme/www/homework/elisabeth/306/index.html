@@ -39,9 +39,7 @@ var start = document.getElementById("content")
 var ul = document.createElement("ul")
 start.appendChild(ul)
 for (i = 0; i < content_set.length; i++) {
-		if (content_set[i]) {
-			ul.appendChild(document.createElement("li")).innerHTML= content_set[i].toString()
-		}
+			ul.appendChild(document.createElement("li")).innerHTML= content_set[i]
 	}
 </script>
 
