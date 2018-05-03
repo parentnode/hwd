@@ -40,20 +40,17 @@
 <script type="text/javascript">
 
 	// ADD YOUR JS HERE
-	var startpos = document.querySelector("li.starthere");
-	var endpos = document.body;
-	var currentpos = startpos;
+	var startNode = document.querySelector("li.starthere");
 
-	while(currentpos != endpos) {
-		console.log("You are currently at " + currentpos);
-		currentpos = currentpos.parentNode;
+	// just to keep startNode intact i set and endNode that i change in my loop
+	var endNode = startNode;
+
+	function traverseToBody() {
+		while(endNode != document.body){
+			endNode = endNode.parentNode;
+		}
+		console.log(endNode)
 	}
-
-	if (currentpos == endpos) {
-		console.log(currentpos);
-	}
-
-
 
 </script>
 

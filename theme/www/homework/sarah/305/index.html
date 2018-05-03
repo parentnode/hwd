@@ -54,15 +54,17 @@
 	};
 	console.log(hopping_node);
 
+// ****** UPDATED: For above, could also say only while(hopping_node....), as don't need != null.
+
 // Or hardcode to check for when hopping_node is document.body
 
-var hopping_node = document.querySelector("li.starthere");
+	var hopping_node = document.querySelector("li.starthere");
 
-while(hopping_node != document.body) {
-	hopping_node = hopping_node.parentNode;
-	// console.log(hopping_node);
-};
-console.log(hopping_node);
+	while(hopping_node != document.body) {
+		hopping_node = hopping_node.parentNode;
+		// console.log(hopping_node);
+	};
+	console.log(hopping_node);
 
 
 

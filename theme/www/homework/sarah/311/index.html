@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 311</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+		#content p {font-size: 20px; font-family: Arial;}
+
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content">
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+
+	// ADD YOUR JS HERE
+
+	// Add wheel eventlistener to window. declare variable for p tag
+	window.addEventListener("wheel", wheel_scrolled, false);
+	var p_div = document.querySelector("p");
+
+	// Detect scroll direction and use delta value to change size of font
+	function wheel_scrolled(event) {
+		if (event.deltaY > 0) {
+			// console.log("greater than 0");
+			p_div.style.fontSize = "30px";
+		}
+		else {
+			// console.log("less than 0");
+			p_div.style.fontSize = "10px";
+		}
+	}
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
