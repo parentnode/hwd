@@ -19,7 +19,7 @@
 
 		<div class="scene">
 			<h1>Hello World</h1>
-			
+
 			<ul class="index">
 				<li>
 					<h2>I'm here</h2>
@@ -40,20 +40,11 @@
 <script type="text/javascript">
 
 	// ADD YOUR JS HERE
-	var startpos = document.querySelector("li.starthere");
-	var endpos = document.body;
-	var currentpos = startpos;
+var start = document.querySelector("li.item.starthere")
 
-	while(currentpos != endpos) {
-		console.log("You are currently at " + currentpos);
-		currentpos = currentpos.parentNode;
-	}
-
-	if (currentpos == endpos) {
-		console.log(currentpos);
-	}
-
-
+while (start !== document.body) {
+start = start.parentNode;
+}
 
 </script>
 

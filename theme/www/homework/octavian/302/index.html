@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 302</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+		#content {min-height: 400px;}
+		div.a1 {background-color: yellow; color: black;}
+		div.a2 {background-color: orange; color: black;}
+		div.a3 {background-color: red; color: white;}
+		div.a4 {background-color: brown; color: white;}
+		div.a5 {background-color: black; color: white;}
+
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content">
+
+		<div class="a4">I'm clueless</div>
+		<div class="scene">
+			<div class="a4">A4</div>
+			<ul>
+				<li class="no">
+					<div class="a3">I'm clueless</div>
+				</li>
+				<li class="yes">
+					<div class="a3">A3</div>
+				</li>
+			</ul>
+
+			<div class="section">
+				<div class="a2">I'm clueless</div>
+				<div class="a1">A1<div class="a2">A2</div></div>
+				<ul>
+					<li class="yes">
+						<div class="a5 b">I'm clueless</div>
+					</li>
+					<li class="yes">
+						<div class="a5 a">A5</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+
+	// ADD YOUR JS HERE
+
+arr = [0,1,2,3,4];
+arr[0] = document.querySelector(".section .a1");
+arr[1] = document.querySelector(".a1 .a2");
+arr[2] = document.querySelector(".yes .a3");
+arr[3] = document.querySelector(".scene .a4");
+arr[4] = document.querySelector(".a5.a"); 
+console.log (arr);
+
+
+(function addElements(arr){
+		var idSelector = document.querySelector("#content");
+		var subSelector = idSelector.firstChild;
+		for(i = 0; i < arr.length; i++){
+			idSelector.insertBefore(arr[i], subSelector );
+		}
+	})(arr);
+
+</script>
+
+
+</body>
+</html>

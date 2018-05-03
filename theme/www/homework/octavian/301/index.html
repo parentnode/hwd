@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 301</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+		#content {min-height: 400px;}
+		div.a1 {background-color: yellow; color: black;}
+		div.a2 {background-color: orange; color: black;}
+		div.a3 {background-color: red; color: white;}
+		div.a4 {background-color: brown; color: white;}
+		div.a5 {background-color: black; color: white;}
+
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content">
+
+		<div class="a4">A4</div>
+		<div class="a1">A1</div>
+		<div class="a3">A3</div>
+		<div class="a5">A5</div>
+		<div class="a2">A2</div>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+//
+arr = [0,1,2,3,4];
+arr[0] = document.querySelector(".a1");
+arr[1] = document.querySelector(".a2");
+arr[2] = document.querySelector(".a3");
+arr[3] = document.querySelector(".a4");
+arr[4] = document.querySelector(".a5"); 
+
+	
+console.log (arr);	
+	
+	(function addElements(arr){
+		var parent = arr[0].parentNode;
+		for(i = 0; i < arr.length; i++){
+			parent.appendChild(arr[i]);
+			console.log (parent.appendChild(arr[i]));
+		}
+	})(arr);
+
+
+	
+/*
+function createVariables(){
+   arr = [1,2,3,4,5];
+   console.log (arr);
+  for (var i = 1; i < 5; ++i) {
+	 var str = ["a"+ i.toString];
+     // arr[i] = "a"+ i.toString;
+	  arr[i] = document.querySelector("."+"str");	  
+  }
+  console.log (arr);
+  return arr;
+ 
+
+};
+ */
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

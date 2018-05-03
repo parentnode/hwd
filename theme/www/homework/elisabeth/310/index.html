@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 310</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+		#content div.field.focus input {border: 2px solid orange; outline: none;}
+		/* ADD YOUR CSS HERE */
+
+
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content">
+
+		<form action="#" method="post" novalidate="novalidate">
+			<fieldset>
+				<div class="field string">
+					<label for="input_firstname">First name</label>
+					<input type="text" name="string" id="input_firstname" />
+				</div>
+				<div class="field string">
+					<label for="input_lastname">Last name</label>
+					<input type="text" name="lastname" id="input_lastname" />
+				</div>
+			</fieldset>
+
+			<ul class="actions">
+				<li class="save"><input type="submit" value="Save" class="button primary" /></li>
+			</ul>
+
+		</form>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+<script>
+var inputList = document.querySelectorAll(".field.string input")
+function addEvent () {
+	for (i = 0; i < inputList.length; i++) {
+	inputList[i].addEventListener("focus", focus, false);
+	inputList[i].addEventListener("blur", blur, false);
+	inputList[i].addEventListener("keyup", keyup, false);
+		function focus() {
+			this.parentNode.className += " focus";
+		}
+		function blur () {
+			this.parentNode.className = this.parentNode.className.replace("focus", "");
+		}
+		function keyup () {
+			var content = document.getElementById("content");
+			var div = document.createElement("div");
+			content.appendChild(div);
+			div.innerHTML = this.value;
+		}
+	}
+}
+addEvent ();
+
+function addSubmit () {
+	var form = document.querySelector("form")
+	form.addEventListener("submit", submit, false);
+	function submit () {
+	 	alert("Your form has been submitted!");
+	 	return false;
+	}
+}
+addSubmit ();
+
+</script>
+</body>
+</html>

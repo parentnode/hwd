@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 310</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+		#content div.field.focus input {border: 2px solid orange; outline: none;}
+		/* ADD YOUR CSS HERE */
+
+
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content">
+
+		<form action="#" method="post" novalidate="novalidate">
+			<fieldset>
+				<div class="field string">
+					<label for="input_firstname">First name</label>
+					<input type="text" name="string" id="input_firstname" />
+				</div>
+				<div class="field string">
+					<label for="input_lastname">Last name</label>
+					<input type="text" name="lastname" id="input_lastname" />
+				</div>
+			</fieldset>
+
+			<ul class="actions">
+				<li class="save"><input type="submit" value="Save" class="button primary" /></li>
+			</ul>
+
+		</form>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+
+	// ADD YOUR JS HERE
+
+	// Add focus, blur and update eventlistener to each of the input fields.
+	// Use input tags under #content, but only of type text.
+	// Use for loop to add to each individual input.
+	// Declare variable for input tags.
+
+	var input_nodes = document.getElementById("content").querySelectorAll("input[type=text]");
+	for (i=0; i < input_nodes.length; i++) {
+		input_nodes[i].addEventListener("focus", focused, false);
+		input_nodes[i].addEventListener("blur", blurred, false);
+		input_nodes[i].addEventListener("update", updated, false);
+	}
+
+	// Add submit eventlistener to the form
+	document.getElementById("content").querySelector("form").addEventListener("submit", submitted, false);
+
+	// Focus: add "focus" class to div above input. Remove class again for blur.
+
+	function focused(event) {
+		event["target"].parentNode.className += " focus";
+	}
+
+	function blurred(event) {
+		event["target"].parentNode.className = event["target"].parentNode.className.replace("focus", "");
+	}
+
+// On update you copy the content of the input field into a div. Create one div for each input.
+// Will create a new div for each update event. Maybe want to overwrite? Then need to declare var outside function, then updated inside function.
+
+	function updated(event) {
+		document.getElementById("content").appendChild(document.createElement("div")).innerHTML = event["target"].value;
+	}
+
+// On submit create an alert to inform that the form has been submitted.
+// Make the submit event callback function return false, to prevent the form for actually being submitted
+
+	function submitted(event) {
+		alert("You have submitted the form");
+		return false;
+	}
+
+</script>
+
+</body>
+</html>
