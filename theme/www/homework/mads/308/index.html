@@ -94,11 +94,15 @@
 
 			// to optimize performance we restrict the callback to run every 66ms
 			if(!resizeThrottle){
-				reziseThrottle = true;
+				console.log("update");
+				resizeThrottle = true;
 				onRezisingWindow();
 				setTimeout(function(){
 					resizeThrottle = false;
-				}, 66);
+				}, 200);
+			}
+			else {
+				console.log("skip")
 			}
 		});
 	}
