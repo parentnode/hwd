@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 005</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	
+	<div id="page"></div>
+	<div id="header"></div>
+	<div id="content" itemscope="" itemtype ="http://schema.org/CreativeWork">
+		<h1><meta itemprop="headline" content="HTML + SEO"/></h1>
+		
+		<h2><meta itemprop="alternativeHeadline" content="Basic semantic HTML"/></h2>
+		<p itemscope="" itemtype ="http://schema.org/CreativeWork">In this article, you will get to work with h1, h2, h3, p, strong and em tags.</p>
+		<!-- <div class="section"></div> -->
+		<div class="section">	
+			<h3>The basic semantic text tags</h3>
+			<p><meta itemprop="text" content="The minimum set of semantic text HTML tags contains h1, h2, h3, p, strong and em. Although there are many other 
+				semantic html tags, these are the most important ones to learn."/></p>
+			
+			<p>Other semantic HTML tags include table, ul, ol and dl.</p>
+			
+			<p><em>We will look more at the other semantic tags later.</em></p>	
+			
+			<h4>The h1 tag</h4>
+			<p>The h1 tag is the primary headline of a page. </p>
+			<p><em>There should <strong>only</strong> ever be one primary headline in a page.</em></p>
+			
+			<h4>The h2 tag</h4>
+			<p>
+				The h2 tag is for secondary headlines in your page. The secondary headlines are used for each subsection 
+				of the primary content.
+			</p>
+			<p><em>There will often be multiple secondary headlines in your pages.</em></p>
+			
+			<h4>The h3 tag</h4>
+			<p>
+				The h3 tag is for tertiary headlines in your page. The tertiary headlines are used for each subsection 
+				of the current secondary section.
+			</p>
+			<p><em>There will often be multiple tertiary headlines in your pages.</em></p>
+			
+			<h4>The p tag</h4>
+			<p><meta itemprop="alternateName" content="Paragraphs"/>
+				The p tag is used for a paragraph of text. Each headline will typically be followed by one or more 
+				paragraphs, relating directly to the previous headline.
+			</p>
+			<p><meta itemprop="alternateName" content="Bold"/>There will often be multiple paragraphs in your pages.</p>
+			
+			<h4>The <strong>strong</strong> tag</h4>
+			<p>
+				The <strong>strong</strong>tag is used to indicate that a certain word (or several words) are more important in the context.
+			</p>
+			<p><em>The <strong>strong</strong> tag is an inline tag and can only be used inside headlines or paragraphs.</em></p>
+			
+			<h4>The em tag</h4>
+				<p> <meta itemprop="alternateName" content="Italic"/>
+					The <em>em</em> tag is used to indicate that a certain word (or several words) needs emphasis in the context.
+				</p>
+				<p><em>The <em>em</em> tag is an inline tag and can only be used inside headlines or paragraphs.</em></p>
+			
+			<h3>Summary</h3>
+			<p>Now you have a basic understanding of HTML text semantics. </p>
+			<p><em>You have added a hierarchy to the text and made it easier to read and to be understood by a machine.</em></p>
+			<p>Let's move on the some of the other semantic tags.</p>
+		</div>
+		
+		<h2><meta itemprop="alternativeHeadline" content="Lists"/></h2>
+		<div class="section">
+			<h3>Getting dressed</h3>
+			<ol>
+				<li>underwear</li>
+				<li>shirt</li>
+				<li>pants</li>
+				<li>poolover</li>
+				<li>jacket</li>
+			</ol>
+			
+			<h3>"Shopping list"/></h3>
+			<ul>
+				<li>cabbage</li>
+				<li>carrots</li>
+				<li>cheese</li>
+				<li>chocolate</li>
+				<li>icecream</li>
+			</ul>
+	
+			<h3>"Directions to Kwik-E-Mart"/></h3>
+			<ol>
+				<li>turn left onto Abc road</li>
+				<li>turn right onto Def street</li>
+				<li>take exit 44 off Def street</li>
+				<li>keep left onto Ghi road</li>
+				<li>continue for 25 minutes</li>
+				<li>turn around</li>
+				<li>look confused</li>
+			</ol>
+	
+			<!-- Definition List -->
+			<h3>"Directions"/></h3>
+			<dl>
+				<dt>right</dt>
+				<dd>right is the opposite of left</dd>
+				
+				<dt>left</dt>
+				<dd>left is the opposite of right</dd>
+				
+				<dt>up</dt>
+				<dd>up is the opposite of down</dd>
+				
+				<dt>down</dt>
+				<dd>down is the opposite of up</dd>
+				
+			</dl>
+	
+			<!-- Added an extra id just for fun and giggles -->
+			<div id="Warning">
+				<h3>Things that can go wrong</h3>
+				<ul>
+					
+					<li>drinking</li>
+					<li>driving</li>
+					<li>jumping</li>
+					<li>pooping</li>
+					
+				</ul>
+			</div>
+			
+			<h3>"Movies"/></h3>
+			<ul>
+				<li>
+					<h4>The Godfather</h4>
+					<p>
+						The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.
+					</p>
+				</li>
+				
+				<li>
+					<h4>Avatar</h4>
+					<p>
+						A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.
+					</p>
+				</li>
+				
+				<li>
+					<h4>Titanic</h4>
+					<p>
+						A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.
+					</p>
+				</li>
+				
+				<li>
+					<h4>The Matrix</h4>
+					<p>
+						A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.
+					</p>
+				</li>
+				
+			</ul>
+	
+			<!-- Definition List -->
+			<h3>Tech lingo</h3>
+			<dl>
+				<dt itemprop="name">Rendering engine</dt>
+				<dd itemprop="description">Software that draws text and images on the screen</dd>
+				
+				<dt>Browser</dt>
+				<dd>Software application for retrieving, presenting and traversing information resources on the World Wide Web</dd>
+				
+				<dt>JavaScript engine</dt>
+				<dd>Program or interpreter which executes JavaScript code</dd>
+				
+				<dt>Chrome</dt>
+				<dd>The basic structural elements used in a graphical user interface, such as window frames and scroll bars</dd>
+			</dl>
+		</div>
+		
+		<h2><meta itemprop="alternativeHeadline" content="Tables"/></h2>
+		<div class="section">
+			<h3>Family members</h3>
+			<table>
+				
+				<tr>
+					<th>name </th>
+					<th>number </th>
+					<th>car </th>
+				</tr>
+				
+				<tr>
+					<td>Martin</td>
+					<td>1</td>	
+					<td>no</td>
+				</tr>
+				<tr>
+					<td>Anja</td>	
+					<td>2</td>		
+					<td>no</td>
+				</tr>
+				<tr>
+					<td>Romeo</td>
+					<td>3</td>
+					<td>no</td>
+				</tr>
+				<tr>
+					<td>Elo</td>
+					<td>4</td>
+					<td>yes</td>
+				</tr>
+			</table>
+			
+			<h3>Raindrop stats</h3>
+			<table>
+				<tr>
+					<th>Jan</th>
+					<th>Feb</th>
+					<th>Mar</th>
+					<th>Apr</th>
+				</tr>
+				<tr>
+					<td>10</td>
+					<td>11</td>
+					<td>12</td>
+					<td>16</td>
+				</tr>
+				<tr>
+					<td>11</td>
+					<td>12</td>
+					<td>13</td>
+					<td>14</td>
+				</tr>
+				<tr>
+					<td>9</td>
+					<td>10</td>
+					<td>17</td>
+					<td>21</td>
+				</tr>
+			</table>
+		
+			<!--
+				Separated date from Blind mice into 2 tables for structure in, 
+				else i would put 2 extra rows in to be viewed in separate lines 
+			-->
+			<h3>Blind mice</h3>
+			<table>
+				<tr>
+					<th>week</th>
+				</tr>
+				<tr>
+					<td>1</td>
+				</tr>
+				<tr>
+					<td>2</td>
+				</tr>
+				<tr>
+					<td>3</td>
+				</tr>
+			</table>
+			<table>	
+				<tr>
+					<th>mon</th>
+					<th>tue</th>
+					<th>wed</th>
+					<th>thur</th>
+					<th>fri</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>2</td>
+					<td>1</td>		
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>2</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>1</td>
+					<td>4</td>
+					<td>1</td>
+					<td>1</td>
+				</tr>
+			</table>
+		</div>			
+		<div itemprop="award" content="Won the award for best SEO optimized website ever!! ">
+
+		</div>
+	</div>
+	
+	<div id="navigation"></div>
+	<div id="footer"></div>
+
+</body>
+</html>
