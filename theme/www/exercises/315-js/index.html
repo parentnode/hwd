@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 315</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="/css/exercises/includes.css" />
+	<script type="text/javascript" src="/js/exercises/includes.js"></script>
+</head>
+<body>
+
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content">
+
+		<h1>Exercise 315 - JS, Manipulator library 2</h1>
+		<p>
+			This exercise is about using the Manipulator library.
+		</p>
+		<p>
+			The purpose of this exercise is to practice using a combination of different tools to 
+			solve a challenge.
+		</p>
+		<p class="note">
+			Use the script tag in the bottom of the exercise page to write your JavaScript.
+		</p>
+		<p class="note">
+			The manipulator library is included in this page. You can use everything you find
+			in the <a href="http://manipulator.local/docs">Manipulator library documentation</a>.
+		</p>
+
+		<h2>Tasks</h2>
+		<ol>
+			<li>
+				<h3>Build a DOM structure</h3>
+				<p>
+					Add a structure containing a <em>div</em> with the classname <em>scene</em>. 
+					Add it to <em>div#content</em>. Make the scene as high as the browser window.
+				</p>
+				<p>Add three div's to the scene.</p>
+			</li>
+			<li>
+				<h3>Request quotes</h3>
+				<p>
+					Make a request to https://random-quote-generator.herokuapp.com/api/quotes/random to get a quote for
+					each of the three div's.
+				</p>
+			</li>
+			<li>
+				<h3>Add CSS</h3>
+				<p>
+					Make the 3 div's 100px wide and high. You may distribute them nicely if you wish.
+				</p>
+				<p>
+					Add three different colors and/or background animations to the three divs. 
+					Background animations can ba created by adding additional html as needed.
+				</p>
+			</li>
+			<li>
+				<h3>Add event listeners</h3>
+				<p>
+					Add a click listener to each of the three div's. Prepare them to make an event callback to the same 
+					function, which will make them jump.
+				</p>
+				<p>
+					In the event callback, make the clicked element jump to the bottom of the screen by applying a CSS translate property. Wait for one second, then let
+					it jump back up. <em>Use u.a.transition</em> to apply transition timing to the movement.
+				</p>
+			</li>
+		</ol>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+</body>
+</html>
