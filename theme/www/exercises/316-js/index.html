@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 316</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="/css/exercises/includes.css" />
+	<script type="text/javascript" src="/js/exercises/includes.js"></script>
+</head>
+<body>
+
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content">
+
+		<h1>Exercise 316 - JS, Manipulator framework 1</h1>
+		<p>
+			This exercise is about using the Manipulator framework.
+		</p>
+		<p>
+			The purpose of this exercise is to practice using a framework to structure your application of code.
+		</p>
+		<p class="note">
+			Use the script tag in the bottom of the exercise page to write your JavaScript.
+		</p>
+		<p class="note">
+			The manipulator library is included in this page. You can use everything you find
+			in the <a href="http://manipulator.local/docs">Manipulator library documentation</a>.
+		</p>
+
+		<h2>Tasks</h2>
+		<ol>
+			<li>
+				<h3>Investigate the code</h3>
+				<p>
+					In <em>index.html</em> you will find a small, regular snippet of HTML. Note that the <em>div.scene</em> has an 
+					<em>opacity:0</em> setting in the CSS in the top of the page, so it will be invisible from the beginning.
+				</p>
+				<p>
+					In <em>js/i-page.js</em> you will find a simple page controller. It's <em>init</em> method will 
+					automatically be called when the DOMContentReady event occurs. It will output an "init page" text in the console.
+					This happens because of the DOMReady event listener/handler in the bottom of the i-page.js file
+					 – AND the page initializer classname (i:page) on the <em>div#page</em> in index.html. If you remove the 
+					 initializer classname on the <em>div#page</em>, then the <em>init</em> method will not be called. 
+					 Try to remove the initializer classname and observe the result. 
+					 Remember to put it back before you continue.
+				</p>
+				<p>
+					In the page initializer, three new methods are created for the page object (div#page), 
+					<em>resized</em>, <em>scrolled</em> and <em>ready</em>. The <em>ready</em> method will be called instantly and 
+					the <em>resized</em> method will be invoked on page resize and <em>scrolled</em> on page scroll, 
+					due to the two event listeners applied in the <em>ready</em> method.
+				</p>
+				<p>
+					Finally the ready method defines a reference to the current scene, which can be used later in your code.
+				</p>
+			</li>
+			<li>
+				<h3>Make the page resize handler</h3>
+				<p>
+					The scene should always be as high as the browser. Set the scene height in page.resized.
+				</p>
+			</li>
+			<li>
+				<h3>Show the page</h3>
+				<p>
+					The scene should be shown only when the page is ready. Add a transition and change the opacity to 1
+					to make the page fade up, when it is ready.
+				</p>
+			</li>
+
+
+		</ol>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+</body>
+</html>
