@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 308</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+		#content {min-height: 2000px;}
+		/* #content {height: 200px; overflow:auto;} */
+
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content">
+
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+
+	// ADD YOUR JS HERE
+
+// 1. Add event listener to window for DOM content loaded.
+
+	window.addEventListener("DOMContentLoaded", contentLoaded, false);
+	// document.addEventListener("DOMContentLoaded", contentLoaded(), false);
+
+	// function contentLoaded() {
+		// console.log("DOM Content Loaded");
+	// }
+
+// 2. Declare var to tell us when DOM content has loaded.
+// Use IF statement to add eventlistener for scroll and resize for when DOM content has loaded.
+// ... NO, the above does not work as the if statment will run before DOM is loaded, so have to use alt method.
+// Alternatively, could add eventListener directly into contentLoaded function, as will only be called when content has loaded.
+// Need to declare variables in global scope.
+
+	var resize_div;
+	var scroll_div;
+	var new_div;
+
+	// var content_load = false;
+	function contentLoaded() {
+		// console.log(content_load + " in function");
+		new_div = document.getElementById("content").appendChild(document.createElement("div"));
+		new_div.innerHTML = "Content loaded";
+		// content_load = true;
+		// console.log(content_load + " second in function");
+		ResizeScrollEventListeners();
+	}
+	// console.log(content_load + " outside function");
+
+	// if (contentLoaded.content_load) {
+	// 	ResizeScrollEventListeners();
+	// }
+
+	// var resize_div = document.getElementById("content").appendChild(document.createElement("div"));
+
+	function ResizeScrollEventListeners() {
+		window.addEventListener("resize", resizedBrowser, false);
+		resize_div = document.getElementById("content").appendChild(document.createElement("div"));
+		window.addEventListener("scroll", scrolling, false);
+		scroll_div = document.getElementById("content").appendChild(document.createElement("div"));
+		// scroll_div.style.height = 1000 + "px";
+		// scroll_div.style.backgroundColor = "red";
+	}
+
+// Use innerWidth and innerHeight on window. to get size of window.
+
+	function resizedBrowser() {
+		resize_div.innerHTML = "Window size: " + window.innerWidth + " x " + window.innerHeight;
+	}
+
+// Use element.scrollTop and element.scrollLeft
+
+// ******UPDATED: Don't use scrollTop, as just for div, but use pageXOffset (or scrollX) and pageYOffset (or scrollY) ***********
+
+// AHH Not working. ****** Now working...
+
+	function scrolling() {
+		// console.log(document.getElementById("content").scrollTop);
+		// console.log(document.body.scrollTop);
+		// console.log(window.scrollTop);
+		scroll_div.innerHTML = "Scroll position: " + window.pageXOffset + " px right and "
+		+ window.pageYOffset + " px from the top."
+	}
+
+</script>
+
+
+</body>
+</html>

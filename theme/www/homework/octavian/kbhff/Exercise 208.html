@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<title>Exercise 208</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="Exercise%20208_files/includes.css">
+	<style type="text/css">
+/* DON'T CHANGE THIS CSS */
+body {margin: 0;}
+		/*#page {width: 500px; margin: 0 auto;}
+
+
+		 ADD YOUR CSS HERE */
+		body {
+			margin: 0;
+			padding: 0;
+			font-size: 14px; 
+			line-height: 1.24px;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		#content {
+			width: 500px;
+			min-height: 700px;
+			margin: 40px auto;
+			padding: 24px;
+ 			background: rgba(230, 240, 240, 0.65);
+ 		}
+		form {
+			position: relative;
+			box-sizing: border-box;
+			background-blend-mode: lighten;
+			border: 2px solid black;
+			padding: 22px;
+			border-color: green;
+		}
+		a {
+			color: green;
+		}
+		.nav-icon {
+			display: inline-block;
+			margin-right: 0.5rem;
+			font-size: 2rem;
+			color: black;
+		}
+		.field-icon {
+			position: absolute;
+			top: 2rem;
+			left: 0.5rem;
+			font-size: 2rem;
+			line-height: 3rem;
+			color: grey;
+		}
+		/* ----------------------- ACTION ELEMENTS (buttons, navigations etc.) ----------------------- */
+		ul.actions {
+			
+			margin: 0px;
+			padding: 0px 0px 2rem 0px;
+			text-align: center;
+		}
+		ul.actions li {
+			list-style: none;
+			padding: 0 0 1.5rem 0;
+		}
+		ul.actions li:last-child {
+			
+			padding: 0;
+		}
+		.button.primary {
+			background-color: green;
+			padding: 0.5rem 4rem;
+			border: 1px solid #bbbbbb;
+			border-radius: 0px;
+			box-sizing: border-box;
+			width: 50%;
+			height: 3rem;
+			font-size: 1.5rem;
+			font-weight: lighter;
+			color: white;
+		}
+		.button.primary:hover{
+			background-color: lightgreen;
+			color: white;
+		}
+
+		.button {
+			background-color: green;
+			padding: 0.5rem 4rem;
+			border: 1px solid #bbbbbb;
+			border-radius: 0px;
+			box-sizing: border-box;
+			width: 50%;
+			height: 3rem;
+			font-size: 1.5rem;
+			font-weight: lighter;
+			color: white;
+		}
+		.button:hover{
+			background-color: lightgreen;
+			color: white;
+		}
+		
+
+
+		/* ----------------------- FORM ELEMENTS ----------------------- */
+		fieldset {border: 0; margin: 0; padding: 0;} 
+		label {
+			position: relative;
+			display: inline-block;
+			font-size: 14px; 
+			line-height: 2rem;
+		}
+		.field {position: relative; padding-bottom: 12px;}
+		.help {
+			position: relative; 
+			z-index: 1;
+			box-sizing: border-box; 
+			width: 100%;
+			min-height: 8px;
+			padding: 0;
+			}
+		.help .hint {
+			display: none; 
+			padding: 0 5px;
+			font-size: 14px;
+			line-height: 24px;
+			box-sizing: border-box; 
+			color: #666;}
+		.help .error {
+			display: none; 
+			position: absolute;
+			top: -48px;
+			left: calc(100% + 20px);
+			width: 300px;
+			box-sizing: border-box;
+			padding: 0 5px;
+			margin-left: 10px;
+			font-size: 14px;
+			line-height: 24px;
+			border-radius: 0px;
+			background-color: red;
+			color: white;
+		}
+		.help .error:after {
+			content:"";
+			position:absolute;
+			top:16px;
+			left:-12px; /* value = - border-left-width - border-right-width */
+			bottom:auto;
+			border-width:8px 12px 8px 0; /* vary these values to change the angle of the vertex */
+			border-color:transparent red;
+			border-style:solid;
+			/* reduce the damage in FF3.0 */
+			display:block;
+			width:0;
+		}
+		input[type="text"], 
+		input[type="number"], 
+		input[type="email"], 
+		input[type="password"] {
+			box-sizing: border-box; 
+			width: 100%;
+			height: 48px;
+			border: 1px solid #bbbbbb;
+			border-radius: 0px;
+			background: rgba(255, 255, 255, 0.65);
+			padding: 0 8px;
+			font-size: 28px;
+			line-height: 48px;
+		}
+		
+		select {
+			box-sizing: border-box; 
+			width: 100%;
+			height: 48px;
+			font-size: 28px;
+			line-height: 48px;
+			background: rgba(240, 240, 240, 0.65);
+		}
+		select:focus {
+			background: rgba(255, 240, 255, 1);
+		}
+		input[type="text"]:focus, 
+		input[type="number"]:focus, 
+		input[type="email"]:focus, 
+		input[type="password"]:focus {
+			border: 2px solid green;
+			background: rgba(255, 245, 255, 1);
+			outline: none;
+		}
+
+		input[type="text"]:focus + .help > .hint, 
+		input[type="number"]:focus + .help > .hint, 
+		input[type="email"]:focus + .help > .hint, 
+		input[type="password"]:focus + .help > .hint {
+			display: inline-block;
+		}
+		input[type="text"]:focus + .help > .hint-link, 
+		input[type="number"]:focus + .help > .hint-link, 
+		input[type="email"]:focus + .help > .hint-link, 
+		input[type="password"]:focus + .help > .hint-link {
+			display: inline-block;
+		}
+		 		
+		.error input[type="text"] + .help .error, 
+		.error input[type="number"] + .help .error, 
+		.error input[type="email"] + .help .error, 
+		.error input[type="password"] + .help .error {
+			display: inline-block;
+		} 
+		.error input[type="text"]:focus, 
+		.error input[type="number"]:focus, 
+		.error input[type="email"]:focus, 
+		.error input[type="password"]:focus {
+			border: 2px solid green;
+		} 
+		.error input[type="text"], 
+		.error input[type="number"], 
+		.error input[type="email"], 
+		.error input[type="password"] {
+			border: 1px solid red;
+		} 				
+		/* remove number spinner (up and down arrows) */
+		input[type=number]::-webkit-inner-spin-button, 
+		input[type=number]::-webkit-outer-spin-button { 
+			-webkit-appearance: inherit; 
+			margin: 0; 
+		}
+
+		.required label::before {
+		tab-size: 400%;
+			content: '*';
+			color: red;
+		}
+			
+
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header">
+		<a class="logo" href="http://class-test.local/">KBHFF <span class="highlight">udviklerguide</span></a>
+		<ul class="servicenavigation">
+			<li class="keynav navigation nofollow"><a href="#navigation">To navigation</a></li>
+			<li><a href="http://class-test.local/kontakt">Contact</a></li>
+			<li><a href="http://kbhff.dk/">kbhff.dk</a></li>
+		</ul>
+	</div>
+	<div id="navigation">
+		<ul class="navigation">
+			<li><a href="http://class-test.local/homework/octavian/208/software-license">Software license</a></li>
+			<li><a href="http://class-test.local/homework/octavian/208/choose-editor">Code editors</a></li>
+			<li><a href="http://class-test.local/homework/octavian/208/development-environment">Dev environment</a></li>
+			<li><a href="http://class-test.local/homework/octavian/208/before-you-start-coding">Coding conventions</a></li>
+			<li><a href="http://class-test.local/homework/octavian/208/playground">Set up playground</a></li>
+			<li><a href="http://class-test.local/homework/octavian/208/dictionary">Dictionary</a></li>
+		</ul>
+	</div>
+	<div id="content">
+
+		<h1>Form layout</h1>
+		<p>
+			This is a page containing a range of different input fields. We use it to make our proposals for our
+			new form elements – to be shared with and approved by the IT Work Group.
+		</p>
+
+		<form action="#" method="POST" class="form">
+			<fieldset>
+				<h3>Primary data</h3>
+
+				<div class="field string">
+					<label for="input_text1">Text</label>
+					<input name="string1" id="input_text1" type="text">
+					<div class="help">
+						<div class="hint">hint message which is pretty long and explaining a lot of things</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field string required">
+					<label for="input_text2">Text required</label>
+					<input name="string2" id="input_text2" type="text">
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field string required error">
+					<label for="input_text3">Text required w. error</label>
+					<input name="string3" id="input_text3" value="kli&lt;sfd" type="text">
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message which is pretty long and explaining a lot of things</div>
+					</div>
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<h3>Secondary data</h3>
+
+				<div class="field email required">
+					<label for="input_email">Email required</label>
+					<input name="email" id="input_email" maxlength="255" type="email">
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field password required">
+					<label for="input_password">Password required</label>
+					<input name="password" id="input_password" maxlength="255" type="password">
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field select">
+					<label for="input_select">Select required</label>
+					<select name="select" id="input_select">
+						<option value="0">test</option>
+						<option value="1">apple</option>
+						<option value="2" selected="selected">pear</option>
+						<option value="3">banana</option>
+					</select>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field text required">
+					<label for="input_text">Text required</label>
+					<textarea name="text" id="input_text" style="width: 449px; height: 138px;">pouaspfoi</textarea>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field checkbox required">
+					<input name="checkbox1" value="0" type="hidden">
+					<input name="checkbox1" id="input_checkbox1" value="1" type="checkbox">
+					<label for="input_checkbox1">Checkbox required</label>
+					<div class="help">
+						<div class="hint">hint message which is pretty long and explaining a lot of things</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field checkbox required error">
+					<input name="checkbox2" value="0" type="hidden">
+					<input name="checkbox2" id="input_checkbox2" value="1" type="checkbox">
+					<label for="input_checkbox2">Checkbox required w/ error</label>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message which is pretty long and explaining a lot of things</div>
+					</div>
+				</div>
+
+				<div class="field radiobuttons required">
+					<label>Radiobuttons required</label>
+					<div class="item">
+						<input name="radiobuttons" id="input_radiobuttons_value1" value="value1" type="radio">
+						<label for="input_radiobuttons_value1">text1</label>
+					</div>
+					<div class="item">
+						<input name="radiobuttons" id="input_radiobuttons_value2" value="value2" type="radio">
+						<label for="input_radiobuttons_value2">text2</label>
+					</div>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field radiobuttons required">
+					<label>Radiobuttons required w/ error</label>
+					<div class="item">
+						<input name="radiobuttons" id="input_radiobuttons_value1" value="value1" checked="checked" type="radio">
+						<label for="input_radiobuttons_value1">text1</label>
+					</div>
+					<div class="item">
+						<input name="radiobuttons" id="input_radiobuttons_value2" value="value2" type="radio">
+						<label for="input_radiobuttons_value2">text2</label>
+					</div>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<ul class="actions">
+					<li class="save">
+						<input value="Submit" class="button primary" type="submit">
+					</li>
+					<li class="cancel">
+						<input value="Cancel" class="button" type="button">
+					</li>
+				</ul>
+
+			</fieldset>
+		</form>
+
+	</div>
+	<div id="footer">
+		<ul class="servicenavigation">
+			<li class="copyright">KBHFF, 2018</li>
+			<li><a href="http://class-test.local/kontakt">Kontakt</a></li>
+			<li><a href="http://kbhff.dk/">kbhff.dk</a></li>
+		</ul>
+	</div>
+</div>
+
+
+
+</body></html>

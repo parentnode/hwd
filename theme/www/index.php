@@ -6,15 +6,21 @@
 </head>
 <body>
 
-<h1>Hello World</h1>
+<div id="page">
+	<div id="header"></div>
+	<div id="content">
 
-<ul>
-	<li><a href="/classroom">Class room</a></li>
-	<li><a href="/exercises">Exercises</a></li>
-	<li><a href="/homework">Homework area</a></li>
+		<h1>Hello keyboard dancer</h1>
 
-	<li><a href="/kbhff">KBHFF guide</a></li>
-</ul>
+		<ul>
+			<li><a href="/classroom">Class room</a></li>
+			<li><a href="/exercises">Exercises</a></li>
+			<li><a href="/homework">Homework area</a></li>
+		</ul>
+
+	</div>
+	<div id="footer"></div>
+</div>
 
 </body>
 </html>

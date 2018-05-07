@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 304</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+		#content {min-height: 400px;}
+
+		li.item.modified {background-color: green;}
+		li.item.special {background-color: red;}
+
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content">
+
+		<ul class="modifyme">
+			<li class="item">Item 1</li>
+			<li class="item special">Item 2</li>
+			<li class="item">Item 3</li>
+			<li class="item">Item 4</li>
+			<li class="item special">Item 5</li>
+			<li class="item special">Item 6</li>
+			<li class="item">Item 7</li>
+			<li class="item special">Item 8</li>
+		</ul>
+
+		<ul class="dontmodifyme">
+			<li class="item">Item 1</li>
+			<li class="item">Item 2</li>
+			<li class="item">Item 3</li>
+			<li class="item">Item 4</li>
+			<li class="item">Item 5</li>
+			<li class="item">Item 6</li>
+			<li class="item">Item 7</li>
+			<li class="item">Item 8</li>
+		</ul>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+
+	// ADD YOUR JS HERE
+
+	// DECLARE variable for lis in ul.modifyme
+	// var modifyme_lis = document."#content"."ul.modifyme".querySelectorAll("li");
+	var modifyme_lis = document.querySelectorAll(".modifyme li");
+
+	// CORRECTED / COMMENTS: qsALL(".modifyme > li") -- only takes immediate li children.
+
+	// ITERATE over list and replace "special" with "" if it is in class list, using a second for loop over class list.
+	// Replace will work here, but not always.
+	// If "special" is not in the list, add "modified" with space in front.
+	var i;
+	var j;
+	var lis_with_special = [];
+	for(i=0; i < modifyme_lis.length; i++) {
+		for(j=0; j < modifyme_lis[i].classList.length; j++) {
+			if(modifyme_lis[i].classList[j] == "special") {
+				modifyme_lis[i].classList.remove("special");
+				lis_with_special.push(i);
+			};
+		};
+	};
+			// Now have list of indices in modifyme_lis list array, pointing to lis that need to have "modified" added.
+		// The above won't work with multiple instances of "special"
+	// var k;
+	// for(k=0; k < lis_with_special.length; k++) {
+	// 	modifyme_lis[lis_with_special[k]].className += " modified";
+	// }
+
+	// ************* CORRECTED VERSION ****************
+	// Should add modified class to those NOT with class special...
+	// Use indexOf on lis_with_special array, if index k is not in, then will return -1.
+
+	var k;
+	for(k=0; k < modifyme_lis.length; k++) {
+		if (lis_with_special.indexOf(k) < 0) {
+			modifyme_lis[k].className += " modified";
+		}
+	}
+
+	// 	if(modifyme_lis[i].className == "special") {
+	// 		console.log(modifyme_lis[i]);
+	// 		modifyme_lis[i].className.replace("special", "");
+	// 	}
+	// 	else {
+	// 		modifyme_lis[i].className = modifyme_lis[i].className + " modified";
+	// 	};
+	// 	console.log(modifyme_lis[i]);
+	// };
+
+
+
+</script>
+
+
+</body>
+</html>

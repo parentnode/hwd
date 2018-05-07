@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 302</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+		#content {min-height: 400px;}
+		div.a1 {background-color: yellow; color: black;}
+		div.a2 {background-color: orange; color: black;}
+		div.a3 {background-color: red; color: white;}
+		div.a4 {background-color: brown; color: white;}
+		div.a5 {background-color: black; color: white;}
+
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content">
+
+		<div class="a4">I'm clueless</div>
+		<div class="scene">
+			<div class="a4">A4</div>
+			<ul>
+				<li class="no">
+					<div class="a3">I'm clueless</div>
+				</li>
+				<li class="yes">
+					<div class="a3">A3</div>
+				</li>
+			</ul>
+
+			<div class="section">
+				<div class="a2">I'm clueless</div>
+				<div class="a1">A1<div class="a2">A2</div></div>
+				<ul>
+					<li class="yes">
+						<div class="a5 b">I'm clueless</div>
+					</li>
+					<li class="yes">
+						<div class="a5 a">A5</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+
+	// ADD YOUR JS HERE
+	var a4 = document.querySelector(".scene .a4")
+	var a1 = document.querySelector(".scene .section .a1")
+	var a3 = document.querySelector(".scene .yes .a3")
+	var a5 = document.querySelector(".scene .section .yes .a5.a")
+	var a2 = document.querySelector(".a1 .a2")
+
+	// function moveElement(node, position) {
+	// // moves an element in a HTML document
+	// position.parentNode.insertBefore(node, position)
+	// }
+	// moveElement(a1, a4)
+	// moveElement(a3, a4)
+	//
+	// function moveLastElement(node, position) {
+	// position.parentNode.insertBefore(node, position.nextSibling)
+	// }
+	// // moveLastElement(a5, a4)
+
+	function moveElement(node, position) {
+		if (node === a5) {
+	position.parentNode.insertBefore(node, position.nextSibling)
+		}	else {
+	position.parentNode.insertBefore(node, position)
+		}
+	}
+moveElement(a1, a4)
+moveElement(a3, a4)
+moveElement(a5, a4)
+
+</script>
+
+
+</body>
+</html>

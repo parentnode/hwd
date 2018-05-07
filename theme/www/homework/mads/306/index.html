@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 306</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+		#content {min-height: 400px;}
+
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content">
+
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+
+	var content_set = [
+		"I'm number one",
+		"I'm number two",
+		"I'm number three",
+		"I'm number four",
+		"I'm number five"
+	];
+	
+
+	// ADD YOUR JS HERE
+
+	var element = document.querySelector("div#content");
+
+	function addListToDOM(parentElement, contentArray) {
+		var newUlElement = parentElement.appendChild(document.createElement("ul"));
+		for(var i = 0; i < contentArray.length; i++){
+			var newLiElement = newUlElement.appendChild(document.createElement("li"));
+			newLiElement.innerHTML = contentArray[i];
+		}
+	}
+	addListToDOM(element, content_set);
+
+</script>
+
+
+</body>
+</html>

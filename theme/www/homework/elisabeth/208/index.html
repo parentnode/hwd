@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 208</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="http://udvikler-kbhff.think.dk/css/includes.css" />
+	<style type="text/css">
+	@font-face {
+		font-family: 'voresfont';
+		src: url('/css/fonts/voresfont.eot');
+		src: url('/css/fonts/voresfont.eot?#iefix') format('embedded-opentype'),
+			 url('/css/fonts/voresfont.woff') format('woff'),
+			 url('/css/fonts/voresfont.svg#voresfont') format('svg'),
+			 url('/css/fonts/voresfont.ttf') format('truetype');
+		font-weight: 400;
+		font-style: normal;
+	}
+		/* ADD YOUR CSS HERE */
+		fieldset {
+			border:0;
+			padding: 0;
+			margin: 0;
+		}
+		form {
+			min-height: 400px;
+			min-width: 400px;
+			width: 500px;
+		}
+
+		div.field input {
+			width: 100%;
+			border: 1px solid	#666666;
+			height: 30px;
+			margin-bottom: 28px;
+			display: block;
+			font-size: 22px;
+		}
+		.field.text.required textarea {
+			width: 100%;
+			height: 100px;
+			margin-bottom: 20px;
+			font-size: 22px;
+		}
+		div.field input:focus, .field.text.required textarea:focus, div.field.select select:focus {
+			background-color: rgba(62,142,23, 0.15);
+			border: 2px solid #559C33;
+			outline: none;
+		}
+		div.field.error input:focus {
+			background-color: rgba(194,36,20, 0.15);
+			outline: none;
+			border: 2px solid #C22414;
+		}
+		div.field label {
+			display: block;
+			text-align: left;
+			font-weight: 400;
+		}
+		label::after {
+			content: "*";
+			color: red;
+			font-size: 18px;
+		}
+		div.item label::after {
+			content: " ";
+		}
+		div.field div.help {
+			display: none;
+			font-size: 10px;
+			width: 100%;
+			height: 12px;
+			float: left;
+			margin-top: -25px;
+			text-align: left;
+			line-height: 0.5em;
+		}
+		#content div.help div.error {
+			color: #C22414;
+			line-height: 1em;
+		}
+		#content div.help div.hint {
+			color: #3E8E17;
+			line-height: 1em;
+		}
+		div.field.checkbox.required:hover > div.help, div.field.select:hover > div.help, div.field.radiobuttons.required:hover > div.help {
+			display: block;
+		}
+		div.field.select .help, div.field.checkbox.required .help, div.field.radiobuttons.required .help {
+			margin-top: 0;
+		}
+		div.field.radiobuttons.required.error div.help .error, div.field.checkbox.required.error div.help .error, div.field.string.required.error div.help .error   {
+			visibility: visible;
+		}
+		div.field.radiobuttons.required.error .hint, div.field.string.required.error .hint, 	div.field.checkbox.required.error .hint {
+			display: none;
+		}
+		div.help .error {
+			visibility: hidden;
+		}
+		div.field.string.required.error input:focus + div, div.field input:focus + div {
+			display: block;
+		}
+		div.field.string.required.error .help, div.field.checkbox.required.error .help, div.field.radiobuttons.required.error .help {
+			display: block;
+		}
+		div.checkbox label {
+			display: inline-block;
+			margin: 0;
+			float: left;
+			padding-left: 0;
+		}
+		div.field.checkbox input {
+			width: 15px;
+			height: 15px;
+			float: left;
+			margin-top: 3px;
+			margin-right: 5px;
+		}
+		#content li.save, li.cancel {
+			list-style-type: none;
+			display: inline-block;
+			padding: 0;
+		}
+		input.button  {
+			background-color: #3E8E17;
+			line-height: 21px;
+			font-size: 14px;
+			color: #ffffff;
+			text-transform: uppercase;
+			padding: 7px 14px;
+			border: none;
+			font-family: voresfont;
+		}
+		#content ul.actions {
+			margin: 0;
+		}
+		li.cancel	input.button {
+			background-color: #999999;
+		}
+		input.button:hover {
+			background-color: #357914;
+		}
+		li.cancel input.button:hover {
+			background-color: #666666;
+		}
+		div.field.select {
+			padding-bottom: 24px;
+		}
+		.select label {
+			display: inline-block;
+			float: left;
+		}
+		.select select {
+			width: 100%;
+			height: 30px;
+			font-size: 22px;
+		}
+		div.field.checkbox.required {
+			padding-bottom: 54px;
+		}
+		div.radiobuttons label {
+			padding: 0;
+		}
+		div.radiobuttons input {
+			width: 15px;
+			height: 15px;
+			float: left;
+			display: inline-block;
+			margin: 5px 5px 0 0;
+		}
+		div.field.radiobuttons.required {
+			margin: 20px 0;
+		}
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header">
+		<a class="logo" href="/">KBHFF <span class="highlight">udviklerguide</span></a>
+		<ul class="servicenavigation">
+			<li class="keynav navigation nofollow"><a href="#navigation">To navigation</a></li>
+			<li><a href="/kontakt">Contact</a></li>
+			<li><a href="http://kbhff.dk">kbhff.dk</a></li>
+		</ul>
+	</div>
+	<div id="navigation">
+		<ul class="navigation">
+			<li><a href="#">Software license</a></li>
+			<li><a href="#">Code editors</a></li>
+			<li><a href="#">Dev environment</a></li>
+			<li><a href="#">Coding conventions</a></li>
+			<li><a href="#">Set up playground</a></li>
+			<li><a href="#">Dictionary</a></li>
+		</ul>
+	</div>
+	<div id="content">
+
+		<h1>Form layout</h1>
+		<p>
+			This is a page containing a range of different input fields. We use it to make our proposals for our
+			new form elements – to be shared with and approved by the IT Work Group.
+		</p>
+
+		<form action="#" method="POST" class="form">
+			<fieldset>
+				<h3>Primary data</h3>
+
+				<div class="field string">
+					<label for="input_text1">Text</label>
+					<input type="text" name="string1" id="input_text1" />
+					<div class="help">
+						<div class="hint">hint message which is pretty long and explaining a lot of things. Many extraordinary, super duper important things. Sooooo important.</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field string required">
+					<label for="input_text2">Text required</label>
+					<input type="text" name="string2" id="input_text2" />
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field string required error">
+					<label for="input_text3">Text required w. error</label>
+					<input type="text" name="string3" id="input_text3" />
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message which is pretty long and explaining a lot of things. Many extraordinary, super duper important things. Sooooo important.</div>
+					</div>
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<h3>Secondary data</h3>
+
+				<div class="field email required">
+					<label for="input_email">Email required</label>
+					<input type="email" name="email" id="input_email" maxlength="255" />
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field password required">
+					<label for="input_password">Password required</label>
+					<input type="password" name="password" id="input_password" maxlength="255" />
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field select">
+					<label for="input_select">Select required</label>
+					<select name="select" id="input_select">
+						<option value="0">test</option>
+						<option value="1">apple</option>
+						<option value="2" selected="selected">pear</option>
+						<option value="3">banana</option>
+					</select>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field text required">
+					<label for="input_text">Text required</label>
+					<textarea name="text" id="input_text"></textarea>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field checkbox required">
+					<input type="hidden" name="checkbox1" value="0" />
+					<input type="checkbox" name="checkbox1" id="input_checkbox1" value="1" />
+					<label for="input_checkbox1">Checkbox required</label>
+					<div class="help">
+						<div class="hint">hint message which is pretty long and explaining a lot of things. Many extraordinary, super duper important things. Sooooo important.</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field checkbox required error">
+					<input type="hidden" name="checkbox2" value="0" />
+					<input type="checkbox" name="checkbox2" id="input_checkbox2" value="1" />
+					<label for="input_checkbox2">Checkbox required w/ error</label>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message which is pretty long and explaining a lot of things. Many extraordinary, super duper important things. Sooooo important.</div>
+					</div>
+				</div>
+
+				<div class="field radiobuttons required">
+					<label>Radiobuttons required</label>
+					<div class="item">
+						<input type="radio" name="radiobuttons" id="input_radiobuttons_value1" value="value1" />
+						<label for="input_radiobuttons_value1">text1</label>
+					</div>
+					<div class="item">
+						<input type="radio" name="radiobuttons" id="input_radiobuttons_value2" value="value2" />
+						<label for="input_radiobuttons_value2">text2</label>
+					</div>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<div class="field radiobuttons required error">
+					<label>Radiobuttons required w/ error</label>
+					<div class="item">
+						<input type="radio" name="radiobuttons1" id="input_radiobuttons_value3" value="value1" />
+						<label for="input_radiobuttons_value3">text1</label>
+					</div>
+					<div class="item">
+						<input type="radio" name="radiobuttons1" id="input_radiobuttons_value4" value="value2" />
+						<label for="input_radiobuttons_value4">text2</label>
+					</div>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+
+				<ul class="actions">
+					<li class="save">
+						<input type="submit" value="Submit" class="button primary" />
+					</li>
+					<li class="cancel">
+						<input type="button" value="Cancel" class="button" />
+					</li>
+				</ul>
+
+			</fieldset>
+		</form>
+
+	</div>
+	<div id="footer">
+		<ul class="servicenavigation">
+			<li class="copyright">KBHFF, 2018</li>
+			<li><a href="/kontakt">Kontakt</a></li>
+			<li><a href="http://kbhff.dk">kbhff.dk</a></li>
+		</ul>
+	</div>
+</div>
+
+
+</body>
+</html>

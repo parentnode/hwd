@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 308</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+		#content {min-height: 2000px;}
+
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content">
+
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+
+	// ADD YOUR JS HERE
+	var content = document.getElementById("content");
+	var loadDiv;
+	var resizeDiv;
+	var scrollDiv;
+
+	window.addEventListener("DOMContentLoaded", contentLoaded, false);
+
+	function contentLoaded() {
+		//Creating and appending div
+		loadDiv = document.createElement("div");
+		loadDiv.innerHTML = "Content Loaded";
+		content.appendChild(loadDiv);
+
+		nextStep();
+	}
+
+	function nextStep() {
+		window.addEventListener("resize", onResize, false);
+		window.addEventListener("scroll", onScroll, false);
+
+		resizeDiv = document.createElement("div");
+		scrollDiv = document.createElement("div");
+		content.appendChild(resizeDiv);
+		content.appendChild(scrollDiv);
+
+		//Initial size and scroll position
+		resizeDiv.innerHTML = "Width: " + window.innerWidth + " & " + "Height: " + window.innerHeight;
+		scrollDiv.innerHTML = "Y position: " + window.scrollY + " & " + "X position " + window.scrollX;
+	}
+
+	function onResize() {
+		resizeDiv.innerHTML = "Width: " + window.innerWidth + " & " + "Height: " + window.innerHeight;
+	}
+
+	function onScroll() {
+		scrollDiv.innerHTML = "Y position: " + window.scrollY + " & " + "X position " + window.scrollX;
+	}
+
+</script>
+
+
+</body>
+</html>
