@@ -5,245 +5,284 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-	<div id="page" itemscope itemtype="http://schema.org/CreativeWork">
-	<div id="header">
-		<dl class="info">
-			<dt class="author">Author:</dt>
-			<dd class="author" itemprop="author">Julie Courraud</dd>
-			<dt class="date_created">Date:</dt>
-			<dd class="date_created" itemprop="dateCreated" content="2018-04-14">14th April 2018</dd>
-			<dt class="language">Language - isn't it redundant?</dt>
-			<dd class="language" itemprop="inLanguage" content="English">English</dd>
-			<dt class="audience">To be read by:</dt>
-			<dd class="audience" itemprop="audience">Martin</dd>
-		</dl>
+	<div id="page">
+		<div id="header"></div>
+		<div id="content" itemscope itemtype="http://schema.org/CreativeWork">
+			<dl class="info">
+				<dt class="author">Author:</dt>
+				<dd class="author" itemprop="author">Julie Courraud</dd>
+				<dt class="date_created">Date:</dt>
+				<dd class="date_created" itemprop="dateCreated" content="2018-05-07">7th May 2018</dd>
+				<dt class="language">Language - isn't it redundant?</dt>
+				<dd class="language" itemprop="inLanguage" content="English">English</dd>
+				<dt class="audience">To be read by:</dt>
+				<dd class="audience" itemprop="audience">Martin</dd>
+			</dl>
+			<h1 itemprop="headline">Exercise 5</h1>
+			<div class="section" itemprop="text">
+				<h2>Basic semantic HTML</h2>
+				<p itemprop="about">In this article, you will get to work with h1, h2, h3, p, strong and em tags.</p>
+				<h3>The basic semantic text tags</h3>
+				<p>
+					The minimum set of semantic text HTML tags contains h1, h2, h3, p,
+					strong and em. Although there are many other
+					semantic html tags, these are the most important ones to learn.
+				</p>
+				<p>Other semantic HTML tags include table, ul, ol and dl.</p>
+				<p>We will look more at the other semantic tags later.</p>
+
+				<h4>The h1 tag</h4>
+				<p>
+					The h1 tag is the primary headline of a page.
+					There should <strong>only ever</strong> be <strong>one</strong>
+					primary headline in a page.
+				</p>
+
+				<h4>The h2 tag</h4>
+				<p>
+					The h2 tag is for secondary headlines in your page.
+					The secondary headlines are used for each subsection
+					of the primary content.
+				</p>
+				<p>There will often be multiple secondary headlines in your pages.</p>
+
+				<h4>The h3 tag</h4>
+				<p>
+					The h3 tag is for tertiary headlines in your page.
+					The tertiary headlines are used for each subsection
+					of the current secondary section.
+				</p>
+				<p>There will often be multiple tertiary headlines in your pages.</p>
+
+				<h4>The p tag</h4>
+				<p>
+					The p tag is used for a paragraph of text.
+					Each headline will typically be followed by one or more
+					paragraphs, relating directly to the previous headline.
+				</p>
+				<p>There will often be multiple paragraphs in your pages.</p>
+
+				<h4>The strong tag</h4>
+				<p>
+					The <strong>strong</strong> tag is used to indicate that a certain
+					word (or several words) are more important in the context.
+				</p>
+				<p>The strong tag is an inline tag and can only be used inside headlines or paragraphs.</p>
+
+				<h4>The em tag</h4>
+				<p>
+					The <em>em</em> tag is used to indicate that a certain word
+					(or several words) needs emphasis in the context.
+				</p>
+				<p>The em tag is an inline tag and can only be used inside headlines or paragraphs.</p>
+
+				<h3>Summary</h3>
+				<p>
+					Now you have a basic understanding of HTML text semantics.
+					You have added a hierarchy to the text and made it easier
+					to read and to be understood by a machine. Let's move on the some of the other semantic tags.
+				</p>
+			</div>
+			<div class="section">
+				<h2>Lists</h2>
+
+				<h3>Getting dressed</h3>
+				<ol>
+					<li>underwear</li>
+					<li>shirt</li>
+					<li>pants</li>
+					<li>poolover</li>
+					<li>jacket</li>
+				</ol>
+
+				<h3>Shopping list</h3>
+				<ul>
+					<li>cabbage</li>
+					<li>carrots</li>
+					<li>cheese</li>
+					<li>chocolate</li>
+					<li>icecream</li>
+					<li><strong>raw bacon +++</strong></li>
+				</ul>
+
+				<h3>Directions to Kwik-E-Mart</h3>
+				<ol>
+					<li>turn right onto Def street</li>
+					<li>take exit 44 off Def street</li>
+					<li>keep left onto Ghi road</li>
+					<li>continue for 25 minutes</li>
+					<li>turn around</li>
+					<li>look confused</li>
+					<li>call Martin to <em>complain!</em></li>
+				</ol>
+
+				<h3>Directions</h3>
+				<dl>
+					<dt>right</dt>
+					<dd>right is the opposite of left</dd>
+					<dt>left</dt>
+					<dd>left is the opposite of right</dd>
+					<dt>up</dt>
+					<dd>up is the opposite of down</dd>
+					<dt>down</dt>
+					<dd>down is the opposite of up</dd>
+				</dl>
+
+				<h3>Things that can go wrong</h3>
+				<ul>
+					<li>drinking</li>
+					<li>driving</li>
+					<li>jumping</li>
+					<li>pooping</li>
+				</ul>
+
+				<h2>Movies</h2>
+				<ul>
+					<li>
+						<h3>The Godfather</h3>
+						<p>
+							The aging patriarch of an organized crime dynasty transfers control of
+							his clandestine empire to his reluctant son.
+						</p>
+					</li>
+					<li>
+						<h3>Avatar</h3>
+						<p>
+							A paraplegic marine dispatched to the moon Pandora on a unique mission
+							becomes torn between following his orders and protecting the world he feels is his home.
+						</p>
+					</li>
+					<li>
+						<h3>Titanic</h3>
+						<p>
+							A seventeen-year-old aristocrat falls in love with a kind but poor artist
+							aboard the luxurious, ill-fated R.M.S. Titanic.
+						</p>
+					</li>
+					<li>
+						<h3>The Matrix</h3>
+					<p>
+						A computer hacker learns from mysterious rebels about the true nature of his reality
+						and his role in the war against its controllers.
+					</p>
+					</li>
+				</ul>
+
+				<h3>Tech lingo</h3>
+				<dl>
+					<dt>Rendering engine</dt>
+					<dd>Software that draws text and images on the screen</dd>
+					<dt>Browser</dt>
+					<dd>Software application for retrieving, presenting and traversing information resources on the World Wide Web</dd>
+					<dt>JavaScript engine</dt>
+					<dd>Program or interpreter which executes JavaScript code</dd>
+					<dt>Chrome</dt>
+					<dd>The basic structural elements used in a graphical user interface, such as window frames and scroll bars</dd>
+				</dl>
+			</div>
+			<div class="section">
+				<h2>Tables</h2>
+
+				<h3>Family members</h3>
+				<table>
+					<tr>
+						<th>name</th>
+						<th>number</th>
+						<th>car</th>
+					</tr>
+					<tr>
+						<td>Martin</td>
+						<td>1</td>
+						<td>no</td>
+					</tr>
+					<tr>
+						<td>Anja</td>
+						<td>2</td>
+						<td>no</td>
+					</tr>
+					<tr>
+						<td>Romeo</td>
+						<td>3</td>
+						<td>no</td>
+					</tr>
+					<tr>
+						<td>Elo</td>
+						<td>4</td>
+						<td>yes</td>
+					</tr>
+				</table>
+
+				<h3>Raindrop stats</h3>
+				<table>
+					<tr>
+						<th>Month</th>
+						<th>Day 1</th>
+						<th>Day 2</th>
+						<th>Day 3</th>
+						<th>Day 4</th>
+					</tr>
+					<tr>
+						<td>Jan</td>
+						<td>10</td>
+						<td>11</td>
+						<td>12</td>
+						<td>16</td>
+					</tr>
+					<tr>
+						<td>Feb</td>
+						<td>11</td>
+						<td>12</td>
+						<td>13</td>
+						<td>14</td>
+					</tr>
+					<tr>
+						<td>Mar</td>
+						<td>9</td>
+						<td>10</td>
+						<td>17</td>
+						<td>21</td>
+					</tr>
+				</table>
+
+				<h3>Blind mice</h3>
+				<table>
+					<tr>
+						<th></th>
+						<th>mon</th>
+						<th>tue</th>
+						<th>wed</th>
+						<th>thur</th>
+						<th>fri</th>
+					</tr>
+					<tr>
+						<td>week1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+						<td>2</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>week2</td>
+						<td>3</td>
+						<td>2</td>
+						<td>1</td>
+						<td>1</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>week3</td>
+						<td>2</td>
+						<td>1</td>
+						<td>4</td>
+						<td>1</td>
+						<td>1</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div id="navigation"></div>
+		<div id="footer"></div>
 	</div>
-
-	<div id="content" itemprop="text">
-		<h1 itemprop="headline">Exercises 1-3</h1>
-
-		<div class="section">
-		<h2>Basic semantic HTML</h2>
-		<p itemprop="about">In this article, you will get to work with h1, h2, h3, p, strong and em tags.</p>
-
-		<h3>The basic semantic text tags</h3>
-		<p>The minimum set of semantic text HTML tags contains h1, h2, h3, p, strong and em. Although there are many other
-		semantic html tags, these are the most important ones to learn.</p>
-		<p>Other semantic HTML tags include table, ul, ol and dl.</p>
-		<p>We will look more at the other semantic tags later.</p>
-
-		<h4>The h1 tag</h4>
-		<p>The h1 tag is the primary headline of a page. There should <strong>only ever</strong> be <strong>one</strong> primary headline in a page.</p>
-
-		<h4>The h2 tag</h4>
-		<p>The h2 tag is for secondary headlines in your page. The secondary headlines are used for each subsection
-		of the primary content.</p>
-		<p>here will often be multiple secondary headlines in your pages.</p>
-
-		<h4>The h3 tag</h4>
-		<p>The h3 tag is for tertiary headlines in your page. The tertiary headlines are used for each subsection
-		of the current secondary section.</p>
-		<p>There will often be multiple tertiary headlines in your pages.</p>
-
-		<h4>The p tag</h4>
-		<p>The p tag is used for a paragraph of text. Each headline will typically be followed by one or more
-		paragraphs, relating directly to the previous headline.</p>
-		<p>There will often be multiple paragraphs in your pages.</p>
-
-		<h4>The strong tag</h4>
-		<p>The <strong>strong</strong> tag is used to indicate that a certain word (or several words) are more important in the context.</p>
-		<p>The strong tag is an inline tag and can only be used inside headlines or paragraphs.</p>
-
-		<h4>The em tag</h4>
-		<p>The <em>em</em> tag is used to indicate that a certain word (or several words) needs emphasis in the context.</p>
-		<p>The em tag is an inline tag and can only be used inside headlines or paragraphs.</p>
-
-		<h3>Summary</h3>
-		<p>Now you have a basic understanding of HTML text semantics. You have added a hierarchy to the text and made it easier
-		to read and to be understood by a machine. Let's move on the some of the other semantic tags.</p>
-	</div>
-	<div class="section">
-		<h2>Lists</h2>
-
-		<h3>Getting dressed</h3>
-		<ol>
-			<li>underwear</li>
-			<li>shirt</li>
-			<li>pants</li>
-			<li>poolover</li>
-			<li>jacket</li>
-		</ol>
-
-		<h3>Shopping list</h3>
-		<ul>
-			<li>cabbage</li>
-			<li>carrots</li>
-			<li>cheese</li>
-			<li>chocolate</li>
-			<li>icecream</li>
-			<li><strong>raw bacon +++</strong></li>
-		</ul>
-
-		<h3>Directions to Kwik-E-Mart</h3>
-		<ol>
-			<li>turn right onto Def street</li>
-			<li>take exit 44 off Def street</li>
-			<li>keep left onto Ghi road</li>
-			<li>continue for 25 minutes</li>
-			<li>turn around</li>
-			<li>look confused</li>
-			<li>call Martin to <em>complain!</em></li>
-		</ol>
-
-		<h3>Directions</h3>
-		<dl>
-			<dt>right</dt>
-			<dd>right is the opposite of left</dd>
-			<dt>left</dt>
-			<dd>left is the opposite of right</dd>
-			<dt>up</dt>
-			<dd>up is the opposite of down</dd>
-			<dt>down</dt>
-			<dd>down is the opposite of up</dd>
-		</dl>
-
-		<h3>Things that can go wrong</h3>
-		<ul>
-			<li>drinking</li>
-			<li>driving</li>
-			<li>jumping</li>
-			<li>pooping</li>
-		</ul>
-
-		<h3>Movies</h3>
-		<dl>
-			<dt>The Godfather</dt>
-			<dd>The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.</dd>
-			<dt>Avatar</dt>
-			<dd>A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.</dd>
-			<dt>Titanic</dt>
-			<dd>A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.</dd>
-			<dt>The Matrix</dt>
-			<dd>A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.</dd>
-		</dl>
-
-		<h3>Tech lingo</h3>
-		<dl>
-			<dt>Rendering engine</dt>
-			<dd>Software that draws text and images on the screen</dd>
-			<dt>Browser</dt>
-			<dd>Software application for retrieving, presenting and traversing information resources on the World Wide Web</dd>
-			<dt>JavaScript engine</dt>
-			<dd>Program or interpreter which executes JavaScript code</dd>
-			<dt>Chrome</dt>
-			<dd>The basic structural elements used in a graphical user interface, such as window frames and scroll bars</dd>
-		</dl>
-	</div>
-	<div class="section">
-		<h2>Tables</h2>
-
-		<h3>Family members</h3>
-		<table>
-			<tr>
-				<th>name</th>
-				<th>number</th>
-				<th>car</th>
-			</tr>
-			<tr>
-				<th>Martin</th>
-				<th>1</th>
-				<th>no</th>
-			</tr>
-			<tr>
-				<th>Anja</th>
-				<th>2</th>
-				<th>no</th>
-			</tr>
-			<tr>
-				<th>Romeo</th>
-				<th>3</th>
-				<th>no</th>
-			</tr>
-			<tr>
-				<th>Elo</th>
-				<th>4</th>
-				<th>yes</th>
-			</tr>
-		</table>
-
-		<h3>Raindrop stats</h3>
-		<table>
-			<tr>
-				<th>Month</th>
-				<th>Day 1</th>
-				<th>Day 2</th>
-				<th>Day 3</th>
-				<th>Day 4</th>
-			</tr>
-			<tr>
-				<th>Jan</th>
-				<th>10</th>
-				<th>11</th>
-				<th>12</th>
-				<th>16</th>
-			</tr>
-			<tr>
-				<th>Feb</th>
-				<th>11</th>
-				<th>12</th>
-				<th>13</th>
-				<th>14</th>
-			</tr>
-			<tr>
-				<th>Mar</th>
-				<th>9</th>
-				<th>10</th>
-				<th>17</th>
-				<th>21</th>
-			</tr>
-		</table>
-
-		<h3>Blind mice</h3>
-		<table>
-			<tr>
-				<th></th>
-				<th>mon</th>
-				<th>tue</th>
-				<th>wed</th>
-				<th>thur</th>
-				<th>fri</th>
-			</tr>
-			<tr>
-				<th>week1</th>
-				<th>1</th>
-				<th>1</th>
-				<th>1</th>
-				<th>2</th>
-				<th>1</th>
-			</tr>
-			<tr>
-				<th>week2</th>
-				<th>3</th>
-				<th>2</th>
-				<th>1</th>
-				<th>1</th>
-				<th>1</th>
-			</tr>
-			<tr>
-				<th>week3</th>
-				<th>2</th>
-				<th>1</th>
-				<th>4</th>
-				<th>1</th>
-				<th>1</th>
-			</tr>
-		</table>
-
-	</div>
-	</div>
-	<div id="navigation"></div>
-	<div id="footer"></div>
-	</div>
-
 </body>
 </html>
