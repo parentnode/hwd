@@ -40,7 +40,7 @@
 				<p>
 					A <em>div.scene</em> element has been added to the <em>div#content</em> to provide us with an
 					element that we can use to create transitions between different content sets. We can have multiple scenes
-					in our content, but most often we will just have one. Using JavaScript we can switch between scenes
+					in our content, but most often we will just have one at the time. Using JavaScript we can switch between scenes
 					in a controlled manner. Note that the <em>div.scene</em> has an <em>opacity:0</em> setting in the 
 					CSS in the top of the page, so it will be invisible from the beginning.
 				</p>
@@ -58,10 +58,12 @@
 				<p>
 					The page controller is an example of an initializer object – in this case a very
 					specific initializer, designed to control our page, whereas other initilizers will
-					be designed to provide control over different content elements.
+					be designed to provide control over different content elements. All initializer objects
+					are stored in the <em>Util.Objects</em> object, each using a specific index, also referred
+					to as it's name. In the page controller example the name is thus "page".
 				</p>
 				<p>
-					HTML nodes and initializers objects are automatically mapped together using initializer classnames
+					HTML elements and initializer objects are automatically mapped together using initializer classnames
 					in the form of "i:initializer-name". In the case of the page controller, the 
 					<em>div#page</em> has an "i:<strong>page</strong>" classname, and this is what 
 					associates it with the Util.Objects["<strong>page</strong>"] initializer.
@@ -72,13 +74,13 @@
 					last line in the file i-page.js: <em>u.e.addDOMReadyEvent(u.init)</em>. So in this example
 					the initialization process starts automatically. Very simply put, the initialization process
 					involves finding any elements with an "i:<em>something</em>" classname (where <em>something</em>
-					is the name of desired initializer object), and then checking if the initalizer object
+					is the name of the initializer object), and then checking if the initializer object
 					exists, by checking if Util.Objects has a matching index.
 				</p>
 				<p>
-					When an HTML node is matched with an initializer object, the node will automatically
-					be passed as an argument to the initalizer object's <em>init</em> method. This
-					allows you to extend the node with the desired functionality, as specified by the
+					When an HTML element is matched with an initializer object, the element will automatically
+					be passed as an argument to the initializer object's <em>init</em> method. This
+					allows you to extend the element with the functionality you specify in the
 					initializer object.
 				</p>
 				<p>
@@ -108,17 +110,17 @@
 				<h3>Make the page resize handler</h3>
 				<p>
 					The scene should always be as high as the browser. Set the scene height in page.resized,
-					so that it will automatically be updated on every browser resize event.
+					using <em>u.ass</em>, so that it will automatically be updated on every browser resize event.
 				</p>
 			</li>
 			<li>
 				<h3>Show the page</h3>
 				<p>
-					The scene should be shown only when the page is ready. Add a transition and change the opacity to 1
+					The scene should be shown only when the page is ready. Add a transition, using <em>
+					u.a.transition</em> and change the opacity to 1, using <em>u.ass</em>
 					to make the page fade up, when it is ready.
 				</p>
 			</li>
-
 
 		</ol>
 
