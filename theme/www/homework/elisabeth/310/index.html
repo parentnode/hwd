@@ -48,29 +48,29 @@ function addEvent () {
 	inputList[i].addEventListener("focus", focus, false);
 	inputList[i].addEventListener("blur", blur, false);
 	inputList[i].addEventListener("keyup", keyup, false);
-		function focus() {
-			this.parentNode.className += " focus";
-		}
-		function blur () {
-			this.parentNode.className = this.parentNode.className.replace("focus", "");
-		}
-		function keyup () {
-			var content = document.getElementById("content");
-			var div = document.createElement("div");
-			content.appendChild(div);
-			div.innerHTML = this.value;
-		}
 	}
+}
+function focus() {
+	this.parentNode.className += " focus";
+}
+function blur () {
+	this.parentNode.className = this.parentNode.className.replace("focus", "");
+}
+function keyup () {
+	var content = document.getElementById("content");
+	var div = document.createElement("div");
+	content.appendChild(div);
+	div.innerHTML = this.value;
 }
 addEvent ();
 
 function addSubmit () {
 	var form = document.querySelector("form")
 	form.addEventListener("submit", submit, false);
-	function submit () {
-	 	alert("Your form has been submitted!");
-	 	return false;
-	}
+}
+function submit () {
+ 	alert("Your form has been submitted!");
+ 	return false;
 }
 addSubmit ();
 
