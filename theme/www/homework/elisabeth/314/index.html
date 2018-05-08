@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 314</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="/js/manipulator/seg_desktop.js"></script>
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+/* MY own css */
+
+		#header {height: 50px; padding-bottom: 50px;}
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content"></div>
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+
+	// ADD YOUR JS HERE
+// Adds some content to the div#content
+
+var new_content = u.qs("div#content");
+var new_div = u.ae(new_content, "div", {"class":"scene"});
+var new_h1 = u.ae(new_div, "h1", {"html":"I am a headline"});
+var new_p = u.ae(new_div, "p", {"html":"I am a p"});
+var new_p = u.ae (new_div, "p", {"html":"I am also a p"});
+var new_ul = u.ae(new_div, "ul");
+var new_li = u.ae(new_ul, "li", {"html":"I am the first list-item"});
+var new_li = u.ae(new_ul, "li",{"html":"I am the second list-item"});
+var new_li = u.ae(new_ul, "li",{"html":"I am the third list-item"});
+
+// Adds event listener and a funtion that loops through the different colors
+
+
+var data_color = ["red", "blue", "green", "yellow"];
+var color_picked = false;
+
+u.e.click(new_h1);
+
+new_h1.clicked = function changeColor (event) {
+	if (color_picked != true) {
+		u.as(new_h1, "color", data_color[0]);
+		color_picked = true;
+	}
+	else if (new_h1.style.color == data_color[0]) {
+		u.as(new_h1, "color", data_color[1]);
+	}
+	else if (new_h1.style.color == data_color[1]) {
+		u.as(new_h1, "color", data_color[2]);
+	}
+	else if (new_h1.style.color == data_color[2]) {
+		u.as(new_h1, "color", data_color[3]);
+		color_picked = false;
+	}
+}
+
+// Add event listener with a timeout function for the paragraph
+
+u.e.hold(new_p)
+
+new_p.inputStarted = function mouseDown (event) {
+	setTimeout(function() {
+		alert ("you held the mouse down for too long!!")();
+	}, 2000);
+}
+
+//Adds a hover event to the list items
+
+u.e.hover(new_ul.childNodes[0]);
+
+new_ul.childNodes[0].over = function hover (event) {
+		u.ae(new_ul, new_ul.childNodes[0])
+}
+
+u.e.hover(new_ul.childNodes[1]);
+
+new_ul.childNodes[1].over = function hover (event) {
+		u.ae(new_ul, new_ul.childNodes[1])
+}
+
+u.e.hover(new_ul.childNodes[2]);
+
+new_ul.childNodes[2].over = function hover (event) {
+		u.ae(new_ul, new_ul.childNodes[0])
+}
+
+</script>
+
+
+</body>
+</html>
