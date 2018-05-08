@@ -41,15 +41,14 @@
 	var middleQuoteDiv = u.ae(sceneDiv, "div", {"class": "middleQuote quotebox"});
 	var bottomQuoteDiv = u.ae(sceneDiv, "div", {"class": "bottomQuote quotebox"});
 
-	topQuoteDiv.response = function(response) {
+	topQuoteDiv.response = setInnerHTMLtoResponse;
+	middleQuoteDiv.response = setInnerHTMLtoResponse;
+	bottomQuoteDiv.response = setInnerHTMLtoResponse;
+
+	function setInnerHTMLtoResponse(response) {
 		this.innerHTML = response.quote;
 	}
-	middleQuoteDiv.response = function(response) {
-		this.innerHTML = response.quote;
-	}
-	bottomQuoteDiv.response = function(response) {
-		this.innerHTML = response.quote;
-	}
+
 	u.request(topQuoteDiv, "https://random-quote-generator.herokuapp.com/api/quotes/random");
 	u.request(middleQuoteDiv, "https://random-quote-generator.herokuapp.com/api/quotes/random");
 	u.request(bottomQuoteDiv, "https://random-quote-generator.herokuapp.com/api/quotes/random");
@@ -57,16 +56,13 @@
 	u.a.bgColor(topQuoteDiv, "#ababFF");
 	u.a.bgColor(middleQuoteDiv, "#FFabab");
 	u.a.bgColor(bottomQuoteDiv, "#abFFab");
-	
 
 	// Add a click listener to each of the three div's. Prepare them to make an event callback to the same function, which will make them jump.
 	var elements = u.qsa(".scene div.quotebox");
 	for(var i = 0; i < elements.length; i++){
-
 		elements[i].clicked = clickCallback;
 		elements[i].style.cursor = "pointer"; 
 		u.e.click(elements[i]);
-
 	}
 	function clickCallback() {
 		u.a.transition(this, "all 0.3s ease-in");
