@@ -8,7 +8,7 @@
 		/* DON'T CHANGE THIS CSS */
 		body {margin: 0;}
 		#page {width: 300px; margin: 0 auto;}
-
+		.red { color: red;}
 	</style>
 </head>
 <body>
@@ -34,7 +34,10 @@
 	var myUL = u.ae(contentDiv, "ul");
 	var myFirstLI = u.ae(myUL, "li", {"html": "first list item"})
 	var mySecondLI = u.ae(myUL, "li", {"html": "second list item"})
-	var myThirdLI = u.ae(myUL, "li", {"html": "third list item"})
+	var myThirdLI = u.ae(myUL, "li", {"html": "third list item", "class":"red"})
+	var myFourthLI = u.ae(myUL, "li", {"html": "fourth list item"})
+	var myFifthLI = u.ae(myUL, "li", {"html": "fifth list item"})
+
 	
 	myH1.arrayOfColors = ["red", "green", "blue", "purple", "yellow"];
 	u.e.click(myH1);
@@ -62,27 +65,36 @@
 
 	// add hover eventListener to alle children of the ul
 	var myLIs = u.qsa("#content > ul > li");
-	function addEventsToElements(elements) {
+	function addHoverEvents(elements) {
 		for(var i = 0; i < elements.length; i++){
 			u.e.hover(elements[i]);
-			// find the element that was hovered and move it one up unless there is no previousSibling then move it to the bottom.
-			elements[i].over = function() {
-				if(u.ps(this)) {
-					myUL.insertBefore(this, u.ps(this));
-				}
-				else {
-					u.ae(myUL, this)
-				}
+			elements[i].over = moveOnHover;
+		}
+	}
+
+	/**
+	 * Further development:
+	 * Using mouseenter and mouseleave to control hover, could maybe replace the need for 'justMoved'
+	 * https://javascript.info/mousemove-mouseover-mouseout-mouseenter-mouseleave
+	 */ 
+	function moveOnHover() {
+		var previousSibling = u.ps(this);
+		var nextSibling = u.ns(this);
+
+		if(!this.justMoved){
+			if(previousSibling) {
+				myUL.insertBefore(this, previousSibling);
+				previousSibling.justMoved = true;
+				setTimeout(function(element){ element.justMoved = false;}, 20, previousSibling);
+			}
+			else {
+				u.ae(myUL, this);
+				nextSibling.justMoved = true;
+				setTimeout(function(element){ element.justMoved = false;}, 20, nextSibling);
 			}
 		}
 	}
-	addEventsToElements(myLIs);
-	/**
-	 * Further development:
-	 * Fix bug where 'over'-event is triggeret on element that is moved in 'under the mouse'
-	 */ 
-
-	// ADD YOUR JS HERE
+	addHoverEvents(myLIs);
 
 </script>
 </body>
