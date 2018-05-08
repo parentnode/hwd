@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 315</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="/js/manipulator/seg_desktop.js"></script>
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+		.scene {
+			font-size: 0px;
+		}
+		.quotebox {
+			display: inline-block;
+			box-sizing: border-box;
+			vertical-align: top;
+			height: 100px;
+			width: 100px;
+			font-size: 11px;
+			padding: 5px;
+		}
+
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content"></div>
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+
+	// ADD YOUR JS HERE
+	var contentDiv = u.qs("#content");
+	var sceneDiv = u.ae(contentDiv, "div", {"class": "scene"});
+	sceneDiv.style.height = window.innerHeight + "px";
+	var topQuoteDiv = u.ae(sceneDiv, "div", {"class": "topQuote quotebox"});
+	var middleQuoteDiv = u.ae(sceneDiv, "div", {"class": "middleQuote quotebox"});
+	var bottomQuoteDiv = u.ae(sceneDiv, "div", {"class": "bottomQuote quotebox"});
+
+	topQuoteDiv.response = function(response) {
+		this.innerHTML = response.quote;
+	}
+	middleQuoteDiv.response = function(response) {
+		this.innerHTML = response.quote;
+	}
+	bottomQuoteDiv.response = function(response) {
+		this.innerHTML = response.quote;
+	}
+	u.request(topQuoteDiv, "https://random-quote-generator.herokuapp.com/api/quotes/random");
+	u.request(middleQuoteDiv, "https://random-quote-generator.herokuapp.com/api/quotes/random");
+	u.request(bottomQuoteDiv, "https://random-quote-generator.herokuapp.com/api/quotes/random");
+
+	u.a.bgColor(topQuoteDiv, "#ababFF");
+	u.a.bgColor(middleQuoteDiv, "#FFabab");
+	u.a.bgColor(bottomQuoteDiv, "#abFFab");
+	
+
+	// Add a click listener to each of the three div's. Prepare them to make an event callback to the same function, which will make them jump.
+	var elements = u.qsa(".scene div.quotebox");
+	for(var i = 0; i < elements.length; i++){
+
+		elements[i].clicked = clickCallback;
+		elements[i].style.cursor = "pointer"; 
+		u.e.click(elements[i]);
+
+	}
+	function clickCallback() {
+		// In the event callback, make the clicked element jump to the bottom of the screen by applying a CSS translate property.
+		// Wait for one second, then let it jump back up. Use u.a.transition to apply transition timing to the movement.
+		// for some reason I have to put the transition inside the callback or it will only work once !!???
+		u.a.transition(this, "all 0.3s ease-in");
+		Util.Animation.translate(this, 0, window.innerHeight - 100);
+
+		setTimeout(function(){
+			u.a.transition(this, "all 2s ease-in");
+			Util.Animation.translate(this, 0, 0);
+		}.bind(this), 1000)
+	}
+
+</script>
+
+
+</body>
+</html>

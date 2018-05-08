@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 314</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="/js/manipulator/seg_desktop.js"></script>
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content"></div>
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+
+	/** 
+	 * Util function u.qs is used to querySelect a DOM-element
+	 * Util function u.ae is used to append a existing/new element and set some of its properties
+	 */ 
+
+	var contentDiv = u.qs("#content");
+	var newDiv = u.ae(contentDiv, "div", {
+		"class": "scene"
+		});
+	var myH1 = u.ae(contentDiv, "h1", {"html": "my first heading"});
+	var myFirstParagraph = u.ae(contentDiv, "p", {"html": "first paragraph"});
+	var mySecondParagraph = u.ae(contentDiv, "p", {"html": "second paragraph"});
+	var myUL = u.ae(contentDiv, "ul");
+	var myFirstLI = u.ae(myUL, "li", {"html": "first list item"})
+	var mySecondLI = u.ae(myUL, "li", {"html": "second list item"})
+	var myThirdLI = u.ae(myUL, "li", {"html": "third list item"})
+	
+	var arrayOfColors = ["red", "green", "blue", "purple"];
+	u.e.click(myH1);
+	var colorPos = 0;
+	myH1.clicked = function() {
+		myH1.style.color = arrayOfColors[colorPos];
+		if(colorPos < 3){
+			colorPos++;
+		}
+		else {
+			colorPos = 0;
+		}
+	}
+	u.e.hold(myFirstParagraph);
+	myFirstParagraph.held = function(event){
+		myFirstParagraph.holdingOn = true;
+		setTimeout(function(){
+			if(myFirstParagraph.holdingOn){
+				alert("No you can't click this no matter how long you hold down your mouse!")
+			}
+		}, 1250)
+	}
+	u.e.addEndEvent(myFirstParagraph, function(){
+		myFirstParagraph.holdingOn = false;
+	})
+
+	// add hover eventListener to alle children of the ul
+	var myLIs = u.qsa("#content > ul > li");
+	function addEventsToElements(elements) {
+		for(var i = 0; i < elements.length; i++){
+			u.e.hover(elements[i]);
+			// find the element that was hovered and move it one up unless there is no previousSibling then move it to the bottom.
+			elements[i].over = function() {
+				if(u.ps(this)) {
+					myUL.insertBefore(this, u.ps(this));
+				}
+				else {
+					u.ae(myUL, this)
+				}
+			}
+		}
+	}
+	addEventsToElements(myLIs);
+	/**
+	 * Further development:
+	 * Fix bug where 'over'-event is triggeret on element that is moved in 'under the mouse'
+	 */ 
+
+	// ADD YOUR JS HERE
+
+
+</script>
+
+
+</body>
+</html>
