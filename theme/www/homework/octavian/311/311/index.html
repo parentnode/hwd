@@ -27,29 +27,6 @@
 
 	// ADD YOUR JS HERE
 
-	// Add wheel eventlistener to window. declare variable for p tag
-	window.addEventListener("wheel", wheel_scrolled, false);
-	var p_div = document.querySelector("p");
-
-	// Detect scroll direction and use delta value to change size of font
-	function wheel_scrolled(event) {
-		if (event.deltaY > 0) {
-			// console.log("greater than 0");
-			p_div.style.fontSize = "30px";
-		}
-		else {
-			// console.log("less than 0");
-			p_div.style.fontSize = "10px";
-		}
-	}
-
-// **** UPDATED: Can use getComputedStyle(element).fontSize and parseFloat to get decimal value of actual font size, then can increase or decrease value.
-// Or declare current_font_size var as some specific value.
-
-// Then in functions, fontSize = (current_font_size++) + "px"; or current_font_size--
-
-
-
 
 </script>
 

@@ -25,15 +25,24 @@
 <script type="text/javascript">
 
 	var content_set = {
-		"no1":"I'm number one".
-		"no2":"I'm number two".
-		"no3":"I'm number three".
-		"no4":"I'm number four".
-		"no5":"I'm number five".
+		"no1":"I'm number one",
+		"no2":"I'm number two",
+		"no3":"I'm number three",
+		"no4":"I'm number four",
+		"no5":"I'm number five",
 	}
 
 	// ADD YOUR JS HERE
-
+	var begining = document.querySelector("#content")
+var ulElement = document.createElement("ul")
+begining.appendChild(ulElement)
+for ( i in content_set) {
+		var liElement = document.createElement("li");
+		ulElement.appendChild(liElement) 		
+		liElement.className = i;
+		liElement.innerHTML = content_set[i];
+	}
+	
 
 </script>
 

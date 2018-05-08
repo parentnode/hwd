@@ -54,7 +54,7 @@
 	for (i=0; i < input_nodes.length; i++) {
 		input_nodes[i].addEventListener("focus", focused, false);
 		input_nodes[i].addEventListener("blur", blurred, false);
-		input_nodes[i].addEventListener("update", updated, false);
+		input_nodes[i].addEventListener("keyup", updated, false);
 	}
 
 	// Add submit eventlistener to the form
@@ -69,6 +69,8 @@
 	function blurred(event) {
 		event["target"].parentNode.className = event["target"].parentNode.className.replace("focus", "");
 	}
+
+// ********** Again, can use this.parentNode, etc. 
 
 // On update you copy the content of the input field into a div. Create one div for each input.
 // Will create a new div for each update event. Maybe want to overwrite? Then need to declare var outside function, then updated inside function.
