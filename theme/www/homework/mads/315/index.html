@@ -75,10 +75,10 @@
 		u.a.transition(this, "all 0.3s ease-in");
 		Util.Animation.translate(this, 0, window.innerHeight - 100);
 
-		setTimeout(function(){
-			u.a.transition(this, "all 2s ease-in");
-			Util.Animation.translate(this, 0, 0);
-		}.bind(this), 1000)
+		setTimeout(function(element){
+			u.a.transition(element, "all 2s ease-in");
+			Util.Animation.translate(element, 0, 0);
+		}, 1000, this)
 	}
 
 </script>
