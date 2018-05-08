@@ -42,14 +42,15 @@
 			<li>
 				<h3>Request quotes</h3>
 				<p>
-					Make a request to https://random-quote-generator.herokuapp.com/api/quotes/random to get a quote for
-					each of the three div's.
+					Use <em>u.request</em> to make a request to https://random-quote-generator.herokuapp.com/api/quotes/random to get a quote for
+					each of the three div's. You are supposed to make three requests so you get a different quote for each div.
+					The Quote API returns a JSON object – you should use the <em>quote</em> value, to insert into your div.
 				</p>
 			</li>
 			<li>
 				<h3>Add CSS</h3>
 				<p>
-					Make the 3 div's 100px wide and high. You may distribute them nicely if you wish.
+					Use <em>u.ass</em> to make the 3 div's 100px wide and high. You may distribute them nicely if you wish.
 				</p>
 				<p>
 					Add three different colors and/or background animations to the three divs. 
@@ -63,8 +64,10 @@
 					function, which will make them jump.
 				</p>
 				<p>
-					In the event callback, make the clicked element jump to the bottom of the screen by applying a CSS translate property. Wait for one second, then let
-					it jump back up. <em>Use u.a.transition</em> to apply transition timing to the movement.
+					In the event callback, make the clicked element jump to the bottom of the screen by applying a CSS 
+					translate property. Wait for one second, then let it jump back up. <em>Use u.a.transition</em> 
+					to apply transition timing to the movement. Use the third parameter to add a custom callback method
+					where you apply the "jump back" animation. 
 				</p>
 			</li>
 		</ol>
