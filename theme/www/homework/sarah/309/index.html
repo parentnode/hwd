@@ -56,13 +56,14 @@
 		event["target"].className = "hover";
 	}
 
+// ****** UPDATED: Can also use this.className = . To make sure it is li (from eventlistener function) that is updated.
+
 	function mouseout_action(event) {
 		event["target"].className = "";
 	}
 
 	function clicked_action(event) {
 		alert(event["target"].innerHTML);
-		event["target"];
 	}
 
 </script>
