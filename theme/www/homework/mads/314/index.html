@@ -27,9 +27,7 @@
 	 */ 
 
 	var contentDiv = u.qs("#content");
-	var newDiv = u.ae(contentDiv, "div", {
-		"class": "scene"
-		});
+	var newDiv = u.ae(contentDiv, "div", {"class": "scene"});
 	var myH1 = u.ae(contentDiv, "h1", {"html": "my first heading"});
 	var myFirstParagraph = u.ae(contentDiv, "p", {"html": "first paragraph"});
 	var mySecondParagraph = u.ae(contentDiv, "p", {"html": "second paragraph"});
@@ -38,24 +36,23 @@
 	var mySecondLI = u.ae(myUL, "li", {"html": "second list item"})
 	var myThirdLI = u.ae(myUL, "li", {"html": "third list item"})
 	
-	var arrayOfColors = ["red", "green", "blue", "purple"];
+	myH1.arrayOfColors = ["red", "green", "blue", "purple", "yellow"];
 	u.e.click(myH1);
-	var colorPos = 0;
 	myH1.clicked = function() {
-		myH1.style.color = arrayOfColors[colorPos];
-		if(colorPos < 3){
-			colorPos++;
-		}
-		else {
+		if(!this.colorChanged || colorPos == this.arrayOfColors.length){
 			colorPos = 0;
 		}
+		this.style.color = this.arrayOfColors[colorPos];
+		this.colorChanged = true;
+		colorPos++;
 	}
+
 	u.e.hold(myFirstParagraph);
 	myFirstParagraph.held = function(event){
 		myFirstParagraph.holdingOn = true;
 		setTimeout(function(){
 			if(myFirstParagraph.holdingOn){
-				alert("No you can't click this no matter how long you hold down your mouse!")
+				alert("Let it go! Just let it go.")
 			}
 		}, 1250)
 	}
@@ -87,9 +84,6 @@
 
 	// ADD YOUR JS HERE
 
-
 </script>
-
-
 </body>
 </html>
