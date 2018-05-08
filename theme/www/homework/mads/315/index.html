@@ -69,13 +69,11 @@
 
 	}
 	function clickCallback() {
-		// In the event callback, make the clicked element jump to the bottom of the screen by applying a CSS translate property.
-		// Wait for one second, then let it jump back up. Use u.a.transition to apply transition timing to the movement.
-		// for some reason I have to put the transition inside the callback or it will only work once !!???
 		u.a.transition(this, "all 0.3s ease-in");
 		Util.Animation.translate(this, 0, window.innerHeight - 100);
 
 		setTimeout(function(element){
+			// for some reason I have to put the transition inside the callback or it will only work once !!???
 			u.a.transition(element, "all 2s ease-in");
 			Util.Animation.translate(element, 0, 0);
 		}, 1000, this)
