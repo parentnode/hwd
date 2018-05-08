@@ -14,6 +14,8 @@
 		.color3 {color: blue}
 		.color4 {color: orange}
 
+
+
 	</style>
 </head>
 <body>
@@ -35,7 +37,7 @@
 	var heading = u.qs("h1");
 	var paragraph = u.qs("p");
 	var list = u.qs("ul");
-	var listItems = u.cn(u.qs("ul"));
+	var listItems = u.cn(list);
 	console.log(listItems);
 	
 	u.ac(heading,"color0");
@@ -45,22 +47,21 @@
 	for (var i = 0; i < listItems.length; i++) {
 		u.e.hover(listItems[i]);
 	}
-	
+
 	listItems[0].over = function(event) {
 		u.ae(list, listItems[0]);
-		listItems = u.cn(u.qs("ul"));
-	}
-	listItems[1].over = function(event) {
-		u.ae(list, listItems[0]);
-		listItems = u.cn(u.qs("ul"));
-	}
-	listItems[2].over = function(event) {
-		u.ae(list, listItems[0]);
-		listItems = u.cn(u.qs("ul"));
+		listItems = u.cn(list);
 	}
 	
-
-
+	listItems[1].over = function(event) {
+		u.ae(list, listItems[1]);
+		listItems = u.cn(list);
+	}
+	
+	listItems[2].over = function(event) {
+		u.ie(list, listItems[2]);
+		listItems = u.cn(list);
+	}
 	
 
 	heading.clicked = function(event) {

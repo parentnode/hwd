@@ -22,6 +22,49 @@
 <script type="text/javascript">
 
 	// ADD YOUR JS HERE
+	u.ae(document.getElementById("content"), "DIV", {
+		"class":"scene",
+	});
+
+	var scene = u.qs(".scene");
+
+	var browserHeight = window.innerHeight + "px";
+	u.as(scene, "height", browserHeight);
+
+	function quoteGenerator (howManyQuotesYouWant){
+		for (var i = 0; i < howManyQuotesYouWant; i++) {
+			u.ae(scene, "DIV")
+		}
+
+		var currentDiv;
+
+		for (var i = 0; i < howManyQuotesYouWant; i++) {
+			currentDiv = u.childNodes(scene)[i];
+			
+			u.request(currentDiv, "https://random-quote-generator.herokuapp.com/api/quotes/random")
+			
+			currentDiv.response = function(response){
+				currentDiv.innerHTML = response.quote;
+			}
+			console.log(i);
+		}
+
+	}	
+
+	quoteGenerator(3);
+
+
+	var quote1 = new XMLHttpRequest();
+
+	quote1.onreadystatechange = function () {
+				if (this.readyState == 4) {
+					// document.querySelector(".div").innerHTML = this.response.quote;
+				}
+			}
+
+	quote1.responseType = "json";
+	quote1.open("GET", "https://random-quote-generator.herokuapp.com/api/quotes/random");
+	quote1.send("");
 
 
 </script>
