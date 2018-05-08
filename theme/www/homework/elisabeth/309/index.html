@@ -40,23 +40,23 @@
 var lists = document.querySelectorAll("#navigation ul.navigation li");
 function addEvent () {
 	for (i = 0; i < lists.length; i++) {
-	lists[i].addEventListener("mouseover", addHoverClass, false);
-	lists[i].addEventListener("mouseout", removeHoverClass, false);
-	lists[i].addEventListener("click", alert, false);
-
-	function addHoverClass () {
-	this.className += "hover";
-	}
-	function removeHoverClass () {
-	 this.className = this.className.replace("hover", "")
-	}
-	function alert () {
-		var t = this.innerText;
-		alert(t);
-	}
+		lists[i].addEventListener("mouseover", addHoverClass, false);
+		lists[i].addEventListener("mouseout", removeHoverClass, false);
+		lists[i].addEventListener("click", alertHej, false);
 	}
 }
 addEvent ();
+function addHoverClass () {
+	this.className += "hover";
+}
+function removeHoverClass () {
+ this.className = this.className.replace("hover", "")
+}
+function alertHej () {
+	var t = this.innerText;
+	alert(t);
+}
+
 
 </script>
 
