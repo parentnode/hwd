@@ -33,11 +33,11 @@
 
 	generateMovableQuotes(scene, 3);
 
-	function generateMovableQuotes (node, howManyQuotesYouWant){
+	function generateMovableQuotes (targetNode, quoteCount){
 		var newDiv = {};
 
-		for (var i = 0; i < howManyQuotesYouWant; i++) {
-			newDiv = u.ae(node, "DIV");	
+		for (var i = 0; i < quoteCount; i++) {
+			newDiv = u.ae(targetNode, "DIV");	
 			
 			u.request(newDiv, "https://random-quote-generator.herokuapp.com/api/quotes/random");
 			newDiv.response = function (response) {
