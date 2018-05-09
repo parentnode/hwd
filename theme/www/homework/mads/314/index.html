@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 314</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="/js/manipulator/seg_desktop.js"></script>
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+		.red { color: red;}
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content"></div>
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+
+	/** 
+	 * Util function u.qs is used to querySelect a DOM-element
+	 * Util function u.ae is used to append a existing/new element and set some of its properties
+	 */ 
+
+	var contentDiv = u.qs("#content");
+	var newDiv = u.ae(contentDiv, "div", {"class": "scene"});
+	var myH1 = u.ae(contentDiv, "h1", {"html": "my first heading"});
+	var myFirstParagraph = u.ae(contentDiv, "p", {"html": "first paragraph"});
+	var mySecondParagraph = u.ae(contentDiv, "p", {"html": "second paragraph"});
+	var myUL = u.ae(contentDiv, "ul");
+	var myFirstLI = u.ae(myUL, "li", {"html": "first list item"})
+	var mySecondLI = u.ae(myUL, "li", {"html": "second list item"})
+	var myThirdLI = u.ae(myUL, "li", {"html": "third list item", "class":"red"})
+	var myFourthLI = u.ae(myUL, "li", {"html": "fourth list item"})
+	var myFifthLI = u.ae(myUL, "li", {"html": "fifth list item"})
+
+	
+	myH1.arrayOfColors = ["red", "green", "blue", "purple", "yellow"];
+	u.e.click(myH1);
+	myH1.clicked = function() {
+		if(!this.colorChanged || colorPos == this.arrayOfColors.length){
+			colorPos = 0;
+		}
+		this.style.color = this.arrayOfColors[colorPos];
+		this.colorChanged = true;
+		colorPos++;
+	}
+
+	u.e.hold(myFirstParagraph);
+	myFirstParagraph.held = function(event){
+		myFirstParagraph.holdingOn = true;
+		setTimeout(function(){
+			if(myFirstParagraph.holdingOn){
+				alert("Let it go! Just let it go.")
+			}
+		}, 1250)
+	}
+	u.e.addEndEvent(myFirstParagraph, function(){
+		myFirstParagraph.holdingOn = false;
+	})
+
+	// add hover eventListener to alle children of the ul
+	var myLIs = u.qsa("#content > ul > li");
+	function addHoverEvents(elements) {
+		for(var i = 0; i < elements.length; i++){
+			u.e.hover(elements[i]);
+			elements[i].over = moveOnHover;
+		}
+	}
+
+	/**
+	 * Further development:
+	 * Using mouseenter and mouseleave to control hover, could maybe replace the need for 'justMoved'
+	 * https://javascript.info/mousemove-mouseover-mouseout-mouseenter-mouseleave
+	 */ 
+	function moveOnHover() {
+		var previousSibling = u.ps(this);
+		var nextSibling = u.ns(this);
+
+		// to avoid running the move script if the element has just moved to be 'under the mouse'
+		// I check if the property 'justMoved' on the hovered element is false
+		// (If the property isn't declared it will also return false)
+		if(!this.justMoved){
+			if(previousSibling) {
+				myUL.insertBefore(this, previousSibling);
+
+				// previousSibling moved from above to under the mouse. So I set 'justMoved' to true.
+				// It will still trigger the 'over'-event and therefor the 'mooveOnHover'-function, but
+				// it will only get to the if statement and then stop.
+				previousSibling.justMoved = true;
+				// no matter if a new over-event is triggered it should set back the justMoved to false, so it ready for use again.
+				setTimeout(function(element){ element.justMoved = false;}, 20, previousSibling);
+			}
+			else {
+				u.ae(myUL, this);
+				nextSibling.justMoved = true;
+				setTimeout(function(element){ element.justMoved = false;}, 20, nextSibling);
+			}
+		}
+	}
+	addHoverEvents(myLIs);
+
+</script>
+</body>
+</html>

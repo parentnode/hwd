@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 314</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="/js/manipulator/seg_desktop.js"></script>
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content"></div>
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+
+	// ADD YOUR JS HERE
+	// Build a DOM structure
+	// Use u.ae to build a structure containing a div with the classname scene. Add it to div#content.
+	// Add a heading, two paragraphs and a list with three list items.
+
+	var scene_div = u.ae(document.getElementById("content"), "div", {"class": "scene"});
+	u.ae(scene_div, "h1", {"html":"Heading 1"});
+	u.ae(scene_div, "p", {"html":"Para 1"});
+	u.ae(scene_div, "p", {"html":"Para 2"});
+	var ul_in_scene = u.ae(scene_div, "ul", {"html":"Start of list"});
+	u.ae(ul_in_scene, "li", {"html":"Item 1"});
+	u.ae(ul_in_scene, "li", {"html":"Item 2"});
+	u.ae(ul_in_scene, "li", {"html":"Item 3"});
+
+	// Add event listeners
+	// Use u.e.click to an event listener to the heading, so it toggles between four colors when you click on it.
+	// Add an event listener to the paragraph, so it makes an alert when you hold the mouse down for 2 seconds.
+	// Add an event listener to each of the three list items, so they move to another position in the list, when you hover the mouse over them.
+
+	u.e.click(document.querySelector("h1"));
+	// console.log(getComputedStyle(document.querySelector("h1")).color == "rgb(0, 0, 0)");
+	// console.log(getComputedStyle(document.querySelector("h1")).color);
+	// document.querySelector("h1").style.color = "rgb(256, 0, 0)";
+
+	document.querySelector("h1").clicked = function() {
+		console.log(getComputedStyle(this).color);
+		if (getComputedStyle(this).color == "rgb(0, 0, 0)") {
+			this.style.color = "rgb(256, 0, 0)";
+			// return;
+		}
+		else if (getComputedStyle(this).color == "rgb(255, 0, 0)") {
+			console.log("reached next if");
+			this.style.color = "rgb(0, 256, 0)";
+		}
+		else if (getComputedStyle(this).color == "rgb(0, 255, 0)") {
+			this.style.color = "rgb(0, 0, 256)";
+		}
+		else if (getComputedStyle(this).color == "rgb(0, 0, 255)") {
+			this.style.color = "rgb(62, 51, 129)";
+		}
+		else {
+			this.style.color = "rgb(0, 0, 0)";
+		}
+	};
+
+	for (var p=0; p < document.querySelectorAll("p").length; p++) {
+		u.e.addStartEvent(document.querySelectorAll("p")[p], p_clicked);
+		u.e.addEndEvent(document.querySelectorAll("p")[p], p_mouse_up);
+	}
+
+	var timeout_function;
+	function p_clicked() {
+		timeout_function = setTimeout(function() {
+		alert("You have clicked on a paragraph for 2 seconds.");
+	}, 2000);
+	}
+	function p_mouse_up() {
+		clearTimeout(timeout_function);
+	}
+
+	for (var l=0; l < document.querySelectorAll("li").length; l++) {
+		u.e.hover(document.querySelectorAll("li")[l]);
+		document.querySelectorAll("li")[l].over = hover_event;
+		document.querySelectorAll("li")[l].out = hover_end_event;
+		// console.log(this);
+	}
+
+	function hover_event() {
+		// console.log(this);
+	// If first or second li in list, then move to the end. If last li in list, move to second last.
+		if (this.nextSibling) {
+			console.log(this.parentNode);
+			console.log(this);
+			this.parentNode.appendChild(this);
+			hover_end_event;
+			// Need to add a way to stop code after single move, otherwise the hover function is continuously executing.
+			// Unsure how to do this... hover_end_event function does not work sufficiently.
+		}
+		else {
+			this.parentNode.insertBefore(this, this.previousSibling);
+		}
+	}
+
+	function hover_end_event() {
+		console.log("hover end");
+		return;
+	}
+
+</script>
+
+
+</body>
+</html>
