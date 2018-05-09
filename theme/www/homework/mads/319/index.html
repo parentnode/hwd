@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 319</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="/js/manipulator/seg_desktop.js"></script>
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {}
+		#content div.scene {box-sizing: border-box; padding: 40px; text-align: center;}
+	</style>
+</head>
+<body>
+
+<div id="page" class="i:page">
+	<div id="header"></div>
+	<div id="content">
+		<div class="scene">
+			<ul class="items">
+				<li class="item"><h3><span>The Title</span><em>the subtitle</em></h3></li>
+				<li class="item"><h3><span>The Title</span><em>the subtitle</em></h3></li>
+				<li class="item"><h3><span>The Title</span><em>the subtitle</em></h3></li>
+				<li class="item"><h3><span>The Title</span><em>the subtitle</em></h3></li>
+				<li class="item"><h3><span>The Title</span><em>the subtitle</em></h3></li>
+			</ul>
+			<div class="article">
+				<h1>My first article </h1>
+				<div class="articlebody">
+					<p>
+						Lorem ipsum dolor sit amet, pellentesque lacus volutpat, 
+						bibendum tincidunt sed quisque tincidunt leo donec, 
+						eu eget augue pretium, ac arcu a tortor fames. 
+					</p>
+					<p>
+						Et ligula ut purus. Elit sodales mi cum ab ac magna, 
+						arcu maecenas. Eleifend sollicitudin. Doloribus arcu orci vitae tortor fusce, 
+						justo elit, eu maecenas, ac pulvinar sollicitudin cras. 
+						Ut scelerisque lacus mauris metus rutrum pellentesque, pulvinar 
+						venenatis gravida integer ac, in convallis, ut mollis at rutrum metus.
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet, pellentesque lacus volutpat, 
+						bibendum tincidunt sed quisque tincidunt leo donec, 
+						eu eget augue pretium, ac arcu a tortor fames. 
+						Et ligula ut purus. Elit sodales mi cum ab ac magna, 
+						arcu maecenas. Eleifend sollicitudin. Doloribus arcu orci vitae tortor fusce, 
+						justo elit, eu maecenas, ac pulvinar sollicitudin cras. 
+						Ut scelerisque lacus mauris metus rutrum pellentesque, pulvinar 
+						venenatis gravida integer ac, in convallis, ut mollis at rutrum metus.
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet, pellentesque lacus volutpat, 
+						bibendum tincidunt sed quisque tincidunt leo donec, 
+						eu eget augue pretium, ac arcu a tortor fames. 
+						Et ligula ut purus. Elit sodales mi cum ab ac magna, 
+						arcu maecenas. Eleifend sollicitudin. Doloribus arcu orci vitae tortor fusce, 
+						justo elit, eu maecenas, ac pulvinar sollicitudin cras. 
+						Ut scelerisque lacus mauris metus rutrum pellentesque, pulvinar 
+						venenatis gravida integer ac, in convallis, ut mollis at rutrum metus.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer"></div>
+</div>
+
+
+<script type="text/javascript">
+
+	// ADD YOUR JS HERE
+	var list_items = u.qsa("ul.items li.item");
+	u.ac(list_items[3], "selected"); 
+
+	var i, node;
+	for(i = 0; i < list_items.length; i++) {
+		node = list_items[i];
+
+		node.clicked = function(event) {
+			var title = u.qs("h3 span", this);
+
+			var subtitle = u.qs("em", title.parentNode);
+			console.log(subtitle.innerHTML);
+		}
+		u.e.click(node);
+		
+	}
+
+	var article = u.qs("div.article");
+	article.header = u.qs("h1", article);
+	article.body = u.qs("div.articlebody", article);
+	var paragraphs = u.qsa("p", article.body);
+
+	console.log(u.text(paragraphs[2]));
+
+</script>
+
+</body>
+</html>
