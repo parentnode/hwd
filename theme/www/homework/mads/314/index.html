@@ -81,10 +81,18 @@
 		var previousSibling = u.ps(this);
 		var nextSibling = u.ns(this);
 
+		// to avoid running the move script if the element has just moved to be 'under the mouse'
+		// I check if the property 'justMoved' on the hovered element is false
+		// (If the property isn't declared it will also return false)
 		if(!this.justMoved){
 			if(previousSibling) {
 				myUL.insertBefore(this, previousSibling);
+
+				// previousSibling moved from above to under the mouse. So I set 'justMoved' to true.
+				// It will still trigger the 'over'-event and therefor the 'mooveOnHover'-function, but
+				// it will only get to the if statement and then stop.
 				previousSibling.justMoved = true;
+				// no matter if a new over-event is triggered it should set back the justMoved to false, so it ready for use again.
 				setTimeout(function(element){ element.justMoved = false;}, 20, previousSibling);
 			}
 			else {
