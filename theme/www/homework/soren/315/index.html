@@ -31,42 +31,46 @@
 	var browserHeight = window.innerHeight + "px";
 	u.as(scene, "height", browserHeight);
 
-	function quoteGenerator (howManyQuotesYouWant){
-		for (var i = 0; i < howManyQuotesYouWant; i++) {
-			u.ae(scene, "DIV")
-		}
+	generateMovableQuotes(scene, 3);
 
-		var currentDiv;
+	function generateMovableQuotes (targetNode, quoteCount){
+		var newDiv = {};
 
-		for (var i = 0; i < howManyQuotesYouWant; i++) {
-			currentDiv = u.childNodes(scene)[i];
+		for (var i = 0; i < quoteCount; i++) {
+			newDiv = u.ae(targetNode, "DIV");	
 			
-			u.request(currentDiv, "https://random-quote-generator.herokuapp.com/api/quotes/random")
+			u.request(newDiv, "https://random-quote-generator.herokuapp.com/api/quotes/random");
+			newDiv.response = function (response) {
+				this.innerHTML = response.quote;
+				u.ass(this, {
+					"border":"5px solid black",
+					"margin":"20px",
+					"padding":"10px",
+					"width":"100px", 
+					"height":"100px",
+					"font-size":"10px",
+					"background-color":"gold",
+					"display":"flex",
+					"align-items":"center"
+				});
+			};
 			
-			currentDiv.response = function(response){
-				currentDiv.innerHTML = response.quote;
+			newDiv.moveQuote = function(event) {
+				u.a.transition(this, "all 1s cubic-bezier(.98,.08,.38,.98)", function(event) {
+					this.moveQuoteBack();
+				});
+				u.a.translate(this, 0, u.browserH() - this.offsetTop - 130);
 			}
-			console.log(i);
-		}
+		
+			newDiv.moveQuoteBack = function(event) {
+				u.a.transition(this, "all 1s cubic-bezier(0,1.2,.82,-0.64) 1s")
+				u.a.translate(this, 0, 0);
+			}
 
+			u.e.click(newDiv);	
+			newDiv.clicked = newDiv.moveQuote;
+		}		
 	}	
-
-	quoteGenerator(3);
-
-
-	var quote1 = new XMLHttpRequest();
-
-	quote1.onreadystatechange = function () {
-				if (this.readyState == 4) {
-					// document.querySelector(".div").innerHTML = this.response.quote;
-				}
-			}
-
-	quote1.responseType = "json";
-	quote1.open("GET", "https://random-quote-generator.herokuapp.com/api/quotes/random");
-	quote1.send("");
-
-
 </script>
 
 
