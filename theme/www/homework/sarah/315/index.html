@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 315</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="/js/manipulator/seg_desktop.js"></script>
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content"></div>
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+
+	// ADD YOUR JS HERE
+
+// Create scene div and 3 divs within scene div. Scene div should be browser window height and 2 divs each 100 x 100px
+	var scene_div = u.ae(document.getElementById("content"), "div", {"class": "scene"});
+	for (var i=0; i<3; i++) {
+		u.ae(scene_div, "div", {"class": "div"+i});
+	}
+
+// Use manipulator u.cn childNodes to loop over new divs and give height and width. Is for loop necessary?
+	scene_div.style.height = window.innerHeight + "px";
+	// console.log(u.cn(scene_div));
+	for (var i=0; i<3; i++) {
+		u.cn(scene_div)[i].style.height = 100 + "px";
+		u.cn(scene_div)[i].style.width = 100 + "px";
+		u.cn(scene_div)[i].style.margin = "auto";
+	}
+
+	// Make request to add quote to each of the three new divs
+	for (var j=0; j < u.cn(scene_div).length; j++) {
+		var XHR = new XMLHttpRequest();
+		XHR.responseType = "json";
+		XHR.onreadystatechange = action_on_ready_state;
+		console.log(XHR.response);
+	}
+
+	var quotes = [];
+
+	function action_on_ready_state() {
+		console.log("action on rr function");
+		if(this.readyState == 4) {
+			quotes.push(XHR.response.quote + " by " + XHR.response.author);
+			console.log(XHR.response);
+			console.log(quotes);
+		}
+	}
+
+	XHR.open("GET", "http://random-quote-generator.herokuapp.com/api/quotes/random");
+	XHR.send("");
+	console.log(XHR.response + "again");
+
+	u.cn(scene_div)[0].innerHTML = quotes[0];
+
+
+	u.cn(scene_div)[0].style.backgroundColor = "red";
+	u.cn(scene_div)[1].style.backgroundColor = "green";
+	u.cn(scene_div)[2].style.backgroundColor = "blue";
+
+
+</script>
+
+
+</body>
+</html>

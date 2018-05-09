@@ -32,8 +32,14 @@
 		"I'm number five"
 	];
 	
-
 	// ADD YOUR JS HERE
+	var begining = document.querySelector("#content")
+var ulElement = document.createElement("ul")
+begining.appendChild(ulElement)
+for (i = 0; i < content_set.length; i++) {
+	var liElement = document.createElement("li"); 
+			ulElement.appendChild(liElement).innerHTML= content_set[i]
+	}
 
 
 </script>
