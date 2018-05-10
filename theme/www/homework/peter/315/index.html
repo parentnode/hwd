@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 315</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="/js/manipulator/seg_desktop.js"></script>
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+
+		/* MY CSS */
+		.one {
+			background: linear-gradient(to bottom, #b31217, #c95450);
+		}
+		.two {
+			background: linear-gradient(to bottom, #10923c, #52b176);
+		}
+		.three {
+			background: linear-gradient(to bottom, #2b32b2, #106ba0);
+		}
+
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content"></div>
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+
+	// ADD YOUR JS HERE
+
+	// "u" is the shorthand for "Util"
+	// Creating all the divs and querying stuff
+	var contentDiv = u.querySelector("#content");
+	var scene = u.appendElement(contentDiv, "div", {"class": "scene"});
+	var divOne = u.appendElement(scene, "div", {"class": "one animate"});
+	var divTwo = u.appendElement(scene, "div", {"class": "two animate"});
+	var divThree = u.appendElement(scene, "div", {"class": "three animate"});
+	var animateDivs = u.querySelectorAll(".animate");
+
+	// Setting scene height
+	var windowHeight = window.innerHeight + "px";
+	u.applyStyle(scene, "height", windowHeight);
+
+	// Adding quotes, pretty much a copy of Mads since i don't quiiiteee understand responses as well as i thought yet
+	u.request(divOne, "https://random-quote-generator.herokuapp.com/api/quotes/random");
+	divOne.response = responseToQuote;
+
+	u.request(divTwo, "https://random-quote-generator.herokuapp.com/api/quotes/random");
+	divTwo.response = responseToQuote;
+
+	u.request(divThree, "https://random-quote-generator.herokuapp.com/api/quotes/random");
+	divThree.response = responseToQuote;
+
+	function responseToQuote(response) {
+		this.innerHTML = response.quote;
+		console.log(response.author)
+	}
+
+	// Making divs clickable, applying styles and adding quotes
+	var i;
+	for(i = 0; i < animateDivs.length; i++) {
+		u.e.click(animateDivs[i]);	// "e" is the shorthand for "Events"
+		animateDivs[i].clicked = startAnimation;
+
+		u.applyStyles(animateDivs[i], {
+			"display": "inline-block",
+			"width": "100px",
+			"height": "100px",
+			"padding": "10px",
+			"color": "white",
+			"font-size": "11px",
+			"text-align": "center",
+			"opacity": "0.85",
+			"box-sizing": "border-box",
+			"border-radius": "100px",
+			"overflow": "hidden"
+		});
+	}
+
+	// Animating stuff
+	function startAnimation() {
+		u.a.transition(this, "all 2s ease-out", animationCallback); // "a" is the shorthand for "Animation"
+		 // parsing windowHeight to remove the "px" and make it a number and then removing it's own height to jump back at the bottom instead of the middle
+		u.a.translate(this, 0, parseFloat(windowHeight) -this.offsetHeight);
+
+		function animationCallback() {
+			u.t.setTimer(this, "timerDone", 1000); // "t" is the shorthand for "Timer"
+
+			this.timerDone = function() {
+			u.a.transition(this, "all 2s ease-in");
+			u.a.translate(this, 0, 0);
+			}
+		}
+	}
+
+
+
+</script>
+
+
+</body>
+</html>
