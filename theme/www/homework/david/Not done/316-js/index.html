@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 316</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="/css/exercises/includes.css" />
+	<script type="text/javascript" src="/js/exercises/includes.js"></script>
+</head>
+<body>
+
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content">
+
+		<h1>Exercise 316 - JS, Manipulator framework 1</h1>
+		<p>
+			This exercise is about using the Manipulator framework.
+		</p>
+		<p>
+			The purpose of this exercise is to practice using a framework to structure your 
+			application of code. This exercise focuses on understanding how the pieces
+			fit together.
+		</p>
+		<p class="note">
+			Use the script tag in the bottom of the exercise page to write your JavaScript.
+		</p>
+		<p class="note">
+			The manipulator library is included in this page. You can use everything you find
+			in the <a href="http://manipulator.local/docs">Manipulator library documentation</a>.
+		</p>
+
+		<h2>Tasks</h2>
+		<ol>
+			<li>
+				<h3>Investigate the code</h3>
+				<p>
+					In the <em>index.html</em> file you will find a small, regular snippet of HTML.
+				</p>
+				<p>
+					A <em>div.scene</em> element has been added to the <em>div#content</em> to provide us with an
+					element that we can use to create transitions between different content sets. We can have multiple scenes
+					in our content, but most often we will just have one at the time. Using JavaScript we can switch between scenes
+					in a controlled manner. Note that the <em>div.scene</em> has an <em>opacity:0</em> setting in the 
+					CSS in the top of the page, so it will be invisible from the beginning.
+				</p>
+				<p>
+					From now on we will start using the <em>div.scene</em> as a permanent part of our basic HTML
+					structure, alongside #page, #header, #content, #navigation and #footer.
+				</p>
+				<p>
+					In the <em>js/i-page.js</em> file you will find a simple example of a page controller. 
+					The <em>page controller</em>, means the main JavaScript module, that is helping 
+					us to control the rendering of our page – including dealing with browser events 
+					such as the resize and scroll-events. It can be made more or less
+					advanced, depending on the needs of your current project.
+				</p>
+				<p>
+					The page controller is an example of an initializer object – in this case a very
+					specific initializer, designed to control our page, whereas other initilizers will
+					be designed to provide control over different content elements. All initializer objects
+					are stored in the <em>Util.Objects</em> object, each using a specific index, also referred
+					to as it's name. In the page controller example the name is thus "page".
+				</p>
+				<p>
+					HTML elements and initializer objects are automatically mapped together using initializer classnames
+					in the form of "i:initializer-name". In the case of the page controller, the 
+					<em>div#page</em> has an "i:<strong>page</strong>" classname, and this is what 
+					associates it with the Util.Objects["<strong>page</strong>"] initializer.
+					The matching of initializer classnames and initializer objects happens when the
+					<em>u.init</em> method is called. This call it typically invoked on the 
+					DOMContentLoaded event to automate the initialization process. In the current 
+					example you will find that <em>u.init</em> is tied to the DOMContentLoaded event in the
+					last line in the file i-page.js: <em>u.e.addDOMReadyEvent(u.init)</em>. So in this example
+					the initialization process starts automatically. Very simply put, the initialization process
+					involves finding any elements with an "i:<em>something</em>" classname (where <em>something</em>
+					is the name of the initializer object), and then checking if the initializer object
+					exists, by checking if Util.Objects has a matching index.
+				</p>
+				<p>
+					When an HTML element is matched with an initializer object, the element will automatically
+					be passed as an argument to the initializer object's <em>init</em> method. This
+					allows you to extend the element with the functionality you specify in the
+					initializer object.
+				</p>
+				<p>
+					When the current page initializer object is initialized, it will output an 
+					"init page" text in the console. If you remove or change the 
+					 initializer classname on the <em>div#page</em>, then the <em>init</em> method will not be called. 
+					 Try to remove or change the initializer classname and observe the result.
+					 The same thing happens if you change the name of the initializer module.
+					 Remember to revert the code back before you continue.
+				</p>
+				<p>
+					In the page initializer, three new methods are created for the page object (div#page): 
+					<em>resized</em>, <em>scrolled</em> and <em>ready</em>. The <em>ready</em> method will be called 
+					instantly because this is done by the initializer object itself (in line 43). 
+					The <em>resized</em> method will be invoked on page resize and <em>scrolled</em> on page scroll, 
+					due to the two event listeners applied in the <em>ready</em> method.
+				</p>
+				<p>
+					Finally the <em>ready</em> method also defines a reference to the current scene, which 
+					can be used later in your code.
+				</p>
+				<p>
+					Try to add some console.log output to follow the flow and scope.
+				</p>
+			</li>
+			<li>
+				<h3>Make the page resize handler</h3>
+				<p>
+					The scene should always be as high as the browser. Set the scene height in page.resized,
+					using <em>u.ass</em>, so that it will automatically be updated on every browser resize event.
+				</p>
+			</li>
+			<li>
+				<h3>Show the page</h3>
+				<p>
+					The scene should be shown only when the page is ready. Add a transition, using <em>
+					u.a.transition</em> and change the opacity to 1, using <em>u.ass</em>
+					to make the page fade up, when it is ready.
+				</p>
+			</li>
+
+		</ol>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+</body>
+</html>
