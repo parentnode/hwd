@@ -3,69 +3,60 @@
 <head>
 	<title>Exercise 309</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" type="text/css" href="/css/exercises/includes.css" />
-	<script type="text/javascript" src="/js/exercises/includes.js"></script>
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 960px; margin: 0 auto;}
+
+		#navigation ul {text-align: center; padding: 0;}
+		#navigation ul li {display: inline-block; margin: 0 5px; padding: 14px 5px; border: 1px solid black; color: black;}
+		#navigation ul li.hover {background-color: white; color: white;}
+	</style>
 </head>
 <body>
 
-
 <div id="page">
 	<div id="header"></div>
+	<div id="navigation">
+		<ul class="navigation">
+			<li>Software</li>
+			<li>Editors</li>
+			<li>Environment</li>
+			<li>Conventions</li>
+			<li>Playground</li>
+			<li>Dictionary</li>
+		</ul>
+	</div>
 	<div id="content">
 
-		<h1>Exercise 309 - JS, Mouse events</h1>
-		<p>
-			This exercise is about using native Mouse events.
-		</p>
-
-		<p>
-			The purpose of this exercise is to practice basic JS, by capturing and dealing with
-			mouse events. You will be using the <em>mouseover</em>, <em>mouseout</em> and 
-			<em>click</em> events in this exercise.
-		</p>
-		<p class="note">
-			Use the script tag in the bottom of the exercise page to write your JavaScript.
-		</p>
-
-		<h2>Tasks</h2>
-		<ol>
-			<li>
-				<h3>Query the <em>li</em>'s of the navigation</h3>
-				<p>
-					Get a nodelist with the li-elements of the navigation.
-				</p>
-			</li>
-			<li>
-				<h3>Make a for loop and add event listeners</h3>
-				<p>
-					Make a for loop to iterate the navigation elements. On each element you add a <em>mouseover</em>, 
-					a <em>mouseout</em> and a <em>click</em> event listener - to the li-element.
-				</p>
-			</li>
-			<li>
-				<h3>Deal with <em>mouseover</em> events</h3>
-				<p>
-					On <em>mouseover</em> you have to add a "hover" class to the element that the mouse hovered over.
-					This will apply a new style to the element.
-				</p>
-			</li>
-				<h3>Deal with <em>mouseout</em> events</h3>
-				<p>
-					On <em>mouseout</em> you have to remove the "hover" class from the element that the mouse now left.
-					This will return the element to it's original state.
-				</p>
-			</li>
-			<li>
-				<h3>Deal with <em>click</em> events</h3>
-				<p>
-					On <em>click</em>, you should make an alert with the text of the element the user clicked on.
-				</p>
-			</li>
-		</ol>
 
 	</div>
 	<div id="footer"></div>
 </div>
+
+<script type="text/javascript">
+
+	// ADD YOUR JS HERE
+	var listEi = document.querySelectorAll("#navigation li");
+
+	for ( i = 0; i < listEi.length; i++) {
+		listEi[i].addEventListener("mouseover", addHover, false);
+		listEi[i].addEventListener("mouseout", removeHover, false);
+		listEi[i].addEventListener("click", function(){alert(this.innerHTML);});
+	}	
+
+	function addHover() {
+	
+		this.className = this.className + "hover";
+	};
+
+	function removeHover(ev) {
+		//this.classList.remove("hover");
+		ev["target"].className = "";
+	};
+	
+</script>
+
 
 </body>
 </html>

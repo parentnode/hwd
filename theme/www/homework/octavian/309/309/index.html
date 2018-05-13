@@ -37,6 +37,25 @@
 <script type="text/javascript">
 
 	// ADD YOUR JS HERE
+	var listElements = document.querySelectorAll("ul.navigation li");
+
+	for (var i = 0; i < listElements.length; i++) {
+		listElements[i].addEventListener("mouseover", addHoverClass, false);
+		listElements[i].addEventListener("mouseout", removeHoverClass, false);
+		listElements[i].addEventListener("click", clickAlert, false);
+	}	
+
+	function addHoverClass() {
+		this.classList.add("hover");
+	};
+
+	function removeHoverClass() {
+		this.classList.remove("hover");
+	};
+
+	function clickAlert() {
+		alert(this.innerHTML);
+	};
 
 
 </script>
