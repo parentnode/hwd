@@ -3,15 +3,22 @@ Util.Objects["page"] = new function() {
 		u.bug("init page");
 
 
-		// global scroll handler 
+		// global resize handler 
 		page.resized = function() {
 			// u.bug("page resized");
+
+			u.ass(u.qs(".scene"), {
+				"height":u.browserH() + "px"
+			})
+
 
 		}
 
 		// global scroll handler 
 		page.scrolled = function() {
 			// u.bug("page scrolled");
+
+			console.log('scrolled');
 
 		}
 
@@ -38,6 +45,10 @@ Util.Objects["page"] = new function() {
 				// initial resize
 				this.resized();
 			}
+			u.a.transition(this.scene, "opacity 1s ease-in");
+			u.ass(this.scene, {
+				"opacity":"1"
+			})
 		}
 
 		page.ready();
@@ -46,3 +57,4 @@ Util.Objects["page"] = new function() {
 
 // Start initialization on DOMReady
 u.e.addDOMReadyEvent(u.init)
+
