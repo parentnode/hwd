@@ -21,8 +21,20 @@
 <script type="text/javascript">
 
 	// ADD YOUR JS HERE
-
-
+	var cont = document.getElementById("content");
+	var XHR = new XMLHttpRequest();
+	var i = 0;
+	XHR.onreadystatechange = callback;
+	function callback(){
+		if (XHR.readyState >= 4) {
+			cont.innerHTML = this.response.getElementById("content").innerHTML;
+		}
+		i++;
+	console.log("ready state changed" , i);
+	};
+	XHR.responseType = "document";
+	XHR.open("GET", "http://hwd-01.local")
+	XHR.send("")
 </script>
 
 
