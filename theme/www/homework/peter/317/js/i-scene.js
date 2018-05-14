@@ -7,8 +7,6 @@ Util.Objects["scene"] = new function() {
 		u.f.init(form); // "f" for "form"
 
 		var contentNodeList = u.querySelectorAll("h1, p, .form fieldset, .form ul");
-		u.bug(contentNodeList)
-
 		// Hiding content
 		var i;
 		for(i = 0; i < contentNodeList.length; i++) {
