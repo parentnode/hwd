@@ -42,5 +42,20 @@
 </div>
 
 
+<script type="text/javascript">
+	var inputE = document.querySelectorAll("#content form .field input");
+	for(var i = 0; i < inputE.length; i++) {
+		inputE[i].addEventListener("focus", function() {this.parentNode.classList.add("focus");});
+		inputE[i].addEventListener("blur", function() {this.parentNode.classList.remove("focus");});
+		inputE[i].addEventListener("keyup", function() {document.querySelector("." + this.id).innerHTML = "The " + this.id + ": " + this.value + " ";});
+		document.getElementById("content").appendChild(document.createElement("DIV")).className = inputE[i].id;
+		var replayDig = document.createElement("DIV").innerHTML = "The " + inputE[i].id + " : ";
+	} 
+	document.querySelector("form").addEventListener("submit", function() {alert("Submitted!");});
+</script>
+
+
+ 
+
 </body>
 </html>

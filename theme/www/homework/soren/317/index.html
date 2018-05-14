@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Exercise 316</title>
+	<title>Exercise 317</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<script type="text/javascript" src="/js/manipulator/seg_desktop.js"></script>
 	<script type="text/javascript" src="js/i-page.js"></script>
+	<script type="text/javascript" src="js/i-scene.js"></script>
 	<style type="text/css">
 		/* DON'T CHANGE THIS CSS */
 		body {margin: 0;}
 		#page {}
 		#content div.scene {box-sizing: border-box; padding: 40px; text-align: center;
-			opacity: 0;
+			opacity: 1;
 		}
-
+		#content div.field.error input {border-color: red;}
 	</style>
 </head>
 <body>
@@ -20,18 +21,12 @@
 <div id="page" class="i:page">
 	<div id="header"></div>
 	<div id="content">
-		<div class="scene">
+		<div class="scene i:scene">
 
-			<h1>The Page Controller</h1>
-			<p>The page controller controls page renderinger and communication between initializers.</p>
-
-		</div>
-	</div>
-	<div id="footer"></div>
-</div>
-
-</body>
-</html>h custom properties and methods.
+			<h1>A scene initializer</h1>
+			<p>
+				The scene initializer is an example of an initializer specialized to extend the
+				scene node with custom properties and methods.
 			</p>
 
 			<form action="#" method="POST" class="form">

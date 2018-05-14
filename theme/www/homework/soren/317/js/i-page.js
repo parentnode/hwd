@@ -1,5 +1,5 @@
 Util.Objects["page"] = new function() {
-	this.init = function(page) {
+this.init = function(page) {
 		u.bug("init page");
 
 
