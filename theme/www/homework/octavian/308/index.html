@@ -3,74 +3,101 @@
 <head>
 	<title>Exercise 308</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" type="text/css" href="/css/exercises/includes.css" />
-	<script type="text/javascript" src="/js/exercises/includes.js"></script>
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+		#content {min-height: 2000px;}
+		.scrollBox {
+			padding: 10px;
+			position: fixed;
+			top: 100px;
+			left: 0px;
+			box-sizing: border-box;
+			width: 600px;
+			height: 100px;
+			background-color: rgb(186, 230, 173);
+			
+		}
+		.BrowserSizeBox {
+			position: fixed;
+			padding: 10px;
+			top: 200px;
+			left: 0px;
+			box-sizing: border-box;
+			width: 600px;
+			height: 100px;
+			background-color: rgb(10, 90, 173);
+			
+		}
+		.LodetBox {
+			position: fixed;
+			padding: 10px;
+			top: 0px;
+			left: 0px;
+			box-sizing: border-box;
+			width: 600px;
+			height: 100px;
+			background-color: rgb(238, 224, 144);
+				
+		}
+
+	</style>
 </head>
 <body>
-
 
 <div id="page">
 	<div id="header"></div>
 	<div id="content">
 
-		<h1>Exercise 308 - JS, Browser events</h1>
-		<p>
-			This exercise is about using native Browser events.
-		</p>
-
-		<p>
-			The purpose of this exercise is to practice basic JS, by capturing and dealing with events
-			from by the browser. You will be using the resize, scroll and DOMContentLoaded events in this
-			exercise.
-		</p>
-		<p class="note">
-			Use the script tag in the bottom of the exercise page to write your JavaScript.
-		</p>
-
-		<h2>Tasks</h2>
-		<ol>
-			<li>
-				<h3>Add a <em>DOMContentLoaded</em> event listener to the Window object</h3>
-				<p>
-					Add a <em>DOMContentLoaded</em> event listener to the Window object.
-					Make a function called <em>contentLoaded</em> and use this as the callback function 
-					for the event listener.
-				</p>
-				<p>
-					In <em>contentLoaded</em>, create a new div with the text "Content loaded", and 
-					append it to <em>#content</em>, to show that the content has loaded.
-				</p>
-			</li>
-			<li>
-				<h3>Add a <em>resize</em> and <em>scroll</em> event listener.</h3>
-				<p>
-					When the content has loaded - and only after this event has occurred - then add event 
-					listeners for resize and scroll events.
-				</p>
-			</li>
-			<li>
-				<h3>Deal with <em>resize</em> events</h3>
-				<p>
-					Find a way to identify the new width and height of the browser. Create <strong>one</strong> new
-					div in <em>#content</em> and write the current size of the window into this div. 
-					You should not create a new div for each event, but rather re-use the same div for all 
-					resize events, so that it always contains the current size of the window. 
-				</p>
-			</li>
-			<li>
-				<h3>Deal with <em>scroll</em> events</h3>
-				<p>
-					Find a way to identify the current scroll position of the browser. Create <strong>one</strong> new
-					div in <em>#content</em> and write the current scroll position into this div. 
-					You should not create a new div for each event, but rather re-use the same div for all 
-					scroll events, so that it always contains the current scroll position. 
-				</p>
-			</li>
-		</ol>
 
 	</div>
 	<div id="footer"></div>
 </div>
+
+<script type="text/javascript">
+	// ADD YOUR JS HERE
+	addEventListener("DOMContentLoaded", contentLoaded, false);
+
+	var getContent = document.querySelector("#content");
+	var loaded = document.createElement("div");
+	var reSize = document.createElement("div");
+	var scrollPoint = document.createElement("div");
+	
+
+	function contentLoaded() {
+		loaded.className = "LodetBox";
+		reSize.className = "BrowserSizeBox";
+		scrollPoint.className = "scrollBox";	
+		getContent.appendChild(loaded).innerHTML = "Content has been loaded.";
+		getContent.appendChild(reSize).innerHTML = "Current browser size has " + window.outerWidth + " x " + window.outerHeight + " pixels.";
+		getContent.appendChild(scrollPoint).innerHTML = "Current horizontal/vertical scroll position is " + window.pageXOffset + "/" + window.pageYOffset + " pixels."
+		
+		window.addEventListener("resize", changeBrowserSize, false);
+		window.addEventListener("scroll", changeScrollPos, false);
+	}
+
+	
+	function changeBrowserSize() {
+		reSize.className = "BrowserSizeBox";
+		reSize.innerHTML = "Current browser size has " + window.outerWidth + " x " + window.outerHeight + " pixels.";
+			
+		
+	}
+
+	function changeScrollPos() {
+		scrollPoint.className = "scrollBox";	
+		scrollPoint.innerHTML = "Current horizontal/vertical scroll position is " + window.pageXOffset + "/" + window.pageYOffset + " pixels.";
+		
+		
+
+	}
+	
+
+
+
+</script>
+
 
 </body>
 </html>

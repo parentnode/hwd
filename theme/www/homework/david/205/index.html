@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 205</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+		#content {min-height: 400px;}
+		#header:hover + #content {background: transparent url(assets/bg_205.png) no-repeat left 50px;}
+		#header:hover + #content * {opacity: 0;}
+		#content div.reference_video {padding-top: 50px;}
+		#content div.reference_video video {margin: 0 -26px;}
+
+
+		/* ADD YOUR CSS HERE */
+		fieldset{
+			border: none;
+			padding-top: 37px;
+			font-family: Verdana;
+			font-size: smaller;
+			font-weight: lighter;
+			
+		}
+		.field{
+			padding-top:14px;
+		}
+		label[for=input_firstname],label[for=input_lastname],label[for=input_password],label[for=input_email]{
+			display:block;
+			padding-right:5px;
+			margin-left:-7px;
+		}
+		label[for=input_terms]{
+			display:inline;
+			padding-right:2px;
+			margin-left:-9px;
+		}
+		.hint,.error{
+			display:none;
+			
+			/* margin-right: -2px; */
+			margin-left: -16px;
+			width: 100%;
+			background-color: lightgreen;
+			font-family:Verdana;
+			font-size: smaller;
+			padding-right: 5px;
+			padding-left: 5px;
+			padding-right: 18px;
+			border-radius:3px;
+		}
+		#input_firstname, #input_lastname,#input_email{
+			width:100%;
+			height: 26px;
+			border-radius: 4px;
+			border: 1px lightgray solid;
+			padding-right:21px;
+			margin-left:-16px;
+		}
+		#input_firstname:focus, #input_lastname:focus,#input_email:focus{
+			border:2px green solid;
+		}
+		
+		#input_firstname:focus + div.help div.hint, #input_lastname:focus + div.help div.hint, #input_email:focus + div.help div.hint{
+			display:block;
+		}
+		/*input[type=checkbox]:checked {
+			color:blue;
+		}*/
+
+		/*input:checked + div.help div.hint{
+			display:block;
+		}*/
+		input[type="checkbox"]:checked ~ div.help div.hint{
+			display:block;
+		}
+		
+		.field.checkbox {
+			margin-left:-19px;
+		}
+		.field.checkbox .hint{
+			margin-left:3px;
+			padding-right:3px;
+		}
+		#input_terms{
+			margin-left: 3px;
+			margin-right: 14px;
+			color:blue;
+		}
+		ul.actions{
+			list-style-type:none;
+			margin-left:-10px;
+			padding: 0;
+		}
+		
+		
+		li.save input{
+			height: 30px;
+			padding-left: 5px;
+			padding-right: 7px;
+			margin-left: 5px;
+			width: 88px;
+			background-color: lightgreen;
+			border: 0;
+			border-radius: 2px;
+			font-size: medium;
+			font-weight: bolder;
+			margin-top: 2px;
+			
+		}
+		li.save input:hover{
+			color:white;
+			background-color:green;
+			text-align:center;
+		}
+		
+		
+		
+
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header">
+		Hover the mouse here to see reference design
+	</div>
+	<div id="content">
+
+		<form action="#" method="post" novalidate="novalidate">
+			<fieldset>
+				<div class="field string">
+					<label for="input_firstname">First name</label>
+					<input type="text" name="string" id="input_firstname" />
+					<div class="help">
+						<div class="hint">Type your first name</div>
+						<div class="error">That's a weird name</div>
+					</div>
+				</div>
+				<div class="field string">
+					<label for="input_lastname">Last name</label>
+					<input type="text" name="lastname" id="input_lastname" />
+					<div class="help">
+						<div class="hint">Type your last name</div>
+						<div class="error">That's a pretty cool last name</div>
+					</div>
+				</div>
+				<div class="field email">
+					<label for="input_email">Email</label>
+					<input type="email" name="email" id="input_email" />
+					<div class="help">
+						<div class="hint">Make sure to type your email correctly</div>
+						<div class="error">It's not a valid email</div>
+					</div>
+				</div>
+				<div class="field checkbox">
+					<input type="hidden" name="terms" value="0" />
+					<input type="checkbox" name="terms" id="input_terms" value="1" />
+					<label for="input_terms">Accept terms</label>
+					<div class="help">
+						<div class="hint">Please accept the terms</div>
+						<div class="error">You have to accept the terms</div>
+					</div>
+				</div>
+			</fieldset>
+
+			<ul class="actions">
+				<li class="save"><input type="submit" value="Save" class="button primary" /></li>
+			</ul>
+
+		</form>
+
+
+		<div class="reference_video">
+			<h2>Reference video</h2>
+			<video src="assets/vid_205.mp4" width="352" controls></video>
+		</div>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+
+</body>
+</html>

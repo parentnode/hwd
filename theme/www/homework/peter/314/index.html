@@ -33,32 +33,30 @@
 	var li1 = Util.appendElement(uList, "li", {"html": "one"});
 	var li2 = Util.appendElement(uList, "li", {"html": "two"});
 	var li3 = Util.appendElement(uList, "li", {"html": "three"});
-	var colorArray = ["red", "green", "blue", "purple"];	// creating color array
+	var colorArray = ["red", "green", "blue", "yellow"];	// creating color array
 
 	// Adding event listeners
 	Util.Events.click(header1);
-	Util.Events.click(p1);
-	Util.Events.click(p2);
+	Util.Events.hold(p1);
+	Util.Events.hold(p2);
 	Util.Events.hover(li1);
 	Util.Events.hover(li2);
 	Util.Events.hover(li3);
 
-	// Header event
+	// Header 
+	function getRandomInt(min, max) {
+		return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+
 	header1.clicked = function() {
 		if (!this.style.color) {
 			this.style.color = colorArray[0];
 		}
-		else if (this.style.color == colorArray[0]) {
-			this.style.color = colorArray[1];
-		}
-		else if (this.style.color == colorArray[1]) {
-			this.style.color = colorArray[2];
-		}
-		else if (this.style.color == colorArray[2]) {
-			this.style.color = colorArray[3];
-		}
-		else if (this.style.color == colorArray[3]) {
-			this.style.color = colorArray[0];
+		else {
+			var currentColor = this.style.color;
+			while (this.style.color == currentColor) {
+				this.style.color = colorArray[getRandomInt(0, 3)];
+			}
 		}
 	}
 
@@ -67,53 +65,37 @@
 		alert("Hey");
 	}
 
-	var aTimer;
-	p1.inputStarted = function() {
-		aTimer = window.setTimeout(showAlert, 2000); // set timer
+	p1.held = function() {
+		setTimeout(showAlert, 1250); // Time to showAlert is actually 2000ms as manipulators u.e.hold only starts after 750ms --GOING TO BE UPDATED WITH VAR TIME
 	}
 
-	p1.clicked = function() {
-		window.clearTimeout(aTimer); // reset timer
-	}
-
-	p2.inputStarted = function() {
-		aTimer = window.setTimeout(showAlert, 2000);
-	}
-
-	p2.clicked = function() {
-		window.clearTimeout(aTimer);
+	p2.held = function() {
+		setTimeout(showAlert, 1250);
 	}
 
 	// List events
-	li1.over = function() {
-		if (this.nextSibling == null) {
-			uList.insertBefore(this, this.previousSibling);
-		}
-		else {
-			uList.insertBefore(this, this.nextSibling.nextSibling);
+	function overFunc() {
+		if (!window.overActive) {
+			window.overActive = true;
+
+			if (this.nextSibling == null) {
+				uList.insertBefore(this, this.previousSibling);
+			}
+			else {
+				uList.appendChild(this);
+			}
+			
+			setTimeout(function() {
+				window.overActive = false;
+			}, 50);
+
 		}
 	}
 
-	/*
-	li2.over = function() {
-		if (this.nextSibling == null) {
-			uList.insertBefore(this, this.previousSibling);
-		}
-		else {
-			uList.insertBefore(this, this.nextSibling.nextSibling);
-		}
-	}
+	li1.over = overFunc;
+	li2.over = overFunc;
+	li3.over = overFunc;
 
-	li3.over = function() {
-		if (this.nextSibling == null) {
-			uList.insertBefore(this, this.previousSibling);
-		}
-		else {
-			uList.insertBefore(this, this.nextSibling.nextSibling);
-		}
-	}
-	*/
-	
 </script>
 
 
