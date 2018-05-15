@@ -20,7 +20,7 @@
 
 <div id="page">
 	<div id="header"></div>
-	<div id="content">
+	<div id="content" onclick="see()">
 
 		<div class="a4">A4</div>
 		<div class="a1">A1</div>
@@ -35,6 +35,24 @@
 <script type="text/javascript">
 
 	// ADD YOUR JS HERE
+	
+	var example = document.getElementById("content");
+	var a1=document.getElementsByClassName("a1");
+	var a2=document.getElementsByClassName("a2");
+	var a3=document.getElementsByClassName("a3");
+	var a4=document.getElementsByClassName("a4");
+	var a5=document.getElementsByClassName("a5");
+	
+	
+	function see(){
+		
+		example.appendChild(a1[0]);
+		example.appendChild(a2[0]);
+		example.appendChild(a3[0]);
+		example.appendChild(a4[0]);
+		example.appendChild(a5[0]);
+	}
+
 
 </script>
 
