@@ -26,7 +26,7 @@
 // Adds new content
 	var new_content = u.qs("div#content");
 	var scene = u.ae(new_content, "div", {"class":"scene"});
-	u.ass(scene, {"height":"u.browserH", "border":"1px solid red"})
+	u.ass(scene, {"height":u.browserH() + "px", "border":"1px solid red"})
 	var new_div = u.ae(scene, "div");
 	var new_div = u.ae(scene, "div");
 	var new_div = u.ae(scene, "div");
@@ -58,10 +58,7 @@ for (i = 0; i < data_color.length; i++) {
 	u.as(div_array[i], "backgroundColor", data_color[i])
 }
 
-scene.transitioned = function() {
-}
-u.a.transition(scene, "all 1s ease-in");
-u.as(scene, "backgroundColor", "black")
+
 
 
 
@@ -70,7 +67,7 @@ div_array[0].clicked = function (event) {
 	div_array[0].transitioned = function() {
 		u.a.translate(div_array[0], 0, 0)
 	}
-	u.a.transition(div_array[0], "all 1s");
+	u.a.transition(this, "all 1s");
 	u.a.translate(div_array[0], 0, u.browserH());
 }
 
@@ -90,6 +87,16 @@ div_array[2].clicked = function (event) {
 	u.a.transition(div_array[2], "all 1s");
 	u.a.translate(div_array[2], 0, u.browserH());
 }
+
+// u.e.click(div_array[i])
+// for (i = 0; i < div_array.lenght; i++) {
+// 	div_array[i].clicked = function (event) {
+// 		div_array[i].transitioned = function() {
+// 			u.a.translate(div_array[i], 0, 0)
+// 		}
+// 		u.a.transition(this, "all 1s");
+// 		u.a.translate(div_array[i], 0, u.browserH());
+// }}
 
 </script>
 
