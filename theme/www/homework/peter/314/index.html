@@ -65,16 +65,14 @@
 		alert("Hey");
 	}
 
-	p1.held = function() {
+	function overPFunc() {
 		setTimeout(showAlert, 1250); // Time to showAlert is actually 2000ms as manipulators u.e.hold only starts after 750ms --GOING TO BE UPDATED WITH VAR TIME
 	}
-
-	p2.held = function() {
-		setTimeout(showAlert, 1250);
-	}
+	p1.held = overPFunc;
+	p2.held = overPFunc;
 
 	// List events
-	function overFunc() {
+	function overLiFunc() {
 		if (!window.overActive) {
 			window.overActive = true;
 
@@ -91,10 +89,9 @@
 
 		}
 	}
-
-	li1.over = overFunc;
-	li2.over = overFunc;
-	li3.over = overFunc;
+	li1.over = overLiFunc;
+	li2.over = overLiFunc;
+	li3.over = overLiFunc;
 
 </script>
 
