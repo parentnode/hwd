@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 302</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+		#content {min-height: 400px;}
+		div.a1 {background-color: yellow; color: black;}
+		div.a2 {background-color: orange; color: black;}
+		div.a3 {background-color: red; color: white;}
+		div.a4 {background-color: brown; color: white;}
+		div.a5 {background-color: black; color: white;}
+
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content" onclick="orderClass()">
+
+		<div class="a4">I'm clueless</div>
+		<div class="scene">
+			<div class="a4">A4</div>
+			<ul>
+				<li class="no">
+					<div class="a3">I'm clueless</div>
+				</li>
+				<li class="yes">
+					<div class="a3">A3</div>
+				</li>
+			</ul>
+
+			<div class="section">
+				<div class="a2">I'm clueless</div>
+				<div class="a1">A1<div class="a2">A2</div></div>
+				<ul>
+					<li class="yes">
+						<div class="a5 b">I'm clueless</div>
+					</li>
+					<li class="yes">
+						<div class="a5 a">A5</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+
+	// ADD YOUR JS HERE
+	/*
+	var scene = document.getElementsByClassName("scene");
+	var yes_3 = document.getElementsByClassName("yes 3");
+	var section_a2_a1 = document.getElementsByClassName("section 1 2");
+	var section_a2_a1 = document.getElementsByClassName("section 1 2");
+	
+	
+	var scene=document.getElementsByClassName("scene");
+	var section=document.getElementsByClassName("section");
+
+	var class_a3=document.getElementsByClassName("a3");
+	var class_a4;*/
+	//var parent = document.getElementsById("content");
+	//var a1div = document.getElementsByClassName("div.a1");
+	//var el = document.querySelector("div.section div.a1");
+	//var parent = document.getElementsById("content");
+	var scene = document.querySelector("div#content div.scene");
+	var class_a1=document.querySelector("div#content div.section div.a1");
+	var class_a2=document.querySelector("div.section div.a1 div.a2");
+	var class_a3=document.querySelector("div#content div.scene li.yes div.a3");
+	var class_a4=document.querySelector("div#content div.scene div.a4");
+	var class_a5=document.querySelector("div.section li.yes div.a5.a");
+	function orderClass(){ 
+		scene.appendChild(class_a1);
+		class_a1.appendChild(class_a3);
+		class_a3.appendChild(class_a4);
+		class_a4.appendChild(class_a5);
+		console.log(class_a1);
+		console.log(class_a3);
+		console.log(class_a5);
+		
+		
+	}
+</script>
+
+
+</body>
+</html>

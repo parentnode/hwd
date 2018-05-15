@@ -9,6 +9,7 @@
 		body {margin: 0;}
 		#page {}
 		#content div.scene {box-sizing: border-box; padding: 40px; text-align: center;}
+		ul {padding: 50px 0}
 	</style>
 </head>
 <body>
@@ -17,7 +18,20 @@
 	<div id="header"></div>
 	<div id="content">
 		<div class="scene">
-			
+			<div class="article">
+				<h1>Der var engang en mand</h1>
+				<div class="articlebody">
+ 					<p>Han boede i en spand</p>
+					<p>Spanden var af ler</p>
+					<p>Nu kan jeg ikke mer'</p>
+				</div>
+			</div>
+			<ul class="items">
+				<li class="item"><em>Throw a title in the air</em><h3>This is a list that <span>just don't care</span></h3></li>
+				<li class="item"><em>Throw a title in the air</em><h3>This is a list that <span>just don't care</span></h3></li>
+				<li class="item"><em>Throw a title in the air</em><h3>This is a list that <span>just don't care</span></h3></li>
+				<li class="item"><em>Throw a title in the air</em><h3>This is a list that <span>just don't care</span></h3></li>
+			</ul>
 		</div>
 	</div>
 	<div id="footer"></div>
@@ -49,7 +63,7 @@
 	article.body = u.qs("div.articlebody", article);
 	var paragraphs = u.qsa("p", article.body);
 
-	console.log(u.text(paragraph[2]));
+	console.log(u.text(paragraphs[2]));
 
 </script>
 

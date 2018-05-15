@@ -30,7 +30,7 @@ var new_content = u.qs("div#content");
 var new_div = u.ae(new_content, "div", {"class":"scene"});
 var new_h1 = u.ae(new_div, "h1", {"html":"I am a headline"});
 var new_p = u.ae(new_div, "p", {"html":"I am a p"});
-var new_p = u.ae (new_div, "p", {"html":"I am also a p"});
+var new_p = u.ae(new_div, "p", {"html":"I am also a p"});
 var new_ul = u.ae(new_div, "ul");
 var new_li = u.ae(new_ul, "li", {"html":"I am the first list-item"});
 var new_li = u.ae(new_ul, "li",{"html":"I am the second list-item"});
@@ -39,35 +39,46 @@ var new_li = u.ae(new_ul, "li",{"html":"I am the third list-item"});
 // Adds event listener and a funtion that loops through the different colors
 
 
-var data_color = ["red", "blue", "green", "yellow"];
-var color_picked = false;
+new_h1.data_color = ["red", "blue", "green", "yellow"];
+this.color_picked = false;
+
+// u.e.click(new_h1);
+//
+// new_h1.clicked = function changeColor (event) {
+// 	if (color_picked != true) {
+// 		u.as(new_h1, "color", data_color[0]);
+// 		color_picked = true;
+// 	}
+// 	else if (new_h1.style.color == data_color[0]) {
+// 		u.as(new_h1, "color", data_color[1]);
+// 	}
+// 	else if (new_h1.style.color == data_color[1]) {
+// 		u.as(new_h1, "color", data_color[2]);
+// 	}
+// 	else if (new_h1.style.color == data_color[2]) {
+// 		u.as(new_h1, "color", data_color[3]);
+// 		color_picked = false;
+// 	}
+// }
 
 u.e.click(new_h1);
-
-new_h1.clicked = function changeColor (event) {
-	if (color_picked != true) {
-		u.as(new_h1, "color", data_color[0]);
-		color_picked = true;
+new_h1.clicked = function() {
+	if (!this.color_picked || color_pos == this.data_color.length) {
+		color_pos = 0;
 	}
-	else if (new_h1.style.color == data_color[0]) {
-		u.as(new_h1, "color", data_color[1]);
-	}
-	else if (new_h1.style.color == data_color[1]) {
-		u.as(new_h1, "color", data_color[2]);
-	}
-	else if (new_h1.style.color == data_color[2]) {
-		u.as(new_h1, "color", data_color[3]);
-		color_picked = false;
-	}
+	u.as(this, "color", this.data_color[color_pos]);
+	color_pos++;
+	this.color_picked = true;
 }
+
 
 // Add event listener with a timeout function for the paragraph
 
 u.e.hold(new_p)
 
-new_p.inputStarted = function mouseDown (event) {
+new_p.held = function(event) {
 	setTimeout(function() {
-		alert ("you held the mouse down for too long!!")();
+		alert ("you held the mouse down for too long!!");
 	}, 2000);
 }
 
@@ -75,19 +86,19 @@ new_p.inputStarted = function mouseDown (event) {
 
 u.e.hover(new_ul.childNodes[0]);
 
-new_ul.childNodes[0].over = function hover (event) {
-		u.ae(new_ul, new_ul.childNodes[0])
+new_ul.childNodes[0].over = function (event) {
+		u.ae(new_ul, this)
 }
 
 u.e.hover(new_ul.childNodes[1]);
 
-new_ul.childNodes[1].over = function hover (event) {
-		u.ae(new_ul, new_ul.childNodes[1])
+new_ul.childNodes[1].over = function (event) {
+		u.ae(new_ul, this)
 }
 
 u.e.hover(new_ul.childNodes[2]);
 
-new_ul.childNodes[2].over = function hover (event) {
+new_ul.childNodes[2].over = function (event) {
 		u.ae(new_ul, new_ul.childNodes[0])
 }
 
