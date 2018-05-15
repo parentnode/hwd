@@ -41,7 +41,22 @@
 <script type="text/javascript">
 
 	// ADD YOUR JS HERE
-
+	var node = document.getElementById("content");
+	var first_child = node.firstChild;
+	
+	console.log(first_child.nextElementSibling);
+	var second_child = first_child.nextSibling;
+	
+	var third_child = second_child.nextSibling;
+	console.log(first_child);
+	console.log(second_child);
+	console.log(third_child);
+	
+	//console.log(second_child.parentNode);
+	//console.log(first_child.nextElementSibling);
+	//console.log(second_child.nextElementSibling);
+	
+	
 </script>
 
 
