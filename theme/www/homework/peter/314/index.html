@@ -50,7 +50,7 @@
 
 	header1.clicked = function() {
 		if (!this.style.color) {
-			this.style.color = colorArray[0];
+			this.style.color = colorArray[getRandomInt(0, colorArray.length - 1)];
 		}
 		else {
 			var currentColor = this.style.color;
@@ -66,7 +66,8 @@
 	}
 
 	function overPFunc() {
-		setTimeout(showAlert, 1250); // Time to showAlert is actually 2000ms as manipulators u.e.hold only starts after 750ms --GOING TO BE UPDATED WITH VAR TIME
+		window.t_timer = setTimeout(showAlert, 1250); // Time to showAlert is actually 2000ms as manipulators u.e.hold only starts after 750ms --GOING TO BE UPDATED WITH VAR TIME
+		clearTimeout(t_timer);
 	}
 	p1.held = overPFunc;
 	p2.held = overPFunc;
