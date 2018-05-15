@@ -55,7 +55,7 @@
 		else {
 			var currentColor = this.style.color;
 			while (this.style.color == currentColor) {
-				this.style.color = colorArray[getRandomInt(0, 3)];
+				this.style.color = colorArray[getRandomInt(0, colorArray.length - 1)];
 			}
 		}
 	}
