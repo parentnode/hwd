@@ -93,12 +93,12 @@
 				// it will only get to the if statement and then stop.
 				previousSibling.justMoved = true;
 				// no matter if a new over-event is triggered it should set back the justMoved to false, so it ready for use again.
-				setTimeout(function(element){ element.justMoved = false;}, 20, previousSibling);
+				setTimeout(function(element){ element.justMoved = false;}, 50, previousSibling);
 			}
 			else {
 				u.ae(myUL, this);
 				nextSibling.justMoved = true;
-				setTimeout(function(element){ element.justMoved = false;}, 20, nextSibling);
+				setTimeout(function(element){ element.justMoved = false;}, 50, nextSibling);
 			}
 		}
 	}
