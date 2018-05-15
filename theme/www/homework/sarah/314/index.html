@@ -81,8 +81,12 @@
 		clearTimeout(timeout_function);
 	}
 
+// *************UPDATED: Should not query lis 4 times, but save reference to them. ********************
+
 	for (var l=0; l < document.querySelectorAll("li").length; l++) {
+		// ************ Event listener:
 		u.e.hover(document.querySelectorAll("li")[l]);
+		// ************ Event handlers:
 		document.querySelectorAll("li")[l].over = hover_event;
 		document.querySelectorAll("li")[l].out = hover_end_event;
 		// console.log(this);

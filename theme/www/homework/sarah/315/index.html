@@ -33,8 +33,9 @@
 	scene_div.style.height = window.innerHeight + "px";
 	// console.log(u.cn(scene_div));
 	for (var i=0; i<3; i++) {
-		u.cn(scene_div)[i].style.height = 100 + "px";
-		u.cn(scene_div)[i].style.width = 100 + "px";
+		// Making size 150 x 150 to fit in quotes.
+		u.cn(scene_div)[i].style.height = 150 + "px";
+		u.cn(scene_div)[i].style.width = 150 + "px";
 		u.cn(scene_div)[i].style.margin = "auto";
 	}
 
@@ -42,31 +43,74 @@
 	for (var j=0; j < u.cn(scene_div).length; j++) {
 		var XHR = new XMLHttpRequest();
 		XHR.responseType = "json";
+		// TO define node as child of scene div. TO be able to add HTML in action_on_ready_state function
+		XHR.node = u.cn(scene_div)[j];
 		XHR.onreadystatechange = action_on_ready_state;
-		console.log(XHR.response);
+		XHR.open("GET", "http://random-quote-generator.herokuapp.com/api/quotes/random");
+		XHR.send("");
 	}
 
-	var quotes = [];
-
 	function action_on_ready_state() {
-		console.log("action on rr function");
+		// console.log("action on rr function");
 		if(this.readyState == 4) {
-			quotes.push(XHR.response.quote + " by " + XHR.response.author);
-			console.log(XHR.response);
-			console.log(quotes);
+			this.node.innerHTML = this.response.quote + " by " + this.response.author;
 		}
 	}
 
-	XHR.open("GET", "http://random-quote-generator.herokuapp.com/api/quotes/random");
-	XHR.send("");
-	console.log(XHR.response + "again");
+// ****** UPDATED: Need to add open and send to first for loop. [DONE]
+// Also need to add innerHTML into the action_on_ready_state function, as don't know what the synchronicity is. [DONE]
+// And use "this" inside the action_on_ready_state function. [DONE]
 
-	u.cn(scene_div)[0].innerHTML = quotes[0];
+// Also to above for loop, add: XHR.node = u.cn(scene_div)[j]; [DONE]
+// AND add to if clause: this.node.innerHTML = this.response.quote + etc etc. [DONE]
 
+	// u.cn(scene_div)[0].style.backgroundColor = "red";
+	// u.cn(scene_div)[1].style.backgroundColor = "green";
+	// u.cn(scene_div)[2].style.backgroundColor = "blue";
 
-	u.cn(scene_div)[0].style.backgroundColor = "red";
-	u.cn(scene_div)[1].style.backgroundColor = "green";
-	u.cn(scene_div)[2].style.backgroundColor = "blue";
+// UPDATE: Use u.ass(node, JSONstyle):
+	u.ass(u.cn(scene_div)[0], {"backgroundColor": "red"});
+	u.ass(u.cn(scene_div)[1], {"backgroundColor": "green"});
+	u.ass(u.cn(scene_div)[2], {"backgroundColor": "blue"});
+
+// Add click event listeners to each div. Make element jump to bottom of screen, wait 1 sec and move back up.
+// Use CSS translate property and u.a.transition to apply transition timing.
+// Third parameter is custom callback to apply jumpback method.
+
+	for (var k=0; k < u.cn(scene_div).length; k++) {
+		u.e.click(u.cn(scene_div)[k]);
+		u.cn(scene_div)[k].clicked = translation_on_click;
+	}
+
+	var orig_y_position
+
+// Calculate translate by taking window.innerHeight - AbsY of node - offsetHeight of node
+	function translation_on_click() {
+		console.log("click has happened!");
+		// console.log(this);
+		u.a.transition(this, "all 1s ease-in");
+		console.log("transition complete");
+		orig_y_position = u.absY(this);
+		console.log(orig_y_position);
+		u.a.translate(this, 0, window.innerHeight - orig_y_position - u.actualH(this));
+		console.log("translate complete");
+		u.a.transition(this, "all 1s ease-in", delay_ahead_of_move);
+		// What does transition do??
+	}
+
+// Delay, use Util.Timer.setTimer( Node node, Function|String action, Number timeout [, Mixed param] );
+
+	function delay_ahead_of_move () {
+		console.log("start of delay");
+		u.t.setTimer(this, move_div_back, 1000);
+		console.log("end of delay");
+	}
+
+	function move_div_back() {
+		u.a.translate(this, 0, 0);
+		orig_y_position = u.absY(this);
+		console.log(orig_y_position);
+	}
 
 
 </script>
