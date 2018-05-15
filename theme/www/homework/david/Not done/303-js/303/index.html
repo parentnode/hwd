@@ -41,16 +41,92 @@
 <script type="text/javascript">
 
 	// ADD YOUR JS HERE
-	var node = document.getElementById("content");
-	var first_child = node.firstChild;
+	var div_names = ["A1","A2","A3","A4","A5"];
+	var node; 
+	node = document.body.childNodes;
+	console.log(node);
+	var div_page = node[1];
+	console.log(div_page.id);
+	var div_content = div_page.childNodes[3];
+	console.log(div_content.id);
+	var div_a1 = div_content.childNodes[1];
+	console.log(div_a1.innerHTML);
+	div_a1.innerHTML=div_names[0];
+	var div_scene = div_content.childNodes[3];
+	var div_a2 = div_scene.childNodes[1];
+	div_a2.innerHTML="A2";
+	var div_a3 = div_scene.childNodes[3];
+	div_a3.innerHTML="A3";
 	
-	console.log(first_child.nextElementSibling);
-	var second_child = first_child.nextSibling;
+	var div_a4 = div_scene.childNodes[5].childNodes[1].childNodes[1];
+	div_a4.innerHTML="A4";
+	var div_a5 = div_scene.childNodes[7];
+	div_a5.innerHTML="A5";
 	
-	var third_child = second_child.nextSibling;
-	console.log(first_child);
-	console.log(second_child);
-	console.log(third_child);
+	
+	
+	//var first_child = node.firstChild;
+	//var setA1 = first_child.nextSibling.innerHTML="A1";
+	//console.log(first_child.nodeName);
+	//
+	////var second_child = node.childNodes[0];
+	//var second_child = first_child.nextSibling.firstChild;
+	////console.log(second_child.nodeName);
+	//second_child.innerHTML="A2";
+	//var parent = second_child.parentNode;
+	//console.log(parent.nodeName);
+	//var third_child = second_child.nextSibling;
+	//
+	//console.log(third_child.nodeName);
+	
+	//			var child_of_child = second_child.childNodes[1];
+	//			console.log(child_of_child);
+	//			
+	//			var sibling = child_of_child.nextSibling;
+	//			
+	//			var sibling_of_sibling = sibling.nextSibling;
+	//			console.log(sibling_of_sibling);
+	
+	//MyCode
+	//var child = node.firstChild;
+	//var first_child = node.firstChild.nextSibling;
+	//first_child.innerHTML="A1";
+	//
+	//var second_child = node.childNodes[2];
+	//var child_of_child = second_child.childNodes[1];
+	//var sibling = child_of_child.nextSibling;
+	//console.log(sibling.nodeName);
+
+	//var sibling_of_sibling = sibling.nextSibling;
+	//console.log(sibling_of_sibling);
+	//var second_child = first_child;
+	//var third_child = second_child.childNodes[0];
+	//third_child.innerHTML="A3";
+	//console.log(first_child.nextElementSibling.innerHTML);
+	//var second_child = first_child.childNodes[1].nextElementSibling;
+	//var second_child = document.getElementsByClassName("scene");
+	//second_child.innerHTML="A2";
+
+	//var third_child = second_child.nextElementSibling;
+	//third_child.innerHTML="A3";
+	//var second_child = third_child.nextSibling;
+	//fourth_child.innerHTML="A2";
+
+	//second_child.innerHTML="A2";
+	//console.log("The Object");
+	//var third_child = second_child.nextSibling;
+	//console.log(node);
+	//console.log("First-Child");
+	//console.log(first_child);
+	//console.log("Second_Child: ")
+	//console.log(second_child);
+	//console.log("Third_Child");
+	//console.log(child.nodeName);
+	//console.log(child.nodename);
+	//console.log(third_child);
+	//console.log("Fourth_Child");
+	//console.log(fourth_child.innerHTML);
+	//console.log(second_child.nodeName);
 	
 	//console.log(second_child.parentNode);
 	//console.log(first_child.nextElementSibling);
