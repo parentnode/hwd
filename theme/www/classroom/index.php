@@ -23,7 +23,7 @@
 			<li><a href="peter/peter.php">Peter</a></li>
 			<li><a href="octavian/octavian.php">Octavian</a></li>
 			<li><a href="julie/julie.php">Julie</a></li>
-
+			<li><a href="david/index.php">David</a></li>
 			<li><a href="mr-miyagi">Mr. Miyagi</a></li>
 		</ul>
 
