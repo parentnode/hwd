@@ -49,7 +49,18 @@
 <script type="text/javascript">
 
 	// ADD YOUR JS HERE
-
+	var parentNode = document.getElementById("content");
+	var li_element_list = parentNode.querySelectorAll("li");
+	var ul = document.getElementsByClassName(".modifyme");
+	for(var i= 0; i < li_element_list.length; i++){
+		//console.log(li_element_list[i]);
+		//if(ul.li_element_list.className == "special"){
+			//ul.removeChild(li_element_list);
+			//console.log(ul.li_element_list[i]);
+		//}
+		console.log(li_element_list[i].className ="special");
+	}
+	
 </script>
 
 
