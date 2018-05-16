@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>PHP Syntax</title>
+	<title>PHP Syntax - Part 1</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" type="text/css" href="/css/exercises/includes.css" />
 	<script type="text/javascript" src="/js/exercises/includes.js"></script>
@@ -13,7 +13,7 @@
 	<div id="header"></div>
 	<div id="content">
 		
-		<h1>PHP Syntax</h1>
+		<h1>PHP Syntax, Part 1</h1>
 
 		<h2>Basics</h2>
 		<?php echo "<p>Hello World. I'm home.</p>"; ?>
