@@ -1,5 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans|PT+Sans|Source+Sans+Pro');
+
+html, .scene {
+	height: 100%;
+	background: #fffcf7;
+}
+
 .scene {
-	height: 500px;
-	width: 500px;
-	background: #8f2424;
+	margin: auto;
+}
+
+.scene h1 {
+	font-family: 'PT Sans', sans-serif;
+	text-align: center;
+}
+
+.scene .card {
+	display: block;
+	position: relative;
+	font-family: 'Noto sans', sans-serif;
+	max-width: 400px; /* Make element adjust if window gets too small */
+	opacity: 0.8;
+	padding: 10px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	background: rgba(0, 0, 0, 0.1);
+
+	/* removing link styling */
+	text-decoration: none;
+	color: initial;
+
+	/* Animation */
+	transition: all 0.1s ease-in;
+}
+
+.scene .card .description {
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 14px;
+	margin: 0;
+}
+
+.scene .card:hover {
+	transform: scale(1.05);
 }
