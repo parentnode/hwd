@@ -2,9 +2,10 @@
 var trelloBoard = "aSELHpTm"; // The trello board you wanna get the data from, BOARD NEEDS TO BE PUBLIC OR ELSE YOU'LL NEED TO AUTHORIZE WITH TOKENS
 var trelloKey = "bf094877e21908a497e9566e5998a582"; // Your trello api key, this is needed to allow third party sites to access
 var trelloToken = ""; // SHOULD NEVER BE USED CLIENT SIDE
-var trelloCards = "http://api.trello.com/1/boards/" + trelloBoard + "/cards?&key=" + trelloKey; // Check the Trello API for specific card fields or boards, action and more.
+var trelloCards = "http://trello.com/1/boards/" + trelloBoard + "/cards?&key=" + trelloKey; // Check the Trello API for specific card fields or boards, action and more.
+//http://api.trello.com/1/boards/
 
-// Querying and initial variables
+// Querying and hiding scene for loading
 var scene = document.querySelector('.scene');
 
 // Getting putting cards into site
@@ -32,6 +33,7 @@ xhr.onreadystatechange = function() {
 			cardDiv.className = "card";
 			cardDiv.innerHTML =  cardName;
 			cardDiv.style.borderLeft = "5px solid " + cardColor;
+			cardDiv.style.opacity = "0"; // Hiding cards to animate later
 
 			cardDiv.setAttribute("href", jsonArray[obj].shortUrl); // Add corresponding trello link to card
 			cardDiv.setAttribute("target", "_blank"); // Open link in new tab
@@ -44,8 +46,15 @@ xhr.onreadystatechange = function() {
 			}
 		}
 	}
+	// Start showing cards, gets animation from styles.css
+	var cardList = scene.querySelectorAll(".card");
+	var timer = 0;
+	for(var i = 0; i < cardList.length; i++) {
+		cardList[i].style.animation =  "showCards .25s ease " + (timer += .1) + "s 1 normal forwards";
+	}
 }
 // Opens the trelloCards url and returns the data as json
 xhr.responseType = "json";
 xhr.open("GET", trelloCards);
 xhr.send("");
+

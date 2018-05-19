@@ -5,10 +5,6 @@ html, .scene {
 	background: #fffcf7;
 }
 
-.scene {
-	margin: auto;
-}
-
 .scene h1 {
 	font-family: 'PT Sans', sans-serif;
 	text-align: center;
@@ -19,11 +15,11 @@ html, .scene {
 	position: relative;
 	font-family: 'Noto sans', sans-serif;
 	max-width: 400px; /* Make element adjust if window gets too small */
-	opacity: 0.8;
 	padding: 10px;
 	margin: 0 auto;
 	margin-bottom: 20px;
 	border-radius: 5px;
+	color: rgba(0, 0, 0, 0.8);
 	background: rgba(0, 0, 0, 0.1);
 
 	/* removing link styling */
@@ -42,4 +38,12 @@ html, .scene {
 
 .scene .card:hover {
 	transform: scale(1.05);
+	background: rgba(0, 0, 0, 0.2);
+}
+
+
+/* Gets called from trello.js */
+@keyframes showCards {
+	from { top: -15px; opacity: 0; }
+	to { top: 0; opacity: 1; }
 }
