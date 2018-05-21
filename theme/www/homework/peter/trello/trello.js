@@ -19,30 +19,39 @@ xhr.onreadystatechange = function() {
 			// Extracting json values
 			var cardName = jsonArray[obj].name; 
 			var cardDesc = jsonArray[obj].desc;
+			var cardColor;
+			var cardDate = jsonArray[obj].due;
 
 			// Check if the color label exists
 			if (jsonArray[obj].labels[0]) {
-				var cardColor = jsonArray[obj].labels[0].color;
+				cardColor = jsonArray[obj].labels[0].color;
 			}
 			else {
 				cardColor = "grey";
 			}
 
 			// Creating cards themselves
-			var cardDiv = scene.appendChild(document.createElement("a"));
-			cardDiv.className = "card";
-			cardDiv.innerHTML =  cardName;
-			cardDiv.style.borderLeft = "5px solid " + cardColor;
-			cardDiv.style.opacity = "0"; // Hiding cards to animate later
+			var cardElement = scene.appendChild(document.createElement("a"));
+			cardElement.className = "card";
+			cardElement.innerHTML =  cardName;
+			cardElement.style.borderTop = "5px solid " + cardColor;
+			cardElement.style.opacity = "0"; // Hiding cards to animate later
 
-			cardDiv.setAttribute("href", jsonArray[obj].shortUrl); // Add corresponding trello link to card
-			cardDiv.setAttribute("target", "_blank"); // Open link in new tab
+			cardElement.setAttribute("href", jsonArray[obj].shortUrl); // Add corresponding trello link to card
+			cardElement.setAttribute("target", "_blank"); // Open link in new tab
 
-			if (jsonArray[obj].desc) {
-				var descDiv = cardDiv.appendChild(document.createElement("p"));
-				descDiv.className = "description";
-				descDiv.innerHTML = cardDesc;
-				// descDiv.style.fontSize = "12px";
+			// Check if description exist
+			if (cardDesc) {
+				var descElement = cardElement.appendChild(document.createElement("p"));
+				descElement.className = "description";
+				descElement.innerHTML = cardDesc;
+			}
+
+			// Check if the card has a due date
+			if (cardDate) {
+				var dateElement = cardElement.appendChild(document.createElement("p"))
+				dateElement.className = "date";
+				dateElement.innerHTML = "due: " + cardDate.slice(0, 10);
 			}
 		}
 	}
