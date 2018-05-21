@@ -19,12 +19,11 @@ html, .scene {
 	margin: 0 auto;
 	margin-bottom: 20px;
 	border-radius: 5px;
-	color: rgba(0, 0, 0, 0.8);
+	color: rgba(0, 0, 0, 0.9);
 	background: rgba(0, 0, 0, 0.1);
 
 	/* removing link styling */
 	text-decoration: none;
-	color: initial;
 
 	/* Animation */
 	transition: all 0.1s ease-in;
@@ -50,6 +49,21 @@ html, .scene {
 	background: rgba(0, 0, 0, 0.2);
 }
 
+
+.scene .link {
+	display: block;
+	max-width: 400px;
+	margin: 0 auto;
+	color: rgba(0, 0, 0, 0.9);
+	border-left: 1px solid;
+	padding-left: 10px;
+
+	text-decoration: none;
+}
+
+.scene .link:hover {
+	border-width: 2px;
+}
 
 /* Gets called from trello.js */
 @keyframes showCards {

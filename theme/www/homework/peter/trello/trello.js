@@ -3,10 +3,18 @@ var trelloBoard = "aSELHpTm"; // The trello board you wanna get the data from, B
 var trelloKey = "bf094877e21908a497e9566e5998a582"; // Your trello api key, this is needed to allow third party sites to access
 var trelloToken = ""; // SHOULD NEVER BE USED CLIENT SIDE
 var trelloCards = "http://trello.com/1/boards/" + trelloBoard + "/cards?&key=" + trelloKey; // Check the Trello API for specific card fields or boards, action and more.
-//http://api.trello.com/1/boards/
+// http://api.trello.com/1/boards/
+// cards?fields=name
 
 // Querying and hiding scene for loading
 var scene = document.querySelector('.scene');
+
+// Creating board link, we append it after the cards has been loaded
+var boardLink = document.createElement("a");
+boardLink.className = "link";
+boardLink.innerHTML = "View board";
+boardLink.setAttribute("href", "https://trello.com/b/" +trelloBoard);
+boardLink.setAttribute("target", "_blank");
 
 // Getting putting cards into site
 var xhr = new XMLHttpRequest();
@@ -49,17 +57,19 @@ xhr.onreadystatechange = function() {
 
 			// Check if the card has a due date
 			if (cardDate) {
-				var dateElement = cardElement.appendChild(document.createElement("p"))
+				var dateElement = cardElement.appendChild(document.createElement("p"));
 				dateElement.className = "date";
 				dateElement.innerHTML = "due: " + cardDate.slice(0, 10);
 			}
 		}
 	}
+	// Card loop ends here
 	// Start showing cards, gets animation from styles.css
 	var cardList = scene.querySelectorAll(".card");
 	var timer = 0;
 	for(var i = 0; i < cardList.length; i++) {
 		cardList[i].style.animation =  "showCards .25s ease " + (timer += .1) + "s 1 normal forwards";
+		scene.appendChild(boardLink); // Prevent boardLink from jumping into place by appending from this loop
 	}
 }
 // Opens the trelloCards url and returns the data as json
