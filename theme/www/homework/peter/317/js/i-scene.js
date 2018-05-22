@@ -20,6 +20,7 @@ Util.Objects["scene"] = new function() {
 		for(i = 0; i < contentNodeList.length; i++) {
 			u.a.transition(contentNodeList[i], "all 1s ease-in " + i + "s");
 			u.a.opacity(contentNodeList[i], 1);
+			u.a.translate(contentNodeList[i], 0, 50);
 		}
 
 		// Hide content
@@ -27,6 +28,7 @@ Util.Objects["scene"] = new function() {
 			for(i = 0; i < contentNodeList.length; i++) {
 				u.a.transition(contentNodeList[i], "all 1s ease-in " + i + "s");
 				u.a.opacity(contentNodeList[i], 0);
+				u.a.translate(contentNodeList[i], 0, 0);
 			}
 		}
 	

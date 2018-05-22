@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 319</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="/js/manipulator/seg_desktop.js"></script>
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {}
+		#content div.scene {box-sizing: border-box; padding: 40px; text-align: center;}
+	</style>
+</head>
+<body>
+
+<div id="page" class="i:page">
+	<div id="header"></div>
+	<div id="content">
+		<div class="scene">
+				
+			<div class="article">
+				<h1>Der bor en bager</h1>
+				<div class="articlebody">
+					<p>Der bor en bager på Nørregade, han bager kringler og julekage.</p>
+					<p>Han bager store, han bager små, han bager nogle med sukker på.</p>
+					<p>Og i hans vindu' er sukkersager og heste, grise og peberkager.</p>
+					<p>Så har du penge, så kan du få, men har du ingen, så må du gå.</p>
+				</div>
+
+				<ul class="items">
+					<li class="item">
+						<h3>
+							<span>Kringle</span>
+							<em>15kr</em>
+						</h3>
+					</li>
+
+					<li class="item">
+						<h3>
+							<span>Julekage</span>
+							<em>25kr</em>
+						</h3>
+					</li>
+					
+					<li class="item">
+						<h3>
+							<span>Peberkage</span>
+							<em>20kr</em>
+						</h3>
+					</li>
+
+					<li class="item">
+						<h3>
+							<span>Studenterbrød</span>
+							<em>10kr</em>
+						</h3>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+	</div>
+	<div id="footer"></div>
+</div>
+
+
+<script type="text/javascript">
+
+	// ADD YOUR JS HERE
+	var list_items = u.qsa("ul.items li.item");
+	u.ac(list_items[3], "selected"); 
+
+	var i, node;
+	for(i = 0; i < list_items.length; i++) {
+		node = list_items[i];
+
+		node.clicked = function(event) {
+			var title = u.qs("h3 span", this);
+
+			var subtitle = u.qs("em", title.parentNode);
+			console.log(subtitle.innerHTML);
+		}
+		u.e.click(node);
+		
+	}
+
+	var article = u.qs("div.article");
+	article.header = u.qs("h1", article);
+	article.body = u.qs("div.articlebody", article);
+	var paragraphs = u.qsa("p", article.body);
+
+	console.log(u.text(paragraphs[2]));
+
+</script>
+
+</body>
+</html>
