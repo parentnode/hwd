@@ -45,6 +45,10 @@
 	// console.log(getComputedStyle(document.querySelector("h1")).color);
 	// document.querySelector("h1").style.color = "rgb(256, 0, 0)";
 
+// ***UPDATE: should also reducing querying for h1 and p further down.
+// ****UPDATE: Should add window. ahead of getComputedStyle.
+// ***UPDATE: Could add colours to colour array and get from there.
+
 	document.querySelector("h1").clicked = function() {
 		console.log(getComputedStyle(this).color);
 		if (getComputedStyle(this).color == "rgb(0, 0, 0)") {
@@ -96,10 +100,10 @@
 		// console.log(this);
 	// If first or second li in list, then move to the end. If last li in list, move to second last.
 		if (this.nextSibling) {
-			console.log(this.parentNode);
-			console.log(this);
+			// console.log(this.parentNode);
+			// console.log(this);
 			this.parentNode.appendChild(this);
-			hover_end_event;
+			// hover_end_event;
 			// Need to add a way to stop code after single move, otherwise the hover function is continuously executing.
 			// Unsure how to do this... hover_end_event function does not work sufficiently.
 		}
@@ -108,10 +112,15 @@
 		}
 	}
 
-	function hover_end_event() {
-		console.log("hover end");
-		return;
-	}
+// ***UPDATE: Could add setTimeout to end the hover event, e.g. after 50 ms.
+// ***UPDATE: Using overActive - Manipulator? Or Native? (see Peter's)
+// ***UPDATE: See Mads' version: add flag to whether element has just been moved underneath mouse.
+// ***UPDATE: Reset flag once enough time has passed for element to be moved, e.g. 20 ms.
+
+	// function hover_end_event() {
+	// 	console.log("hover end");
+	// 	return;
+	// }
 
 </script>
 
