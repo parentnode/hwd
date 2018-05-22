@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans|PT+Sans|Source+Sans+Pro');
 
-html, .scene {
-	height: 100%;
+html {
 	background: #fffcf7;
+}
+
+.scene {
+	margin: 0 auto;
+	max-width: 400px;
 }
 
 .scene h1 {
@@ -14,9 +18,7 @@ html, .scene {
 	display: block;
 	position: relative;
 	font-family: 'Noto sans', sans-serif;
-	max-width: 400px; /* Make element adjust if window gets too small */
 	padding: 10px;
-	margin: 0 auto;
 	margin-bottom: 20px;
 	border-radius: 5px;
 	color: rgba(0, 0, 0, 0.9);
@@ -51,9 +53,6 @@ html, .scene {
 
 
 .scene .link {
-	display: block;
-	max-width: 400px;
-	margin: 0 auto;
 	color: rgba(0, 0, 0, 0.9);
 	border-left: 1px solid;
 	padding-left: 10px;
