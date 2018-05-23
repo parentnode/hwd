@@ -68,12 +68,13 @@
 	para2.held = heldPassed;
 
 
-var lis = [li1, li2, li3];
+	var lis = [li1, li2, li3];
 	function hoverLiEvents(el) {
 		for(var i = 0; i < el.length; i++){
 			u.e.hover(el[i]);
 			el[i].over =  function() {
-				if (this.nextSibling == null) {
+
+			if (this.nextSibling == null) {
 				uList.insertBefore(this, this.previousSibling);
 			}
 			else {
@@ -88,7 +89,7 @@ var lis = [li1, li2, li3];
 			
 		}
 	}
-hoverLiEvents(lis);
+	hoverLiEvents(lis);
 	
 </script>
 </body>
