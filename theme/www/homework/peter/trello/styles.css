@@ -69,3 +69,10 @@ html {
 	from { top: -15px; opacity: 0; }
 	to { top: 0; opacity: 1; }
 }
+
+
+@media screen and (max-width: 900px) {
+	.scene {
+		max-width: 800px;
+	}
+}
