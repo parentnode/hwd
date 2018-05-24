@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 403</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="/css/exercises/includes.css" />
+	<script type="text/javascript" src="/js/exercises/includes.js"></script>
+</head>
+<body>
+
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content">
+
+		<h1>Exercise 403 - PHP</h1>
+		<p>
+			This exercise is about developing your first Janitor based PHP project
+		</p>
+		<p>
+			The purpose of this exercise is to work with your personal Janitor project to gain experience
+			with frameworks and PHP.
+		</p>
+
+		<h2>Tasks</h2>
+		<ol>
+			<li>
+				<h3>Add controller endpoints</h3>
+				<p>
+					Every part (separated by /) of the URL you request is either a controller or a parameter for the
+					controller. Fx. if your controller is called test.php, then a request to /test/help, will pass
+					the parameter help to the test.php controller.
+				</p>
+				<p>
+					Modify the controller you added in exercise 403 and add controller logic so that the controller
+					is able to respond to two parameters. If you send <em>test1</em> it should show a different template
+					than if you send <em>test2</em>. It should still maintain the default output if no parameters are
+					sent. Create additional templates as needed.
+				</p>
+				<p>
+					You can use the posts.php controller as inspiration. This
+					controller is able to act differently depending on which parameters it receives. If it has just one
+					parameter, then it will show the <em>pages/post.php</em> template. If it has two parameters and the first
+					one is <em>tag</em>, then it will show the <em>pages/posts_tag.php</em> template. Otherwise it will
+					just show the <em>pages/posts.php</em> template, which is the default view of this controller.
+				</p>
+			</li>
+			<li>
+				<h3>Visit your new page</h3>
+				<p>
+					Visit the page you have created and test how it works when you send the new parameters. 
+					If your controller is named test.php, then visit <em>/test</em>, <em>/test/test1</em> and 
+					<em>/test/test2</em> on your local project domain.
+				</p>
+			</li>
+		</ol>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+</body>
+</html>
