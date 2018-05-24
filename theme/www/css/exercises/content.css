@@ -10,7 +10,7 @@
 #content h4 {font-size: 16px; padding: 0;}
 #content p {font-size: 16px; padding: 0 0 20px;}
 
-#content code {font-family: Courier; display: block; margin: 0 0 20px; padding: 10px; background-color: #dedede;}
+#content code {font-family: Courier; display: block; margin: 0 0 20px; padding: 10px; background-color: #dedede; white-space: pre;}
 
 #content ul {margin: 0 0 20px;}
 #content li {padding: 0 0 7px;}
