@@ -69,7 +69,7 @@
 		Util.Animation.translate(this, 0, window.innerHeight - 100);
 
 		setTimeout(function(element){
-			// for some reason I have to put the transition inside the callback or it will only work once !!???
+			// setting a new transition because transition from before is cleaned up by u.a.transition's 'transitioned'-callback. 
 			u.a.transition(element, "all 2s ease-in");
 			Util.Animation.translate(element, 0, 0);
 		}, 1000, this)

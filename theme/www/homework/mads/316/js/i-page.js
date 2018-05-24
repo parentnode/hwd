@@ -1,6 +1,7 @@
 Util.Objects["page"] = new function() {
 	this.init = function(page) {
 		u.bug("init page");
+		console.log(page);
 
 		// global scroll handler 
 		page.resized = function() {
@@ -36,7 +37,6 @@ Util.Objects["page"] = new function() {
 				this.resized();
 
 				// scene fade up
-				console.log(page);
 				u.a.transition(page.scene, "all 2s ease-in");
 				u.ass(page.scene, {"opacity":"1"});
 
