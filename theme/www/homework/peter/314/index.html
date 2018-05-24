@@ -61,16 +61,13 @@
 	}
 
 	// Paragraph events
-	function showAlert() {
-		alert("Hey");
-	}
-
-	function overPFunc() {
-		window.t_timer = setTimeout(showAlert, 1250); // Time to showAlert is actually 2000ms as manipulators u.e.hold only starts after 750ms --GOING TO BE UPDATED WITH VAR TIME
-		clearTimeout(t_timer);
-	}
-	p1.held = overPFunc;
-	p2.held = overPFunc;
+	var timer;
+	function heldParagraph() {
+		window.clearTimeout(timer);
+		timer = window.setTimeout(function() {alert('Hello!');}, 1250); // Time to showAlert is actually 2000ms as manipulators u.e.hold only starts after 750ms --GOING TO BE UPDATED WITH VAR TIME
+		}
+	p1.held = heldParagraph;
+	p2.held = heldParagraph;
 
 	// List events
 	function overLiFunc() {

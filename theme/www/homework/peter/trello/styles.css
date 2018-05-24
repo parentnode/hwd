@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans|PT+Sans|Source+Sans+Pro');
+
+html {
+	background: #fffcf7;
+}
+
+.scene {
+	margin: 0 auto;
+	max-width: 400px;
+}
+
+.scene h1 {
+	font-family: 'PT Sans', sans-serif;
+	text-align: center;
+}
+
+.scene .card {
+	display: block;
+	position: relative;
+	font-family: 'Noto sans', sans-serif;
+	padding: 10px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	color: rgba(0, 0, 0, 0.9);
+	background: rgba(0, 0, 0, 0.1);
+
+	/* removing link styling */
+	text-decoration: none;
+
+	/* Animation */
+	transition: all 0.1s ease-in;
+}
+
+.scene .card .description {
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 14px;
+	margin: 0;
+}
+
+.scene .card .date {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+
+	font-size: 14px;
+	margin: 0;
+}
+
+.scene .card:hover {
+	transform: scale(1.05);
+	background: rgba(0, 0, 0, 0.2);
+}
+
+
+.scene .link {
+	color: rgba(0, 0, 0, 0.9);
+	border-left: 1px solid;
+	padding-left: 10px;
+
+	text-decoration: none;
+}
+
+.scene .link:hover {
+	border-width: 2px;
+}
+
+/* Gets called from trello.js */
+@keyframes showCards {
+	from { top: -15px; opacity: 0; }
+	to { top: 0; opacity: 1; }
+}
+
+
+@media screen and (max-width: 900px) {
+	.scene {
+		max-width: 800px;
+	}
+}

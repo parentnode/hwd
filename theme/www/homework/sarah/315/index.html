@@ -29,6 +29,10 @@
 		u.ae(scene_div, "div", {"class": "div"+i});
 	}
 
+// *** UPDATE: Should not use u.cn several times. Save reference to the u.cn(scene_div);
+// ***Can use u.ass to update styles in one go.
+// ***Can use u.request, rather than XMLHttpRequest.
+
 // Use manipulator u.cn childNodes to loop over new divs and give height and width. Is for loop necessary?
 	scene_div.style.height = window.innerHeight + "px";
 	// console.log(u.cn(scene_div));
@@ -68,7 +72,7 @@
 	// u.cn(scene_div)[1].style.backgroundColor = "green";
 	// u.cn(scene_div)[2].style.backgroundColor = "blue";
 
-// UPDATE: Use u.ass(node, JSONstyle):
+// UPDATE: Use u.ass(node, JSONstyle): [DONE]
 	u.ass(u.cn(scene_div)[0], {"backgroundColor": "red"});
 	u.ass(u.cn(scene_div)[1], {"backgroundColor": "green"});
 	u.ass(u.cn(scene_div)[2], {"backgroundColor": "blue"});
@@ -86,14 +90,14 @@
 
 // Calculate translate by taking window.innerHeight - AbsY of node - offsetHeight of node
 	function translation_on_click() {
-		console.log("click has happened!");
+		// console.log("click has happened!");
 		// console.log(this);
 		u.a.transition(this, "all 1s ease-in");
-		console.log("transition complete");
+		// console.log("transition complete");
 		orig_y_position = u.absY(this);
-		console.log(orig_y_position);
+		// console.log(orig_y_position);
 		u.a.translate(this, 0, window.innerHeight - orig_y_position - u.actualH(this));
-		console.log("translate complete");
+		// console.log("translate complete");
 		u.a.transition(this, "all 1s ease-in", delay_ahead_of_move);
 		// What does transition do??
 	}
@@ -101,15 +105,19 @@
 // Delay, use Util.Timer.setTimer( Node node, Function|String action, Number timeout [, Mixed param] );
 
 	function delay_ahead_of_move () {
-		console.log("start of delay");
 		u.t.setTimer(this, move_div_back, 1000);
-		console.log("end of delay");
 	}
+
+// ***UPDATE: To move element back, use translate again, but move it 0px and 0px, because it is only the visual representation of the element that is changed with translate
+// ***Also, can get away with transition(this, "all 1s ease-in", delay_ahead_of_move) at the first transition call.
+// ***Then can add the transition again in move_div_back
+// ***Could also add delay to transition. As last parameter in "". See Soren's solution.
+
 
 	function move_div_back() {
 		u.a.translate(this, 0, 0);
-		orig_y_position = u.absY(this);
-		console.log(orig_y_position);
+		// orig_y_position = u.absY(this);
+		// console.log(orig_y_position);
 	}
 
 

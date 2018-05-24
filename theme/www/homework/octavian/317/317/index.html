@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 317</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="/js/manipulator/seg_desktop.js"></script>
+	<script type="text/javascript" src="js/i-page.js"></script>
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {}
+		#content div.scene {box-sizing: border-box; padding: 40px; text-align: center;
+			opacity: 0;
+		}
+		#content div.field.error input {border-color: red;}
+	</style>
+</head>
+<body>
+
+<div id="page" class="i:page">
+	<div id="header"></div>
+	<div id="content">
+		<div class="scene">
+
+			<h1>A scene initializer</h1>
+			<p>
+				The scene initializer is an example of an initializer specialized to extend the
+				scene node with custom properties and methods.
+			</p>
+
+			<form action="#" method="POST" class="form">
+				<fieldset>
+					<h3>Primary data</h3>
+
+					<div class="field string">
+						<label for="input_text1">Text</label>
+						<input type="text" name="string1" id="input_text1" />
+						<div class="help">
+							<div class="hint">hint message which is pretty long and explaining a lot of things</div>
+							<div class="error">error message</div>
+						</div>
+					</div>
+
+					<div class="field string required">
+						<label for="input_text2">Text required</label>
+						<input type="text" name="string2" id="input_text2" />
+						<div class="help">
+							<div class="hint">hint message</div>
+							<div class="error">error message</div>
+						</div>
+					</div>
+				</fieldset>
+
+				<ul class="actions">
+					<li class="submit">
+						<input type="submit" value="Submit" class="button primary" />
+					</li>
+				</ul>
+
+			</form>
+
+		</div>
+	</div>
+	<div id="footer"></div>
+</div>
+
+</body>
+</html>

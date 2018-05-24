@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 314</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="/js/manipulator/seg_desktop.js"></script>
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content"></div>
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+
+	// ADD YOUR JS HERE
+	var contentDiv = u.qs("div#content");
+	// Creating HTML
+	var nDiv = u.ae(contentDiv, "div", {"class:": "scene"});
+	var nH1 = u.ae(nDiv, "h1", {"html": "Press this text H1 title  to change color"});
+	var para1 = u.ae(nDiv, "p", {"html": "press & hold 2 secunds to pop"});
+	var para2 = u.ae(nDiv, "p", {"html": "press and hold 2 secunds to pop up a message"});
+	var uList = u.ae(nDiv, "ul");
+	var li1 = u.ae(uList, "li", {"html": "item 1"});
+	var li2 = u.ae(uList, "li", {"html": "item 2"});
+	var li3 = u.ae(uList, "li", {"html": "item 3"});
+	// colors to change
+	var colores = ["red", "green", "Brown ", "blue", "yellow", "AliceBlue","Chartreuse ", "Coral","CornflowerBlue "];
+	var j = 0;
+	var k = 750;
+	
+	// Adding event listeners
+	u.e.click(nH1);
+	u.e.hold(para1);//Adding hold event listener to first paragraph 
+	u.e.hold(para2);//Adding hold event listener to secound paragraph 
+	u.e.hover(li1);//Adding hover event
+	u.e.hover(li2);//Adding hover event
+	u.e.hover(li3);//Adding hover event
+
+	// Header 
+	
+	// Paragraph events
+	var i = colores.length;
+	nH1.clicked = function() {
+
+		if (!this.style.color) {
+			this.style.color = "BlueViolet" ;		
+		}
+		this.style.color = colores[i];	
+			if (i === 0)
+		 i = colores.length;
+		i--;
+	}
+	var delay;
+	function heldPassed() {
+		window.clearTimeout(delay);
+		delay = window.setTimeout(function() {alert('Tow secunds passed!');}, 2000-k); 
+		}
+	para1.held = heldPassed;
+	para2.held = heldPassed;
+
+
+	var lis = [li1, li2, li3];
+	function hoverLiEvents(el) {
+		for(var i = 0; i < el.length; i++){
+			u.e.hover(el[i]);
+			el[i].over =  function() {
+
+			if (this.nextSibling == null) {
+				uList.insertBefore(this, this.previousSibling);
+			}
+			else {
+				uList.appendChild(this);
+			}
+			
+			setTimeout(function() {
+				window.overActive = false;
+			}, 200);
+
+			};
+			
+		}
+	}
+	hoverLiEvents(lis);
+	
+</script>
+</body>
+</html>
