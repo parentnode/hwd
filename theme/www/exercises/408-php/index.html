@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 408</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="/css/exercises/includes.css" />
+	<script type="text/javascript" src="/js/exercises/includes.js"></script>
+</head>
+<body>
+
+
+<div id="page" class="i:page">
+	<div id="header"></div>
+	<div id="content">
+
+		<div class="scene i:exercise">
+			<h1>Exercise 408 - Janitor CSS/JavaScript production bundles</h1>
+			<p>
+				This exercise is about developing your first Janitor based PHP project
+			</p>
+			<p>
+				The purpose of this exercise is to work with your personal Janitor project to gain experience
+				with Janitor.
+			</p>
+
+			<h2>Tasks</h2>
+			<ol>
+				<li>
+					<h3>Understand the merging / bundling process</h3>
+					<p>
+						Your JavaScript and CSS has been structured for an optimized workflow with the intention to merge
+						the individual JavaScript and CSS files into just two files. One for JavaScript and one for CSS. 
+						Per segment. One reason for this is to minimize the requests made by your site.
+					</p>
+					<p>
+						The <em>js/lib/seg_#segment#_include.js</em> and <em>css/lib/seg_#segment#_include.css</em> files
+						contain all the information to build each segment bundle, by merging all the files listed in each 
+						include into one file. 
+						After building your production bundles, you will see the result in <em>js/seg_#segment#.js</em> and 
+						<em>css/seg_#segment#.css</em>. One JavaScript file and one CSS file for each segment you support.
+					</p>
+					<p>
+						The actual building process is handled by scripts in two separate submodules, 
+						<em>js-merger</em> and <em>css-merger</em>.
+					</p>
+				</li>
+				<li>
+					<h3>Build bundles</h3>
+					<p>
+						To build the production bundles, you have to request the building script through your browser.
+						Simply visit <em>#your-domain#.local/js/lib/build</em> to build the JavaScript bundles and
+						<em>#your-domain#.local/css/lib/build</em> to build the CSS bundles.
+					</p>
+					<p>
+						When you visit these pages, they will output information about the building process. You can click
+						on each file in the view to see more details.
+					</p>
+					<p>
+						If there are any errors in the output, then fix the errors and build again. The building process is not
+						complete until the scripts have been run without errors.
+					</p>
+					<p>
+						When the process is done, check the result in your Git application and commit the updated files.
+					</p>
+				</li>
+				<li>
+					<h3>Janitor backend JavaScript and CSS</h3>
+					<p>
+						The backend interface of Janitor is also using Detector and Manipulator, which also needs to be built
+						after install and each time you upgrade Janitor. You also need to build again if you add custom 
+						code to either <em>theme/www/janitor/js</em> or <em>theme/www/janitor/css</em>. 
+					</p>
+					<p>
+						To build the Janitor backend bundles visit <em>#your-domain#.local/janitor/js/lib/build</em> and 
+						<em>#your-domain#.local/janitor/css/lib/build</em>.
+					</p>
+				</li>
+			</ol>
+		</div>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+</body>
+</html>
