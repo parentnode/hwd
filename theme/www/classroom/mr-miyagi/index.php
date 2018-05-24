@@ -9,16 +9,18 @@
 <body>
 
 
-<div id="page">
+<div id="page" class="i:page">
 	<div id="header"></div>
 	<div id="content">
-		
-		<h1>Examples</h1>
 
-		<ul>
-			<li><a href="php/php-syntax-1.php">PHP Syntax, Part 1</a></li>
-			<li><a href="php/php-syntax-2.php">PHP Syntax, Part 2</a></li>
-		</ul>
+		<div class="scene">
+			<h1>Examples</h1>
+
+			<ul>
+				<li><a href="php/php-syntax-1.php">PHP Syntax, Part 1</a></li>
+				<li><a href="php/php-syntax-2.php">PHP Syntax, Part 2</a></li>
+			</ul>
+		</div>
 
 	</div>
 	<div id="footer"></div>

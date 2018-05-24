@@ -9,64 +9,66 @@
 <body>
 
 
-<div id="page">
+<div id="page" class="i:page">
 	<div id="header"></div>
 	<div id="content">
 
-		<h1>Exercise 308 - JS, Browser events</h1>
-		<p>
-			This exercise is about using native Browser events.
-		</p>
+		<div class="scene i:exercise">
+			<h1>Exercise 308 - JS, Browser events</h1>
+			<p>
+				This exercise is about using native Browser events.
+			</p>
 
-		<p>
-			The purpose of this exercise is to practice basic JS, by capturing and dealing with events
-			from by the browser. You will be using the resize, scroll and DOMContentLoaded events in this
-			exercise.
-		</p>
-		<p class="note">
-			Use the script tag in the bottom of the exercise page to write your JavaScript.
-		</p>
+			<p>
+				The purpose of this exercise is to practice basic JS, by capturing and dealing with events
+				from by the browser. You will be using the resize, scroll and DOMContentLoaded events in this
+				exercise.
+			</p>
+			<p class="note">
+				Use the script tag in the bottom of the exercise page to write your JavaScript.
+			</p>
 
-		<h2>Tasks</h2>
-		<ol>
-			<li>
-				<h3>Add a <em>DOMContentLoaded</em> event listener to the Window object</h3>
-				<p>
-					Add a <em>DOMContentLoaded</em> event listener to the Window object.
-					Make a function called <em>contentLoaded</em> and use this as the callback function 
-					for the event listener.
-				</p>
-				<p>
-					In <em>contentLoaded</em>, create a new div with the text "Content loaded", and 
-					append it to <em>#content</em>, to show that the content has loaded.
-				</p>
-			</li>
-			<li>
-				<h3>Add a <em>resize</em> and <em>scroll</em> event listener.</h3>
-				<p>
-					When the content has loaded - and only after this event has occurred - then add event 
-					listeners for resize and scroll events.
-				</p>
-			</li>
-			<li>
-				<h3>Deal with <em>resize</em> events</h3>
-				<p>
-					Find a way to identify the new width and height of the browser. Create <strong>one</strong> new
-					div in <em>#content</em> and write the current size of the window into this div. 
-					You should not create a new div for each event, but rather re-use the same div for all 
-					resize events, so that it always contains the current size of the window. 
-				</p>
-			</li>
-			<li>
-				<h3>Deal with <em>scroll</em> events</h3>
-				<p>
-					Find a way to identify the current scroll position of the browser. Create <strong>one</strong> new
-					div in <em>#content</em> and write the current scroll position into this div. 
-					You should not create a new div for each event, but rather re-use the same div for all 
-					scroll events, so that it always contains the current scroll position. 
-				</p>
-			</li>
-		</ol>
+			<h2>Tasks</h2>
+			<ol>
+				<li>
+					<h3>Add a <em>DOMContentLoaded</em> event listener to the Window object</h3>
+					<p>
+						Add a <em>DOMContentLoaded</em> event listener to the Window object.
+						Make a function called <em>contentLoaded</em> and use this as the callback function 
+						for the event listener.
+					</p>
+					<p>
+						In <em>contentLoaded</em>, create a new div with the text "Content loaded", and 
+						append it to <em>#content</em>, to show that the content has loaded.
+					</p>
+				</li>
+				<li>
+					<h3>Add a <em>resize</em> and <em>scroll</em> event listener.</h3>
+					<p>
+						When the content has loaded - and only after this event has occurred - then add event 
+						listeners for resize and scroll events.
+					</p>
+				</li>
+				<li>
+					<h3>Deal with <em>resize</em> events</h3>
+					<p>
+						Find a way to identify the new width and height of the browser. Create <strong>one</strong> new
+						div in <em>#content</em> and write the current size of the window into this div. 
+						You should not create a new div for each event, but rather re-use the same div for all 
+						resize events, so that it always contains the current size of the window. 
+					</p>
+				</li>
+				<li>
+					<h3>Deal with <em>scroll</em> events</h3>
+					<p>
+						Find a way to identify the current scroll position of the browser. Create <strong>one</strong> new
+						div in <em>#content</em> and write the current scroll position into this div. 
+						You should not create a new div for each event, but rather re-use the same div for all 
+						scroll events, so that it always contains the current scroll position. 
+					</p>
+				</li>
+			</ol>
+		</div>
 
 	</div>
 	<div id="footer"></div>
