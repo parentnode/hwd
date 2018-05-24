@@ -20,10 +20,48 @@
 </div>
 
 <script type="text/javascript">
-
 	// ADD YOUR JS HERE
-
-
+	u.ae(document.getElementById("content"), "DIV", {
+		"class":"danse",
+	});
+	var danse = u.qs(".danse");
+	var wHeight = window.innerHeight + "px";
+	u.as(danse, "height", wHeight);
+	squere(danse, 3);
+	function squere (nodeRep, len){
+		var nDiv = {};
+		var i = 0;
+			while (i < len){
+			i++;
+			nDiv = u.ae(nodeRep, "DIV");	
+			u.request(nDiv, "https://random-quote-generator.herokuapp.com/api/quotes/random");
+			nDiv.response = function (res) {
+				this.innerHTML = res.quote;
+				u.ass(this, {
+					"padding":"20px",
+					"border":"15px solid blue",
+					"margin":"10px",
+					"background-color":"red",
+					"display": "inlineblock",
+					"align-items":"center",
+					"width":"100px", 
+					"height":"100px",
+					"opacity": "0.65",
+					"font-size":"30px",
+							
+				});
+			};			
+			nDiv.move = function(event) {
+				u.a.transition(this, "all 1s cubic-bezier(.5,-.8,.8,-.9)", function(event) {
+				u.a.transition(this, "all 1s cubic-bezier(0,1.2,.82,-0.64) 1s")
+				u.a.translate(this, 0, 0);
+				});
+				u.a.translate(this, 0, u.browserH() - this.offsetTop - 100);
+			}
+			u.e.click(nDiv);	
+			nDiv.clicked = nDiv.move;
+		}		
+	}	
 </script>
 
 
