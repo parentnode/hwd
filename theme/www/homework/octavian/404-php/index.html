@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 404</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="/css/exercises/includes.css" />
+	<script type="text/javascript" src="/js/exercises/includes.js"></script>
+</head>
+<body>
+
+
+<div id="page" class="i:page">
+	<div id="header"></div>
+	<div id="content">
+
+		<div class="scene i:exercise">
+			<h1>Exercise 404 - PHP</h1>
+			<p>
+				This exercise is about developing your first Janitor based PHP project
+			</p>
+			<p>
+				The purpose of this exercise is to work with your personal Janitor project to gain experience
+				with frameworks and PHP.
+			</p>
+
+			<h2>Tasks</h2>
+			<ol>
+				<li>
+					<h3>Add access requirements</h3>
+					<p>
+						Every controller starts with one or more <em>$access_item</em> settings. This is used to specify
+						access settings for your controller. You can specify free access to your controller by setting:
+					</p>
+					<code>$access_item = false;</code>
+
+					<p>
+						You can limit the access for the entire controller by setting:
+					</p>
+					<code>$access_item["/"] = true;</code>. 
+
+					<p>
+						You can set specific access for each controller view by adding
+						the specific paths to <em>$access_item</em>, like:
+					</p>
+					<code>$access_item["/"] = false;
+	$access_item["/test1"] = true;</code>
+
+					<p>If your controller is called test.php, this would
+						result in /test being publicly available, while /test/test1 is only available if the current
+						user has been granted permissions.
+					</p>
+					<p>
+						Modify the <em>$access_item</em> of your controller. Start by setting it to <em>true</em>.
+					</p>
+					<p>
+						Now, when you try to access your page, you will be redirected to the login page – because you
+						have not been granted permissions yet.
+					</p>
+				</li>
+				<li>
+					<h3>Add user permissions</h3>
+					<p>
+						Log into Janitor in your project and go to /janitor. You should know the username and password. :-)
+					</p>
+					<p>
+						Go to <em>Users</em> -> <em>Groups</em> in the navigation on the left (hover the mouse over the 
+						gray bar on the right to make it open).
+					</p>
+					<p>
+						Your user should belong to the <em>Developer</em> group, so click the <em>Access</em> button in the
+						<em>Developer</em> row to customize access settings for this user group.
+					</p>
+					<p>
+						The access page will contain a list of available controllers and possible access options. Find your
+						controller on the list and check the checkbox for <em>/</em>. Remember to save.
+					</p>
+					<p>
+						Now you can visit the controller as long as your a logged in. Try to log out and visit the page again.
+						It should redirect you to the login page again.
+					</p>
+				</li>
+				<li>
+					<h3>Add detailed access settings</h3>
+					<p>
+						Make the <em>$access_item</em> settings in your controller more advanced, so that the default
+						view is available to everyone and /test1 and /test2 are only available to users with correct
+						permissions.
+					</p>
+					<p>
+						Update the access grants in <em>Users</em> -> <em>Groups</em> when you change the <em>$access_item</em>
+						to allow yourself access.
+					</p>
+				</li>
+			</ol>
+		</div>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+</body>
+</html>
