@@ -3,64 +3,105 @@
 <head>
 	<title>Exercise 317</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<script type="text/javascript" src="/js/manipulator/seg_desktop.js"></script>
-	<script type="text/javascript" src="js/i-page.js"></script>
-	<script type="text/javascript" src="js/i-scene.js"></script>
-	<style type="text/css">
-		/* DON'T CHANGE THIS CSS */
-		body {margin: 0;}
-		#page {}
-		#content div.scene {box-sizing: border-box; padding: 40px; text-align: center;
-			opacity: 1;
-		}
-		#content div.field.error input {border-color: red;}
-	</style>
+	<link rel="stylesheet" type="text/css" href="/css/exercises/includes.css" />
+	<script type="text/javascript" src="/js/exercises/includes.js"></script>
 </head>
 <body>
 
-<div id="page" class="i:page">
+
+<div id="page">
 	<div id="header"></div>
 	<div id="content">
-		<div class="scene i:scene">
 
-			<h1>A scene initializer</h1>
-			<p>
-				The scene initializer is an example of an initializer specialized to extend the
-				scene node with custom properties and methods.
-			</p>
+		<h1>Exercise 317 - JS, Manipulator framework 2</h1>
+		<p>
+			This exercise is about using the Manipulator framework.
+		</p>
+		<p>
+			The purpose of this exercise is to practice using a framework to structure your 
+			application of code. In this exercise we will be adding a custom initializer object
+			and mapping it to a node in our HTML.
+		</p>
+		<p class="note">
+			Use the script tag in the bottom of the exercise page to write your JavaScript.
+		</p>
+		<p class="note">
+			The manipulator library is included in this page. You can use everything you find
+			in the <a href="http://manipulator.local/docs">Manipulator library documentation</a>.
+		</p>
 
-			<form action="#" method="POST" class="form">
-				<fieldset>
-					<h3>Primary data</h3>
+		<h2>Tasks</h2>
+		<ol>
+			<li>
+				<h3>Include the scene initializer object</h3>
+				<p>
+					In <em>js/i-scene.js</em> you will find an empty "scene" initializer object.
+					Right now it is not doing anything other than outputting a text in the
+					console. It is not active yet, because it is not included in your page AND
+					the initializer class "i:scene" has not been added to the HTML.
+				</p>
+				<p>
+					Add a script tag in your <em>head</em> and include the i-scene.js file into
+					your HTML page. It's looks a lot like the script include tag for i-page.js
+					that already exists in the exercise page.
+				</p>
+				<p>
+					Add an initializer classname, "i:scene" to the <em>div.scene</em> element
+					and check that the output from the scene initializer object occurs in the 
+					console when you refresh your page.
+				</p>
+			</li>
+			<li>
+				<h3>Initialize the form</h3>
+				<p>
+					In the scene initializer, query the form element and initialize the form
+					using <em>Util.Form.init()</em>, the form initializer from Manipulator. This enables 
+					JavaScript input validation and event callbacks from form interaction.
+				</p>
+				<p>
+					Create a callback method, called "submitted", on the form element. This method will be
+					called when the submit button is pressed. You will add functionality later.
+				</p>
+			</li>
+			<li>
+				<h3>Show the scene</h3>
+				<p>
+					The scene should be shown only when the content is ready, and we want to fade up the
+					content elements one by one. First the headline, then the paragraphs, then the form
+					elements and finally the buttons. But to do that we have to set their individual 
+					opacity to 0, before we show the scene (which currently has opacity: 0 and is hiding
+					the scene as a whole).
+				</p>
+				<p>
+					Query the elements that we want to fade up and set their opacity to 0. Consider if
+					there is a way to get all of them in one query – or at least add them to an array
+					that you can iterate through.
+				</p>
+				<p>
+					Now that the individual elements are hidden, you can set the opacity of the 
+					scene to 1.
+				</p>
+				<p>
+					Make a loop and add a transition and opacity:1 to each of the elements, while
+					increasing the transition delay value for each iteration. That way they will apear
+					one after the other.
+				</p>
+			</li>
+			<li>
+				<h3>Hide the scene</h3>
+				<p>
+					In the <em>submitted</em> method you created on the form element earlier, you
+					make a loop and fade each of the elements back to opacity:0, again increasing the
+					delay for each iteration. After the final element has faded out, you make an alert
+					announcing that the assignment is complete.
+				</p>
+				<p>
+					Now the scene elements will fade out one by one, when the form is submitted, which will
+					only happen when there are no errors in the form.
+				</p>
+			</li>
+		</ol>
 
-					<div class="field string">
-						<label for="input_text1">Text</label>
-						<input type="text" name="string1" id="input_text1" />
-						<div class="help">
-							<div class="hint">hint message which is pretty long and explaining a lot of things</div>
-							<div class="error">error message</div>
-						</div>
-					</div>
-
-					<div class="field string required">
-						<label for="input_text2">Text required</label>
-						<input type="text" name="string2" id="input_text2" />
-						<div class="help">
-							<div class="hint">hint message</div>
-							<div class="error">error message</div>
-						</div>
-					</div>
-				</fieldset>
-
-				<ul class="actions">
-					<li class="submit">
-						<input type="submit" value="Submit" class="button primary" />
-					</li>
-				</ul>
-
-			</form>
-
-		</div>
 	</div>
 	<div id="footer"></div>
 </div>
