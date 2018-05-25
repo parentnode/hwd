@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 410</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="/css/exercises/includes.css" />
+	<script type="text/javascript" src="/js/exercises/includes.js"></script>
+</head>
+<body>
+
+
+<div id="page" class="i:page">
+	<div id="header"></div>
+	<div id="content">
+
+		<div class="scene i:exercise">
+			<h1>Exercise 410 - Janitor models</h1>
+			<p>
+				This exercise is about developing your first Janitor based PHP project
+			</p>
+			<p>
+				The purpose of this exercise is to work with your personal Janitor project to gain experience
+				with Janitor and PHP.
+			</p>
+
+			<h2>Tasks</h2>
+			<ol>
+				<li>
+					<h3>Understand Janitor models</h3>
+					<p>
+						A Janitor model can be categorized as a Data structure model. It consists of a PHP Class 
+						containing information about the data options/requirements of the model and
+						an SQL file, containing the layout of the table that will be used to store data related to this
+						model in the database.
+					</p>
+					<p>
+						Models are found in the <em>theme/classes/items</em> folder. The classes are named 
+						Type#Modelname# and the file containing then are named <em>type.#modelname#.class.php</em>. 
+						The files must follow this convention for autoloading to work. You can look at the TypeDemo
+						class to see an example.
+					</p>
+					<p>
+						SQL files are found in the <em>theme/config/db</em> folder. The sql files are named 
+						item_#modelname#.sql. 
+						The files must follow this convention for autoloading to work. You can look at the item_demo.sql
+						file to see an example.
+					</p>
+					<p>
+						A model should extend the ItemType class which again will extend the ItemTypeCore class,
+						the Model class and the HTML and HTMLCore classes in that order.
+					</p>
+					<p>
+						The Itemtype classes provides methods for saving, updating, deleting or otherwise manipulating data.
+					</p>
+					<p>
+						The Model class provides default data options, input validation and the means to actually create
+						models in your Type#Model# classes.
+					</p>
+					<p>
+						The HTML classes provide methods to create HTML forms and inputs, using information from the model.
+					</p>
+					<p>
+						That means all of this becomes available directly in your Type#Model# class.
+					</p>
+				</li>
+				<li>
+					<h3>Create your first model class</h3>
+					<p>
+						Make your first Model class by saving <em>theme/classes/items/type.demo.class.php</em> with a
+						new name – following the naming conventions.
+					</p>
+					<p>
+						A model <strong>must</strong> always have a name. This is the only requirement. Change the names
+						and properties of the other data fields (specified in the $this->addToModel calls - the first 
+						parameter is the name). You can also add more fields if you want to.
+					</p>
+					<p>
+						Janitor supports these field types: string, email, password, select, radiobuttons, checkbox, integer
+						number, datatime, date, files, text and html. The type will be used to determine what kind of input
+						field and validation that should be used for entering date for the specified field.
+					</p>
+				</li>
+				<li>
+					<h3>Create your first model sql file</h3>
+					<p>
+						Make your first model sql file by saving <em>theme/config/db/item_demo.sql</em> with a
+						new name – following the naming conventions.
+					</p>
+					<p>
+						Update the SQL file to reflect the structure you decided for your model. Though the syntax
+						may seem very foreign to you, you should be able to read and modify as needed without fully
+						understanding the syntax.
+					</p>
+				</li>
+				<li>
+					<h3>Create your first model interface</h3>
+					<p>
+						To interact with the model (save, update, delete) you need some kind of interface.
+						Typically the first interface we create is the backend list/edit/new views. A
+						backend interface consists of a controller and a number of templates (most
+						frequently list/edit/new).
+					</p>
+					<p>
+						You can copy the backend controller for the demo model, found in <em>theme/www/janitor/demo.php</em>
+						and use it for your new model. You need to make some updates to the file to make it work and
+						remember to grant yourself permission to access the controller if you keep the current
+						$access_item settings.
+					</p>
+					<p>
+						You can also copy the backend templates for list/edit/new from the demo model, found in 
+						<em>theme/templates/janitor/demo</em>. You need to make some updates to the files to make 
+						it work.
+					</p>
+				</li>
+				<li>
+					<h3>Test</h3>
+					<p>
+						Test the backend interface by visiting the new backend controller. Look at the file structure
+						and the controller and try to figure out what URL it be available on. NOTE: backend controllers
+						rarely have a default view.
+					</p>
+					<p>
+						If you did everything correct, you will now be able to add items based on your new model
+						to the system. And you can edit and delete the item as well.
+					</p>
+				</li>
+			</ol>
+		</div>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+</body>
+</html>
