@@ -3,45 +3,102 @@
 <head>
 	<title>Exercise 319</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" type="text/css" href="/css/exercises/includes.css" />
-	<script type="text/javascript" src="/js/exercises/includes.js"></script>
+	<script type="text/javascript" src="/js/manipulator/seg_desktop.js"></script>
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {}
+		#content div.scene {box-sizing: border-box; padding: 40px; text-align: center;}
+	</style>
 </head>
 <body>
 
-
-<div id="page">
+<div id="page" class="i:page">
 	<div id="header"></div>
 	<div id="content">
-
-		<h1>Exercise 319 - JS, Reverse engineering</h1>
-		<p>
-			This exercise is about reading code.
-		</p>
-		<p>
-			The purpose of this exercise is to practice reading code. You have the read the JavaScript
-			code and figure out what kind of HTML it needs to work.
-		</p>
-
-		<h2>Tasks</h2>
-		<ol>
-			<li>
-				<h3>Read the code</h3>
-				<p>
-					Read through the JavaScript in the tag in the bottom of the exercise page.
-				</p>
-			</li>
-			<li>
-				<h3>Create the HTML</h3>
-				<p>
-					From the code you now have to deduct what HTML elements are required for the
-					script to run without errors. Write the HTML into the div#content as regular HTML.
-				</p>
-			</li>
-		</ol>
-
+		<div class="scene">
+			
+		<div class="scene">
+				
+				<ul class ="items">
+					<li class="item">
+						<h3>
+							<em>Love0</em>
+							<span>Love is the reason</span>
+						</h3>
+					</li>
+					<li class="item">
+						<h3>
+							<em>Love1</em>
+							<span>Love is in the air</span>
+						</h3>
+					</li>
+					<li class="item">
+							<h3>
+								<em>Love2</em>
+								<span>Love is on the Mar</span>
+							</h3>
+						</li>
+					<li class="item">
+						<h3>
+							<em>Love3</em>
+							<span>Astral love is in the universe</span>
+						</h3>
+						<li class="item">
+								<h3>
+									<em>Love4</em>
+									<span>Love is in the air</span>
+								</h3>
+							</li>
+					</li>
+					<div class="article">
+							<h1></h1>
+							<div class="articlebody">
+								<p>love love love</p>
+								<p>love love lovelove love love</p>
+								<p>Love love love lovelove love lovelove love love</p>
+							</div>
+						</div>
+					<li class="item selected">
+							<h3>
+								<em>Love is selected</em>
+								<span>Selected</span>
+							</h3>
+					</li>
+			
+		</div>
 	</div>
 	<div id="footer"></div>
 </div>
+
+
+<script type="text/javascript">
+
+	// ADD YOUR JS HERE
+	var list_items = u.qsa("ul.items li.item");
+	u.ac(list_items[3], "selected"); 
+
+	var i, node;
+	for(i = 0; i < list_items.length; i++) {
+		node = list_items[i];
+
+		node.clicked = function(event) {
+			var title = u.qs("h3 span", this);
+			var subtitle = u.qs("em", title.parentNode);
+			console.log(subtitle.innerHTML);
+		}
+		u.e.click(node);
+		
+	}
+
+	var article = u.qs("div.article");
+	article.header = u.qs("h1", article);
+	article.body = u.qs("div.articlebody", article);
+	var paragraphs = u.qsa("p", article.body);
+
+	console.log(u.text(paragraphs[2]));
+
+</script>
 
 </body>
 </html>
