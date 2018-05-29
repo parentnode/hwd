@@ -40,7 +40,14 @@
 <script type="text/javascript">
 
 	// ADD YOUR JS HERE
-
+	var query_start_here = document.querySelector(".starthere");
+	console.log(query_start_here);
+	var node = query_start_here.parentNode;
+	
+	while(node = node.parentNode ) {
+		console.log(node.parentNode);
+	}
+	
 </script>
 
 

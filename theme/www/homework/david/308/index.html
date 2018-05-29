@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 308</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+		#content {min-height: 2000px;}
+
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content">
+
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+
+	// ADD YOUR JS HERE
+	//Add a <em>DOMContentLoaded</em> event listener to the Window object
+	window.addEventListener("DOMContentLoaded", function(event) {
+		contentLoaded();
+ 	});
+	/*
+		Make a function called <em>contentLoaded</em> and use this as the callback function for the event listener.
+	
+		In <em>contentLoaded</em>, create a new div with the text "Content loaded", and 
+		append it to <em>#content</em>, to show that the content has loaded.
+	*/
+	//var width = document.createElement("div");
+	//var height = document.createElement("div");
+	
+	var newDiv = document.createElement("div");
+	var height = document.createElement("p");
+	var width = document.createElement("p");
+	function resized(event){
+		console.log("Resized");
+		console.log(window.innerHeight);
+		console.log(window.innerWidth);
+		//width.innerHTML=window.innerWidth;
+		//height.innerHTML=window.innerHeight;
+		width.innerHTML="Width " + window.innerWidth;
+		height.innerHTML="Height " + window.innerHeight;
+		newDiv.appendChild(height);
+		newDiv.appendChild(width);
+	}
+	function scrolled(event){
+		console.log("Scrolled");
+		
+	}
+	function contentLoaded(){
+		console.log("Running from contentloaded()");
+		var content = document.querySelector("#content");
+		
+		newDiv.innerText = "Content Loaded";
+		
+		window.addEventListener("resize",resized,false);
+		window.addEventListener("scroll",scrolled,false);
+		content.appendChild(newDiv);
+		
+		//content.appendChild(width);
+		//content.appendChild(height);
+	}
+	/*
+		Add a <em>resize</em> and <em>scroll</em> event listener.</h3>
+		When the content has loaded - and only after this event has occurred - then add event 
+		listeners for resize and scroll events.
+	*/
+	/*
+		Find a way to identify the new width and height of the browser. Create <strong>one</strong> new
+		div in <em>#content</em> and write the current size of the window into this div. 
+		You should not create a new div for each event, but rather re-use the same div for all 
+		resize events, so that it always contains the current size of the window. 
+	*/
+	
+
+
+
+
+	//Add a <em>resize</em> and <em>scroll</em> event listener.
+
+
+
+</script>
+
+
+</body>
+</html>

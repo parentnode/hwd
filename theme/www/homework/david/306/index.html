@@ -34,7 +34,34 @@
 	
 
 	// ADD YOUR JS HERE
+	var content = document.querySelector("#content");
 
+	var newUl =  document.createElement("ul");
+	
+	content.appendChild(newUl);
+	
+
+	
+	//var 
+	
+	for(var i = 0; i < content_set.length; i++){
+		//var newContent = document.createTextNode(content_set[i]);
+		
+		//newLi.appendChild(newP);
+		//newP.appendChild(newContent);
+		var newContent = document.createTextNode(content_set[i]);
+		
+		var newLi =  document.createElement("li");
+		newUl.appendChild(newLi);
+		newLi.appendChild(newContent);
+			
+		
+	}
+
+	// 
+	//newUl.appendChild(newLi);
+	//newLi.appendChild(newContent);
+	console.log(newUl);
 
 </script>
 
