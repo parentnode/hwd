@@ -80,9 +80,9 @@
 			</p>
 
 
-			<p><pre><?
+			<pre><p><?
 				print_r($my_array);
-			?></pre></p>
+			?></p></pre>
 
 			<p>
 			<?
@@ -92,9 +92,9 @@
 			</p>
 
 
-			<p><pre><?
+			<pre><p><?
 				print_r($my_array);
-			?></pre></p>
+			?></p></pre>
 
 
 

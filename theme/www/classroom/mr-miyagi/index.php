@@ -19,6 +19,7 @@
 			<ul>
 				<li><a href="php/php-syntax-1.php">PHP Syntax, Part 1</a></li>
 				<li><a href="php/php-syntax-2.php">PHP Syntax, Part 2</a></li>
+				<li><a href="php/php-syntax-3.php">PHP + SQL Syntax, Part 3</a></li>
 			</ul>
 		</div>
 

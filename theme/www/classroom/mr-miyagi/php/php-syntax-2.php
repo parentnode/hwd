@@ -47,26 +47,26 @@
 			</p>
 
 
-
+*/ ?>
 			<h2>Superglobals</h2>
 
-			<p><pre>$_SERVER: <?
+			<pre><p>$_SERVER: <?
 				print_r($_SERVER);
-			?></pre></p>
+			?></p></pre>
 
-
+<? /*
 			<?
 			session_start();
 			$_SESSION["counter"] = isset($_SESSION["counter"]) ? $_SESSION["counter"]+1 : 1;
 			?>
-			<p><pre>$_SESSION: <?
+			<pre><p>$_SESSION: <?
 				print_r($_SESSION);
-			?></pre></p>
+			?></p></pre>
 
 
-			<p><pre>$_COOKIE: <?
+			<pre><p>$_COOKIE: <?
 				print_r($_COOKIE);
-			?></pre></p>
+			?></p></pre>
 
 
 			<h3>$_GET</h3>
@@ -75,9 +75,9 @@
 				<input type="text" name="my_second_var" />
 				<input type="submit" value="send" />
 			</form>
-			<p><pre><?
+			<pre><p><?
 				print_r($_GET);
-			?></pre></p>
+			?></p></pre>
 
 
 			<h3>$_POST</h3>
@@ -86,9 +86,9 @@
 				<input type="text" name="my_second_var" />
 				<input type="submit" value="send" />
 			</form>
-			<p><pre><?
+			<pre><p><?
 				print_r($_POST);
-			?></pre></p>
+			?></p></pre>
 
 
 			<h3>$_FILES</h3>
@@ -96,9 +96,9 @@
 				<input type="file" name="my_file" />
 				<input type="submit" value="send" />
 			</form>
-			<p><pre><?
+			<pre><p><?
 				print_r($_FILES);
-			?></pre></p>
+			?></p></pre>
 
 
 
