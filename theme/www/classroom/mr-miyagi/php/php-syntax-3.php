@@ -56,7 +56,7 @@
 			<p>
 			<?
 				$result = $mysqli->query("CREATE TABLE IF NOT EXISTS `php_syntax_test`.`my_table` (`id` int(11) NOT NULL AUTO_INCREMENT,`name` varchar(255) NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8;");
-				if($result) {
+				if($result->affected()) {
 					print "Table created";
 				}
 				else {
@@ -70,7 +70,7 @@
 			<pre>INSERT INTO `php_syntax_test`.`my_table` values(1, 'Martin')
 			<p><?
 				$result = $mysqli->query("INSERT INTO `php_syntax_test`.`my_table` values(1, 'Martin')");
-				if($result) {
+				if($result->affected()) {
 					print "'1, Martin' INSERTED INTO DATABASE";
 				}
 				else {
@@ -81,7 +81,7 @@
 			<pre>INSERT INTO `php_syntax_test`.`my_table` values(2, 'Romeo'), (3, 'Elo')
 			<p><?
 				$result = $mysqli->query("INSERT INTO `php_syntax_test`.`my_table` values(2, 'Romeo'), (3, 'Elo')");
-				if($result) {
+				if($result->affected()) {
 					print "'2, Romeo' and '3, Elo' INSERTED INTO DATABASE";
 				}
 				else {
@@ -92,7 +92,7 @@
 			<pre>INSERT INTO `php_syntax_test`.`my_table` SET name='Anjo'
 			<p><?
 				$result = $mysqli->query("INSERT INTO `php_syntax_test`.`my_table` SET name='Anjo'");
-				if($result) {
+				if($result->affected()) {
 					print "'Anjo' INSERTED INTO DATABASE";
 				}
 				else {
