@@ -37,8 +37,40 @@
 <script type="text/javascript">
 
 	// ADD YOUR JS HERE
+	//var navigation = document.getElementById("navigation");
+	var all_li = document.querySelectorAll("ul.navigation li");
+	/*
+	<h3>Query the <em>li</em>'s of the navigation</h3>
+				<p>
+					Get a nodelist with the li-elements of the navigation.
+				</p>
+	*/
 	
 
+    //Software Editors Environment Conventions Playground Dictionary 
+
+
+	for(var i=0; i < all_li.length; i++){
+		// console.log(all_li[i]);
+		all_li[i].addEventListener("mouseover", mousedover, false);
+		all_li[i].addEventListener("mouseout", mousedout, false);
+		all_li[i].addEventListener("click", clicked, false);
+		//navigation
+	}
+	function mousedover(){
+		console.log("Added hover class " );
+		
+		this.classList.add("hover");
+		//all_li.className = ".hover";
+		console.log(this.className);
+	}
+	function mousedout(){
+		this.classList.remove("hover");
+		console.log("Removed hover class " );
+	}
+	function clicked(){
+		alert(this.innerText);
+	}
 
 </script>
 

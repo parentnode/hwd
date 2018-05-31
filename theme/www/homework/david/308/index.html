@@ -49,8 +49,7 @@
 		//height.innerHTML=window.innerHeight;
 		width.innerHTML="Width " + window.innerWidth;
 		height.innerHTML="Height " + window.innerHeight;
-		newDiv.appendChild(height);
-		newDiv.appendChild(width);
+		
 	}
 	function scrolled(event){
 		console.log("Scrolled");
@@ -66,20 +65,9 @@
 		window.addEventListener("scroll",scrolled,false);
 		content.appendChild(newDiv);
 		
-		//content.appendChild(width);
-		//content.appendChild(height);
+		newDiv.appendChild(width);
+		newDiv.appendChild(height);
 	}
-	/*
-		Add a <em>resize</em> and <em>scroll</em> event listener.</h3>
-		When the content has loaded - and only after this event has occurred - then add event 
-		listeners for resize and scroll events.
-	*/
-	/*
-		Find a way to identify the new width and height of the browser. Create <strong>one</strong> new
-		div in <em>#content</em> and write the current size of the window into this div. 
-		You should not create a new div for each event, but rather re-use the same div for all 
-		resize events, so that it always contains the current size of the window. 
-	*/
 	
 
 

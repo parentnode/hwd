@@ -18,8 +18,8 @@
 		}
 		h1{
 			margin:0;
-			font-size: 36px;
-			line-height: 1em;
+			font-size: 28px;
+			line-height: 2em;
 			padding-bottom: 20px;
 		}
 		h2{
@@ -32,7 +32,7 @@
 		}
 		h3{
 			margin:0;
-			font-family:Times New Roman;
+			font-family:Georgia, 'Times New Roman', Times, serif;
 			color:black;
 			font-size: 21px;
 			padding-bottom: 20px;
@@ -55,13 +55,23 @@
 		}
 		
 		
-		ol:not(h3){
-			line-height: 17px;
+		ol{
+			line-height: 16px;
 			margin:0;
 			color:red;
-			font-weight:bold;
-			font-family:Arial;
+			
+			
 			font-size:30px
+		}
+		ol > li {
+			padding-top:20px;
+			padding-left: 0px;
+			font-family:Arial, Helvetica, sans-serif;
+		}
+
+		li > h3 {
+			font-family:'Times New Roman', Times, serif;
+			font-size: 19px;
 		}
 		ul{  
 			padding-left: 20px;
@@ -87,7 +97,7 @@
 			color:white;
 		}
 		.times{
-			font-family:Times New Roman;
+			font-family:"Times New Roman";
 		}
 		.arial{
 			font-family:Arial;
@@ -121,7 +131,7 @@
 					text appear <em>exactly</em> as it does in the underlying graphic, <strong>without</strong> changing the HTML.
 				</p>
 			</li>
-			<li ">
+			<li>
 				<h3>Validate your CSS on w3c</h3>
 				<p>
 					Use <a href="https://jigsaw.w3.org/css-validator/validator" target="_blank">https://jigsaw.w3.org/css-validator/validator</a> to validate your HTML.
