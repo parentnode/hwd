@@ -37,6 +37,19 @@
 <script type="text/javascript">
 
 	// ADD YOUR JS HERE
+	var all_li = document.querySelectorAll("li");
+	/*
+	<h3>Query the <em>li</em>'s of the navigation</h3>
+				<p>
+					Get a nodelist with the li-elements of the navigation.
+				</p>
+	*/
+	
+	console.log("forEach - array");
+	all_li.forEach(function(node, i) {
+		console.log(i);
+		console.log(node);	
+	});
 
 
 </script>
