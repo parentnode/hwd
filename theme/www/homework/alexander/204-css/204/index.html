@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 204</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 500px; margin: 0 auto;}
+		/* ADD YOUR CSS HERE */
+input[type=text], input[type=email], input[type=password], input[type=submit], #input_text, #input_select
+{
+	display:block;
+	width: 400px;
+	margin-left: 25px;
+}
+
+	/*label{display: block;
+	width: 400px;
+	float: left;
+	padding-bottom: 5px;*/
+}
+
+		.help{visibility: hidden;}
+
+		input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, input[type=submit]:focus, #input_text:focus, #input_checkbox:focus, #input_select:focus, #input_text:focus{border: 2px solid blue;}
+		input:focus+.help .hint{visibility: visible;}
+		#input_text:focus+.help .hint{visibility: visible;}
+		.help .hint + #input_select:focus{visibility: visible; float: right;}
+		input [type=checkbox]:checked+.help .hint{visibility: visible;}
+
+	</style>
+</head>
+<body>
+
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content">
+			<form action="/action_page.php" method="post" class="labelstyle:inject">
+			<fieldset>
+				<div class="field string">
+					<label for="input_string">Regular text input</label>
+					<input type="text" name="string" id="input_string" />
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+				<br>
+
+				<div class="field email">
+					<label for="input_email">Email</label>
+					<input type="email" name="email" id="input_email" maxlength="255" />
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+				<br>
+
+				<div class="field password">
+					<label for="input_password">Password</label>
+					<input type="password" name="password" id="input_password" maxlength="255" />
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+				<br>
+
+				<div class="field select">
+					<label for="input_select">Asparagus</label>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+					<select name="select" id="input_select">
+						<option value="0" >Grønne asparagus</option>
+						<option value="1" selected="selected" >Hvide asparagus</option>
+						<option value="2" >Tofarvede asparagus</option>
+					</select>
+				</div>
+				<br>
+
+				<div class="field text [required]">
+					<label for="input_text">Text</label>
+					<textarea name="text" id="input_text"></textarea>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+				<br>
+
+				<div class="field checkbox [required]">
+					<input type="hidden" name="checkbox" value="0" />
+					<input type="checkbox" name="checkbox" id="input_checkbox" value="1" />
+					<label for="input_checkbox">I like asparagus</label>
+					<div class="help">
+						<div class="hint">Hint: leftclick with the mouse inside the checkbox if you like asparagus</div>
+						<div class="error">YOU HAVE TO SAY YOU LIKE ASPARAGUS TO CONTINUE</div>
+					</div>
+				</div>
+				<br>
+
+				<div class="field radiobuttons">
+					<label>How often do you eat asparagus</label>
+					<div class="item">
+						<input type="radio" name="radiobuttons" id="input_radiobuttons_value1" value="value1" />
+						<label for="input_radiobuttons_value1">Every day</label>
+					</div>
+					<div class="item">
+						<input type="radio" name="radiobuttons" id="input_radiobuttons_value2" value="value2" />
+						<label for="input_radiobuttons_value2">Every week</label>
+					</div>
+					<div class="item">
+						<input type="radio" name="radiobuttons" id="input_radiobuttons_value3" value="value3" />
+						<label for="input_radiobuttons_value3">Less than every week</label>
+					</div>
+					<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+					</div>
+				</div>
+				<br>
+
+				<input type="submit" value="Submit">
+
+			</div>
+			</fieldset>
+			</form>
+	</div>
+	<div id="footer"></div>
+</div>
+
+
+</body>
+</html>
