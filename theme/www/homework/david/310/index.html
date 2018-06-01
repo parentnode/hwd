@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 310</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+		#content div.field.focus input {border: 2px solid orange; outline: none;}
+		/* ADD YOUR CSS HERE */
+
+
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content">
+
+		<form action="#" method="post" novalidate="novalidate">
+			<fieldset>
+				<div class="field string">
+					<label for="input_firstname">First name</label>
+					<input type="text" name="string" id="input_firstname" />
+				</div>
+				<div class="field string">
+					<label for="input_lastname">Last name</label>
+					<input type="text" name="lastname" id="input_lastname" />
+				</div>
+			</fieldset>
+
+			<ul class="actions">
+				<li class="save"><input type="submit" value="Save" class="button primary" /></li>
+			</ul>
+
+		</form>
+
+	</div>
+	<div id="footer"></div>
+</div>
+<script type="text/javascript">
+
+	// ADD YOUR JS HERE
+	var contents = document.querySelector("#content");
+	var all_input = document.querySelectorAll("div.field.string input");
+	var form = document.querySelector("form");
+	var newDiv = document.createElement("div");
+	//var first = document.createElement("p");
+	
+	form.addEventListener("submit",	submitted, false);
+	
+	for(var i = 0; i < all_input.length; i++){
+		all_input[i].addEventListener("focus", focused, false);
+		all_input[i].addEventListener("blur", blurred, false);
+		all_input[i].addEventListener("keyup", updated, false);
+		
+		all_input[i].pName = document.createElement("p");
+		
+		newDiv.appendChild(all_input[i].pName);
+		contents.appendChild(newDiv);
+	}
+	function focused(){
+		this.classList.add("focus");
+		console.log(this.className);
+	}
+	function blurred(){
+		this.classList.remove("focus");
+		console.log(this.className);
+	}
+	function updated(){
+		console.log(this);
+		this.pName.innerHTML = this.value;
+		
+		
+	}
+	function submitted(){
+		alert("Form have been submitted");
+		return false;
+	}
+
+
+
+</script>
+
+</body>
+</html>
