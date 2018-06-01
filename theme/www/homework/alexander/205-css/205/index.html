@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 205</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+		#content {min-height: 400px;}
+		#header:hover + #content {background: transparent url(assets/bg_205.png) no-repeat left 50px;}
+		#header:hover + #content * {opacity: 0;}
+		#content div.reference_video {padding-top: 50px;}
+		#content div.reference_video video {margin: 0 -26px;}
+
+
+		/* ADD YOUR CSS HERE */
+
+
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header">
+		Hover the mouse here to see reference design
+	</div>
+	<div id="content">
+
+		<form action="#" method="post" novalidate="novalidate">
+			<fieldset>
+				<div class="field string">
+					<label for="input_firstname">First name</label>
+					<input type="text" name="string" id="input_firstname" />
+					<div class="help">
+						<div class="hint">Type your first name</div>
+						<div class="error">That's a weird name</div>
+					</div>
+				</div>
+				<div class="field string">
+					<label for="input_lastname">Last name</label>
+					<input type="text" name="lastname" id="input_lastname" />
+					<div class="help">
+						<div class="hint">Type your last name</div>
+						<div class="error">That's a pretty cool last name</div>
+					</div>
+				</div>
+				<div class="field email">
+					<label for="input_email">Email</label>
+					<input type="email" name="email" id="input_email" />
+					<div class="help">
+						<div class="hint">Make sure to type your email correctly</div>
+						<div class="error">It's not a valid email</div>
+					</div>
+				</div>
+				<div class="field checkbox">
+					<input type="hidden" name="terms" value="0" />
+					<input type="checkbox" name="terms" id="input_terms" value="1" />
+					<label for="input_terms">Accept terms</label>
+					<div class="help">
+						<div class="hint">Please accept the terms</div>
+						<div class="error">You have to accept the terms</div>
+					</div>
+				</div>
+			</fieldset>
+
+			<ul class="actions">
+				<li class="save"><input type="submit" value="Save" class="button primary" /></li>
+			</ul>
+
+		</form>
+
+
+		<div class="reference_video">
+			<h2>Reference video</h2>
+			<video src="assets/vid_205.mp4" width="352" controls></video>
+		</div>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+
+</body>
+</html>
