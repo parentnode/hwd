@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 412</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="/css/exercises/includes.css" />
+	<script type="text/javascript" src="/js/exercises/includes.js"></script>
+</head>
+<body>
+
+
+<div id="page" class="i:page">
+	<div id="header"></div>
+	<div id="content">
+
+		<div class="scene i:exercise">
+			<h1>Exercise 412 - Testing smartphones</h1>
+			<p>
+				This exercise is about how to test your project on a smartphone.
+			</p>
+			<p>
+				The purpose of this exercise is to work with your personal Janitor project to gain experience
+				with testing on smartphones.
+			</p>
+
+			<h2>Tasks</h2>
+			<ol>
+				<li>
+					<h3>Install Squid proxy server</h3>
+					<p>
+						We use a proxy server to enable testing your code on your smartphone devices.
+					</p>
+					<p>
+						Find and follow the guide for setting up Squid on 
+						<a href="https://parentnode.dk/blog">parentnode.dk/blog</a>.
+					</p>
+				</li>
+				<li>
+					<h3>Update your hosts file</h3>
+					<p>
+						Open your hosts file and add a <em>.proxy</em> variant of your test domain, using the local IP of your
+						computer as described in the guide. You can find your local IP by running <em>ifconfig</em>
+						in Bash. It is very likely starting with 192.168 or 10.0.
+					</p>
+				</li>
+				<li>
+					<h3>Update your local project Apache configuration</h3>
+					<p>
+						Add a ServerAlias to your project Apache configuration using a <em>.proxy</em> variant of your domain.
+					</p>
+				</li>
+				<li>
+					<h3>Restart Apache</h3>
+					<p>
+						Restart Apache to enable the new settings.
+					</p>
+				</li>
+				<li>
+					<h3>Configure proxy on your smartphone</h3>
+					<p>
+						Follow the guide to configure the proxy server on your smartphone.
+					</p>
+					<p>
+						Visit the <em>.proxy</em> variant of your domain on your smartphone and you should
+						be able to see the project running on your local computer.
+					</p>
+				</li>
+			</ol>
+		</div>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+</body>
+</html>
