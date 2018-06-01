@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<div id="page">
+<div id="page" class="i:page">
 	<div id="header"></div>
 	<div id="content">
 
@@ -26,7 +26,29 @@
 <script type="text/javascript">
 
 	// ADD YOUR JS HERE
+	var loremIp = document.querySelector("p");
+	window.addEventListener("wheel", adjustTextSize,false);
+	var textSize = 20;
+	var size;
+	function adjustTextSize(event){
+		console.log(event.deltaY);
+		if(event.deltaY > 0){
+			increaseSize();
+		}
+		else if (event.deltaY < 0){
+			decreaseSize();
+		}
+	}
+	function increaseSize(){
+		size = textSize++;
+		loremIp.style.fontSize = size+"px";
+	}
+	function decreaseSize(){
+		//console.log("Decreased");
+		size = textSize--;
+		loremIp.style.fontSize = size+"px";
 
+	}
 
 </script>
 
