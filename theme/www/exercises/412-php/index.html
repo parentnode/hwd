@@ -35,8 +35,8 @@
 						<a href="https://parentnode.dk/blog">parentnode.dk/blog</a>.
 					</p>
 					<p>
-						The following tasks are also described in the post, and are just listed here
-						to ensure you get all the way through.
+						The following tasks are also described in the post, and are listed here
+						to add further explanation.
 					</p>
 				</li>
 				<li>
@@ -44,15 +44,16 @@
 					<p>
 						Open your hosts file and add a <em>.proxy</em> variant of your test domain, using the local IP of your
 						computer as described in the guide. You can find your local IP by running <em>ifconfig</em>
-						in Bash. It is very likely starting with <em>inet</em> <strong>192.168.x.x</strong> or <em>inet</em> 
+						in Bash. The command will generate a lot of output and the lines you are looking for is very likely starting with <em>inet</em> <strong>192.168.x.x</strong> or <em>inet</em> 
 						<strong>10.0.x.x</strong>.
 					</p>
 				</li>
 				<li>
 					<h3>Update your local project Apache configuration</h3>
 					<p>
-						Add a ServerAlias to your project Apache configuration (project-name/apache/httpd-vhosts.conf) 
-						using a <em>.proxy</em> variant of your domain.
+						Add a <em>ServerAlias</em> to your project Apache configuration (project-name/apache/httpd-vhosts.conf) 
+						using a <em>.proxy</em> variant of your domain. You can add it right under 
+						<em>ServerName</em> in the top of the file.
 					</p>
 				</li>
 				<li>
@@ -64,7 +65,7 @@
 				<li>
 					<h3>Configure proxy on your smartphone</h3>
 					<p>
-						Follow the guide to configure the proxy server on your smartphone.
+						Follow the last element of the guide, to configure the proxy server on your smartphone. 
 					</p>
 					<p>
 						Visit the <em>.proxy</em> variant of your domain on your smartphone and you should
