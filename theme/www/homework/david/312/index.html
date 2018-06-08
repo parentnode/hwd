@@ -21,7 +21,25 @@
 <script type="text/javascript">
 
 	// ADD YOUR JS HERE
-
+	var request = new XMLHttpRequest();
+	request.addEventListener("readystatechange",ready,false);
+	request.open("GET","http://hwd-01.local");
+	request.responseType = "document";
+	request.send();
+	function ready(){
+		if(this.readyState==4)
+		{
+			var content = document.querySelector("div#content");
+			var newDiv = document.createElement("div");
+			//newDiv.appendChild(this.response);
+			
+			var test = this.response.querySelector("div.scene");
+			
+			newDiv.appendChild(test);
+			content.appendChild(newDiv);
+			
+		}
+	}
 
 </script>
 
