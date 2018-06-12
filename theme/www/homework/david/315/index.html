@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 315</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="/js/manipulator/seg_desktop.js"></script>
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+		.scene {height: 100%;}
+	</style>
+</head>
+<body>
+
+<div id="page">
+	<div id="header"></div>
+	<div id="content"></div>
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+
+	// ADD YOUR JS HERE
+	var content = u.querySelector("div#content");
+	var scene = u.appendElement(content, "div",{"class":"scene"})
+	var div1 = u.appendElement(scene, "div",{"id":"div1","class":"quotes"});
+	var div2 = u.appendElement(scene, "div",{"id":"div2","class":"quotes"});
+	var div3 = u.appendElement(scene, "div",{"id":"div3","class":"quotes"});
+	var request1 = u.request(div1,"https://random-quote-generator.herokuapp.com/api/quotes/random",{"method":"GET", "headers":{"Accept":"application/json"}});
+	var request2 = u.request(div2,"https://random-quote-generator.herokuapp.com/api/quotes/random",{"method":"GET", "headers":{"Accept":"application/json"}});
+	var request3 = u.request(div3,"https://random-quote-generator.herokuapp.com/api/quotes/random",{"method":"GET", "headers":{"Accept":"application/json"}});
+	div1.response = function(response){
+		console.log(response.quote);
+		u.appendElement(div1, "p", {"html": response.quote,"class":"quotes"});
+	}
+	div2.response = function(response){
+		console.log(response.quote);
+		u.appendElement(div2, "p", {"html": response.quote,"class":"quotes"});
+	}
+	div3.response = function(response){
+		console.log(response.quote);
+		u.appendElement(div3, "p", {"html": response.quote,"class":"quotes"});
+	}
+	var applyStyle1= u.querySelector("#div1");
+	var applyStyle2= u.querySelector("#div2");
+	var applyStyle3= u.querySelector("#div3");
+	var applyStyle2All = u.querySelectorAll("div .quotes");
+	//var selectQuotes = u.querySelectorAll("div", list_node);
+	//var selectQuotes = u.querySelectorAll(".quotes");
+	/* Old code one property 
+	u.as(applyStyle1,"background-color","red");
+	u.as(applyStyle2,"background-color","blue");
+	u.as(applyStyle3,"background-color","green");
+ 	*/
+	u.ass(applyStyle1, {"background-color":"red"/*, "font-size":"9px"*/});
+	u.ass(applyStyle2, {"background-color":"blue"/*, "font-size":"9px"*/});
+	u.ass(applyStyle3, {"background-color":"green"/*, "font-size":"9px"*/});
+
+	for(var i =0; i< applyStyle2All.length; i++){
+		u.ass(applyStyle2All[i],{"font-size":"9px" ,"width":"100px", "height":"100px", "padding-top":"2px","padding-right":"2px", "padding-bottom":"2px","padding-left":"2px"});
+		
+	}
+	
+
+
+	u.e.click(applyStyle1);
+	applyStyle1.transitioned = function() {
+		//alert("Hello");
+		u.a.translate(applyStyle1,"0","0");
+	}
+	applyStyle1.clicked = function(event){
+		u.a.transition(applyStyle1,"all 1s ease-in");
+		u.a.translate(applyStyle1,"0","500");	
+	}
+	
+	u.e.click(applyStyle2);
+	applyStyle2.transitioned = function() {
+		//alert("Hello");
+		u.a.translate(applyStyle2,"0","0");
+	}
+	applyStyle2.clicked = function(event){
+		u.a.transition(applyStyle2,"all 1s ease-in");
+		u.a.translate(applyStyle2,"0","500");	
+	}
+	u.e.click(applyStyle3);
+	applyStyle3.transitioned = function() {
+		//alert("Hello");
+		u.a.translate(applyStyle3,"0","0");
+	}
+	applyStyle3.clicked = function(event){
+		u.a.transition(applyStyle3,"all 1s ease-in");
+		u.a.translate(applyStyle3,"0","500");	
+	}
+	/*function multiplequotes(this){
+		u.e.click(this);
+		this.transitioned = function() {
+		//alert("Hello");
+			u.a.translate(this,"0","0");
+		}
+		this.clicked = function(event){
+			u.a.transition(this,"all 1s ease-in");
+			u.a.translate(this,"0","500");	
+		}
+	}*/
+	//multiplequotes(applyStyle1);
+	//multiplequotes(applyStyle2);
+	//multiplequotes(applyStyle3);
+	
+	
+
+	
+	 	
+</script>
+
+
+</body>
+</html>
