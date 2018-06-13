@@ -32,18 +32,17 @@ Util.Objects["page"] = new function() {
 				// Get current scene
 				this.scene = u.qs(".scene", this);
 				console.log(this.scene);
-
+				
 				// set resize handler
 				u.e.addWindowEvent(this, "resize", this.resized);
 				// set scroll handler
 				u.e.addWindowEvent(this, "scroll", this.scrolled);
 
-
 				// initial resize
 				this.resized();
-				if(this.is_ready=true){
+				if(this.is_ready){
 					u.a.transition(this.scene,"all 1s ease-in");	
-					u.ass(this.scene,"opacity","1");	
+					u.as(this.scene,"opacity","1");	
 					u.a.translate(this.scene,"0","0");
 				}
 			}
