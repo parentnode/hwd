@@ -6,38 +6,47 @@
 	<style type="text/css">
 		/* DON'T CHANGE THIS CSS */
 		body {margin: 0 auto; background: transparent url(img/bg_102.png) no-repeat 250px top;}
-		div.e1 div.e2 div.e3 div.e4 div.e5, body div.e1, div.e1 div, div.e1 div.e2 > div, div.e1 div > div.e3 div, div#e5 {background: red;}
+		
+		div.e1 div.e2 div.e3 div.e4 div.e5, 
+		body div.e1, 
+		div.e1 div, 
+		div.e1 div.e2 > div, 
+		div.e1 div > div.e3 div, 
+		div#e5 {
+		background: red;
+		}
 		body > div {width: 200px;}
 		div {padding: 20px;}
 
 
 		/* ADD YOUR CSS HERE */
-		#e1 {
+		 body div.e1 {
 			background-color: yellow;
 		}
 
-		div #e2 {
+		div.e1 div.e2 {
 			background-color: blue;
 		}
 
-		div #e3 {
+		div.e1 > div div.e3 {
 			background-color: orange;
 		}
 
-		div #e4 {
+		div.e1 div.e2 > div div.e4 {
 			background-color: black;
 		}
 
 		div#e5 {
 			background-color: green;
 		}
-
+		
 	</style>
+
 </head>
 <body>
 
 <div class="e1" id="e1">
-	<div class="e2" id="e2">
+ 	 <div class="e2" id="e2">
 		<div class="e3" id="e3">
 			<div class="e4" id="e4">
 				<div class="e5" id="e5">
@@ -47,6 +56,8 @@
 		</div>
 	</div>
 </div>
+
+
 
 
 </body>
