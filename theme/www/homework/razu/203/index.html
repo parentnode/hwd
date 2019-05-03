@@ -6,25 +6,25 @@
 </head>
 <body>
 
-	<form action="" method="POST">
+	<form action="#" method="POST">
 		<fieldset>
 			<div>
-				<lebel for="regular_text">Regular text input fields: </lebel>
+				<label for="regular_text">Regular text input fields: </label>
 				<input type="text" id="regular_text">
 			</div>
 
 			<div>
-				<lebel for="email_id"> Email: </lebel>
+				<label for="email_id"> Email: </label>
 				<input type="email" id="email_id">
 			</div>
 
 			<div>
-				<lebel for="password_id"> Password: </lebel>
+				<label for="password_id"> Password: </label>
 				<input type="password" id="password_id">
 			</div>
 
 			<div>
-				<lebel for="selection_id"> Select: </lebel>
+				<label for="selection_id"> Select: </label>
 				<select name="selections" id="selection_id">
 					<option value="1"> test1 </option>
 					<option value="2"> test2 </option>
@@ -35,15 +35,29 @@
 			</div>
 
 			<div>
-				<lebel for="textarea_id"> Multiline Textarea: </lebel>
+				<label for="textarea_id"> Multiline Textarea: </label>
 				<textarea name="textarea" id="textarea_id"></textarea>
 			</div>
 
 			<div>
-				<lebel for="checkbox_id"> Checkbox </lebel>
+				<label for="checkbox_id"> Checkbox </label>
 				<input type="checkbox" id="checkbox_id">
 			</div>
+
+			<div class="radiobuttons">
+				<input type="radio" id="radion_id1" value="1">
+				<label for="radion_id1">Inception</label>
+			</div>
+
+			<div class="radiobuttons">
+				<input type="radio" id="radio_id2" value="2">
+				<label for="radio_id2">Stepup</label>
+			</div>
 		</fieldset>
+
+		<div class="action_list">
+			<input type="Submit" id="action_id">
+		</div>
 	</form>
 
 
