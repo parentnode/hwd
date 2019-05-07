@@ -8,22 +8,34 @@
 
 	<form action="#" method="POST">
 		<fieldset>
-			<div>
+			<div class="string [required]">
 				<label for="regular_text">Regular text input fields: </label>
 				<input type="text" id="regular_text">
+				<div class="help">
+					<div class="hint">hint message</div>
+					<div class="error">error message</div>
+				</div>
 			</div>
 
-			<div>
+			<div class="email [required]">
 				<label for="email_id"> Email: </label>
 				<input type="email" id="email_id">
+				<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+				</div>
 			</div>
 
-			<div>
+			<div class="password [required]">
 				<label for="password_id"> Password: </label>
 				<input type="password" id="password_id">
+				<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+				</div>
 			</div>
 
-			<div>
+			<div class="select [required]">
 				<label for="selection_id"> Select: </label>
 				<select name="selections" id="selection_id">
 					<option value="1"> test1 </option>
@@ -32,26 +44,42 @@
 					<option value="4"> test4 </option>
 					<option value="5"> test5 </option>
 				</select>
+				<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+				</div>
 			</div>
 
-			<div>
+			<div class="textarea [required]">
 				<label for="textarea_id"> Multiline Textarea: </label>
 				<textarea name="textarea" id="textarea_id"></textarea>
+				<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+				</div>
 			</div>
 
-			<div>
+			<div class="checkbox [required]">
 				<label for="checkbox_id"> Checkbox </label>
 				<input type="checkbox" id="checkbox_id">
+				<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+				</div>
 			</div>
 
-			<div class="radiobuttons">
+			<div class="radiobuttons [required]">
 				<input type="radio" id="radion_id1" value="1">
 				<label for="radion_id1">Inception</label>
 			</div>
 
-			<div class="radiobuttons">
+			<div class="radiobuttons [required]">
 				<input type="radio" id="radio_id2" value="2">
 				<label for="radio_id2">Stepup</label>
+				<div class="help">
+						<div class="hint">hint message</div>
+						<div class="error">error message</div>
+				</div>
 			</div>
 		</fieldset>
 
