@@ -10,11 +10,32 @@
 
 
 		/* ADD YOUR CSS HERE */
-		input [type=text] {
+		input[type=text], input[type=email], input[type=password], textarea {
 			width: 100%;
 		}
 		.hint, .error {
-			display: none;
+			visibility: hidden;
+		}
+
+		input, select, textarea {
+			display: block;
+		}
+
+		input[type=checkbox], input[type=radio] {
+			display: inline;
+		}
+
+		input:focus, select:focus, textarea:focus {
+			background-color: lightgreen;
+			border: 2px darkgreen solid;
+		}
+		input:focus + div.help div.hint, select:focus + div.help div.hint, textarea:focus + div.help div.hint {
+			visibility: visible;
+		}
+
+		input[type=submit]:hover {
+			background-color: green;
+			font-weight: bold;
 		}
 
 	</style>
@@ -80,8 +101,8 @@
 				</div>
 	
 				<div class="checkbox [required]">
-					<label for="checkbox_id"> Checkbox </label>
 					<input type="checkbox" id="checkbox_id">
+					<label for="checkbox_id"> Checkbox </label>
 					<div class="help">
 							<div class="hint">hint message</div>
 							<div class="error">error message</div>
