@@ -24,7 +24,7 @@
 			font-weight: lighter;
 		}
 
-		div.help {
+		.hint, .error {
 			display: none;
 		}
 
@@ -62,6 +62,20 @@
 		input:focus + div.help div.hint {
 			display: block;
 			background-color: lightgreen;
+			position: relative;
+			width: 100%;
+			left: -10px;
+			z-index: 2;
+			margin-top: -2px;
+			border: 1px solid green;
+			border-radius: 3px;
+			border-top: none;
+		}
+
+		input:focus {
+			/* border: none; */
+			border: 1px solid green;
+			border-radius: 3px;
 		}
 
 	</style>
