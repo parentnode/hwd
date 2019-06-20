@@ -33,7 +33,20 @@
 	}
 
 	// ADD YOUR JS HERE
+var injectionPoint = document.getElementById('content');
+var newUl = document.createElement('ul');
+injectionPoint.appendChild(newUl);
 
+for(let propI in content_set){
+	//console.log(propI);
+	//console.log(content_set[propI]);
+	var newLi = document.createElement('li');
+	newLi.setAttribute('class',propI);
+	//console.log(newLi);
+	newLi.innerHTML = content_set[propI];
+	//console.log(newLi);
+	newUl.appendChild(newLi);
+}
 
 </script>
 
