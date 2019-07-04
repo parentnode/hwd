@@ -40,7 +40,44 @@
 	</div>
 	<div id="footer"></div>
 </div>
+<script type="text/javascript">
+	//Add your JS here
+	var inputElements = document.querySelectorAll('div.field input');
+	var formContent = document.querySelector('form');
+	var mirrorDiv = document.createElement('div');
+		
 
+	for(var i=0 ; i < inputElements.length ; i++){
+		inputElements[i].addEventListener('focus', focusFunction);
+		inputElements[i].addEventListener('blur', blurFunction);
+		inputElements[i].addEventListener('keyup', updateFunction);
 
+		mirrorDiv.classList.add(inputElements[i].id);
+		console.log(mirrorDiv.classList);
+		mirrorDiv.innerHTML = 'Mirror for ' + inputElements[i].id + ':' + inputElements[i].value;
+		formContent.appendChild(mirrorDiv);
+	}
+
+	formContent.addEventListener('submit', submitFunction);
+
+	function focusFunction(){
+		this.parentNode.classList.add('focus');
+	}
+
+	function blurFunction(){
+		this.parentNode.classList.remove('focus');
+	}
+
+	function updateFunction(){
+		document.querySelector('.'+this.id).innerHTML = 'Mirror for ' + this.id + ' : ' + this.value;
+		//console.log(this.value);
+	}
+
+	function submitFunction(){
+		Alert('Form is not submitted');
+		return false;
+	}
+
+</script>
 </body>
 </html>
