@@ -44,18 +44,20 @@
 	//Add your JS here
 	var inputElements = document.querySelectorAll('div.field input');
 	var formContent = document.querySelector('form');
-	var mirrorDiv = document.createElement('div');
+	
 		
 
 	for(var i=0 ; i < inputElements.length ; i++){
+		
 		inputElements[i].addEventListener('focus', focusFunction);
 		inputElements[i].addEventListener('blur', blurFunction);
 		inputElements[i].addEventListener('keyup', updateFunction);
+		
+		inputElements[i].mirrorDiv = document.createElement('div');
+		formContent.appendChild(inputElements[i].mirrorDiv);
 
-		mirrorDiv.classList.add(inputElements[i].id);
-		console.log(mirrorDiv.classList);
-		mirrorDiv.innerHTML = 'Mirror for ' + inputElements[i].id + ':' + inputElements[i].value;
-		formContent.appendChild(mirrorDiv);
+		inputElements[i].mirrorDiv.innerHTML = 'Mirror for ' + inputElements[i].id + ':' + inputElements[i].value;
+		
 	}
 
 	formContent.addEventListener('submit', submitFunction);
@@ -69,12 +71,12 @@
 	}
 
 	function updateFunction(){
-		document.querySelector('.'+this.id).innerHTML = 'Mirror for ' + this.id + ' : ' + this.value;
+		this.mirrorDiv.innerHTML = 'Mirror For ' + this.id + ' : ' + this.value;
 		//console.log(this.value);
 	}
 
 	function submitFunction(){
-		Alert('Form is not submitted');
+		alert('Form is not submitted');
 		return false;
 	}
 

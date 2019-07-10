@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 311</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+		#content p {font-size: 20px; font-family: Arial;}
+
+	</style>
+</head>
+<body>
+
+<div id="page" class="i:page">
+	<div id="header"></div>
+	<div id="content">
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+
+	// ADD YOUR JS HERE
+	var textP = document.querySelector('p');
+
+	var fontSize = window.getComputedStyle(textP).fontSize;
+	fontSize = parseFloat(fontSize);
+	//fontSize++;
+	console.log(fontSize);
+
+	window.addEventListener('wheel', changeFont);
+
+	function changeFont(){
+		console.log(event.deltaY);
+		if(event.deltaY > 0){
+			textP.style.fontSize = (fontSize++)+'px';
+		}
+		else if (event.deltaY < 0){
+			textP.style.fontSize = (fontSize--)+'px';
+		}
+	}
+</script>
+
+
+</body>
+</html>
