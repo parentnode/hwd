@@ -21,7 +21,15 @@
 <script type="text/javascript">
 
 	// ADD YOUR JS HERE
+	var XHR = new XMLHttpRequest;
+	XHR.open('GET', 'http://hwd-01.local', true);
+	XHR.send();
+	XHR.responseType = 'document';
 
+	XHR.onreadystatechange = function (){
+		if (XHR.readyState == 4)
+		document.querySelector('#content').innerHTML = XHR.response.querySelector('#content').innerHTML;
+	}
 
 </script>
 
