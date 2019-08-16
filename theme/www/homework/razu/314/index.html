@@ -22,7 +22,75 @@
 <script type="text/javascript">
 
 	// ADD YOUR JS HERE
+	var contentDiv = u.qs('#content');
+	u.ae(contentDiv, 'div', { 'class':'scene', 'html':'<h1>Manipulator</h1> <p>paragrapg1</p> <p>paragraph2</p> <ul><li>one</li> <li>two</li> <li>three</li></ul>'});
+	
+	var title = u.qs('div.scene h1');
+	var paragraphs = u.qsa('div.scene p');
+	var list = u.qsa('div.scene ul li');
+	//console.log(list);
 
+	u.e.click(title);
+
+	for(var i=0; i<paragraphs.length; i++){
+		u.e.hold(paragraphs[i]);
+	}
+
+	for(var i=0; i<list.length; i++)
+	u.e.hover(list[i], {delay:0, delay_over: 100});
+
+	var colors = ['blue','green','red','purple'];
+	var i = 0;
+	title.clicked = function clickFunction(){
+		if(i<colors.length){
+			title.style.color = colors[i];
+			i++;
+		}
+		else{
+			i=0;
+			clickFunction();
+		}
+	}
+	
+	for(var i=0; i<paragraphs.length; i++){
+		console.log(paragraphs[i]);
+		paragraphs[i].held = function(){
+			setTimeout( function(){alert('You have held the mouse key for atleast 2 seconds');}, 1250);
+		}
+	}
+	for(var i=0; i<list.length; i++){
+		
+		/*list[i].over = overfun;*/
+		list[i].i = i;
+		list[i].over = function(){
+			console.log(this.i);
+			switch(this.i){
+				case 0:
+					list[this.i].style.color = 'black';
+					list[this.i+1].style.color = 'blue';
+					list[this.i+2].style.color = 'blue';
+					break;
+				case 1:
+					list[this.i].style.color = 'black';
+					list[this.i-1].style.color = 'blue';
+					list[this.i+1].style.color = 'blue';
+					break;
+				case 2:
+					list[this.i].style.color = 'black';
+					list[this.i-1].style.color = 'blue';
+					list[this.i-2].style.color = 'blue';
+					break;
+			}
+		}
+	}
+	for(var i=0; i<list.length; i++){
+		list[i].out = function(){
+			for (var j = 0; j<list.length; j++){
+				console.log(list[j]);
+				list[j].style.color = 'black';
+			}
+		}
+	}
 
 </script>
 

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 315</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="/js/manipulator/seg_desktop.js"></script>
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+
+	</style>
+</head>
+<body>
+
+<div id="page" class="i:page">
+	<div id="header"></div>
+	<div id="content"></div>
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+
+	// ADD YOUR JS HERE
+var contentDiv = u.qs('div#content');
+u.ae(contentDiv, 'div', {'class':'scene'});
+
+var setHeight = window.innerHeight + 'px';
+var sceneDiv = u.qs('div.scene');
+u.as(sceneDiv, 'height', setHeight);
+
+var div1 = u.ae(sceneDiv, 'div', {'class':'divOne'});
+var div2 =u.ae(sceneDiv, 'div', {'class':'divTwo'});
+var div3 =u.ae(sceneDiv, 'div', {'class':'divThree'});
+
+div1.response = writeQuote;
+div2.response = writeQuote;
+div3.response = writeQuote;
+
+u.request(div1, 'http://quotes.rest/qod.json');
+u.request(div2, 'http://quotes.rest/qod.json');
+u.request(div3, 'http://quotes.rest/qod.json');
+
+
+function writeQuote(response){
+	console.log(response);
+	this.innerHTML = response.contents.quotes[0].quote;
+}
+console.log(div1.innerHTML);
+
+u.ass
+
+</script>
+
+
+</body>
+</html>
