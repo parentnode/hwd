@@ -26,8 +26,10 @@ var contentDiv = u.qs('div#content');
 u.ae(contentDiv, 'div', {'class':'scene'});
 
 var setHeight = window.innerHeight + 'px';
+console.log(setHeight);
+var setWidth = window.innerWidth + 'px';
 var sceneDiv = u.qs('div.scene');
-u.as(sceneDiv, 'height', setHeight);
+u.ass(sceneDiv, {'height':setHeight, 'width':setWidth});
 
 var div1 = u.ae(sceneDiv, 'div', {'class':'divOne'});
 var div2 =u.ae(sceneDiv, 'div', {'class':'divTwo'});
@@ -40,15 +42,49 @@ div3.response = writeQuote;
 u.request(div1, 'http://quotes.rest/qod.json');
 u.request(div2, 'http://quotes.rest/qod.json');
 u.request(div3, 'http://quotes.rest/qod.json');
+//console.log(response.exception);
 
 
 function writeQuote(response){
-	console.log(response);
+	//console.log(response);
 	this.innerHTML = response.contents.quotes[0].quote;
 }
-console.log(div1.innerHTML);
+var color = ['red','green','purple'];
+var divs2animate = u.qsa('div.scene div');
+console.log(divs2animate);
+for(var i=0; i<divs2animate.length; i++){
+	u.ass(divs2animate[i], {
+				'width':'100px', 
+				'height':'100px',
+				'border':'5px solid blue',
+				'padding':'10px',
+				'text-align':'center',
+				'font-size':'10px',
+				'background-color':color[i],
+				'color':'white',
+				'display':'inline-block',
+				'margin':'5px'
+			}
+		);
+	u.e.click(divs2animate[i]);
+	divs2animate[i].clicked = function (){
+		u.a.transition(this, 'all 1s', jumpBack);
+		u.a.translate(this, 0, window.innerHeight-this.offsetHeight-20);
+		
+	}
 
-u.ass
+	function jumpBack(){
+		u.t.setTimer(this, 'timerDone', 1000);
+		this.timerDone = function(){
+			u.a.transition(this, 'all 1s');
+			u.a.translate(this, 0,0);
+		}
+	}
+}
+
+
+
+//console.log('div'+ i);
 
 </script>
 
