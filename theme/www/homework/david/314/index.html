@@ -22,24 +22,44 @@
 <script type="text/javascript">
 
 	// ADD YOUR JS HERE
-	var content = u.querySelector("div#content");
-	var scene = u.appendElement(content,"div",{"class":"scene"} );
-	//var scene = u.querySelector("div.scene");
-	u.appendElement(scene, "h1");
 
-	u.appendElement(scene, "p");
-	u.appendElement(scene, "p");
-	var ul = u.appendElement(scene,"ul" );
-
-	u.appendElement(ul, "li", {"html":"Pears"});
-	u.appendElement(ul, "li", {"html":"Bananas"});
-	u.appendElement(ul, "li", {"html":"Apples"});
-
-	//u.ae()
-	console.log(scene);
-	console.log(ul);
-	console.log(li);
+	var content = u.qs("#content");
+	var scene = u.ae(content, "div", {"class":"scene"} );
+	//var head = u.qs("#h1")
+	var head = u.ae(scene, "h1", {"html":"Fruit"});
+	var paragraph= u.ae(scene, "p", {"html":"Parameter"});
+	u.ae(scene, "p", {"html":"Parameter2"});
+	var ul = u.ae(scene, "ul");
+	u.ae(ul, "li", {"html":"Pears"});
+	u.ae(ul, "li", {"html":"Bananas"});
+	u.ae(ul, "li", {"html":"Apples"});
+	//Use u.e.click to add an event listener to the heading, 
+	//and let it toggle between four colors when you click on
+	//it. So each time you click the heading it changes to a 
+	//new color.
+	//Use u.e.hold to add an event listener to the paragraph, 
+	//and let it make an alert when you hold the mouse down 
+	//for 2 seconds. Use the setting for u.e.hold to specify 
+	//the desired hold time.
+	//Use u.e.hover to add an event listener to each of the
+	// three list items, and make it so the two other list
+	// elements change color, when you hover the mouse over
+	// each of them. 
+	//var header = u.qs(head);
+	colors=["blue","green","red","orange"]
+	u.e.click(head);
+	arrayno = 0;
+	head.clicked = function (event){
+		u.as(head,"color",colors[arrayno]);
+		arrayno++;
+	}
+	u.e.hold(paragraph);
+	paragraph.held = function(event){
+		u.t.setTimer(paragraph,10000)
+		alert("holded to long")
+	}
 	
+
 </script>
 
 
