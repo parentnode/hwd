@@ -42,24 +42,23 @@
 				<li>
 					<h3>Update your hosts file</h3>
 					<p>
-						Open your hosts file and add a <em>.proxy</em> variant of your test domain, using the local IP of your
-						computer as described in the guide. You can find your local IP by running <em>ifconfig</em>
-						in Bash. The command will generate a lot of output and the lines you are looking for is very likely starting with <em>inet</em> <strong>192.168.x.x</strong> or <em>inet</em> 
-						<strong>10.0.x.x</strong>.
+						Open your hosts file “/etc/hosts” in VS Code and find your test domain. Add a <em>.proxy</em> variant of your test domain in a new line, using the local IP of your
+						computer. You can find your local IP by running <em>ifconfig</em>
+						in Bash. It may prompt with an installation suggestion “net-tools”. If so just install it with the command: <em>sudo apt install net-tools</em>. Then run the “ifconfig” command once again. The command will generate a lot of output and the lines you are looking for is very likely starting with <em>inet</em> <strong>192.168.x.x</strong> or <em>inet</em><strong> 10.0.x.x</strong>. Assign this IP with your test domain with a .proxy variant and save the changes in the file. 
+						
 					</p>
 				</li>
 				<li>
 					<h3>Update your local project Apache configuration</h3>
 					<p>
-						Add a <em>ServerAlias</em> to your project Apache configuration (project-name/apache/httpd-vhosts.conf) 
-						using a <em>.proxy</em> variant of your domain. You can add it right under 
-						<em>ServerName</em> in the top of the file.
+						Add a <em>ServerAlias</em> to your project Apache configuration: Open project-name/apache/httpd-vhosts.conf file in VS Code. Add a <em>.proxy</em> variant of your domain. You can add it right under <em>ServerName</em> at the upper part of the file. 
+						
 					</p>
 				</li>
 				<li>
 					<h3>Restart Apache</h3>
 					<p>
-						Restart Apache to enable the new settings.
+						Restart Apache to enable the new settings with the Bash command: <em>apache restart</em>
 					</p>
 				</li>
 				<li>
