@@ -3,54 +3,65 @@
 <head>
 	<title>Exercise 103</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" type="text/css" href="/css/exercises/includes.css" />
-	<script type="text/javascript" src="/js/exercises/includes.js"></script>
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0 auto; background: transparent url(img/bg_103.png) no-repeat 4px top; padding: 100px 0 0; min-width: 650px;}
+
+
+		/* ADD YOUR CSS HERE */
+		
+		#nav {
+			background: red;
+			width: 66%;
+			border-radius: 25px;
+			margin-left: 5px;
+		}
+		#nav li{
+
+			/* display: inline-block; */
+			font-size: 17px;
+  			margin-top: 15px;
+			/* margin top/bottom centers it in the middle */
+			margin-bottom: 15px;
+			margin-right: 10px;
+			background: black;
+			color: white;
+			padding: 10px;
+			border-radius: 15px;
+			font-weight: bold;
+
+		}
+		ul{	margin-left: 200px;}
+		.a1,.a2,.a3,.a4{
+			/* what does it do? */
+			margin-top: inherit;
+			/* important! makes it horisontal */
+
+			display: inline-block;
+		}
+		.a5{
+			/* how to make it larger? */
+			display: inline-block;
+			background-color: black;
+			color: white;
+			border-radius: 13px;
+			margin-left: 250px;
+			
+		}
+	</style>
 </head>
 <body>
 
-
-<div id="page" class="i:page">
-	<div id="header"></div>
-	<div id="content">
-
-		<div class="scene i:exercise">
-			<h1>Exercise 103 - CSS Basics</h1>
-			<p>
-				This exercise is about CSS basics – inline-block and floats.
-			</p>
-
-			<p>
-				The purpose of this exercise is to practice writing CSS. The goal is to make the navigation
-				look like the reference graphic, by adding appropriate CSS. Although the graphic does not scale, your
-				version should follow the rules specified below.
-			</p>
-
-			<h2>Tasks</h2>
-			<ol>
-				<li>
-					<h3>Add CSS selectors with background-colors</h3>
-					<p>
-						Add your own CSS selectors to the navigation to make it look like the reference.
-					</p>
-					<ul class="rules">
-						<li>Width of navigation should scale</li>
-						<li>item 1-4 is centered in the availble area</li>
-						<li>item 5 stays to the right</li>
-						<li>item 1-5 does not scale, but has a fixed size</li>
-					</ul>
-				</li>
-				<li>
-					<h3>Validate your CSS on w3c</h3>
-					<p>
-						Use <a href="https://jigsaw.w3.org/css-validator/validator" target="_blank">https://jigsaw.w3.org/css-validator/validator</a> to validate your CSS.
-					</p>
-				</li>
-			</ol>
-		</div>
-
-	</div>
-	<div id="footer"></div>
+<div id="nav">
+	<ul>
+		<li class="a1">Item 1</li>
+		<li class="a2">Item 2</li>
+		<li class="a3">Item 3</li>
+		<li class="a4">Item 4</li>
+		<li class="a5">Item 5</li>
+	</ul>
 </div>
+
 
 </body>
 </html>
