@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 203</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<style type="form/css">
+	.fieldset{width: 100%}
+		
+	</style>
+<body>
+
+
+	<div id="page">
+
+		<div id="header"></div>
+		<div id="content">
+			<div class="field string [required]">
+				<label for="input_string">String [required]</label>
+				<input type="text" name="string" id="input_string" />
+				<div class="help">
+					<div class="hint">hint message</div>
+					<div class="error">error message</div>
+				</div>
+			</div>
+
+			<div class="field password [required]">
+				<label for="input_password">Password [required]</label>
+				<input type="password" name="password" id="input_password" maxlength="255" />
+				<div class="help">
+					<div class="hint">hint message</div>
+					<div class="error">error message</div>
+				</div>
+			</div>
+
+
+			<div class="field email [required]">
+				<label for="input_email">Email</label>
+				<input type="email" name="email" id="input_email" maxlength="255" />
+				<div class="help">
+					<div class="hint">hint message</div>
+					<div class="error">error message</div>
+				</div>
+			</div>
+
+			
+			
+
+			<div class="field select [required]">
+				<label for="input_select">Select [required]</label>
+				<select name="select" id="input_select">
+					<option value="0" selected="selected">test</option>
+				</select>
+				<div class="help">
+					<div class="hint">hint message</div>
+					<div class="error">error message</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="field text [required]">
+			<label for="input_text">Text [required]</label>
+			<textarea name="text" id="input_text"></textarea>
+			<div class="help">
+				<div class="hint">hint message</div>
+				<div class="error">error message</div>
+			</div>
+		</div>
+
+		<div class="field checkbox [required]">
+			<input type="hidden" name="checkbox" value="0" />
+			<input type="checkbox" name="checkbox" id="input_checkbox" value="1" />
+			<label for="input_checkbox">Checkbox [required]</label>
+			<div class="help">
+				<div class="hint">hint message</div>
+				<div class="error">error message</div>
+			</div>
+		</div>
+
+		<div class="field radiobuttons [required]">
+			<label>Radiobuttons [required]</label>
+			<div class="item">
+				<input type="radio" name="radiobuttons" id="input_radiobuttons_value1" value="value1" />
+				<label for="input_radiobuttons_value1">text1</label>
+			</div>
+			<div class="item">
+				<input type="radio" name="radiobuttons" id="input_radiobuttons_value2" value="value2" />
+				<label for="input_radiobuttons_value2">text2</label>
+			</div>
+			<div class="help">
+				<div class="hint">radio hint message</div>
+				<div class="error">error message</div>
+			</div>
+		</div>
+
+		<div id="navigation">
+			<ul class="actions">
+				<li class="text"><a href="#">Cancel</a></li>
+				<li class="cancel"><a href="#" class="button">Cancel</a></li>
+				<li class="save"><a href="#" class="button primary">Save</a></li>
+				<li class="option"><a href="#" class="button secondary">Option</a></li>
+				<li class="cancel"><input type="submit" value="Cancel" class="button" /></li>
+				<li class="save"><input type="submit" value="Save" class="button primary" /></li>
+				<li class="option"><input type="submit" value="Option" class="button secondary" /></li>
+			</ul>
+		</div>
+		<div>
+			<input type="submit" value="Submit" id="submit">
+
+		</div>
+
+
+		<div id="footer"></div>
+	
+	</div>
+	
+
+
+</body>
+</html>
