@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 202</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 500px; margin: 0 auto;}
+		#content {min-height: 400px;}
+		#content:hover {background: transparent url(img/bg_202.png) no-repeat left 50px;}
+		#content:hover * {opacity: 0;}
+
+
+		/* ADD YOUR CSS HERE */
+		/* css trick https://css-tricks.com/complete-guide-table-element/ */
+		
+		table{
+			margin-top: 50px;
+			border: 1px solid black;
+			border-radius:10px;
+			width:100%;
+			border-spacing:0;
+			/*makes the magic, cuts of the bluebox, */
+			overflow:hidden;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			height: 200px;
+			
+		}
+		.top,.center,.bottom{
+			border-bottom: 1px dashed gray;
+		}
+			/* why dosent it work with ?   
+		.top,.center,.bottom{
+			border-bottom: 1px dashed gray;
+		}*/
+		th{
+			text-transform: uppercase;
+			background-color: blue;
+			color: white;
+			font-weight: bold;
+			font-weight: 900;
+			height: 30px;
+		}
+		
+	
+		.top td,.center td,.bottom td{
+			background-color: white;
+			border-bottom: 1px dashed black;
+		}
+
+		.top{
+			vertical-align: top;
+		}
+		.center{
+			vertical-align: middle;
+		}
+		.bottom{
+			vertical-align: bottom;
+		}
+
+		
+		/* column 1 */
+		th:nth-last-child(4), 
+		td:nth-last-child(4) 
+		{
+			text-align:left;
+			/* color:red; */
+			width: 200px;
+		}
+		/* column 2 */
+		th:nth-last-child(3), 
+		td:nth-last-child(3) 
+		{
+			text-align:center;
+			/* color:pink; */
+		}
+		/* column 3  */
+		th:nth-last-child(2), 
+		td:nth-last-child(2) 
+		{
+			text-align:center;
+			/* color:brown; */
+			padding-right: 20px;
+
+		}
+		/* column 4 */
+		th:nth-last-child(1), 
+		td:nth-last-child(1) 
+		{
+			text-align:center;
+			/* color:green; */
+			max-width: 60px;
+			padding-right: 20px;
+		}
+
+	</style>
+</head>
+<body>
+
+<div id="page" class="i:page">
+	<div id="header"></div>
+	<div id="content">
+
+		<table >
+		<tr>
+			<th>name</th>
+			<th>number</th>
+			<th>car</th>
+			<th>alignment</th>
+		</tr>
+		<tr class="top">
+			<td>Martin</td>
+			<td>1</td>
+			<td>no</td>
+			<td>I'm top aligned</td>
+		</tr>
+		<tr class="center">
+			<td>Anja</td>
+			<td>2</td>
+			<td>no</td>
+			<td>I'm center aligned</td>
+		</tr>
+		<tr class="bottom">
+			<td>Romeo</td>
+			<td>3</td>
+			<td>no</td>
+			<td>I'm bottom aligned</td>
+		</tr>
+		<tr>
+			<td>Elo</td>
+			<td>4</td>
+			<td>yes</td>
+			<td>none</td>
+		</tr>		
+		</table>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+
+</body>
+</html>
