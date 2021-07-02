@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 203</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<!-- The formaction snippet gives me an error: 
+Error: Bad value [POST|GET] for attribute method on element form.
+From line 8, column 1; to line 8, column 65
+<form action="#" method="[POST|GET]" class="[labelstyle:inject]">
+--> 
+<form action="#" method="[POST|GET]" class="[labelstyle:inject]">
+
+	<fieldset>
+		<div class="field string [required]">
+		<label for="input_string">String [required]</label>
+		<input type="text" name="string" id="input_string" />
+		<div class="help">
+			<div class="hint">hint message</div>
+			<div class="error">error message</div>
+		</div>
+		</div>
+		
+		<div class="field email [required]">
+		<label for="input_email">Email</label>
+		<input type="email" name="email" id="input_email" maxlength="255" />
+		<div class="help">
+			<div class="hint">hint message</div>
+			<div class="error">error message</div>
+		</div>
+		</div>
+		
+		<div class="field password [required]">
+		<label for="input_password">Password [required]</label>
+		<input type="password" name="password" id="input_password" maxlength="255" />
+		<div class="help">
+			<div class="hint">hint message</div>
+			<div class="error">error message</div>
+		</div>
+		</div>
+		
+		<div class="field select [required]">
+		<label for="input_select">Select [required]</label>
+		<!--W3C says i get an error in select and i need the multiple attribute but if that is the case i could be better of whith an list  -->
+		<select  name="select" id="input_select" >
+			<option value="0" selected="selected">Pærer</option>
+			<option value="1" selected="selected">Bananer</option>
+			<option value="2" selected="selected">Æbler</option>
+		</select>
+		<div class="help">
+			<div class="hint">hint message</div>
+			<div class="error">error message</div>
+		</div>
+		</div>
+		
+		<div class="field text [required]">
+		<label for="input_text">Text [required]</label>
+		<textarea name="text" id="input_text"></textarea>
+		<div class="help">
+			<div class="hint">hint message</div>
+			<div class="error">error message</div>
+		</div>
+		</div>
+		
+		<div class="field checkbox [required]">
+		<input type="hidden" name="checkbox" value="0" />
+		<input type="checkbox" name="checkbox" id="input_checkbox" value="1" />
+		<label for="input_checkbox">Checkbox [required]</label>
+		<div class="help">
+			<div class="hint">hint message</div>
+			<div class="error">error message</div>
+		</div>
+		</div>
+		
+		<div class="field radiobuttons [required]">
+		<label>Radiobuttons [required]</label>
+		<div class="item">
+			<input type="radio" name="radiobuttons" id="input_radiobuttons_value1" value="value1" />
+			<label for="input_radiobuttons_value1">text1</label>
+		</div>
+		<div class="item">
+			<input type="radio" name="radiobuttons" id="input_radiobuttons_value2" value="value2" />
+			<label for="input_radiobuttons_value2">text2</label>
+		</div>
+		<div class="help">
+			<div class="hint">hint message</div>
+			<div class="error">error message</div>
+		</div>
+		</div>
+	</fieldset>
+
+	
+	
+	<ul class="actions">
+		<li><input type="submit" value="Submit"></li>
+	</ul>
+</form>
+
+</body>
+</html>
