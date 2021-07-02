@@ -13,57 +13,79 @@
     <div id="header"> 
     </div>
     <div id= "content">
-        <div itemscope itemtype="http://schema.org/Article">
-            <h1>Stuff I learned so far</h1>
+        <div class="article" itemscope itemtype="http://schema.org/Article">
+            <h1 itemprop="headline">Stuff I learned so far</h1>
 
-            <h2>Basic semantic HTML</h2>
-            <p>In this article, you will get to work with h1, h2, h3, p, strong and em tags.</p>
+            <ul class="info">
+                <li class="published_at" itemprop="datePublished" content="2016-03-14">14th March, 2016</li>
+                <li class="modified_at" itemprop="dateModified" content="2016-03-16"></li>
+                <li class="author" itemprop="author">Anja Müller</li>
+                <li class="main_entity share" itemprop="mainEntityOfPage" content="http://templator.parentnode.dk/docs/article"></li>
+                <li class="publisher" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                    <ul class="publisher_info">
+                        <li class="name" itemprop="name">parentnode.dk</li>
+                        <li class="logo" itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                            <span class="image_url" itemprop="url" content="http://templator.parentnode.dk/img/logo-large.png"></span>
+                        </li>
+                    </ul>
+                </li>
+                <li class="image_info" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                    <span class="image_url" itemprop="url" content="http://templator.parentnode.dk/img/logo-large.png"></span>
+                </li>
+            </ul>
 
-            <h3>Basic semantic text tags</h3> 
-            <p>
-                The minimum set of semantic text HTML tags contains h1, h2, h3, p, strong and em. Although there are many other 
-                semantic html tags, these are the most important ones to learn.
-            </p>
-            <p>Other semantic HTML tags include table, ul, ol and dl.</p>
-            <p>We will look more at the other semantic tags later.</p>	
+            <div class="articlebody" itemprop="articleBody">
+                <h2>Basic semantic HTML</h2>
+                
+                <p>In this article, you will get to work with h1, h2, h3, p, strong and em tags.</p>
 
-            <h4>The h1 tag</h4>
-            <p>The h1 tag is the primary headline of a page. There should only ever be one primary headline in a page.</p>
+                <h3>Basic semantic text tags</h3> 
+                <p>
+                    The minimum set of semantic text HTML tags contains h1, h2, h3, p, strong and em. Although there are many other 
+                    semantic html tags, these are the most important ones to learn.
+                </p>
+                <p>Other semantic HTML tags include table, ul, ol and dl.</p>
+                <p>We will look more at the other semantic tags later.</p>	
 
-            <h4>The h2 tag</h4>
-            <p>
-                The h2 tag is for secondary headlines in your page. The secondary headlines are used for each subsection 
-                of the primary content.
-            </p> 
-            <p>There will often be multiple secondary headlines in your pages.</p>
+                <h4>The h1 tag</h4>
+                <p>The h1 tag is the primary headline of a page. There should only ever be one primary headline in a page.</p>
 
-            <h4>The h3 tag</h4>
-            <p>
-                The h3 tag is for tertiary headlines in your page. The tertiary headlines are used for each subsection 
-                of the current secondary section.
-            </p>
-            <p>	There will often be multiple tertiary headlines in your pages.</p>
+                <h4>The h2 tag</h4>
+                <p>
+                    The h2 tag is for secondary headlines in your page. The secondary headlines are used for each subsection 
+                    of the primary content.
+                </p> 
+                <p>There will often be multiple secondary headlines in your pages.</p>
 
-            <h4>The p tag</h4>
-            <p>
-                The p tag is used for a paragraph of text. Each headline will typically be followed by one or more 
-                paragraphs, relating directly to the previous headline.
-            </p>
-            <p>There will often be multiple paragraphs in your pages.</p>
+                <h4>The h3 tag</h4>
+                <p>
+                    The h3 tag is for tertiary headlines in your page. The tertiary headlines are used for each subsection 
+                    of the current secondary section.
+                </p>
+                <p>	There will often be multiple tertiary headlines in your pages.</p>
 
-            <h4>The <strong>strong</strong> tag</h4>
-            <p>The <strong>strong</strong> tag is used to indicate that a certain word (or several words) are more important in the context.</p>
-            <p>The strong tag is an inline tag and can only be used inside headlines or paragraphs.</p> 
+                <h4>The p tag</h4>
+                <p>
+                    The p tag is used for a paragraph of text. Each headline will typically be followed by one or more 
+                    paragraphs, relating directly to the previous headline.
+                </p>
+                <p>There will often be multiple paragraphs in your pages.</p>
 
-            <h4>The <em>em</em> tag</h4>
-            <p>The em tag is used to indicate that a certain word (or several words) needs <em>emphasis</em> in the context.</p>
-            <p>The em tag is an inline tag and can only be used inside headlines or paragraphs.</p>
+                <h4>The <strong>strong</strong> tag</h4>
+                <p>The <strong>strong</strong> tag is used to indicate that a certain word (or several words) are more important in the context.</p>
+                <p>The strong tag is an inline tag and can only be used inside headlines or paragraphs.</p> 
 
-            <h3>Summary</h3>
-            <p>
-                Now you have a basic understanding of HTML text semantics. You have added a hierarchy to the text and made it easier
-                to read and to be understood by a machine. Let's move on the some of the other semantic tags.
-            </p>
+                <h4>The <em>em</em> tag</h4>
+                <p>The em tag is used to indicate that a certain word (or several words) needs <em>emphasis</em> in the context.</p>
+                <p>The em tag is an inline tag and can only be used inside headlines or paragraphs.</p>
+
+                <h3>Summary</h3>
+                <p>
+                    Now you have a basic understanding of HTML text semantics. You have added a hierarchy to the text and made it easier
+                    to read and to be understood by a machine. Let's move on the some of the other semantic tags.
+                </p>            
+            </div>
+            
         </div>
         <div>
             <h2>Lists</h2>
