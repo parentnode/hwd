@@ -9,85 +9,88 @@
 		#page {width: 500px; margin: 0 auto;}
 		#content {height: 672px;}
 		#content:hover {background: transparent url(img/bg_101.png) no-repeat left top;}
-		#content:hover * {opacity: 0;}
+		#content:hover * {opacity: 0.5;}
 
 
-        
+
 		/* ADD YOUR CSS HERE */
         /* dont use *  its to heavy */
 
         /* #header {padding-top: 100px;} */
         /* ingen halve pixels */
         #content{
-
-            /* padding-left: 8px; */
-            padding-top: 8px;
-            background-color: pink;
-        }
-        #content p{
-            font-size: 16px;
-            padding-bottom: 20px;
-            color: black;
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 19px;
-
+            padding: 50px 0px;
+            /* background-color: pink; */
         }
 
-        #content h1{
-            margin: 0; 
+         h1{
+            margin: 0;
             font-size: 36px;
             padding-bottom: 20px;
+            line-height: 1em;
             font-family: 'Times New Roman', Times, serif;
         }
-        #content h2{
+
+         h2{
+            margin: 0;
             font-style: italic;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 22px;
-            
-            /* background-color: red; */
-            /* margin-top: 29px; */
-            padding-top: 9px;
+            padding-top: 16px;
+            padding-bottom: 15px;
         }
 
-        #content h3{
-            font-family: 'Times New Roman', Times, serif;
+         h3{
             color: black;
+            margin: 0;
+            font-family: 'Times New Roman', Times, serif;
             font-size: 18px;
-
+            /* wtf? why dose it matter? */
+            padding-bottom: 20px;
+            line-height: 1em;
         }
-
-        #content em{
+        p{
+            color: black;
+            margin: 0;
+            font-size: 16px;
+            padding-bottom: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 19px; 
+        }
+         em{
             background-color: blue;
             color: white;
             padding: 2px;
-           
         }
-
-        #content ol{
+         li{
+            margin: 0;
+            padding-bottom: 20px;
+        }
+         ol{
+            color:red;
+            margin: 0;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 27px;
-            color:red;
-            margin-left: -9.5px;
-            margin-top: 28px;
+            margin-left: -9px;
+            margin-top: 13px;
             margin-bottom: 0px;
-            
-
         }
-
-        #content a{
+        ul{ 
+            margin: 0;
+            padding-left: 15px;
+            
+        }
+         a{
+            margin: 0;
             background-color: green;
             color: white;
             text-decoration: none;
-            /* text-decoration-color: red; */
-            font-weight: bold;
+            /* font-weight: bold; */
             border-bottom: 2px solid red;
-            /* letter-spacing: 0px; */
-
-        }   
-        ul{ 
-            margin-top: 14px;
-            margin-left: -5px;
-        } 
+            /* letter-spacing: -1px; */
+            padding-left: 2px;
+            padding-right: 2px;
+        }
         .times{
             font-family: 'Times New Roman', Times, serif;
         }
@@ -99,63 +102,23 @@
         .blue{color: blue; }
         .white {
             color: white;
-            font-weight: bold;
-            letter-spacing: -1px;
             background-color: black;
         }
-
-        /* elementet øverest har en padding bottom */
-        /* brug padding i stedet for margin */
-        /* tænk på vedligeholdelses aspect */
-        /* #content h1 + p{
-            font-family: Arial, Helvetica, sans-serif;
-            margin-top: 0;
-            margin-top: 17px;
-            margin-bottom: 0;
-        } */
-        /* 
-        #content h1+p+p{
-            font-family: Arial, Helvetica, sans-serif;
-            margin-top: 15px;
-
-        } */
-
-
-        
-        
-        /* #content ol>li>p{
-            font-size: 16px;
-            color: black;
-            margin-left: -0.5px;
-            margin-bottom: 35px;        
-        } */
-
-        
-        /* second list in ordered list */
-        /* ol > li:nth-child(n+2)>p{
-            font-size: 15.1px;
-            line-height: 1.3;
-        }     */
-
-
-        
-        ol+h2{
-            margin-top: 49px;
-            margin-bottom: 0;
-        }
-       
         ul li{
+            margin: 0;
+            padding-bottom: 0;
             color: black;
             font-weight: normal;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 16px;
-            margin-left: -20px;
+            font-family: Arial, Helvetica, sans-serif;           
         }
-       
-        
 
 
-        
+
+
+
+
+
+
 	</style>
 </head>
 <body>
@@ -179,7 +142,7 @@
 			<li>
 				<h3>Add CSS </h3>
 				<p>
-					Add your own CSS to the style-tag in the top of the exercise template (101/index.html), to make the 
+					Add your own CSS to the style-tag in the top of the exercise template (101/index.html), to make the
 					text appear <em>exactly</em> as it does in the underlying graphic, <strong>without</strong> changing the HTML.
 				</p>
 			</li>
