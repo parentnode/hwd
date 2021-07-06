@@ -11,48 +11,36 @@
 		#content:hover {background: transparent url(img/bg_101.png) no-repeat left top;}
 		#content:hover * {opacity: 0;}
 
-
         
 		/* ADD YOUR CSS HERE */
         /* dont use *  its to heavy */
-
-        /* #header {padding-top: 100px;} */
+        #header {padding-top: 100px;}
         /* ingen halve pixels */
-        #content{
-
-            /* padding-left: 8px; */
-            padding-top: 8px;
-            background-color: pink;
-        }
+        #content{margin-left: -0.5px;}
         #content p{
             font-size: 16px;
-            padding-bottom: 20px;
-            color: black;
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 19px;
-
         }
 
         #content h1{
             margin: 0; 
             font-size: 36px;
-            padding-bottom: 20px;
+            /* width: 90%; */
+            padding-top: 48px;
             font-family: 'Times New Roman', Times, serif;
         }
         #content h2{
             font-style: italic;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 22px;
-            
             /* background-color: red; */
-            /* margin-top: 29px; */
-            padding-top: 9px;
+            margin-top: 29px;
         }
 
         #content h3{
             font-family: 'Times New Roman', Times, serif;
             color: black;
-            font-size: 18px;
+            font-size: 4.75mm;
+            margin-left: -0.5px;        
 
         }
 
@@ -60,6 +48,8 @@
             background-color: blue;
             color: white;
             padding: 2px;
+            font-weight: bold;
+            letter-spacing: -1px;
            
         }
 
@@ -83,11 +73,60 @@
             border-bottom: 2px solid red;
             /* letter-spacing: 0px; */
 
-        }   
+        }    
+        
+        /* elementet øverest har en padding bottom */
+        /* brug padding i stedet for margin */
+        /* tænk på vedligeholdelses aspect */
+        #content h1 + p{
+            font-family: Arial, Helvetica, sans-serif;
+            /* font-size: 16px; */
+            margin-top: 0;
+            margin-top: 17px;
+            margin-bottom: 0;
+        }
+
+        #content h1+p+p{
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 15px;
+
+        }
+
+
+        
+        
+        #content ol>li>p{
+            font-size: 16px;
+            color: black;
+            margin-left: -0.5px;
+            margin-bottom: 35px;        
+        }
+
+        
+        /* second list in ordered list */
+        ol > li:nth-child(n+2)>p{
+            /* background-color: red; */
+            font-size: 15.1px;
+            line-height: 1.3;
+        }    
+
+
+        
+        ol+h2{
+            margin-top: 49px;
+            margin-bottom: 0;
+        }
         ul{ 
             margin-top: 14px;
             margin-left: -5px;
-        } 
+        }
+        ul li{
+            color: black;
+            font-weight: normal;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            margin-left: -20px;
+        }
         .times{
             font-family: 'Times New Roman', Times, serif;
         }
@@ -103,56 +142,13 @@
             letter-spacing: -1px;
             background-color: black;
         }
-
-        /* elementet øverest har en padding bottom */
-        /* brug padding i stedet for margin */
-        /* tænk på vedligeholdelses aspect */
-        /* #content h1 + p{
-            font-family: Arial, Helvetica, sans-serif;
-            margin-top: 0;
-            margin-top: 17px;
-            margin-bottom: 0;
-        } */
-        /* 
-        #content h1+p+p{
-            font-family: Arial, Helvetica, sans-serif;
-            margin-top: 15px;
-
-        } */
-
-
-        
-        
-        /* #content ol>li>p{
-            font-size: 16px;
-            color: black;
-            margin-left: -0.5px;
-            margin-bottom: 35px;        
-        } */
-
-        
-        /* second list in ordered list */
-        /* ol > li:nth-child(n+2)>p{
-            font-size: 15.1px;
-            line-height: 1.3;
-        }     */
-
-
-        
-        ol+h2{
-            margin-top: 49px;
-            margin-bottom: 0;
-        }
-       
-        ul li{
-            color: black;
-            font-weight: normal;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 16px;
-            margin-left: -20px;
-        }
-       
-        
+        /* fjern */
+        ul > li:nth-child(n+3){
+            /* background-color: red; */
+            /* font-size: 16px; */
+            margin-top: 4px; 
+            /* line-height: 1.3; */
+        }    
 
 
         

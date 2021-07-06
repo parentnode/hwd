@@ -1,0 +1,5 @@
+Tricks: 
+To open exercises: goto http://hwd-01.local/
+to disable cache: go to inspect element in firefox, next press ntwork tab, next press disable cache
+short cut in inspector Ctrl+ shift+c. now select element
+change css in browser. select element with inspector, add nex line in css or change values using arrows
