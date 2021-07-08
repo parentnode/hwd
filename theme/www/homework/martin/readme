@@ -3,3 +3,14 @@ To open exercises: goto http://hwd-01.local/
 to disable cache: go to inspect element in firefox, next press ntwork tab, next press disable cache
 short cut in inspector Ctrl+ shift+c. now select element
 change css in browser. select element with inspector, add nex line in css or change values using arrows
+
+
+
+
+selector regler der er svære at huske:
+div#e1 og div #e1 ?: 
+    se opgave 102 den med kasserne.
+    div med id'et : e1, omvendt ville div #e1 ikke findes da den ville referere til et id: e1 INDEN i et div. og her er der ikke noget div uden om e1 !  */
+
+div > p : vælg p inden i div. 
+    
