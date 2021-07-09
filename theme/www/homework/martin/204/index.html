@@ -13,49 +13,71 @@
 
 		/* reset fieldset */
 		/* https://thatemil.com/blog/2015/01/03/reset-your-fieldset/ */
+		#content{padding-top: 50px;}
 		fieldset {
 			border: 0 none;
 			padding: 0;
 			margin: 0;
 			/* min-width: 0; */
 			background-color: green;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			font-size: 12px;
 		}
 		/* label above input */
-		label,input{
+		label,input,textarea{
 			display:block;
 		}
+		.field .string{padding-top: 20px;}
+
+
 		input{width: 492px;}
 		/* hide hint error default */
-		
+
 		.hint,.error{
 			display: none;
-			font-size: 15px;
+			font-size: 10px;
 			color: blue;
 		}
 
 		textarea:focus ,input:focus {
 			border: 5px solid orange;
-			display: block;
-
-
+			/* display: block; */
 		}
 		.input + div {
 			display: none;
 			position: relative;
-			
+
 		}
 		/* stolen from mads */
+		input:focus ~.help > .hint,
+		textarea:focus ~.help > .hint {
 
-		 input:focus ~ .help > .hint { 
-			display: initial;
+			/* reset to inheried value , so visible*/
+			display: unset;
 
 		}
-
 		button:hover {
 			color:green;
 		}
+		 #input_checkbox,#input_radiobuttons_value1, #input_radiobuttons_value2{
 
+			display: inline-block;
+			width: auto;
+		} 
+		.item > label {
+			display: inline-block;
+		}
+		.checkbox {
+			display: inline-block;
+			width: auto;
+		}
 
+		button{
+			background-color: hotpink;
+			border: 4px black;
+			padding: 10px;
+			margin-left: 220px;
+		}
 
 	</style>
 </head>
@@ -64,15 +86,15 @@
 <div id="page" class="i:page">
 	<div id="header"></div>
 	<div id="content">
-		
+
 		<fieldset>
 			<div class="field string">
 				<!-- text input-->
 				<div class="field string [required]">
-					<label for="input_string">Name</label>
+					<label for="input_string">Name of pasenger</label>
 					<input type="text" name="string" id="input_string" />
 					<div class="help">
-						<div class="hint">write a random name</div>
+						<div class="hint">are you sure that is your name you are writing?</div>
 						<div class="error">error message</div>
 					</div>
 				</div>
@@ -114,10 +136,10 @@
 				<!-- text area -->
 
 				<div class="field text [required]">
-					<label for="input_text">Text [required]</label>
+					<label for="input_text">describe how you will ride the animal</label>
 					<textarea name="text" id="input_text"></textarea>
 					<div class="help">
-						<div class="hint">hint message</div>
+						<div class="hint">say somthing about the way you sit on it.</div>
 						<div class="error">error message</div>
 					</div>
 				</div>
@@ -125,22 +147,22 @@
 				<div class="field checkbox [required]">
 					<input type="hidden" name="checkbox" value="0" />
 					<input type="checkbox" name="checkbox" id="input_checkbox" value="1" />
-					<label for="input_checkbox">Checkbox [required]</label>
+					<label for="input_checkbox">Click the box or the world explodes!</label>
 					<div class="help">
-						<div class="hint">hint message</div>
+						<div class="hint">Did it explode? </div>
 						<div class="error">error message</div>
 					</div>
 				</div>
 				<!-- radiobuttons -->
 				<div class="field radiobuttons [required]">
-					<label>Radiobuttons [required]</label>
+					<label>chose animal color</label>
 					<div class="item">
 						<input type="radio" name="radiobuttons" id="input_radiobuttons_value1" value="value1" />
-						<label for="input_radiobuttons_value1">text1</label>
+						<label for="input_radiobuttons_value1">Rainbow colored</label>
 					</div>
 					<div class="item">
 						<input type="radio" name="radiobuttons" id="input_radiobuttons_value2" value="value2" />
-						<label for="input_radiobuttons_value2">text2</label>
+						<label for="input_radiobuttons_value2">Don't color my animal, freak!</label>
 					</div>
 					<div class="help">
 						<div class="hint">hint message</div>
@@ -152,11 +174,11 @@
 				</div>
 			</div>
 		</fieldset>
-	
+
 		<ul class="actions">
-		
+
 		</ul>
-	
+
 	</form>
 
 	</div>
