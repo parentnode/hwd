@@ -10,7 +10,52 @@
 
 
 		/* ADD YOUR CSS HERE */
+
+		/* reset fieldset */
+		/* https://thatemil.com/blog/2015/01/03/reset-your-fieldset/ */
+		fieldset {
+			border: 0 none;
+			padding: 0;
+			margin: 0;
+			/* min-width: 0; */
+			background-color: green;
+		}
+		/* label above input */
+		label,input{
+			display:block;
+		}
+		input{width: 492px;}
+		/* hide hint error default */
 		
+		.hint,.error{
+			display: none;
+			font-size: 15px;
+			color: blue;
+		}
+
+		textarea:focus ,input:focus {
+			border: 5px solid orange;
+			display: block;
+
+
+		}
+		.input + div {
+			display: none;
+			position: relative;
+			
+		}
+		/* stolen from mads */
+
+		 input:focus ~ .help > .hint { 
+			display: initial;
+
+		}
+
+		button:hover {
+			color:green;
+		}
+
+
 
 	</style>
 </head>
@@ -24,42 +69,44 @@
 			<div class="field string">
 				<!-- text input-->
 				<div class="field string [required]">
-					<label for="input_string">String [required]</label>
+					<label for="input_string">Name</label>
 					<input type="text" name="string" id="input_string" />
 					<div class="help">
-						<div class="hint">hint message</div>
+						<div class="hint">write a random name</div>
 						<div class="error">error message</div>
 					</div>
 				</div>
-				
+
 				<!-- email -->
 				<div class="field email [required]">
 					<label for="input_email">Email</label>
 					<input type="email" name="email" id="input_email" maxlength="255" />
 					<div class="help">
-						<div class="hint">hint message</div>
+						<div class="hint">weird@wtf.com</div>
 						<div class="error">error message</div>
 					</div>
 				</div>
 				<!-- password -->
 				<div class="field password [required]">
-					<label for="input_password">Password [required]</label>
+					<label for="input_password">Password</label>
 					<input type="password" name="password" id="input_password" maxlength="255" />
 					<div class="help">
-						<div class="hint">hint message</div>
+						<div class="hint">make it easy to remember, what about 1,2,3,4 or your birthday?</div>
 						<div class="error">error message</div>
 					</div>
 				</div>
 				<!-- select -->
 				<div class="field select [required]">
-					<label for="input_select">Select [required]</label>
+					<label for="input_select">Select transport animal</label>
 					<select name="select" id="input_select">
-						<option value="0" selected="selected">none</option>
-						<option value="1" selected="selected">1</option>
-						<option value="2" selected="selected">2</option>
+						<option value="0" selected="selected">seahorse</option>
+						<option value="1" selected="selected">unicorn</option>
+						<option value="2" selected="selected">dragon</option>
+						<option value="3" selected="selected">hipogrif</option>
+
 					</select>
 					<div class="help">
-						<div class="hint">hint message</div>
+						<div class="hint">you wont get help!</div>
 						<div class="error">error message</div>
 					</div>
 				</div>
