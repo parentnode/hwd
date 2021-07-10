@@ -47,6 +47,7 @@
 			position: relative;
 		}
 		/* stolen from mads */
+		/* fjern tilde ? det virker kun med tilde*/
 		input:focus ~.help > .hint,
 		textarea:focus ~.help > .hint {
 
@@ -57,7 +58,8 @@
 			color:green;
 		}
 		 #input_checkbox,#input_radiobuttons_value1, #input_radiobuttons_value2{
-
+			/* experment inline */
+			/* få dem til at stå til venstre knappen skal være inderst */
 			display: inline-block;
 			width: auto;
 		} 
@@ -139,6 +141,7 @@
 						<div class="error">error message</div>
 					</div>
 				</div>
+
 				<!-- check box -->
 				<div class="field checkbox [required]">
 					<input type="hidden" name="checkbox" value="0" />
