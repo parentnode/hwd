@@ -14,70 +14,15 @@
 		/* reset fieldset */
 		/* https://thatemil.com/blog/2015/01/03/reset-your-fieldset/ */
 		#content{padding-top: 50px;}
-		fieldset {
-			border: 0 none;
-			padding: 0;
-			margin: 0;
-			/* min-width: 0; */
-			background-color: green;
-			font-family: Verdana, Geneva, Tahoma, sans-serif;
-			font-size: 12px;
-		}
-		/* label above input */
-		label,input,textarea{
-			display:block;
-		}
-		.field .string{padding-top: 20px;}
+		fieldset {border: 0 none;padding-top: 20px;background-color: rgb(35, 228, 154);font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 16px;border-radius: 25px;}
+		#input_string, #input_email, #input_password,#input_select, #input_text{display: block; width: 100%; margin-bottom: 20px;}
+		.hint,.error{display: none; font-size: 10px;}
+		input:focus ~.help > .hint,	textarea:focus ~.help > .hint, input:focus ~.help > .error {display: unset;}
+		button:hover {background-color: white; color:black;}
+		button {background-color: rgb(175, 91, 224); border: solid 1px black;padding: 10px;margin-left: 220px;}
 
-		input{width: 492px;}
-		/* hide hint error default */
-
-		.hint,.error{
-			display: none;
-			font-size: 10px;
-			color: blue;
-		}
-
-		textarea:focus ,input:focus {
-			border: 5px solid orange;
-			/* display: block; */
-		}
-		.input + div {
-			display: none;
-			position: relative;
-		}
-		/* stolen from mads */
-		/* fjern tilde ? det virker kun med tilde*/
-		input:focus ~.help > .hint,
-		textarea:focus ~.help > .hint {
-
-			/* reset to inheried value , so visible*/
-			display: unset;
-		}
-		button:hover {
-			color:green;
-		}
-		 #input_checkbox,#input_radiobuttons_value1, #input_radiobuttons_value2{
-			/* experment inline */
-			/* få dem til at stå til venstre knappen skal være inderst */
-			display: inline-block;
-			width: auto;
-		} 
-		.item > label {
-			display: inline-block;
-		}
-		.checkbox {
-			display: inline-block;
-			width: auto;
-		}
-
-		button{
-			background-color: hotpink;
-			border: 4px black;
-			padding: 10px;
-			margin-left: 220px;
-		}
-
+		#input_text{margin-bottom: 40px;}
+		div.field.checkbox, div.field.checkbox + label{margin-bottom: 20px;}
 	</style>
 </head>
 <body>
@@ -93,7 +38,7 @@
 					<input type="text" name="string" id="input_string" />
 					<div class="help">
 						<div class="hint">are you sure that is your name you are writing?</div>
-						<div class="error">error message</div>
+						<div class="error">error: your name is wierd</div>
 					</div>
 				</div>
 
@@ -103,7 +48,7 @@
 					<input type="email" name="email" id="input_email" maxlength="255" />
 					<div class="help">
 						<div class="hint">weird@wtf.com</div>
-						<div class="error">error message</div>
+						<div class="error">error: not an email</div>
 					</div>
 				</div>
 				<!-- password -->
@@ -112,7 +57,7 @@
 					<input type="password" name="password" id="input_password" maxlength="255" />
 					<div class="help">
 						<div class="hint">make it easy to remember, what about 1,2,3,4 or your birthday?</div>
-						<div class="error">error message</div>
+						<div class="error">error: 404</div>
 					</div>
 				</div>
 				<!-- select -->
@@ -127,7 +72,7 @@
 					</select>
 					<div class="help">
 						<div class="hint">you wont get help!</div>
-						<div class="error">error message</div>
+						<div class="error">error sonethign went wrong.. ups</div>
 					</div>
 				</div>
 
@@ -138,7 +83,7 @@
 					<textarea name="text" id="input_text"></textarea>
 					<div class="help">
 						<div class="hint">say somthing about the way you sit on it.</div>
-						<div class="error">error message</div>
+						<div class="error">error too bad</div>
 					</div>
 				</div>
 
@@ -149,7 +94,7 @@
 					<label for="input_checkbox">Click the box or the world explodes!</label>
 					<div class="help">
 						<div class="hint">Did it explode? </div>
-						<div class="error">error message</div>
+						<div class="error">error.. error.. error</div>
 					</div>
 				</div>
 				<!-- radiobuttons -->
@@ -164,8 +109,8 @@
 						<label for="input_radiobuttons_value2">Don't color my animal, freak!</label>
 					</div>
 					<div class="help">
-						<div class="hint">hint message</div>
-						<div class="error">error message</div>
+						<div class="hint">hint: clip it</div>
+						<div class="error">error again</div>
 					</div>
 					<div>
 						<button type="submit"> submit</button>
