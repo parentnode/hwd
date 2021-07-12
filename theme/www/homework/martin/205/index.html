@@ -11,7 +11,7 @@
 		#header:hover + #content {background: transparent url(assets/bg_205.png) no-repeat left 50px;}
 		#header:hover + #content * {opacity: 0;}
 		#content div.reference_video {padding-top: 50px;}
-		#content div.reference_video video {margin: 0 -26px;}
+		#content div.reference_video video {margin: 200;}
 
 
 		/* ADD YOUR CSS HERE */
@@ -24,6 +24,7 @@
 			position: center;
 			
 		}
+		h2{margin-top: 200px;}
 		#input_firstname{
 			width: 300px;
 			height: 25px;
@@ -41,13 +42,13 @@
 		#input_firstname:hover{
 			background-color: red;
 		}
-		.hint{
-			
-		}
-		:focus{
+
+		input:focus{
 			background-color: blue;
-			
 		}
+		.hint,.error{display: none; font-size: 10px;}
+		input:focus ~.help > .hint,	textarea:focus ~.help > .hint, input:focus ~.help > .error {display: unset;}
+
 
 
 	</style>
