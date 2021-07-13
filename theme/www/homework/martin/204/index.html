@@ -14,15 +14,94 @@
 		/* reset fieldset */
 		/* https://thatemil.com/blog/2015/01/03/reset-your-fieldset/ */
 		#content{padding-top: 50px;}
-		fieldset {border: 0 none;padding-top: 20px;background-color: rgb(35, 228, 154);font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: 16px;border-radius: 25px;}
-		#input_string, #input_email, #input_password,#input_select, #input_text{display: block; width: 100%; margin-bottom: 20px;}
-		.hint,.error{display: none; font-size: 10px;}
-		input:focus ~.help > .hint,	textarea:focus ~.help > .hint, input:focus ~.help > .error {display: unset;}
-		button:hover {background-color: white; color:black;}
-		button {background-color: rgb(175, 91, 224); border: solid 1px black;padding: 10px;margin-left: 220px;}
+		
+
+
+
+		fieldset {
+			/* border: 0 none; */
+			padding-top: 20px; 
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			font-size: 16px;
+		}
+
+		div.field input,
+		div.field textarea, 
+		div.field select{
+			outline: none;
+			width: 100%;
+			/* if there is no border-radius it shows the orange border */
+			border-radius: 0px;
+			box-sizing: border-box;
+			display: block; 
+			width: 100%; 
+			/* margin-bottom: 20px; */
+			height: 20px;
+			margin-bottom: 20px;
+			border: 1px solid black;
+
+		}
+		.hint, .error{
+			font-size: 10px;
+			display: none;
+			position: absolute;
+			background-color: rgb(169, 255, 169);
+			padding: 2px 2px;
+			z-index: 1;
+			width: 462px;
+			margin-top: -21px;
+			border: 1px solid black;
+			border-top: 0px;
+		}
+		div.field.text .help > .hint{
+			margin-top: -41px;
+		}
+		
+		button {
+			background-color: rgb(104, 177, 104);
+			border: solid 1px black;padding: 10px;
+			float:right;
+		}
+
+		 input:focus ~.help > .hint,	
+		textarea:focus ~.help > .hint{
+			display: block;
+			border-color: green;} 
+		#input_checkbox:focus ~.help > .hint{display: none;}
+		button:hover {
+			background-color: white; 
+			color:black;}
+		button:focus {
+			background-color: white; 
+			color:green;}	
+			
+
 
 		#input_text{margin-bottom: 40px;}
-		div.field.checkbox, div.field.checkbox + label{margin-bottom: 20px;}
+
+		div.field.checkbox input,
+		div.field.radiobuttons input {width: 20px; display: inline}
+		
+		
+
+		select{
+			border-radius: 0;
+			box-shadow: 0;
+			border: 1px solid gray;
+			height: 16px;
+		}
+		.radiobuttons > label{
+			display: block;
+			color: green;
+			margin-bottom: 20px;
+		}
+
+		/*  label text = input text size */
+		/* select box make  round cornerrs and color */
+
+		/* radiobuttons, make heading bigger, white space, more space */
+
+
 	</style>
 </head>
 <body>
@@ -82,7 +161,7 @@
 					<label for="input_text">describe how you will ride the animal</label>
 					<textarea name="text" id="input_text"></textarea>
 					<div class="help">
-						<div class="hint">say somthing about the way you sit on it.</div>
+						<div class="hint">Example: I ride the seahorse with a saddle, dresssed as a cowboy.</div>
 						<div class="error">error too bad</div>
 					</div>
 				</div>
@@ -91,7 +170,7 @@
 				<div class="field checkbox [required]">
 					<input type="hidden" name="checkbox" value="0" />
 					<input type="checkbox" name="checkbox" id="input_checkbox" value="1" />
-					<label for="input_checkbox">Click the box or the world explodes!</label>
+					<label for="input_checkbox">Are you bringing other animals</label>
 					<div class="help">
 						<div class="hint">Did it explode? </div>
 						<div class="error">error.. error.. error</div>
@@ -99,14 +178,14 @@
 				</div>
 				<!-- radiobuttons -->
 				<div class="field radiobuttons [required]">
-					<label>chose animal color</label>
+					<label>Chose animal styling:</label>
 					<div class="item">
 						<input type="radio" name="radiobuttons" id="input_radiobuttons_value1" value="value1" />
-						<label for="input_radiobuttons_value1">Rainbow colored</label>
+						<label for="input_radiobuttons_value1">Rainbow</label>
 					</div>
 					<div class="item">
 						<input type="radio" name="radiobuttons" id="input_radiobuttons_value2" value="value2" />
-						<label for="input_radiobuttons_value2">Don't color my animal, freak!</label>
+						<label for="input_radiobuttons_value2">Glitter</label>
 					</div>
 					<div class="help">
 						<div class="hint">hint: clip it</div>
