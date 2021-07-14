@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 204</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 500px; margin: 0 auto;}
+
+
+		/* ADD YOUR CSS HERE */
+
+		/* reset fieldset */
+		/* https://thatemil.com/blog/2015/01/03/reset-your-fieldset/ */
+		#content{padding-top: 50px;}
+		fieldset {
+			padding-top: 20px; 
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			font-size: 16px;
+		}
+		.hint, .error{
+			display: none;
+		}
+		label{
+			display: inline-block;
+		}
+		#input_radiobuttons_value1, #input_radiobuttons_value2, #input_checkbox
+		{
+			display: inline-block;
+		}
+		#input_checkbox + label, 
+		input[type="radio"] + label{
+			padding-bottom: 20px;
+			margin-left: 30px;
+		}
+		/* make new button for checkbox */
+		#input_checkbox + label:before,
+		input[type="radio"] + label:before{
+			content:"";
+			background: rgb(235, 235, 235);
+			border-color:2px black;
+			width: 30px;	
+			height: 30px;
+			display: inline-block;
+			position: absolute;
+			margin-left: -60px;
+			z-index: 0; 
+			cursor: pointer
+		}
+	
+		#input_checkbox:checked + label:before,
+		input[type="radio"]:checked + label:before {
+			content:"";
+			background: rgb(98, 245, 98);
+			width: 30px;
+			height: 30px;
+			display: inline-block;
+			position: absolute;
+			margin-left: -60px;
+			z-index: 1;
+			
+		}
+		#input_checkbox:hover + label:before,
+		input[type="radio"]:hover + label:before {
+			content:"";
+			background: rgb(165, 243, 165);
+
+			width: 30px;
+			height: 30px;
+			display: inline-block;
+			position: absolute;
+			margin-left: -60px;
+			z-index: 1;
+
+		}
+
+		
+		
+		
+
+	</style>
+</head>
+<body>
+
+<div id="page" class="i:page">
+	<div id="header"></div>
+	<div id="content">
+
+		<fieldset>
+				
+				<!-- check box -->
+				<div class="field checkbox [required]">
+					<input type="hidden" name="checkbox" value="0" />
+					<input type="checkbox" name="checkbox" id="input_checkbox" value="1" />
+					<label for="input_checkbox">Are you bringing other animals</label>
+					<div class="help">
+						<div class="hint">Did it explode? </div>
+						<div class="error">error.. error.. error</div>
+					</div>
+				</div>
+				<!-- radiobuttons -->
+				<div class="field radiobuttons [required]">
+					<label>Chose animal styling:</label>
+					<div class="item">
+						<input type="radio" name="radiobuttons" id="input_radiobuttons_value1" value="value1" />
+						<label for="input_radiobuttons_value1">Rainbow</label>
+					</div>
+					<div class="item">
+						<input type="radio" name="radiobuttons" id="input_radiobuttons_value2" value="value2" />
+						<label for="input_radiobuttons_value2">Glitter</label>
+					</div>
+					<div class="help">
+						<div class="hint">hint: clip it</div>
+						<div class="error">error again</div>
+					</div>
+					<div>
+						<button type="submit"> submit</button>
+					</div>
+				</div>
+		</fieldset>
+
+		<ul class="actions">
+
+		</ul>
+
+	</form>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+
+</body>
+</html>

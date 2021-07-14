@@ -14,17 +14,12 @@
 		/* reset fieldset */
 		/* https://thatemil.com/blog/2015/01/03/reset-your-fieldset/ */
 		#content{padding-top: 50px;}
-		
-
-
-
 		fieldset {
-			/* border: 0 none; */
 			padding-top: 20px; 
 			font-family: Verdana, Geneva, Tahoma, sans-serif;
-			font-size: 16px;
+			font-size: 12px;
 		}
-
+		/* general design */
 		div.field input,
 		div.field textarea, 
 		div.field select{
@@ -35,17 +30,24 @@
 			box-sizing: border-box;
 			display: block; 
 			width: 100%; 
-			/* margin-bottom: 20px; */
 			height: 20px;
 			margin-bottom: 20px;
 			border: 1px solid black;
-
 		}
-		.hint, .error{
+		#input_text{margin-bottom: 40px;}
+		div.field.radiobuttons > label{
+			padding-bottom: 20px;
+		}
+		div.field.text .help > .hint{
+			margin-top: -41px;
+		}
+		/* hint related */
+		.hint, 
+		.error{
 			font-size: 10px;
 			display: none;
 			position: absolute;
-			background-color: rgb(169, 255, 169);
+			background-color: yellowgreen;
 			padding: 2px 2px;
 			z-index: 1;
 			width: 462px;
@@ -53,55 +55,81 @@
 			border: 1px solid black;
 			border-top: 0px;
 		}
-		div.field.text .help > .hint{
-			margin-top: -41px;
-		}
-		
-		button {
-			background-color: rgb(104, 177, 104);
-			border: solid 1px black;padding: 10px;
-			float:right;
-		}
+		/* show only certain hints */
+		input[type="radio"]:focus ~.help > .hint,
+		input[type="text"]:focus ~.help > .hint,
+		input[type="password"]:focus ~.help > .hint,
+		input[type="email"]:focus ~.help > .hint,
+		textarea:focus ~.help > .hint{display: block;border-color: black;} 
 
-		 input:focus ~.help > .hint,	
-		textarea:focus ~.help > .hint{
-			display: block;
-			border-color: green;} 
-		#input_checkbox:focus ~.help > .hint{display: none;}
-		button:hover {
-			background-color: white; 
-			color:black;}
-		button:focus {
-			background-color: white; 
-			color:green;}	
+		/* keep things in place */
+		label,
+		input[type="radio"], 
+		#input_checkbox {display: inline-block;}
+		
+		div.field.checkbox input,
+		div.field.radiobuttons input {
+			width: 0px; 
+			display: inline-block;
+			
+		}
 			
 
-
-		#input_text{margin-bottom: 40px;}
-
-		div.field.checkbox input,
-		div.field.radiobuttons input {width: 20px; display: inline}
-		
-		
-
-		select{
-			border-radius: 0;
-			box-shadow: 0;
-			border: 1px solid gray;
-			height: 16px;
+			#input_checkbox + label,
+		input[type="radio"] + label{
+			padding-left: 40px;
+			padding-bottom: 20px;
 		}
-		.radiobuttons > label{
-			display: block;
-			color: green;
-			margin-bottom: 20px;
+		
+		/* THE GREAT BUTTON SECTION */
+		button {
+			background-color: yellowgreen;
+			border: 0;
+			padding: 10px;
+			float:right;
+		}
+		button:hover {background-color: yellowgreen;}
+		button:focus {background-color: rgb(0, 141, 0)}
+
+		/* home made checkbox and radiobutton layer */
+
+		#input_checkbox + label:before,
+		input[type="radio"] + label:before{
+			content:"";
+			background: rgb(235, 235, 235);
+			border-color:2px black;
+			width: 30px;	
+			height: 30px;
+			display: inline-block;
+			position: absolute;
+			margin: -3px 0px 0px -52px;
+			z-index: 0; 
+			cursor: pointer
 		}
 
-		/*  label text = input text size */
-		/* select box make  round cornerrs and color */
+		#input_checkbox:checked + label:before,
+		input[type="radio"]:checked + label:before {
+			content:"";
+			background: rgb(0, 141, 0) ;
+			width: 30px;
+			height: 30px;
+			display: inline-block;
+			position: absolute;
+			margin: -3px 0px 0px -52px;
+			z-index: 1;	
+		}
 
-		/* radiobuttons, make heading bigger, white space, more space */
-
-
+		#input_checkbox:hover + label:before,
+		input[type="radio"]:hover + label:before {
+			content:"";
+			background: yellowgreen;
+			width: 30px;
+			height: 30px;
+			display: inline-block;
+			position: absolute;
+			margin: -3px 0px 0px -52px;
+			z-index: 1;
+		}
 	</style>
 </head>
 <body>
@@ -158,7 +186,7 @@
 				<!-- text area -->
 
 				<div class="field text [required]">
-					<label for="input_text">describe how you will ride the animal</label>
+					<label for="input_text">Describe how you will ride the animal</label>
 					<textarea name="text" id="input_text"></textarea>
 					<div class="help">
 						<div class="hint">Example: I ride the seahorse with a saddle, dresssed as a cowboy.</div>
@@ -170,7 +198,7 @@
 				<div class="field checkbox [required]">
 					<input type="hidden" name="checkbox" value="0" />
 					<input type="checkbox" name="checkbox" id="input_checkbox" value="1" />
-					<label for="input_checkbox">Are you bringing other animals</label>
+					<label for="input_checkbox">Im bringing my own animal</label>
 					<div class="help">
 						<div class="hint">Did it explode? </div>
 						<div class="error">error.. error.. error</div>
