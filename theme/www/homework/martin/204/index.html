@@ -46,56 +46,15 @@
 
 		}
 
-		
-	
+		select {appearance: none;}
 		
 		div.field.select{
 			position: relative;
 		}
-		/* cover the standard arrow with white square*/
-		.select:after {
-			content: "";
-			position: absolute;
-			display: inline-block;
-			height: 38px;
-			width: 40px;
-			background-color: white;
-			right: 0px;
-			top: 14px;
-			border: solid 1px black;
-			border-left: transparent;
-			pointer-events: none;
-
 		
-		}
-		/* arrow */
-		.select:before {
-			z-index: 1;
-			/* arrow css code */
-			/* content: "\2193"; */
-			content: "";
-			font-size: 30px;
-			position: absolute;
-			display: inline-block;
-			right: 5px;
-			top: 25px;
-			border-left: transparent;
-			
-			border-width: 15px;
-			border-style: solid;
-			border-top-color: black;
-			border-left-color: transparent;
-			border-bottom-color: transparent;
-			border-right-color: transparent;
-			
-			cursor: pointer; 
-			pointer-events: none; 
-		}
-		/* set relative pos to relative so the arrow stays inplace.  */
-		select{
-			position: relative;
-
-		}.password:after {
+		/*  arrow  white part*/
+		.select:after {
+		
 			z-index: 2;
 			/* arrow css code */
 			/* content: "\2193"; */
@@ -104,42 +63,58 @@
 			position: absolute;
 			display: inline-block;
 			right: 5px;
-			top: 95px;
+			top: 40%;
 			border-left: transparent;
 			
-			border-width: 15px;
+			border-width: 20px;
 			border-style: solid;
 			border-top-color: white;
 			border-left-color: transparent;
 			border-bottom-color: transparent;
 			border-right-color: transparent;
+			pointer-events: none; 
+
+		
+		}
+		/* arrow black*/
+		.select:before {
+			z-index: 1;
+			content: "";
+			font-size: 30px;
+			position: absolute;
+			display: inline-block;
+			right: 5px;
+			top: 50%;
 			
-			cursor: pointer; 
+			border-width: 20px;
+			border-style: solid;
+			border-top-color: black;
+			border-left-color: transparent;
+			border-bottom-color: transparent;
+			border-right-color: transparent;
 			pointer-events: none; 
 		}
-		.password{
-			position: relative;
-		}
-		/*  */
+
+
 		
-
-
-
-
-
 		#input_text{
-			margin-bottom: 40px;
+			margin-bottom: 20px;
 			height: 100px;
 		}
 		div.field.radiobuttons > label{
-			padding-bottom: 20px;
+			padding-bottom: 10px;
 		}
 		div.field.text .help > .hint{
 			margin-top: -41px;
+
 		}
 		/* hint related */
+		.help{
+			position: relative;
+		}
 		.hint,
 		.error{
+			position: absolute;
 			font-size: 10px;
 			display: none;
 			position: absolute;
@@ -147,9 +122,9 @@
 			padding: 2px 2px;
 			z-index: 1;
 			width: 468px;
-			margin-top: -21px;
 			border: 1px solid black;
 			border-top: 0px;
+			bottom: 5px;
 		}
 		/* show only certain hints */
 		input[type="radio"]:focus ~.help > .hint,
@@ -161,7 +136,11 @@
 		/* keep things in place */
 		label,
 		input[type="radio"],
-		#input_checkbox {display: inline-block;}
+		#input_checkbox {
+			display: inline-block;
+			
+		
+		}
 
 		div.field.checkbox input,
 		div.field.radiobuttons input {
@@ -173,7 +152,7 @@
 		#input_checkbox + label,
 		input[type="radio"] + label{
 			padding-left: 40px;
-			padding-bottom: 20px;
+			padding-bottom: 40px;
 		}
 
 		/* THE GREAT BUTTON SECTION */
@@ -188,6 +167,17 @@
 
 		/* home made checkbox and radiobutton layer */
 
+		/* position relative on class above, makes sure button layer stays in right place  */
+		.field.checkbox, .item1, .item2{
+			position: relative;
+		}
+		#input_checkbox, input[type="radio"]{
+			position: absolute;
+			top: 0;
+			height: 10px;
+			width: 10px;
+		}
+
 		#input_checkbox + label:before,
 		input[type="radio"] + label:before{
 			content:"";
@@ -197,7 +187,9 @@
 			height: 30px;
 			display: inline-block;
 			position: absolute;
-			margin: -3px 0px 0px -52px;
+			top: 0px;
+			left: 0px;
+			/* margin: -3px 0px 0px -52px; */
 			z-index: 0;
 			cursor: pointer
 		}
@@ -210,7 +202,9 @@
 			height: 30px;
 			display: inline-block;
 			position: absolute;
-			margin: -3px 0px 0px -52px;
+			top: 0px;
+			left: 0px;
+			/* margin: -3px 0px 0px -52px; */
 			z-index: 1;
 		}
 
@@ -222,7 +216,8 @@
 			height: 30px;
 			display: inline-block;
 			position: absolute;
-			margin: -3px 0px 0px -52px;
+			top: 0px;
+			left: 0px;
 			z-index: 2;
 		}
 
@@ -234,17 +229,19 @@
 			height: 30px;
 			display: inline-block;
 			position: absolute;
-			margin: -3px 0px 0px -52px;
+			top: 0px;
+			left: 0px;
 			z-index: 1;
 		}
 
-		/* større input felt
-		støre font i input felt
-		adskild label fra intast
-		mere luft
-		grøn box under lav samme størrelse
-		style select felt
-		knapper grøn når hover
+
+		 /* 
+		 padding i selct 
+		 text skrift type
+		 pill midt i felt
+		 afstand mellem textbox 
+		 padding i siderne i field set , samme padding
+		 padding submit button samme som i toppen. som i bunden
 		 */
 	</style>
 </head>
@@ -323,11 +320,11 @@
 				<!-- radiobuttons -->
 				<div class="field radiobuttons [required]">
 					<label>Chose animal styling:</label>
-					<div class="item">
+					<div class="item1">
 						<input type="radio" name="radiobuttons" id="input_radiobuttons_value1" value="value1" />
 						<label for="input_radiobuttons_value1">Rainbow</label>
 					</div>
-					<div class="item">
+					<div class="item2">
 						<input type="radio" name="radiobuttons" id="input_radiobuttons_value2" value="value2" />
 						<label for="input_radiobuttons_value2">Glitter</label>
 					</div>
