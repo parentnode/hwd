@@ -6,8 +6,7 @@
 	<style type="text/css">
 		/* DON'T CHANGE THIS CSS */
 		body {margin: 0;}
-		#page {width: 500px; margin: 0 auto;
-		}
+		#page {width: 500px; margin: 0 auto;}
 
 
 		/* ADD YOUR CSS HERE */
@@ -15,10 +14,19 @@
 		/* ***general overall layout section*** */
 
 		#content{padding-top: 10px;}
-		fieldset {
+		form{
+			border: 1px solid black;
 			padding: 20px 10px 20px 10px ;
 			font-family: 'Montserrat', Arial, sans-serif;
 			font-size: 12px;
+		}
+		fieldset {
+			padding: 0;
+			border: none;
+		}
+		div.field,
+		div.item{
+			position: relative;
 		}
 
 		div.field input,
@@ -36,72 +44,86 @@
 			border: 1px solid black;
 			font-size: 20px;
 			padding-left: 5px;
+			padding-right: 5px;
 		}
 
 		/* aditions to general layout */
-		select {
+		div.field select {
 			appearance: none;
 			padding-left: 0px;
 		}
-		#input_text{
+		div.field textarea{
 			height: 100px;
 		}
 
-		label{
+		div.field label{
 			margin-bottom: 5px;
 			display: inline-block;	
 		}		
 		
-		div.field.checkbox input[type="checkbox"],
-		div.field.radiobuttons input[type="radio"] {
+		div.field.checkbox input,
+		div.field.radiobuttons input{
 			display: inline-block;
 			appearance: none;
 			border: none;
+			position: absolute;
+			z-index: -1;
 		}
 
-		#input_checkbox + label,
-		input[type="radio"] + label{
+		div.field.checkbox input + label,
+		div.field.radiobuttons input + label{
 			margin: 8px 0px 8px 40px;			
 		}
 
-		/* ***pseudo elements section *** */
-		
-		/*make parent "relative" so positioning absolute positioning stays with parent */
-		div.field,
-		div.item1,
-		div.item2{
-			position: relative;
+		/* ***checkbox and radiobutton section*** */
+
+		.field.radiobuttons div.item,div.field.checkbox{
 			margin-bottom: 20px;
 		}
-		
-		/*  arrow  white part*/
-		.select:after {
-			z-index: 2;
-			content: "";
-			font-size: 30px;
-			position: absolute;
-			display: inline-block;
-			right: 5px;
-			top: 40%;
-			border-width: 20px;
-			border-style: solid;
-			border-top-color: white;
-			border-left-color: transparent;
-			border-bottom-color: transparent;
-			border-right-color: transparent;
-			pointer-events: none; 
 
-		
+		div.field.checkbox input + label:before,
+		div.field.radiobuttons input + label:before{
+			content:"";
+			background: rgb(235, 235, 235);
+			width: 30px;
+			height: 30px;
+			display: inline-block;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			z-index: 0;
+			cursor: pointer
 		}
+
+		div.field.checkbox input:checked + label:before,
+		div.field.radiobuttons input:checked + label:before{
+			background: rgb(0, 141, 0);
+			z-index: 1;
+		}
+
+		div.field.checkbox input:hover + label:before,
+		div.field.radiobuttons input:hover + label:before{
+			background: yellowgreen;
+			z-index: 1;
+		}
+
+		div.field.checkbox input:checked:hover + label:before,
+		div.field.radiobuttons input:checked:hover + label:before{
+			background: rgb(0, 141, 0);
+			z-index: 1;
+		}
+
+		/* ***select design*** */
+		
 		/* arrow black*/
-		.select:before {
+		div.field.select:before {
 			z-index: 1;
 			content: "";
 			font-size: 30px;
 			position: absolute;
 			display: inline-block;
 			right: 5px;
-			top: 50%;
+			top: 30px;
 			border-width: 20px;
 			border-style: solid;
 			border-top-color: black;
@@ -110,13 +132,32 @@
 			border-right-color: transparent;
 			pointer-events: none; 
 		}
+		
+		/*  arrow  white part*/
+		div.field.select:after {
+			z-index: 2;
+			content: "";
+			font-size: 30px;
+			position: absolute;
+			display: inline-block;
+			right: 5px;
+			top: 29px;
+			border-width: 20px;
+			border-style: solid;
+			border-top-color: white;
+			border-left-color: transparent;
+			border-bottom-color: transparent;
+			border-right-color: transparent;
+			pointer-events: none; 
+		}
+
 
 		/* ***showing hints section*** */
-		.help{
+		div.field .help{
 			position: relative;
 		}
-		.hint,
-		.error{
+		div.field .hint,
+		div.field .error{
 			position: absolute;
 			font-size: 10px;
 			display: none;
@@ -128,98 +169,31 @@
 			border: 1px solid black;
 			border-top: 0px;
 			bottom: 5px;
-
 		}
+
 		/* show hints */
-		input[type="radio"]:focus ~.help > .hint,
-		input[type="text"]:focus ~.help > .hint,
-		input[type="password"]:focus ~.help > .hint,
-		input[type="email"]:focus ~.help > .hint,
-		textarea:focus ~.help > .hint{display: block;border-color: black;}
+		div.field input:focus ~.help > .hint{display: block;border-color: black;}
+		div.field.checkbox input:focus ~.help > .hint{display:none;}
 
 
-
-		/* THE GREAT BUTTON SECTION */
-		button {
+		/* ***submit button section*** */
+		ul.actions{
+			list-style: none;
+			text-align: right;
+		}
+		ul.actions input{
 			background-color: yellowgreen;
 			border: 0;
 			padding: 10px;
-			float:right;
 		}
-		button:hover {background-color: yellowgreen;}
-		button:focus {background-color: rgb(0, 141, 0)}
+		ul.actions input:hover {background-color: yellowgreen;}
+		ul.actions input:focus {background-color: rgb(0, 141, 0)}
 
-		/* ***checkbox and radiobutton ection*** */
-
-		/* position relative on class above, makes sure button layer stays in right place  */
-		.field.checkbox, .item1, .item2{
-			position: relative;
-		}
-		#input_checkbox, input[type="radio"]{
-			position: absolute;
-			display: inline-block;
-			z-index: -1;
-		}
 		
 
-		#input_checkbox + label:before,
-		input[type="radio"] + label:before{
-			content:"";
-			background: rgb(235, 235, 235);
-			/* border-color:2px black; */
-			width: 30px;
-			height: 30px;
-			display: inline-block;
-			position: absolute;
-			top: 0px;
-			left: 0px;
-			/* margin: -3px 0px 0px -52px; */
-			z-index: 0;
-			cursor: pointer
-		}
-
-		#input_checkbox:checked + label:before,
-		input[type="radio"]:checked + label:before{
-			content:"";
-			background: rgb(0, 141, 0);
-			width: 30px;
-			height: 30px;
-			display: inline-block;
-			position: absolute;
-			top: 0px;
-			left: 0px;
-			/* margin: -3px 0px 0px -52px; */
-			z-index: 1;
-		}
-
-		#input_checkbox:checked:hover + label:before,
-		input[type="radio"]:checked:hover + label:before{
-			content:"";
-			background: rgb(0, 141, 0);
-			width: 30px;
-			height: 30px;
-			display: inline-block;
-			position: absolute;
-			top: 0px;
-			left: 0px;
-			z-index: 2;
-		}
-
-		#input_checkbox:hover + label:before,
-		input[type="radio"]:hover + label:before {
-			content:"";
-			background: yellowgreen;
-			width: 30px;
-			height: 30px;
-			display: inline-block;
-			position: absolute;
-			top: 0px;
-			left: 0px;
-			z-index: 1;
-		}
-
-
 		 /* 
+		 to borders der roteres 45 grader
+		 1 px
 		 hvordan kan css optimeres.
 		 */
 	</style>
@@ -229,8 +203,8 @@
 <div id="page" class="i:page">
 	<div id="header"></div>
 	<div id="content">
-
-		<fieldset>
+		<form action="#">
+			<fieldset>
 				<!-- text input-->
 				<div class="field string [required]">
 					<label for="input_string">Name of pasenger</label>
@@ -299,11 +273,11 @@
 				<!-- radiobuttons -->
 				<div class="field radiobuttons [required]">
 					<label>Chose animal styling:</label>
-					<div class="item1">
+					<div class="item">
 						<input type="radio" name="radiobuttons" id="input_radiobuttons_value1" value="value1" />
 						<label for="input_radiobuttons_value1">Rainbow</label>
 					</div>
-					<div class="item2">
+					<div class="item">
 						<input type="radio" name="radiobuttons" id="input_radiobuttons_value2" value="value2" />
 						<label for="input_radiobuttons_value2">Glitter</label>
 					</div>
@@ -311,17 +285,15 @@
 						<div class="hint">hint: clip it</div>
 						<div class="error">error again</div>
 					</div>
-					<div>
-						<button type="submit"> submit</button>
-					</div>
 				</div>
-		</fieldset>
+			</fieldset>
 
-		<ul class="actions">
-
-		</ul>
-
-	</form>
+			<ul class="actions">
+				<li>
+					<input type="submit" value="submit"/>
+				</li>
+			</ul>
+		</form>
 
 	</div>
 	<div id="footer"></div>
