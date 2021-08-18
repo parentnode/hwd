@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 304</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+		#content {min-height: 400px;}
+
+		li.item.modified {background-color: green;}
+		li.item.special {background-color: red;}
+
+	</style>
+</head>
+<body>
+
+<div id="page" class="i:page">
+	<div id="header"></div>
+	<div id="content">
+
+		<ul class="modifyme">
+			<li class="item">Item 1</li>
+			<li class="item special">Item 2</li>
+			<li class="item">Item 3</li>
+			<li class="item">Item 4</li>
+			<li class="item special">Item 5</li>
+			<li class="item special">Item 6</li>
+			<li class="item">Item 7</li>
+			<li class="item special">Item 8</li>
+		</ul>
+
+		<ul class="dontmodifyme">
+			<li class="item">Item 1</li>
+			<li class="item">Item 2</li>
+			<li class="item">Item 3</li>
+			<li class="item">Item 4</li>
+			<li class="item">Item 5</li>
+			<li class="item">Item 6</li>
+			<li class="item">Item 7</li>
+			<li class="item">Item 8</li>
+		</ul>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+
+	// ADD YOUR JS HERE
+
+
+	// keep item 1,3,4,7
+	// change the class to modifiyed
+	// Make a query to get a nodelist of all the li's in ul.modifyme. 
+	//Do not use the :not selector - that is not the purpose of this exercise. 
+
+	var node_ul_modify = document.querySelector("ul.modifyme");
+	console.log(node_ul_modify.childNodes);
+	var list_to_modify = node_ul_modify.childNodes;
+
+	console.log(list_to_modify.length);
+	//loop
+	var list_to_modify = node_ul_modify.childNodes;
+
+
+	console.log(list_to_modify[3]);
+	console.log(list_to_modify[1].matches(".special"));
+
+	var num = 0; 
+	console.log(num % 2);
+	if (num % 2) {
+		console.log(num + " is odd");
+	} else {
+		console.log(num + " is even");
+	}
+
+	 //console.log(element.matches('.special')); // true
+
+	 // 
+	for (var i= 0; i < list_to_modify.length; i++) {
+		if (i % 2){
+			console.log(i+ " is odd");
+			console.log(list_to_modify[i].matches(".special"));
+			if (list_to_modify[i].matches(".special")) {
+				console.log("has special class");
+				// remove "special" class
+				list_to_modify[i].classList.remove(".special")
+				console.log(list_to_modify[i]);
+
+			}
+			else{
+				// add "modifiyed" class
+				list_to_modify[i].classList.add(".modified")
+				console.log(list_to_modify[i]);
+
+			}
+		}
+		else{
+			console.log(i +" is even");
+		}
+	}
+	console.log(list_to_modify);
+</script>
+
+
+</body>
+</html>
