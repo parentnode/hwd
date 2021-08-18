@@ -49,13 +49,14 @@
 	// console.log(content);
 
 	// ? why dose it need to jump to times what is text? 
-	var content = document.body.childNodes[1].childNodes[3];
+	var content = document.body.firstElementChild.children[1];
 	console.log(content);
-	var div_a1 = content.childNodes[1];
+
+	var div_a1 = content.firstElementChild;
 	console.log(div_a1);
-	var div_scene = content.childNodes[3];
+	var div_scene = content.children[1];
 	console.log(div_scene);
-	var div_a2 = div_scene.childNodes[1];
+	var div_a2 = div_scene.firstElementChild;
 	console.log(div_a2);
 	var div_a3 = div_scene.childNodes[3];
 	console.log(div_a3);

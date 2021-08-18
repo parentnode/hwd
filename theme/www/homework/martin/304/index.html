@@ -56,6 +56,8 @@
 	// Make a query to get a nodelist of all the li's in ul.modifyme. 
 	//Do not use the :not selector - that is not the purpose of this exercise. 
 
+
+	// query uses dot like ".exampleClass"
 	var node_ul_modify = document.querySelector("ul.modifyme");
 	console.log(node_ul_modify.childNodes);
 	var list_to_modify = node_ul_modify.childNodes;
@@ -75,30 +77,29 @@
 	} else {
 		console.log(num + " is even");
 	}
+	
+	// declare outside loop to speed it up.
+	var i, node;
+	for (i = 0; i < list_to_modify.length; i++) {
 
-	 //console.log(element.matches('.special')); // true
+		node = list_to_modify[i];
+		console.log("looper");
+		console.log(node.nodeName);
 
-	 // 
-	for (var i= 0; i < list_to_modify.length; i++) {
-		if (i % 2){
-			console.log(i+ " is odd");
-			console.log(list_to_modify[i].matches(".special"));
-			if (list_to_modify[i].matches(".special")) {
-				console.log("has special class");
-				// remove "special" class
-				list_to_modify[i].classList.remove(".special")
-				console.log(list_to_modify[i]);
+		if (node.nodeName != "#text") {
+			// looking for class name			
+			// methode is better than "matches"
+			if (node.className.match("special")) {
+				console.log(node.className , node.classList);
 
+				node.classList.remove("special")
+				// console.log(node);
 			}
 			else{
 				// add "modifiyed" class
-				list_to_modify[i].classList.add(".modified")
-				console.log(list_to_modify[i]);
-
+				node.classList.add("modified")
+				console.log(node);
 			}
-		}
-		else{
-			console.log(i +" is even");
 		}
 	}
 	console.log(list_to_modify);
