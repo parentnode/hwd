@@ -29,7 +29,8 @@
 </div>
 
 <script type="text/javascript">
-
+	"use strict"; 
+	// 'use strict';
 	var content_set = {
 		"no1":"I'm number one",
 		"no2":"I'm number two",
@@ -45,15 +46,19 @@
 	content.appendChild(ul);
 
 	console.log(content);
-
+	var key, li, text;
 	for (key in content_set) {
 		console.log(key + " " + content_set[key]);
 
-		var li = document.createElement("li");
-		li.classList.add(key);
+		li = document.createElement("li");
+		// overwrite current classname
+		li.className = key; 
+		// add className
+		// li.classList.add(key);
 		text = content_set[key];
-		var node = document.createTextNode(text);
-		li.appendChild(node);
+		li.innerHTML = text; 
+		// node = document.createTextNode(text);
+		// li.appendChild(node);
 		ul.appendChild(li);
 	}
 

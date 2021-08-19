@@ -23,6 +23,8 @@
 </div>
 
 <script type="text/javascript">
+	// make sure variables are declared
+	'use strict';
 
 	var content_set = [
 		"I'm number one",
@@ -40,16 +42,20 @@
 	var ul = document.createElement("ul");
 	// append child add's element to the bottom
 	content.appendChild(ul);
-	var i; 
+	var i, li, text; 
 	for (i = 0; i < content_set.length; i++) {			
-		var li = document.createElement("li");
+		li = document.createElement("li");
 		text = content_set[i];
-		var node = document.createTextNode(text);
+		// var node = document.createTextNode(text);
+		// simple way to add test / html
+		li.innerHTML = "<p>" + text + "</p>";
+		console.log(li.innerHTML);
 		// why is it a childnode? 
-		li.appendChild(node);
+		// li.appendChild(node);
 		ul.appendChild(li);
 	}
 	console.log(ul);
+
 
 </script>
 
