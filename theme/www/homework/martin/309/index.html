@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 309</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 960px; margin: 0 auto;}
+
+		#navigation ul {text-align: center; padding: 0;}
+		#navigation ul li {display: inline-block; margin: 0 5px; padding: 14px 5px; border: 1px solid black; color: black;}
+		#navigation ul li.hover {background-color: white; color: white;}
+	</style>
+</head>
+<body>
+
+<div id="page" class="i:page">
+	<div id="header"></div>
+	<div id="navigation">
+		<ul class="navigation">
+			<li>Software</li>
+			<li>Editors</li>
+			<li>Environment</li>
+			<li>Conventions</li>
+			<li>Playground</li>
+			<li>Dictionary</li>
+		</ul>
+	</div>
+	<div id="content">
+
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+	"use script"
+	// ADD YOUR JS HERE
+
+	var nav = document.querySelector(".navigation");
+	console.log(nav.childNodes);
+	var nav = nav.childNodes;
+
+	console.log(nav.length);	
+	var i, node;
+	for (i = 0; i < nav.length; i++) {
+		node = nav[i];
+		if (node.nodeName != "#text") {
+			node.addEventListener('mouseover', mouseover);
+			node.addEventListener('mouseout', mouseout);
+			node.addEventListener('click', click);
+		}
+	}
+
+	function mouseover(e) {
+		console.log("over");
+		li = e.target; 
+		li.className = "hover";
+	}
+	function mouseout(e) {
+		console.log("out");
+		li = e.target; 
+		li.classList.remove("hover");
+	}	
+	function click(e) {
+		console.log("click");
+		li = e.target; 
+		console.log(li.textContent);	
+		alert(li.textContent);	
+	}
+
+</script>
+
+
+</body>
+</html>
