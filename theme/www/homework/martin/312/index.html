@@ -41,20 +41,23 @@
 	function getData(params) {
 		const xhr = new XMLHttpRequest();
 		// prepare XMLHttpRequest to be send
-		xhr.open('GET','	http://hwd-01.local');
+		xhr.open('GET','http://hwd-01.local');
 		console.log("get");
 		// makes it easy to read in the console.
 		xhr.responseType = 'document';
 		// alternative to eventlistner works on more browsers
-		xhr.onload = function() {
-
-			var data = xhr.response;
-			console.log(window.data);	
-			console.log('DONE: ', xhr.status);
-			var response_content = data.querySelector("div#content"); 
-			console.log(response_content);
-			content.replaceWith(response_content);
-		}	
+		xhr.addEventListener('statechange', function(){
+			console.log(xhr.readyState);
+			if(xhr.readyState === 4) {
+				console.log(xhr.readyState);
+				var data = xhr.response;
+				console.log(window.data);	
+				console.log('DONE: ', xhr.status);
+				var response_content = data.querySelector("div#content"); 
+				console.log(response_content);
+				content.replaceWith(response_content);
+			}
+		});
 		// send
 		xhr.send();
 	}

@@ -13,4 +13,14 @@ div#e1 og div #e1 ?:
     div med id'et : e1, omvendt ville div #e1 ikke findes da den ville referere til et id: e1 INDEN i et div. og her er der ikke noget div uden om e1 !  */
 
 div > p : vælg p inden i div. 
-    
+
+
+clone projekt : eks
+sites
+cd parentnode
+git clone https://github.com/parentnode/manipulator_parentnode_dk
+
+star: m@m-ThinkPad-T520:/srv/sites/parentnode/manipulator_parentnode_dk$ enable_site
+
+relaunch sites
+finish  
