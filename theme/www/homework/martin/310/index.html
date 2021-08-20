@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 310</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+		#content div.field.focus input {border: 2px solid orange; outline: none; }
+		/* ADD YOUR CSS HERE */
+	
+
+	</style>
+</head>
+<body>
+
+<div id="page" class="i:page">
+	<div id="header"></div>
+	<div id="content">
+
+		<form action="#" method="post" novalidate="novalidate">
+			<fieldset>
+				<div class="field string">
+					<label for="input_firstname">First name</label>
+					<input type="text" name="string" id="input_firstname" />
+				</div>
+				<div class="field string">
+					<label for="input_lastname">Last name</label>
+					<input type="text" name="lastname" id="input_lastname" />
+				</div>
+			</fieldset>
+
+			<ul class="actions">
+				<li class="save">
+					<input type="submit" value="Save" class="button primary" />
+				</li>
+			</ul>
+
+		</form>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+	"use script"
+	// ADD YOUR JS HERE
+
+	var input_firstname = document.querySelector("#input_firstname")
+	console.log(input_firstname);
+
+	var input_lastname = document.querySelector("#input_lastname")
+	console.log(input_lastname);
+
+	var btn_submit = document.querySelector(".button")
+	console.log(btn_submit);
+
+	var content = document.querySelector("#content");
+	var div_first_name = document.createElement("div");
+	content.appendChild(div_first_name);
+	
+	var div_last_name = document.createElement("div");
+	content.appendChild(div_last_name);
+
+	var input; 
+
+	input_firstname.addEventListener('focus',focus);
+	input_firstname.addEventListener('blur',blur);
+	input_firstname.addEventListener('update',update);
+
+	input_lastname.addEventListener('focus',focus);
+	input_lastname.addEventListener('blur',blur);
+	input_lastname.addEventListener('update',update);
+
+	document.addEventListener('keyup', keyup);
+
+	// mads's trick
+	formElement = document.querySelector("form");
+
+	formElement.addEventListener('submit',submit);
+
+
+	function focus(e) {
+		console.log("focus");
+		input = e.target; 
+		
+		input.classList.add("input"); 
+		div_field = input.parentNode; 
+		div_field.classList.add("focus");
+	}
+	function blur(e) {
+		console.log("blur");
+		input = e.target; 
+
+		input.classList.remove("input");
+
+		div_field =  input.parentNode;
+		div_field.classList.remove("focus");
+
+		
+	}
+	function update(e) {
+		console.log("update");
+		console.log(e);
+	}
+	//https://stackoverflow.com/questions/14568098/page-reloading-after-form-submission-despite-novalidate-and-false-return
+	
+	// wtf? 
+	function submit(e) {
+		if (e.preventDefault) {
+    		e.preventDefault();
+		} else {
+   			e.returnValue = false;
+		}
+		alert("don't send");
+		return false;
+	}
+
+	
+
+	function keyup(e) {
+
+		console.log(e.code);
+		if ( input == document.activeElement) {
+   			console.log("input has focus");	
+			// chcek if first or last name.
+			console.log(input);
+			var id = input.id;
+			console.log("id : " + id);	 	
+			if ( id == "input_firstname"){
+				div_first_name.textContent += String.fromCharCode(e.keyCode);
+			}
+
+			if(id == "input_lastname"){
+				div_last_name.textContent += String.fromCharCode(e.keyCode);
+			}
+
+		}
+		else{
+			console.log("no focus");
+		}
+
+	}
+
+
+</script>
+
+</body>
+</html>
