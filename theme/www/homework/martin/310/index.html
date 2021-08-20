@@ -44,7 +44,7 @@
 </div>
 
 <script type="text/javascript">
-	"use script"
+	"use strict";
 	// ADD YOUR JS HERE
 
 	var input_firstname = document.querySelector("#input_firstname")
@@ -63,51 +63,53 @@
 	var div_last_name = document.createElement("div");
 	content.appendChild(div_last_name);
 
-	var input; 
+	var input_firstname; 
 
-	input_firstname.addEventListener('focus',focus);
-	input_firstname.addEventListener('blur',blur);
-	input_firstname.addEventListener('update',update);
+	input_firstname.addEventListener('focus',_focus);
+	input_firstname.addEventListener('blur',_blur);
+	input_firstname.addEventListener('update',_update);
 
-	input_lastname.addEventListener('focus',focus);
-	input_lastname.addEventListener('blur',blur);
-	input_lastname.addEventListener('update',update);
+	input_lastname.addEventListener('focus',_focus);
+	input_lastname.addEventListener('blur',_blur);
+	input_lastname.addEventListener('update',_update);
 
-	document.addEventListener('keyup', keyup);
+	// set to input
+	input_firstname.addEventListener('keyup', _keyupFirstName);
+	input_lastname.addEventListener('keyup', _keyupLastName);
 
 	// mads's trick
-	formElement = document.querySelector("form");
+	var formElement = document.querySelector("form");
 
-	formElement.addEventListener('submit',submit);
+	formElement.addEventListener('submit',_submit);
 
 
-	function focus(e) {
+	function _focus(e) {
 		console.log("focus");
-		input = e.target; 
+		// input = e.target; 
 		
-		input.classList.add("input"); 
-		div_field = input.parentNode; 
+		this.classList.add("input"); 
+		var div_field = this.parentNode; 
 		div_field.classList.add("focus");
 	}
-	function blur(e) {
+	function _blur(e) {
 		console.log("blur");
-		input = e.target; 
+		// input = e.target; 
 
-		input.classList.remove("input");
+		this.classList.remove("input");
 
-		div_field =  input.parentNode;
+		var div_field =  this.parentNode;
 		div_field.classList.remove("focus");
 
 		
 	}
-	function update(e) {
+	function _update(e) {
 		console.log("update");
 		console.log(e);
 	}
 	//https://stackoverflow.com/questions/14568098/page-reloading-after-form-submission-despite-novalidate-and-false-return
 	
 	// wtf? 
-	function submit(e) {
+	function _submit(e) {
 		if (e.preventDefault) {
     		e.preventDefault();
 		} else {
@@ -117,31 +119,39 @@
 		return false;
 	}
 
-	
-
-	function keyup(e) {
-
-		console.log(e.code);
-		if ( input == document.activeElement) {
-   			console.log("input has focus");	
-			// chcek if first or last name.
-			console.log(input);
-			var id = input.id;
-			console.log("id : " + id);	 	
-			if ( id == "input_firstname"){
-				div_first_name.textContent += String.fromCharCode(e.keyCode);
-			}
-
-			if(id == "input_lastname"){
-				div_last_name.textContent += String.fromCharCode(e.keyCode);
-			}
-
-		}
-		else{
-			console.log("no focus");
-		}
+	function _keyupFirstName(e) {
+		div_first_name.textContent += String.fromCharCode(e.keyCode);
 
 	}
+	function _keyupLastName(e) {
+		div_last_name.textContent += String.fromCharCode(e.keyCode);
+
+	}
+
+
+	// function _keyup(e) {
+
+	// 	console.log(e.code);
+	// 	if ( input == document.activeElement) {
+   	// 		console.log("input has focus");	
+	// 		// chcek if first or last name.
+	// 		console.log(input);
+	// 		var id = input.id;
+	// 		console.log("id : " + id);	 	
+	// 		if ( id == "input_firstname"){
+	// 			div_first_name.textContent += String.fromCharCode(e.keyCode);
+	// 		}
+
+	// 		if(id == "input_lastname"){
+	// 			div_last_name.textContent += String.fromCharCode(e.keyCode);
+	// 		}
+
+	// 	}
+	// 	else{
+	// 		console.log("no focus");
+	// 	}
+
+	// }
 
 
 </script>

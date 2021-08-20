@@ -35,8 +35,21 @@
 </div>
 
 <script type="text/javascript">
-	"use script"
+	"use strict";
 	// ADD YOUR JS HERE
+
+	// othere scope example:
+	// this is either the object " newObj", or "li", it behaves like "e.target"
+	var newObj = {};
+	newObj._hello = function(){
+		console.log("hello", this);
+	}
+	newObj._hello();
+
+	// example continues in event listner
+
+
+
 
 	var nav = document.querySelector(".navigation");
 	console.log(nav.childNodes);
@@ -47,29 +60,32 @@
 	for (i = 0; i < nav.length; i++) {
 		node = nav[i];
 		if (node.nodeName != "#text") {
-			node.addEventListener('mouseover', mouseover);
-			node.addEventListener('mouseout', mouseout);
-			node.addEventListener('click', click);
+			node.addEventListener('mouseover', _mouseover);
+			node.addEventListener('mouseout', _mouseout);
+			node.addEventListener('click', _click);
+			node.addEventListener('click', newObj._hello);
+
 		}
 	}
+	// "_"  means "attached" to other objects than window object, Martin's intern rule. 
 
-	function mouseover(e) {
+	function _mouseover(e) {
 		console.log("over");
-		li = e.target; 
-		li.className = "hover";
+		// var li = e.target; 
+		// here "this" = "node" object , its actually li
+		this.className = "hover";
 	}
-	function mouseout(e) {
+	function _mouseout(e) {
 		console.log("out");
-		li = e.target; 
-		li.classList.remove("hover");
+		// var li = e.target; 
+		this.classList.remove("hover");
 	}	
-	function click(e) {
+	function _click(e) {
 		console.log("click");
-		li = e.target; 
-		console.log(li.textContent);	
-		alert(li.textContent);	
+		// var li = e.target; 
+		// console.log(li.textContent);	
+		alert(this.textContent);	
 	}
-
 </script>
 
 

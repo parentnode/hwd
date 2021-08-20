@@ -31,17 +31,22 @@
 	window.addEventListener('wheel' , wheel);
 
 	var p = document.querySelector("#content p");
-	p.style.color = "red";
+	// p.style.fontSize = "16px";
+
+	var fontSizeInt = parseInt(p.style.fontSize);
 
 	function wheel(e) {
-		console.log("wheel");
-		console.log(e.wheelDelta);
+		// var font_size = parseInt(p.style.fontSize);
+
 		if (e.wheelDelta > 0){
-			console.log("zoom in");
-			// change
+			console.log("larger");
+			fontSizeInt += 1; 
+			p.style.fontSize = fontSizeInt + "px";
 		}
 		else{
-			console.log(" zoom out");
+			console.log("smaller");
+			fontSizeInt -= 1; 
+			p.style.fontSize = fontSizeInt + "px";
 		}
 	}
 

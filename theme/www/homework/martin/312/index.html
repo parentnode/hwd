@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 312</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+
+	</style>
+</head>
+<body>
+
+<div id="page" class="i:page">
+	<div id="header"></div>
+	<div id="content"></div>
+		<div>
+			<input type="button" value="post" class="post">
+			<input type="button" value="get" class="get">
+
+		</div>
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+
+	// ADD YOUR JS HERE
+	// Sending JavaScript Http Requests with XMLHttpRequest: https://www.youtube.com/watch?v=4K33w-0-p2c
+	// https://reqres.in/
+	// https://reqres.in/api/users
+	"use strict";
+	var postBtn = document.querySelector(".post");
+	var getBtn = document.querySelector(".get");
+
+	getBtn.addEventListener('click', getData);
+	postBtn.addEventListener('click', sendData);
+
+	var content = document.querySelector("div#content"); 
+
+	function getData(params) {
+		const xhr = new XMLHttpRequest();
+		// prepare XMLHttpRequest to be send
+		xhr.open('GET','	http://hwd-01.local');
+		console.log("get");
+		// makes it easy to read in the console.
+		xhr.responseType = 'document';
+		// alternative to eventlistner works on more browsers
+		xhr.onload = function() {
+
+			var data = xhr.response;
+			console.log(window.data);	
+			console.log('DONE: ', xhr.status);
+			var response_content = data.querySelector("div#content"); 
+			console.log(response_content);
+			content.replaceWith(response_content);
+		}	
+		// send
+		xhr.send();
+	}
+	function sendData(params) {
+		console.log("post");
+	}
+
+
+
+</script>
+
+
+</body>
+</html>
