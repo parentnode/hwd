@@ -21,33 +21,59 @@
 </div>
 
 <script type="text/javascript">
-
+	"use strict";
 	// ADD YOUR JS HERE
 
 	// u is martin's short hand for util  
 	// querySelector = qs
 	// u.ae = util.appendElement
-	var content = u.querySelector("#content");
-	var div_scene = document.createElement("div");
-	var scene_ul = document.createElement("ul");
-
-
-	u.appendElement(content, div_scene, {"class":"scene"});
-	u.appendElement(div_scene, "h1",{"class":"heading","html":"header"});
-
-	u.appendElement(div_scene, "p",{"class":"para","html":"first1"});
-	u.appendElement(div_scene, "p",{"class":"para","html":"second2"});
-	u.appendElement(div_scene, scene_ul);
 	
-	u.appendElement(scene_ul, "li",{"html":"hello1"});
-	u.appendElement(scene_ul, "li",{"html":"hello2"});
-	u.appendElement(scene_ul, "li",{"html":"hello3"});
+	var content = u.qs("#content");
 
-	u.e.click('')
+	var div_scene = u.ae(content, "div", {"class":"scene"});
+	var heading = u.ae(div_scene, "h1",{"class":"heading","html":"header"});
 
+	var p1 = u.ae(div_scene, "p",{"class":"para","html":"first1"});
+	var p2 = u.ae(div_scene, "p",{"class":"para","html":"second2"});
+	var scene_ul = u.ae(div_scene, "ul");
+	
+	var li_1 = u.ae(scene_ul, "li",{"html":"hello1"});
+	var li_2 = u.ae(scene_ul, "li",{"html":"hello2"});
+	var li_3 = u.ae(scene_ul, "li",{"html":"hello3"});
 
+	var colors = ["red","blue","green","orange"]; 
+	var i = 0; 
 
+	u.e.click(heading);
+	heading.clicked = function(event) {
+		if(i > 3){i = 0;}
+		heading.style.background = colors[i];
+		i++;
+	}
 
+	u.e.hold(p1);
+
+	// how to hold set time for 2 sec? 
+	// p1,p2.held = function(event) ?? 
+	p1.held = function(event) {
+		console.log(u.e.hold.setting);
+		alert("hold");
+	}
+
+	colorHoverAjacents(li_1,li_2,li_3);
+	colorHoverAjacents(li_2,li_1,li_3);
+	colorHoverAjacents(li_3,li_1,li_2);
+
+	function colorHoverAjacents(hoverElm, elm1, elm2) {
+		u.e.hover(hoverElm);
+		hoverElm.over = function(event) {
+			if(i > 3){i = 0;}
+			elm1.style.background = colors[i];
+			elm2.style.background = colors[i];
+			i++;
+		}
+	}
+	
 </script>
 
 

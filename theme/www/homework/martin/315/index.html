@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 315</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="/js/manipulator/seg_desktop.js"></script>
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto; }
+
+	</style>
+</head>
+<body>
+
+<div id="page" class="i:page">
+	<div id="header"></div>
+	<div id="content"></div>
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+
+	// ADD YOUR JS HERE
+	"use strict";
+
+	var content = u.qs("div#content");
+	var div_scene = u.ae(content, "div", {"class":"scene"});
+	div_scene.style.background = "red";
+	div_scene.style.height = "100vh";
+	var div1 = u.ae(div_scene, "div", {"class":"div1","html": "hello1"});
+	var div2 = u.ae(div_scene, "div", {"class":"div2","html": "hello2"});
+	var div3 = u.ae(div_scene, "div", {"class":"div2","html": "hello3"});
+
+	var height = document.body.scrollHeight;
+	console.log(height);
+	request(div1,0);
+	request(div2,1);
+	request(div3,2);
+
+	function request(node,num) {
+		node.response = function(response) {
+			var data = response.data; 
+			console.log(data);
+			node.textContent = data[num].first_name;
+		}
+		u.request(node, 'https://reqres.in/api/users');
+	}
+
+	u.ass(div1, {"width":"100px", "height":"100px", "background": "blue"});
+	u.ass(div2, {"width":"100px", "height":"100px", "background": "green"});
+	u.ass(div3, {"width":"100px", "height":"100px", "background": "yellow"});
+
+
+	jumpAround(div1);
+	jumpAround(div2);
+	jumpAround(div3);
+
+	function jumpAround(node) {
+		u.e.click(node);
+		node.clicked = function(event) {
+		console.log("click");
+
+		node.transitioned = function() {
+			// wait 2000 ms
+			setTimeout(function(){
+				u.a.transition(node, "all 1s ease-in");
+			u.a.translate(node, 0, 0);
+			},2000)
+		}
+		// not really jumping.. but it works..
+		u.a.transition(node, "all 0.001s ease-in");
+		u.a.translate(node, 0, height-100);
+		}
+	}
+
+
+
+</script>
+
+
+</body>
+</html>

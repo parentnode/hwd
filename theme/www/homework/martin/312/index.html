@@ -46,12 +46,12 @@
 		// makes it easy to read in the console.
 		xhr.responseType = 'document';
 		// alternative to eventlistner works on more browsers
-		xhr.addEventListener('statechange', function(){
+		xhr.addEventListener('readystatechange', function(){
 			console.log(xhr.readyState);
 			if(xhr.readyState === 4) {
 				console.log(xhr.readyState);
 				var data = xhr.response;
-				console.log(window.data);	
+				console.log(data);	
 				console.log('DONE: ', xhr.status);
 				var response_content = data.querySelector("div#content"); 
 				console.log(response_content);
