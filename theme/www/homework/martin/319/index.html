@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 319</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="/js/manipulator/seg_desktop.js"></script>
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {}
+		#content div.scene {box-sizing: border-box; padding: 40px; text-align: center;}
+		em{color: blue;}
+		span{color: green;}
+		.selected{background-color: yellow;}
+	</style>
+</head>
+<body>
+
+<div id="page" class="i:page">
+	<div id="header"></div>
+	<div id="content">
+		<div class="article">
+			<h1>HeadLine</h1>
+
+			<div class="articlebody">articleBody
+				<p>p1</p>
+				<p>p2</p>
+				<p>p3</p>
+
+
+			</div>
+
+			<h3>hello h3 <span>span</span></h3>
+			<ul class = "items">
+				<li class = "item">item
+					<h3>h3 
+						<em>subtitle</em> 
+						<span>title</span></h3>
+				</li>
+				<li class = "item">item
+					<h3>h3 
+						<em>subtitle</em> 
+						<span>title</span></h3>
+				</li>
+				<li class = "item">item
+					<h3>h3 
+						<em>subtitle</em> 
+						<span>title</span></h3>
+				</li>
+				<li class = "item">item
+					<h3>h3 
+						<em>subtitle</em> 
+						<span>title</span></h3>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="footer"></div>
+</div>
+
+
+<script type="text/javascript">
+
+	// ADD YOUR JS HERE
+	var list_items = u.qsa("ul.items li.item");
+	// add class to the last li
+	u.ac(list_items[3], "selected"); 
+
+	console.log(list_items[3]);
+	// u.ass(list_items[3],{"color":"red"})
+
+	// loop through each item on the list
+	// make each li item clickable
+	var i, node;
+	for(i = 0; i < list_items.length; i++) {
+		node = list_items[i];
+		console.log("loop"+i);
+
+		node.clicked = function(event) {
+			console.log("click");
+			// here the scope is "this", which is the node = list item. 
+			// so its searching for a span inside a h3 inside the li in the loop? right? 
+			var title = u.qs("h3 span", this);
+			// console.log(title);
+
+			// title.parentNode = h3
+			// so the em is a sibling to a title they both have h3 as parrent
+			var subtitle = u.qs("em", title.parentNode);
+			// console.log(subtitle);
+			console.log(subtitle.innerHTML);
+		}
+		u.e.click(node);
+		
+	}
+
+	var article = u.qs("div.article");
+	article.header = u.qs("h1", article);
+	console.log(article.header.innerHTML);
+	// in the scope of article 
+	article.body = u.qs("div.articlebody", article);
+	console.log(article.body.innerHTML);
+	var paragraphs = u.qsa("p", article.body);
+	// console.log(paragraphs.innerHTML);
+
+	console.log(u.text(paragraphs[2]));
+
+</script>
+
+</body>
+</html>
