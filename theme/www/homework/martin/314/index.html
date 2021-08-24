@@ -46,8 +46,14 @@
 
 	u.e.click(heading);
 	heading.clicked = function(event) {
-		if(i > 3){i = 0;}
-		heading.style.background = colors[i];
+		// "onliner" if same as below.
+		// i = i>3? 0:i;
+		if(i > 3) {
+			i = 0;
+		}
+		// add to docs? can be written as css "code" in json object, insted of "js css"
+		u.ass(heading,{"background" : colors[i],"font-size": "100px"})
+		// heading.style.background = colors[i];
 		i++;
 	}
 
@@ -64,12 +70,14 @@
 	colorHoverAjacents(li_2,li_1,li_3);
 	colorHoverAjacents(li_3,li_1,li_2);
 
-	function colorHoverAjacents(hoverElm, elm1, elm2) {
-		u.e.hover(hoverElm);
-		hoverElm.over = function(event) {
-			if(i > 3){i = 0;}
-			elm1.style.background = colors[i];
-			elm2.style.background = colors[i];
+	function colorHoverAjacents(node, elm1, elm2) {
+		u.e.hover(node);
+		node.over = function(event) {
+			if(i > 3){
+				i = 0;
+			}
+			u.ass(elm1,{"background" : colors[i]})
+			u.ass(elm2,{"background" : colors[i]})
 			i++;
 		}
 	}

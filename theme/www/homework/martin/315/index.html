@@ -32,7 +32,8 @@
 	var div2 = u.ae(div_scene, "div", {"class":"div2","html": "hello2"});
 	var div3 = u.ae(div_scene, "div", {"class":"div2","html": "hello3"});
 
-	var height = document.body.scrollHeight;
+	var height = u.browserH();
+	// var height = document.body.scrollHeight;
 	console.log(height);
 	request(div1,0);
 	request(div2,1);
@@ -59,18 +60,33 @@
 	function jumpAround(node) {
 		u.e.click(node);
 		node.clicked = function(event) {
-		console.log("click");
+			console.log("click");
 
-		node.transitioned = function() {
-			// wait 2000 ms
-			setTimeout(function(){
-				u.a.transition(node, "all 1s ease-in");
-				u.a.translate(node, 0, 0);
-			},2000)
-		}
-		// not really jumping.. but it works..
-		u.a.transition(node, "all 0.001s ease-in");
-		u.a.translate(node, 0, height-100);
+			this.offsetTop;
+			// martin's home cooked height
+			this.y = u.absoluteY(this);
+			this.done = function() {
+				// wait 2000 ms
+				// setTimeout(function(){
+					u.a.transition(this, "all 1s ease-in 2s");
+					u.ass(this,{
+					transform : "translate(0,0)"
+					});
+					// u.a.translate(this, 0, 0);
+				// },2000)
+			}
+			console.log(this.y);
+			// not really jumping.. but it works..
+			// 2 sec dealay last parameter in the middle
+			u.a.transition(this, "all 1s ease-in 2s","done");
+			// this.offsetHeight = height of element
+			var bottom_pos = height-this.offsetTop-this.offsetHeight;
+			u.ass(this,{
+				transform : "translate(0,"+bottom_pos+"px) rotate(90deg) scale(2)",
+				fontSize : "40px"
+			});
+
+			
 		}
 	}
 

@@ -3,7 +3,7 @@ Util.Objects["page"] = new function() {
 		u.bug("init page");
 
 
-		// global resize handler 
+		// global scroll handler 
 		page.resized = function() {
 			// u.bug("page resized");
 

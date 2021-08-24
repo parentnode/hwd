@@ -14,9 +14,8 @@ Util.Objects["page"] = new function() {
 
 			// scen as high as browser. 
 			console.log(this.scene);
-			u.ass(this.scene, {"height":"100vh"});
-
-
+			var height =  u.browserH();
+			u.ass(this.scene, {"height": height + "px"});
 		}
 
 		// global scroll handler 
@@ -39,6 +38,7 @@ Util.Objects["page"] = new function() {
 				this.is_ready = true;
 
 				// Get current scene ,scope "this" =  page
+				// searching inside scope page / this
 				this.scene = u.qs(".scene", this);
 
 
