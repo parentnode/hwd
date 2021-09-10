@@ -1,194 +1,348 @@
 <!DOCTYPE html>
-<html lang="EN">
+<html lang="DA">
 <head>
-	<!-- (c) & (p) think.dk 2002-2019 -->
-	<!-- For detailed copyright license, see /terms -->
+	<!-- (c) & (p) parentnode.dk 2002-2021 -->
 	<!-- If you want to use or contribute to this code, visit https://parentnode.dk -->
-	<title>Technology needs humanity</title>
+	<title>Vaskebjørnens tæpperens</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="keywords" content="development frontend HTML JavaScript CSS idealism web" />
-	<meta name="description" content="Delivering long lasting, easily maintainable, search engine optimized, energy efficient and fully backwards compatible websites, -services and -applications." />
+	<meta name="keywords" content="rensning tæpper rengøring gulvpleje læderpleje" />
+	<meta name="description" content="​Professionel tæpperens og rengøring." />
 	<meta name="viewport" content="initial-scale=1, user-scalable=no" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
-	<meta property="og:title" content="Technology needs humanity" /><meta property="og:description" content="Delivering long lasting, easily maintainable, search engine optimized, energy efficient and fully backwards compatible websites, -services and -applications." /><meta property="og:image" content="https://parentnode.dk/img/logo-large.png" /><meta property="og:url" content="https://parentnode.dk/" /><meta property="og:type" content="article" />
-	<link rel="canonical" href="https://parentnode.dk/" />
+	<meta property="og:title" content="Vaskebjørnens tæpperens" />
+    <meta property="og:description" content="Professionel tæpperens og rengøring." />
+    <meta property="og:image" content="https://vaskebjoernens-taepperens.dk/img/logo-large.png" />
+    <meta property="og:url" content="https://vaskebjoernens-taepperens.dk/" />
+    <meta property="og:type" content="article" />
+	<link rel="canonical" href="https://vaskebjoernens-taepperens.dk/" />
 	<link rel="apple-touch-icon" href="/touchicon.png" />
 	<link rel="icon" href="/favicon.png" />
 
-	<link type="text/css" rel="stylesheet" media="all" href="/css/seg_desktop.css?rev=20200421-185522" />
-	<script type="text/javascript" src="/js/seg_desktop.js?rev=20200421-185522"></script>
+	<link type="text/css" rel="stylesheet" media="all" href="/css/lib/seg_desktop_include.css" />
+	<script type="text/javascript" src="/js/lib/seg_desktop_include.js"></script>
 
-	</head>
 
-<body class="front">
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 500px; margin: 0 auto;}
+
+
+		/* ADD YOUR CSS HERE */
+
+		/* ***general overall layout section*** */
+
+		#content{padding-top: 10px;}
+		#content .scene form{
+			border: 1px solid black;
+			padding: 20px 10px 20px 10px ;
+			font-family: 'Montserrat', Arial, sans-serif;
+			font-size: 12px;
+		}
+		#content .scene fieldset {
+			padding: 0;
+			border: none;
+		}
+		#content .scene div.field,
+		#content .scene div.item{
+			position: relative;
+		}
+
+		#content .scene div.field input,
+		#content .scene div.field textarea,
+		#content .scene div.field select{
+			/* no orange color when selected*/
+			outline: none;
+			border-radius: 0px;
+
+			width: 100%;
+			box-sizing: border-box;
+			display: block;
+			height: 40px;
+			margin-bottom: 20px;
+			border: 1px solid black;
+			font-size: 20px;
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+
+		/* aditions to general layout */
+		#content .scene div.field select {
+			appearance: none;
+			padding-left: 0px;
+		}
+		#content .scene div.field textarea{
+			height: 100px;
+		}
+
+		#content .scene div.field label{
+			margin-bottom: 5px;
+			display: inline-block;	
+		}		
+		
+		#content .scene div.field.checkbox input,
+		#content .scene div.field.radiobuttons input{
+			display: inline-block;
+			appearance: none;
+			border: none;
+			position: absolute;
+			z-index: -1;
+		}
+
+		#content .scene div.field.checkbox input + label,
+		#content .scene div.field.radiobuttons input + label{
+			margin: 8px 0px 8px 40px;			
+		}
+
+		
+	
+
+		/* ***showing hints section*** */
+		#content .scene div.field .help{
+			position: relative;
+		}
+		#content .scene div.field .hint,
+		#content .scene div.field .error{
+			position: absolute;
+			font-size: 10px;
+			display: none;
+			position: absolute;
+			background-color: yellowgreen;
+			padding: 2px 2px;
+			z-index: 1;
+			width: 468px;
+			border: 1px solid black;
+			border-top: 0px;
+			bottom: 5px;
+		}
+
+		
+		/* ***submit button section*** */
+		#content .scene ul.actions{
+			list-style: none;
+			text-align: right;
+		}
+		#content .scene ul.actions input{
+			background-color: yellowgreen;
+			border: 0;
+			padding: 10px;
+		}
+		#content .scene ul.actions input:hover {background-color: yellowgreen;}
+		#content .scene ul.actions input:focus {background-color: rgb(0, 141, 0)}
+
+		
+
+		 /* 
+		 to borders der roteres 45 grader
+		 1 px
+		 hvordan kan css optimeres.
+		 */
+	</style>
+</head>
+
+<body class="gulvafslibning">
 
 <div id="page" class="i:page">
 
 	<div id="header">
 		<ul class="servicenavigation">
-			<li class="keynav navigation nofollow"><a href="#navigation">To navigation</a></li>
-			<li class="keynav contact"><a href="/contact">Contact</a></li>
-			<li class="keynav user nofollow"><a href="/login">Login</a></li>
-		</ul>
+            <li class="phone">
+                <a href="tel:70231367">70 23 13 67</a>
+            </li>
+            <li class="email">
+                <a href="mailto:info@vaskebjoernen-taepperens.dk?subject=henvendelse%20fra%20hjemmesiden">Send e-mail</a>
+            </li>
+        </ul>
 	</div>
 
 	<div id="content">
-<div class="scene front i:front">
+        <div class="scene gulvafslibning i:scene">
 
-	<div class="article i:article" itemscope itemtype="http://schema.org/Article">
+            <div class="article i:article" itemscope itemtype="http://schema.org/Article">
+        
+                <h1 itemprop="headline">​Gulvafslibning, maskinel opskuring og gulvrenovering</h1>
+                <ul class="info">	
+                    <li class="published_at" itemprop="datePublished" content="2021-08-24">2021-08-24, 00:00</li>	
+                    <li class="modified_at" itemprop="dateModified" content="2021-08-24"></li>
+                    <li class="author" itemprop="author">Martin Kæstel Nielsen</li>	
+                    <li class="main_entity share" itemprop="mainEntityOfPage" content="https://parentnode.dk/"></li>	
+                    <li class="publisher" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">		
+                        <ul class="publisher_info">			
+                            <li class="name" itemprop="name">parentnode.dk</li>			
+                            <li class="logo" itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">	
+                                <span class="image_url" itemprop="url" content="https://parentnode.dk/img/logo-large.png"></span>				
+                                <span class="image_width" itemprop="width" content="720"></span>				
+                                <span class="image_height" itemprop="height" content="405"></span>			
+                            </li>		
+                        </ul>	
+                    </li>	
+                    <li class="image_info" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">		
+                        <span class="image_url" itemprop="url" content="https://parentnode.dk/img/logo-large.png"></span>		
+                        <span class="image_width" itemprop="width" content="720"></span>		
+                        <span class="image_height" itemprop="height" content="405"></span>	
+                    </li>
+                </ul>
 
-		
+                <div class="articlebody" itemprop="articleBody">
+                    <div class="section left">
+                        <p>Hos Vaskebjørnen tilbyder vi gulvafslibning, maskinel opskuring og gulvrenovering for privatkunder og erhvervskunder nær Næstved og Vordingborg. Vi kører også gerne ud i resten af landet.</p>
+                        <p>Afslibning af gulv og anden gulvbehandling kan være af blandt andet trægulve, stengulve og linoleumsgulve.</p>
+                        <h2>Vi tryller et helt nyt gulv frem med gulvafslibning</h2>
+                        <p> Dine gulve bliver dagligt udsat for belastning og slid, især hvis der er tale om en virksomhed, og det er ligegyldigt, om der er tale om trægulve, linoleumsgulve, laminatgulve eller stengulve.</p>
+                        <p>Vi tilbyder en gulvafslibning, hvis dit trægulv er nedslidt eller har ridser, hakker og mærker. Dermed kan vi få træet til at se helt nyt ud igen, og det vil ligefrem begynde at dufte af friskt træ.​</p>
+                        <p>
+                            Vi vil typisk slutte af med en 
+                            <a href="/vi-tilbyder/ludbehandling-af-gulv" title="Ludbehandling af gulv i hele Danmark">ludbehandling</a> 
+                            for at sikre, at det lyse træ ikke gulner i solen.
+                        </p>
+                        <p>Alternativt kan vi oliebehandle eller lakere trægulvet. Resultatet bliver smukke trægulve, der er nemme at vedligeholde og rengøre.</p>
+                        <p>Vi har stor erfaring med gulvafslibning, men vi er også specialiseret i maskinel opskuring af blandt andet linoleumsgulve, hvorpå vi afslutter med et nyt lag polish.</p>
+                    </div>
+                    <div class="picture floor ">
+                    </div>
+                    <div class="section">
+                        <p>Desuden kan vi renovere og nedslibe stengulve. Her slutter vi af med en imprægnering, så overfladen bliver smuk og jævn, og så skidtet ikke fæstner sig.</p>
+                        <h2>Få gerne et uforpligtende tilbud på gulvarbejde</h2>
+                        <p>Kontakt os gerne for at høre mere om, hvad vi kan tilbyde inden for gulvafslibning, maskinel opskuring og gulvrenovering. Vi udarbejder gerne et uforpligtende tilbud på afslibning af gulv.</p>
+                        <p>
+                            Du kan skrive til os på e-mail 
+                            <a href="mailto:info@vaskebjoernen-taepperens.dk">info@vaskebjoernen-taepperens.dk</a>
+                            , eller du kan ringe til os på telefon 
+                            <a href="tel:70231367">70 23 13 67</a>
+                            .
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-		
-
-		<h1 itemprop="headline">Technology needs humanity</h1>
-
-				<h2 itemprop="alternativeHeadline">Vice versa.</h2>
-		
-
-		<ul class="info">	<li class="published_at" itemprop="datePublished" content="2016-06-12">2016-06-12, 00:02</li>	<li class="modified_at" itemprop="dateModified" content="2019-11-04"></li>	<li class="author" itemprop="author">Martin Kæstel Nielsen</li>	<li class="main_entity share" itemprop="mainEntityOfPage" content="https://parentnode.dk/"></li>	<li class="publisher" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">		<ul class="publisher_info">			<li class="name" itemprop="name">parentnode.dk</li>			<li class="logo" itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">				<span class="image_url" itemprop="url" content="https://parentnode.dk/img/logo-large.png"></span>				<span class="image_width" itemprop="width" content="720"></span>				<span class="image_height" itemprop="height" content="405"></span>			</li>		</ul>	</li>	<li class="image_info" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">		<span class="image_url" itemprop="url" content="https://parentnode.dk/img/logo-large.png"></span>		<span class="image_width" itemprop="width" content="720"></span>		<span class="image_height" itemprop="height" content="405"></span>	</li></ul>
-
-				<div class="articlebody" itemprop="articleBody">
-			<p>We are a web agency with a holistic approach to development. That means there is more to it for us than just work. We actually like making the world a better place through programming and we think success is about more than meeting the deadline. When we do projects we want everyone involved in the process to learn something new. That is how we can all grow, personally or professionally, together – even while at work.</p>
-<p>We are proud to deliver long lasting, easily maintainable, search engine optimized, energy efficient and fully backwards compatible web sites, services and applications of any scale. From award winning, animated experiences to learning platforms, shopping- and distribution systems – or any other combination of all these fancy words.</p>
-<p>We favor clients with regenerative purposes or who otherwise (also) serve the common good. When we all give more, we all get more and we believe humans thrive better in a sustainable ecosystem of abundance.</p>		</div>
-			</div>
-
-
-	<div class="news">
-		<h2>Latest news</h2>
-		<ul class="items articles i:articlePreviewList articlePreviewList">
-					<li class="item article id:109" itemscope itemtype="http://schema.org/NewsArticle"
-				data-readstate=""
-				>
-
-								<div class="image item_id:109 format:png variant:mediae-rligxzh6"></div>
-				
-
-				<ul class="tags"><li><a href="/blog">Posts</a></li><li itemprop="articleSection"><a href="/blog/tag/Detector">Detector</a></li></ul>
-
-				<h3 itemprop="headline"><a href="/blog/release-of-detector-v4-1">Release of Detector v4.1</a></h3>
-
-
-				<ul class="info">	<li class="published_at" itemprop="datePublished" content="2021-07-14">2021-07-14, 16:17</li>	<li class="modified_at" itemprop="dateModified" content="2021-07-14"></li>	<li class="author" itemprop="author">soren@parentnode.dk</li>	<li class="main_entity" itemprop="mainEntityOfPage" content="https://parentnode.dk/blog/release-of-detector-v4-1"></li>	<li class="publisher" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">		<ul class="publisher_info">			<li class="name" itemprop="name">parentnode.dk</li>			<li class="logo" itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">				<span class="image_url" itemprop="url" content="https://parentnode.dk/img/logo-large.png"></span>				<span class="image_width" itemprop="width" content="720"></span>				<span class="image_height" itemprop="height" content="405"></span>			</li>		</ul>	</li>	<li class="image_info" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">		<span class="image_url" itemprop="url" content="https://parentnode.dk/images/109/mediae-rligxzh6/720x.png"></span>		<span class="image_width" itemprop="width" content="720"></span>		<span class="image_height" itemprop="height" content="405"></span>	</li></ul>
-
-								<div class="description" itemprop="description">
-					<p>Customer: Which browsers and devices does your web site support? You: Yes!</p>
-				</div>
-				
-			</li>
-					<li class="item article id:97" itemscope itemtype="http://schema.org/NewsArticle"
-				data-readstate=""
-				>
-
-								<div class="image item_id:97 format:png variant:mediae-ifg83qmk"></div>
-				
-
-				<ul class="tags"><li><a href="/blog">Posts</a></li><li itemprop="articleSection"><a href="/blog/tag/Projects">Projects</a></li></ul>
-
-				<h3 itemprop="headline"><a href="/blog/new-self-service-application-for-greenspeak">New sign up WebApplication for GreenSpeak</a></h3>
-
-
-				<ul class="info">	<li class="published_at" itemprop="datePublished" content="2020-10-03">2020-10-03, 15:23</li>	<li class="modified_at" itemprop="dateModified" content="2021-01-18"></li>	<li class="author" itemprop="author">Martin Kæstel Nielsen</li>	<li class="main_entity" itemprop="mainEntityOfPage" content="https://parentnode.dk/blog/new-self-service-application-for-greenspeak"></li>	<li class="publisher" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">		<ul class="publisher_info">			<li class="name" itemprop="name">parentnode.dk</li>			<li class="logo" itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">				<span class="image_url" itemprop="url" content="https://parentnode.dk/img/logo-large.png"></span>				<span class="image_width" itemprop="width" content="720"></span>				<span class="image_height" itemprop="height" content="405"></span>			</li>		</ul>	</li>	<li class="image_info" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">		<span class="image_url" itemprop="url" content="https://parentnode.dk/images/97/mediae-ifg83qmk/720x.png"></span>		<span class="image_width" itemprop="width" content="720"></span>		<span class="image_height" itemprop="height" content="360"></span>	</li></ul>
-
-								<div class="description" itemprop="description">
-					<p>parentNode develops crossplatform sign up WebApplication for non-profit phone service provider GreenSpeak.</p>
-				</div>
-				
-			</li>
-					<li class="item article id:89" itemscope itemtype="http://schema.org/NewsArticle"
-				data-readstate=""
-				>
-
-								<div class="image item_id:89 format:png variant:mediae-0rb3ijox"></div>
-				
-
-				<ul class="tags"><li><a href="/blog">Posts</a></li><li itemprop="articleSection"><a href="/blog/tag/Janitor">Janitor</a></li></ul>
-
-				<h3 itemprop="headline"><a href="/blog/release-of-janitor-v0-7-9">Release of Janitor v0.7.9</a></h3>
-
-
-				<ul class="info">	<li class="published_at" itemprop="datePublished" content="2019-10-29">2019-10-29, 13:24</li>	<li class="modified_at" itemprop="dateModified" content="2019-12-04"></li>	<li class="author" itemprop="author">soren@parentnode.dk</li>	<li class="main_entity" itemprop="mainEntityOfPage" content="https://parentnode.dk/blog/release-of-janitor-v0-7-9"></li>	<li class="publisher" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">		<ul class="publisher_info">			<li class="name" itemprop="name">parentnode.dk</li>			<li class="logo" itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">				<span class="image_url" itemprop="url" content="https://parentnode.dk/img/logo-large.png"></span>				<span class="image_width" itemprop="width" content="720"></span>				<span class="image_height" itemprop="height" content="405"></span>			</li>		</ul>	</li>	<li class="image_info" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">		<span class="image_url" itemprop="url" content="https://parentnode.dk/images/89/mediae-0rb3ijox/720x.png"></span>		<span class="image_width" itemprop="width" content="720"></span>		<span class="image_height" itemprop="height" content="405"></span>	</li></ul>
-
-								<div class="description" itemprop="description">
-					<p>Heads up, developers! Janitor has been updated to version 0.7.9.</p>
-				</div>
-				
-			</li>
-					<li class="item article id:80" itemscope itemtype="http://schema.org/NewsArticle"
-				data-readstate=""
-				>
-
-								<div class="image item_id:80 format:png variant:mediae-cznwausr"></div>
-				
-
-				<ul class="tags"><li><a href="/blog">Posts</a></li><li itemprop="articleSection"><a href="/blog/tag/Projects">Projects</a></li></ul>
-
-				<h3 itemprop="headline"><a href="/blog/the-webby-awards-praises-himmelmekanik-dk-as-honorably-weird">The Webby Awards praises himmelmekanik.dk as honorably weird</a></h3>
-
-
-				<ul class="info">	<li class="published_at" itemprop="datePublished" content="2019-04-04">2019-04-04, 11:54</li>	<li class="modified_at" itemprop="dateModified" content="2019-04-06"></li>	<li class="author" itemprop="author">soren@parentnode.dk</li>	<li class="main_entity" itemprop="mainEntityOfPage" content="https://parentnode.dk/blog/the-webby-awards-praises-himmelmekanik-dk-as-honorably-weird"></li>	<li class="publisher" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">		<ul class="publisher_info">			<li class="name" itemprop="name">parentnode.dk</li>			<li class="logo" itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">				<span class="image_url" itemprop="url" content="https://parentnode.dk/img/logo-large.png"></span>				<span class="image_width" itemprop="width" content="720"></span>				<span class="image_height" itemprop="height" content="405"></span>			</li>		</ul>	</li>	<li class="image_info" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">		<span class="image_url" itemprop="url" content="https://parentnode.dk/images/80/mediae-cznwausr/720x.png"></span>		<span class="image_width" itemprop="width" content="720"></span>		<span class="image_height" itemprop="height" content="421"></span>	</li></ul>
-
-								<div class="description" itemprop="description">
-					<p>Our anti-interactive music site, himmelmekanik.dk, is a 2019 Webby Award honoree. This calls for cake!</p>
-				</div>
-				
-			</li>
-					<li class="item article id:62" itemscope itemtype="http://schema.org/NewsArticle"
-				data-readstate=""
-				>
-
-				
-
-				<ul class="tags"><li class="editing" title="This post is work in progress">Still editing</li><li><a href="/blog">Posts</a></li><li itemprop="articleSection"><a href="/blog/tag/Learning+to+program">Learning to program</a></li><li itemprop="articleSection"><a href="/blog/tag/Linux+server">Linux server</a></li><li itemprop="articleSection"><a href="/blog/tag/Web+development">Web development</a></li></ul>
-
-				<h3 itemprop="headline"><a href="/blog/the-parentnode-web-stack">The parentNode web stack</a></h3>
-
-
-				<ul class="info">	<li class="published_at" itemprop="datePublished" content="2017-01-26">2017-01-26, 12:32</li>	<li class="modified_at" itemprop="dateModified" content="2021-07-20"></li>	<li class="author" itemprop="author">Martin Kæstel Nielsen</li>	<li class="main_entity" itemprop="mainEntityOfPage" content="https://parentnode.dk/blog/the-parentnode-web-stack"></li>	<li class="publisher" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">		<ul class="publisher_info">			<li class="name" itemprop="name">parentnode.dk</li>			<li class="logo" itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">				<span class="image_url" itemprop="url" content="https://parentnode.dk/img/logo-large.png"></span>				<span class="image_width" itemprop="width" content="720"></span>				<span class="image_height" itemprop="height" content="405"></span>			</li>		</ul>	</li>	<li class="image_info" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">		<span class="image_url" itemprop="url" content="https://parentnode.dk/img/logo-large.png"></span>		<span class="image_width" itemprop="width" content="720"></span>		<span class="image_height" itemprop="height" content="405"></span>	</li></ul>
-
-								<div class="description" itemprop="description">
-					<p>The parentNode web stack is web development environment, allowing you to run multiple Janitor projects, and any other LAMP, MAMP or WAMP-based project.</p>
-				</div>
-				
-			</li>
-				</ul>
-
-	</div>
-
-
-	<div class="usedby">
-		<h2>Selected clients</h2>
-		<ul>
-			<li class="greenspeak" title="GreenSpeak">GreenSpeak</li>
-			<li class="lsb" title="Lån & Spar Bank">Lån &amp; Spar Bank</li>
-			<li class="kbhff" title="Københavns Fødevarefællesskab">KBHFF</li>
-			<li class="tuborg" title="Tuborg">Tuborg</li>
-			<li class="urbangreen" title="Urban Green">Urban Green</li>
-		</ul>
-	</div>
-</div>
-	</div>
+            <form action="#" method="POST" class="labelstyle:inject">
+                <fieldset>
+					<p>Få et tilbud på gulvpleje</p>
+                    <!-- name input-->
+                    <div class="field string required">
+                        <label for="input_string">Navn*</label>
+                        <input type="text" name="navn" id="input_string" />
+                        <div class="help">
+                            <div class="hint">Skriv dit navn</div>
+                            <div class="error">Udfyld venligst dit navn</div>
+                        </div>
+                    </div>
+    
+                    <!-- email -->
+                    <div class="field email required">
+                        <label for="input_email">Email*</label>
+                        <input type="email" name="email" id="input_email" maxlength="255" />
+                        <div class="help">
+                            <div class="hint">eksempel@mail.com</div>
+                            <div class="error">mangler e-mail</div>
+                        </div>
+                    </div>
+                    <!-- tlf -->
+                    <div class="field tel required">
+                        <label for="input_tel">Telfon* [required]</label>
+                        <input type="tel" name="telefon" id="input_tel" maxlength="255" />
+                        <div class="help">
+                            <div class="hint">skriv dit nummer</div>
+                            <div class="error">for langt eller kort nummer</div>
+                        </div>
+                    </div>
+    
+                    <!-- text area -->
+    
+                    <div class="field text required">
+                        <label for="input_text">Besked*</label>
+                        <textarea name="besked" id="input_text"></textarea>
+                        <div class="help">
+                            <div class="hint">Spørg om alt omkring rensing af tæpper osv</div>
+                            <div class="error">udfyld besked</div>
+                        </div>
+                    </div>
+    
+                    
+                </fieldset>
+    
+                <ul class="actions">
+                    <li>
+                        <input type="submit" value="submit"/>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
 
 	<div id="navigation">
+		<div class="logo">
+			<h2>Vaskebjørnen®​</h2>
+			<p>​Professionel tæpperens &amp; rengøring ApS</p>
+		</div>
+		
 		<ul class="navigation">
-								<li class="blog"><a href="/blog">bLog</a></li>
-						<li class="tools"><a href="/tools">Tools</a></li>
-						<li class="manifest"><a href="/manifest">Manifest</a></li>
-						<li class="about"><a href="/about">About</a></li>
-							</ul>
+			<li class="front"><a href="/blog">Forside</a></li>
+			<li class="offers dropdown">
+				Vi tilbyder
+				<ul class="dropdown-content">
+					<li><a href="/gulvtaepper">gulvtæpper</a></li>
+					<li><a href="/rensning-af-aegte-taepper">rensning af ægte-tæpper</a></li>
+					<li><a href="/taeppe-til-trappe">Tæppe til trappe</a></li>
+					<li><a href="/gulvpleje">gulvpleje</a></li>
+					<li><a href="/moebelrens">møbelrens</a></li>
+					<li><a href="/gulvafslibning">gulvafslibning</a></li>
+					<li><a href="/gulvpolering">gulvpolering</a></li>
+					<li><a href="/ludbehandling-af-gulv">ludbehandling af gulv</a></li>
+				</ul>
+			</li>
+			<li class="environment"><a href="/miljoe">Miljø</a></li>
+			<li class="review"><a href="/kunderne-siger">Kunderne siger</a></li>
+			<li class="contact"><a href="/kontakt">Kontakt</a></li>
+		</ul>
 	</div>
 
 	<div id="footer">
-		<ul class="servicenavigation">
-			<li class="terms"><a href="/terms">Terms</a></li>
-		</ul>
+		<div itemtype="http://schema.org/Organization" itemscope class="vcard company">
 
-		<p><a href="http://think.dk">&lt;aliens&gt;we are all&lt;/aliens&gt;</a></p>
+			<dl class="info basic">
+
+				<dt class="name">Navn</dt>
+				<dd class="name fn org" itemprop="name">Vaskebjørnen</dd>
+
+				<dt class="description">Beskrivelse</dt>
+				<dd class="description" itemprop="description">Professionel tæpperens & rengøring ApS</dd>
+
+				<dt class="cvr">CVR</dt>
+				<dd class="cvr" itemprop="taxID">35646760</dd>
+			</dl>
+			
+			<dl class="info address">
+				<dt class="location">Adresse</dt>
+				<dd class="location" itemprop="location" itemscope itemtype="http://schema.org/Place">
+					<ul class="address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+						<li class="streetaddress" itemprop="streetAddress">Dyssevej 6, Kongsted</li>
+						<li class="city">
+							<span class="postal" itemprop="postalCode">4683</span> 
+							<span class="locality" itemprop="addressLocality">Rønnede</span>
+						</li>
+						<li class="country" itemprop="addressCountry">Danmark</li>
+					</ul>
+					<ul class="geo" itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
+						<li class="latitude" itemprop="latitude" content="55.2476291"></li>
+						<li class="longitude" itemprop="longitude" content="12.0371033"></li>
+					</ul>
+				</dd>	
+			</dl>
+
+			<dl class="info contact">
+				<dt class="contact">Kontakt</dt>
+				<dd class="contact">
+					<ul>
+						<li class="email"><a href="mailto:info@vaskebjoernen-taepperens.dk" itemprop="email" content="info@vaskebjoernen-taepperens.dk">info@vaskebjoernen-taepperens.dk</a></li>
+						<li itemprop="telephone" class="tel" content="+4570231367">+45 70 23 13 67</li>
+					</ul>
+				</dd>
+			</dl>
+		</div>
 	</div>
-
 </div>
 
 </body>

@@ -28,3 +28,9 @@ finish
 
 Check documentation here: 
 http://manipulator.local/docs
+
+trick server: 
+// right path
+DocumentRoot "/srv/sites/clients/vaskebjoernen-taepperens_dk/theme/www"
+// test it in browser
+ServerName vaskebjoernen-taepperens.local
