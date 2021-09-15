@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Exercise 204</title>
+	<title>Exercise 202</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<style type="text/css">
 		/* DON'T CHANGE THIS CSS */
 		body {margin: 0;}
 		#page {width: 500px; margin: 0 auto;}
+		#content {min-height: 400px;}
+		#content:hover {background: transparent url(img/bg_202.png) no-repeat left 50px;}
+		#content:hover * {opacity: 0;}
 
 
 		/* ADD YOUR CSS HERE */
@@ -20,89 +23,38 @@
 	<div id="header"></div>
 	<div id="content">
 
-
-		<!-- ADD THE FORM YOU CREATED IN EXERCISE 203 HERE -->
-		<form action="#" method="POST">
-			<fieldset>
-				<div class="string [required]">
-					<label for="regular_text">Regular text input fields: </label>
-					<input type="text" id="regular_text">
-					<div class="help">
-						<div class="hint">hint message</div>
-						<div class="error">error message</div>
-					</div>
-				</div>
-	
-				<div class="email [required]">
-					<label for="email_id"> Email: </label>
-					<input type="email" id="email_id">
-					<div class="help">
-							<div class="hint">hint message</div>
-							<div class="error">error message</div>
-					</div>
-				</div>
-	
-				<div class="password [required]">
-					<label for="password_id"> Password: </label>
-					<input type="password" id="password_id">
-					<div class="help">
-							<div class="hint">hint message</div>
-							<div class="error">error message</div>
-					</div>
-				</div>
-	
-				<div class="select [required]">
-					<label for="selection_id"> Select: </label>
-					<select name="selections" id="selection_id">
-						<option value="1"> test1 </option>
-						<option value="2"> test2 </option>
-						<option value="3"> test3 </option>
-						<option value="4"> test4 </option>
-						<option value="5"> test5 </option>
-					</select>
-					<div class="help">
-							<div class="hint">hint message</div>
-							<div class="error">error message</div>
-					</div>
-				</div>
-	
-				<div class="textarea [required]">
-					<label for="textarea_id"> Multiline Textarea: </label>
-					<textarea name="textarea" id="textarea_id"></textarea>
-					<div class="help">
-							<div class="hint">hint message</div>
-							<div class="error">error message</div>
-					</div>
-				</div>
-	
-				<div class="checkbox [required]">
-					<label for="checkbox_id"> Checkbox </label>
-					<input type="checkbox" id="checkbox_id">
-					<div class="help">
-							<div class="hint">hint message</div>
-							<div class="error">error message</div>
-					</div>
-				</div>
-	
-				<div class="radiobuttons [required]">
-					<input type="radio" id="radion_id1" value="1">
-					<label for="radion_id1">Inception</label>
-				</div>
-	
-				<div class="radiobuttons [required]">
-					<input type="radio" id="radio_id2" value="2">
-					<label for="radio_id2">Stepup</label>
-					<div class="help">
-							<div class="hint">hint message</div>
-							<div class="error">error message</div>
-					</div>
-				</div>
-			</fieldset>
-	
-			<div class="action_list">
-				<input type="Submit" id="action_id">
-			</div>
-		</form>
+		<table>
+		<tr>
+			<th>name</th>
+			<th>number</th>
+			<th>car</th>
+			<th>alignment</th>
+		</tr>
+		<tr class="top">
+			<td>Martin</td>
+			<td>1</td>
+			<td>no</td>
+			<td>I'm top aligned</td>
+		</tr>
+		<tr class="center">
+			<td>Anja</td>
+			<td>2</td>
+			<td>no</td>
+			<td>I'm center aligned</td>
+		</tr>
+		<tr class="bottom">
+			<td>Romeo</td>
+			<td>3</td>
+			<td>no</td>
+			<td>I'm bottom aligned</td>
+		</tr>
+		<tr>
+			<td>Elo</td>
+			<td>4</td>
+			<td>yes</td>
+			<td>none</td>
+		</tr>
+		</table>
 
 	</div>
 	<div id="footer"></div>

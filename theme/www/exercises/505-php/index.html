@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 505</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="/css/exercises/includes.css" />
+	<script type="text/javascript" src="/js/exercises/includes.js"></script>
+</head>
+<body>
+
+
+<div id="page" class="i:page">
+	<div id="header"></div>
+	<div id="content">
+
+		<div class="scene i:exercise">
+			<h1>Exercise 505 - Janitor and Detector</h1>
+			<p>
+				This exercise is about developing your first Janitor based PHP project
+			</p>
+			<p>
+				The purpose of this exercise is to work with your personal Janitor project to gain experience
+				with Janitor and Detector segments.
+			</p>
+
+			<h2>Tasks</h2>
+			<ol>
+				<li>
+					<h3>Understand the Detector segments</h3>
+					<p>
+						Janitor natively supports 
+						<a href="https://detector.parentnode.dk">Detector segments</a>. While Janitor can also be used entirely without segments
+						it is recommended to use the segments to provide optimized UI's for each segment, rather than 
+						<em>one size fits all</em>.
+					</p>
+					<p>
+						Janitor will automatically detect the segment of the visiting browser, by making a request
+						to the Detector API, when the <em>$page->segment</em>
+						method is called. As default this happens in the <em>templates/www.header.php</em> template, where
+						the segment of the current user's browser is used to include the correct JavaScript and CSS. The detection 
+						process only happens once per site visit and the detected segment is stored in the user session for
+						the duration of the visit.
+					</p>
+					<p>
+						Janitor accepts a <em>segment=#segment-value#</em> GET parameter on any page, which will force the browser to run
+						under the specified segment. Fx. <em>/?segment=smartphone</em> will force the site to show the smartphone UI.
+					</p>
+					<p>
+						In addition Janitor accepts a <em>dev=1</em> GET parameter on any page, which will force the site 
+						to load the development code, rather than the generated production code. This parameter simply
+						indicates whether to include the system generated JavaScript and CSS bundles or the individual
+						source files. Use <em>dev=1</em> when developing for better debugging. The opposite of <em>dev=1</em>
+						is <em>dev=0</em>. You can observe the difference using the Network pane of your browsers developer 
+						tools.
+					</p>
+					<p>
+						You will learn more about how to structure your JavaScript and CSS and how to create
+						production bundles in the following exercises.
+					</p>
+				</li>
+				<li>
+					<h3>Defining the segment support</h3>
+					<p>
+						The exact segment support can be individualized for each Janitor project. You can choose to use
+						all the original 12 segments individually for an extensive browser support – but you can also 
+						group relevant segments to fit the exact browser support needs of your project and minimize the
+						development effort.
+					</p>
+					<p>
+						We differentiate between the 12 original segments from Detector (available segments) and the 
+						segments or group segments you choose to support in your project (supported segments). Although 
+						Detector will always return the original Detector segment for any given browser, you can customize
+						which segment values $page->segment can return in your project.
+					</p>
+					<p>
+						In <em>theme/config/segments.php</em> you will find the settings for your current project
+						in an associative Array. You will find that the keys represent the available segments,
+						and the values specify the supported segments. In other words, it defines which segment will be
+						applied if a desktop_light browser visits your page - in this case <em>unsupported</em>. Likewise,
+						<em>smartphone</em> stays <em>smartphone</em> and <em>tablet</em> joins the <em>desktop</em> segment.
+					</p>
+				</li>
+			</ol>
+		</div>
+
+	</div>
+	<div id="footer"></div>
+</div>
+
+</body>
+</html>
