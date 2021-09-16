@@ -9,6 +9,7 @@
 <body>
 
 
+
 <div id="page" class="i:page">
 	<div id="header"></div>
 	<div id="content">
@@ -108,8 +109,39 @@
 				they are all on the same "level" in the if you will. or they are siblings. They have the same parent div with the "id = page".
 				you can see that there is a body tag that has a sibling called head. 
 				These to children body and head has a parent called html. there you have the whole family. 
-				note that the html tag is not indented. that is convention, because everyone knows that it is 
-				
+				Do you notice a system here?
+				Everytime there is a child or children there is an indentation.
+				and indentation happens is when you press the tab button in a document, sit on the left side of your keyboard left to the letter Q.
+				it makes 4 spaces infront of the letter behind it like so: 
+			</p>
+
+			<p class="tab">indent example</p>
+			
+			<p>
+				note that the html tag is not indented. That is convention. 
+				That is because everyone has agreed to not indent everything to the right one extra time for no real reason. 
+				in that way all the divs in the html document has a better chance of staying inside the screen.
+				So you could acually write html with making indentation at all it would just become very confusing. 
+				while we are at it remember that tags are always above each other. 
+				here is how to do it 
+				<code>
+&lt;div class="outer_div"&gt;
+	&lt;div class="Im_a_div" &gt;
+		&lt;div class= "long" &gt;
+			&lt;p&gt;
+				&#8;Im a long text that goes farrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+				&#8;note how all my text and my other tags inside are indented
+				&#8;and I would like my programmer to se my end tag. 
+				&#8;&lt;span&gt;Im a span in a paragraph &lt;/span&gt;
+			&lt;/p&gt;
+
+		&lt;/div&gt;
+		&lt;div class= "short" &gt;
+&#9;&#9;&#9;&#60;p&#62;im a short text only one line&#60;/p&#62;&#10;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+				</code>
 			</p>
 			<p>	
 				Why is the header before the content? 
