@@ -16,9 +16,132 @@
 		<div class="scene i:exercise">
 			<h1>Exercise 100 - Introduction to HTML</h1>
 			<p>
-				Something about HTML – it is a markup language, read by search engines, indenting rules.
+				This introduction page might seem a bit controversial.
+				Since it's not an introduction to html from the very basics. 
+				The reason is that you will be given the tools to find the right information as a part of an exercise.  
+				Because finding the right information is in it self a challenge. 
+				We will get more into that. 
+				The aim of this course is also to give you the tools so you can find information your own. 
+				Because that is what real programmers do.
+				Since you are on a course and we have limited time together it is in everyone's interest 
+				that we spend the time in the best possible way.  
+				One not so preferred way to spend the time is explaining simple things that you could easily look up yourself. 
+				An other more preferred way is to let you give it an honest try and see how far you can get by yourself. 
+				When you are stuck or done you will get feedback, and if there are concepts that doesn't make sense to you can get them explained.
+				So the time you spend on reading and learning yourself is time you get learning the tricks of the trade that aren't in the books :) 
+				But remember if you are really stuck in general on this curse, ask for help, or work on something else until you can get help :) 
 			</p>
 
+			<p>
+				The rest of the information on this page is regarding documentation 
+				how you actually write good html, do's and don'ts
+				and how we do things here in town.  
+			</p>
+
+			<h3>How to find the right information about a programing language?</h3>
+			<p>
+			The information about how a programming language is working is called the documentation.  
+			The documentation is a page where the developers of the language,
+			 hopefully write most of the things that are needed for people to use the language. 
+			If they are good and nice programmers they even explain how to set everything up and how to get started.and have lots of examples. 
+			But sometimes there is few examples and its like a sheet where you can't figure out what's what. 
+			Maybe only the developer behind the language knows. 
+			But in our case there is plenty of great documentation on html 
+			and the other languages we are gonna use in the next coming exercises.
+			So don't worry, but you might as well get use to finding the information in the documentation.
+			Every good programmer knows this.
+			</p>
+
+			<p>So what can you do to find the documentation for html and learn the basics? think a little..</p>
+			
+			<p>try googling: html documentation.</p>
+			<p>take a look at the different links that google presents</p>
+			<p>If you type "documentation html" and choose the first link its most likely good enough</p>
+			<p>Now you hopefully found a website with the documentation for html</p>
+			<p>if you found https://developer.mozilla.org/en-US/docs/Web/HTML you found a very good starting point</p>
+			<p>The team behind the web browser firefox has done a great job on writing excellent documentation for html, css and javascript.</p>
+			<p>That is the right one to use.</p>
+
+			<p>So now go in on the page and look for a tutorial, getting started or anything like that or search on google</p>
+			<p>If you search on google remember to write "mdn" in the search as well. The 3 letters mdn is short for mozilla developer network.</p>
+			<p>That way you make sure you don't find all sort of random stuff when you are looking for code examples in the future</p>
+
+			<p>
+				To see how you use html in some very well made videos visit kahn academy html and css <a href="https://www.khanacademy.org/computing/computer-programming/html-css">course</a>. 
+				Here you will get up to speed very fast if you are new to coding. 
+				Also if you are a programmer its worth a visit their css and javascript tutorial is amazing and its made for children in mind, And its all free.
+			</p>
+			
+			
+			
+			<h3>The importance of html structure</h3>
+
+			<p>Now you hopefully got a grasp of the most commen tags: "h1", "h2", "h3", "p", "a", "img", "em", "strong","br" "span", and "div"  </p>
+
+			<p>
+				Right away you wont need the "br" the break tag, so forget about that. 
+				We will use styling with css to make it look the way we want later. that is the 
+				rule.
+			</p>
+
+			<p>Did you know that if you design your html smartly you can make it look anyway you want? later with Css</p>
+			<p>Take a look at this page, <a href="http://www.csszengarden.com/">zengarden.com</a></p>
+			<p>
+				Stop reading for a while and go in and check out what possible to do just with styling, just as an appetizer.
+				See the different pages, the most impressive might be the <a href="http://www.csszengarden.com/219/">steel</a>
+			</p>
+			<p>
+				In general you right click on any website and select source code, you can see the html underneath.
+				So you can basically see how everyone else is doing something, and how bad and totally confusing html can look as well.
+				In the zen garden page it's the same source code for every different design.
+				think about that for a moment, this is important and make this you html mantra. 
+			</p>
+
+			<p><em>"The html is not the design."</em> - unknown zen master developer.</p>
+
+			<p>
+				So lets talk a bit about structure and why its is so important, 
+				First of all most html documents typically consist of a "header" a "footer" and something in between, lets call the in between "content".
+				Just look at source code of this page (right click -> source).
+				Here you can see the div's within div's. 
+				right "above" the "content div" is an empty "header div", and "below" the content is an "empty" "footer div".
+				they are all on the same "level" in the if you will. or they are siblings. They have the same parent div with the "id = page".
+				you can see that there is a body tag that has a sibling called head. 
+				These to children body and head has a parent called html. there you have the whole family. 
+				note that the html tag is not indented. that is convention, because everyone knows that it is 
+				
+			</p>
+			<p>	
+				Why is the header before the content? 
+				The header is for al sort of information that should be seen first. 
+				Like if you where a blind person using this it would be nice there was a phone number, or email address. 
+				If you are blind you aplication the read to you what is happening at the screen will 
+				will most likely start from the top. 
+				html is loaded from top to bottom so in the case you have a really slow computer or/and internet access 
+				you will also want to load the most important things on top like contact detail. 
+			</p>
+
+			<p>
+				Something about HTML – it is a markup language, 
+				read by search engines, 
+
+				indenting rules.
+				clean code general guidelines
+				comments 
+			</p>
+
+			<h3>Something about HTML – it is a markup language, read by search engines</h3>
+			
+			
+
+			<p>The developers behind firefox (mozilla), has made a really nice and basic introduction to html on <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">mdn </a></p>
+			<p>If you are more into videos here are some good beginner videos at<a href="https://www.khanacademy.org/computing/computer-programming/html-css">Kahn academy</a></p>
+
+			<p>
+				Here you will get some information about what is important regarding the way you use html.
+				There are a few important things considering how how to structure html. 
+			</p>
+			
 		</div>
 
 	</div>
