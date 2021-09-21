@@ -75,43 +75,156 @@
 					</p>
 				</li>
 			</ol>
-			<h2>Hints</h2>
-			<p>
-				you are gonna need at least the h1,h2 and p tags.
-			</p>
+			
 			<h2>Resources</h2>
 			<p>
-				Check out khanacadem mdn it's a great place to find inspiration for how to solve the problems.
+				Check out khanacademy and Mozilla developer network (mdn) it's a great place to find inspiration for how to solve the problems.
 				<a href="https://www.khanacademy.org/computing/computer-programming/html-css">Khan academy</a>
 				and
 				<a href="https://developer.mozilla.org/en-US/docs/Web/HTML">mdn</a>
 			</p>
+
+
+			
+			
+
 			<h2>Do's and don'ts</h2>
-			<h3>Do's</h3>
-			<p>
-				It is very important that this site is organized in such a way,
-				 that it get as good search results as possible on google.
-				Organize the html as if it was an article, 
-				This will help the search engine getting your page higher in the search results,
-				One would imagine.
-				the search engine algorithm is probably organized 
-				in such a way that html sites that are organized in a better way gets 
-				higher priority. nobody really know for sure how the algorithm works.
-				it's getting changed all the time.
-				it's also important for you to have your html structured in a logical away.
-				So when you are later looking for something in your html you will find it.
 
-				
-				
-				Try to think as if you were a machine trying to understand the content of the  website. The machine will give h1 first property then h2 to then h3 etc.
-				the text inside h1 is supposed to give a representation the whole article.
-				it's important that google knows what the article is about by only reading h1.
-				imagine if you were a search engine you would first go through analyze all h1 once on the internet.
+				<h3>Do's</h3>
 
+					<h4>Organize your our html, for you, people and the search engines</h4>
+					<p>
+						It is important that your html is organized in such a way,
+						that it improves your search rank on google.
+						The "higher up" your page gets on google the better is the chance that people find it. 
+						At the same time its important for people to get an overview when they look at our page, 
+						and last but no least you also need to keep an overview of our articles headings paragraphs and subheadings. 
+						Read more about html structure why its important and how to do it here on
+						<a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"> structure</a>
+					</p>
+
+					<h4>Example good structure and good indentation:</h4>
+
+					<code>
+&lt;h1&gt;Animals living on earth&lt;/h1&gt;&#10;&lt;p&gt;intro text&lt;/p&gt;&#10;&#10;&#9;&lt;h2&gt;Habitats&lt;/h2&gt;&#10;&#9;&lt;p&gt;intro text block&lt;/p&gt;&#10;&#9;&#9;&lt;h3&gt;Cold climate&lt;/h3&gt;&#10;&#9;&#9;&lt;p&gt;info text block&lt;/p&gt;&#10;&#10;&#9;&#9;&lt;h3&gt;Warm climate&lt;/h3&gt;&#10;&#9;&#9;&#9;&lt;h4&gt;tropical&lt;/h4&gt;&#10;&#9;&#9;&#9;&lt;p&gt;info text block&lt;/p&gt;&#10;&#10;&#9;&#9;&#9;&lt;h4&gt;subtropical&lt;/h4&gt;&#10;&#9;&#9;&#9;&lt;p&gt;info text block&lt;/p&gt;&#10;&#10;&#9;&lt;h2&gt;Types of animals&lt;/h2&gt;&#10;&#9;&#9;and so on..
+					</code>
+					<p>
+						Note that 1 indentation is normally the size of 4 "spaces" 
+						or 2 "spaces", but we use the size of 4 "spaces",
+						if you press the tab button (the one next to the letter Q) 
+						you can make an indentation.
+					</p>
+					<p>
+						Note also that there is only one heading h1 in the example above. That is a 
+						general rule, you only have one h1 per article.  
+						So if you have 5 pages and you have one article on each, you should have 5 h1's for example.
+					</p>
+						Note that the h2 tags are over each other, this is important.
+						Note also the the headings comes in a row, from h1,h2,h3,h4, all the way to h5 and h6 .
+						You cant have an h3 for example without having an h2 above it. 
+					<p>
+
+					</p>
+
+						<h5>tips for good headings</h5>
+						<p>
+							Headings are a very important for search engines, 
+							and people, especially h1. Make sure the headings reveal as much information as possible, 
+							the headings are not a teaser, confusing or abstract. 
+							The headings should be precise and descriptive and not to short.
+							the worst kind of headings are misleading, 
+							and not at all what is really going on in the article, like form of direct "click bait".
+							or bad news papers headings. 
+							Good headings are so good that you get a feeling 
+							you already know exactly what the rest of the article is about.
+							The search algorithm will reward you for this kind of honest behavior.
+							So think twice about what ou write in a heading.  
+						</p>
+
+					<h4>Pay attention to "white space"</h4>
+					<p>
+						White space is newline's between paragraph or headings ect.
+						it can actually even be the 
+						Make sure that the "white space" makes sense and there is a consistent system behind it.
+						Often It can make sense to leave on line of white space above a heading to make it more readable.
+						Remember to delete all the white space that dosen't have a purpose.
+					</p>
+
+					<h4>Starting to think about arranging html elements for styling </h4> 
+					<p>
+						This is a more complex task that we will get more into in later exercises. 
+						For now you need to know that all elements (divs, headings, paragraph ect) 
+						can be moved around pretty much as you please later with css. 
+						Every start and end tag and also image tags makes up what is called an element. 
+						These are all blocks that takes up space in a form of a square on the screen.
+						Some elements like divs are called containers and are used for keeping things inside of. 
+						These are very handy for styling when we get to css. 
+						You don't need to use them now you just need to know they exists, read more about 
+						<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div">div's</a>
+						You can see where all the boxes are by using the inspector, see short
+						<a href="https://www.youtube.com/watch?v=CwiRPmXhcLY">video</a> from Kahn Academy.
+						The inspector will be your workhorse if you are gonna make any website. 
+						So you might as well get to meet it.
+						But just keep in mind that the html has very little to do with the actual design. 
+						In other words: 
+					</p>
+					<p><em>The html is not the design!</em></p>
+					
+					<h4>general good ideas:</h4>
+					<ul>
+						<li>
+							Use the source code of this page as inspiration 
+							for how to write html (right click -> view source)
+						</li>
+						<li>Do things that gives you a better overview</li>
+						<li></li>
+					</ul>
+					<p>write comments above the code you are talking about not next to or below it.</p>
+					
+					
+
+					
+					<h3>Don'ts</h3>
+				<ul>
+					<li>Don't replace a heading with a strong tag</li>
+					<li>Don't organized your html the way you want it to look on the page</li>
+					<li>make unnecessary white space</li>
+					<li>headings needs to give a clear overview, for you and the internet</li>
+					<li>			
+						<p><strong>Don't</strong> just use a tag because you feel like using it, it need's to make sense. </p>
+					</li>
+					<li>don't cheat, you know what that means</li>
+				</ul>
+				
+				<p>
+					Remember just <em>one</em> h1 on each page on a website.
+					see <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements#multiple_h1">mdn</a>. 
+					So lets say you have a website with 5 pages each page can have an h1. </p>
+				<p>
+					Make sure you don't leave space between the tag and the words like so
+					<code>
+	&lt;p&gt; Don&apos;t leave space before/after a p-tag like here in this paragraph. &lt;/p&gt;
+	&lt;p&gt;This is the way to do it.&lt;/p&gt;
+					</code>
+					
+					This also count for h1,h2, em, spans, a, anywhere where there is text. 
+				</p>
+				<p>
+				Don't use strong instead of a h2 or h3, a lot of websites do this, but that dosent make it right.
+				Remember we use h1,h2,3 for search optimization, and structure.
+				</p>
+
+			<h2>Hints</h2>
+			<p class="hint_helper1">
+				If you hover the mouse over this sentence you will get the hint below. 
+				Don't fool yourself first try then look.
 			</p>
-			<h3>Don'ts</h3>
-			<p>remeber just one h1</p>
-				
+			<p class="hint1">
+				All you need is on this page, mdn or kahn academy ;) Read the resources or the do's and don'ts   and watch the videos and kahn academy
+				Check the source code of this page you are looking at to get inspiration. (right click -> source)
+			</p>
+			
+		
 		</div>
 
 	</div>
