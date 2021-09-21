@@ -20,3 +20,13 @@
 
 #content .tab {margin-left: 40px;}
 #content code {background-color: #ffffff; }
+
+#content .hint {
+	display: none;
+	background: blue;
+}
+
+#content .hint:hover {
+	display: block;
+}
+
