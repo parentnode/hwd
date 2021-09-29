@@ -16,38 +16,60 @@
 		<div class="scene i:exercise">
 			<h1>Exercise 502 - PHP</h1>
 			<p>
-				This exercise is about developing your first Janitor based PHP project
+				This exercise is about your first PHP loops and conditionals.
 			</p>
 			<p>
-				The purpose of this exercise is to work with your personal Janitor project to gain experience
-				with frameworks and PHP.
+				The purpose of this exercise is to use PHP and get familiar with the basics language syntax.
 			</p>
 
 			<h2>Tasks</h2>
 			<ol>
 				<li>
-					<h3>Create a new controller</h3>
+					<h3>Create a new PHP file</h3>
 					<p>
-						Create a new simple controller (a PHP file) in <em>theme/www</em>. You can get inspiration from
-						the existing terms.php file, which contains all the relevant code.
-					</p>
-					<p>
-						In the <em>$page->page</em> method, you have to state a template to include. Make up a name for the 
-						template – you make the actual template in the next step.
+						In your homework folder, copy the 502 exercise material folder into your homework folder.
 					</p>
 				</li>
 				<li>
-					<h3>Create a new template</h3>
+					<h3>Read through the script</h3>
 					<p>
-						Create a new template (a PHP file) in <em>theme/templates/pages</em>. You can get inspiration from
-						the existing terms.php file, which contains a full scene.
+						Read the code inside the work file, 502/index.php. It contains 3 Arrays, one of which is indexed, one that
+						is associative and one that is multidimensional. Notice the different ways values can be added to the array.
+						You will be using for and foreach loops as well as some if statements to complete the exercise.
+					</p>
+					<p>
+						Using print_r($indexed); will output the array content in a structured form, although you may need to 
+						look at the source output to see it (view page source).
 					</p>
 				</li>
 				<li>
-					<h3>Visit your new page</h3>
+					<h3>Output $indexed</h3>
 					<p>
-						Visit the page you have created. If your controller is named test.php, then visit /test on your
-						local project domain.
+						Us a for loop to loop through the content of $indexed and print out each value as 
+						a &lt;li&gt; in a valid HTML list (&lt;ul&gt;).
+					</p>
+					<p>
+						Do not output the "Don't print me" element. 
+					</p>
+				</li>
+				<li>
+					<h3>Output $associative</h3>
+					<p>
+						Us a foreach loop to loop through the content of $associative and print out each key and value as 
+						an &lt;dd&gt; and &lt;dt&gt; in a valid HTML definition list (&lt;dl&gt;). 
+					</p>
+					<p>
+						Do not output the "Don't print me" element. 
+					</p>
+				</li>
+				<li>
+					<h3>Output $multidimensional</h3>
+					<p>
+						Use nested foreach loop to loop through the content of $multidimensional and print out the content 
+						in nested html structure, where the <em>indices</em> (the keys of the arrays) becomes headers.
+					</p>
+					<p>
+						Do not output the "Don't print me" element – or the <em>facts</em> sub array of <em>aliens</em>. 
 					</p>
 				</li>
 			</ol>

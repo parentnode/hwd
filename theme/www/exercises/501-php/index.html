@@ -16,52 +16,45 @@
 		<div class="scene i:exercise">
 			<h1>Exercise 501 - PHP</h1>
 			<p>
-				This exercise is about setting up your first Janitor based PHP project
+				This exercise is about your first PHP script
 			</p>
 			<p>
-				The purpose of this exercise is to set up a new personal Janitor project on your computer.
-				This project will form the basis for the following PHP exercises.
+				The purpose of this exercise is to create a PHP script and execute it on your local webserver to see the 
+				output in your browser. As simple as that. A regular old-school <em>hello world</em> example.
 			</p>
 
 			<h2>Tasks</h2>
 			<ol>
 				<li>
-					<h3>Create a new Git repository</h3>
+					<h3>Create a new PHP file</h3>
 					<p>
-						Log into your Github account and create a new repository. Give it a good name, using only lowercase
-						letters and underscores.
+						In your homework folder, create the 501 exercise folder and create an empty index.php file inside.
 					</p>
 				</li>
 				<li>
-					<h3>Clone the new repository</h3>
+					<h3>Write you first PHP output</h3>
 					<p>
-						Create a personal folder in <em>/srv/sites/#YOUR NAME#</em> and clone your new repository into
-						this folder. It should say that you cloned an empty repository – this is correct.
+						Add a PHP starting tag to you new PHP script (&lt;?php). And then use the php function print to print a 
+						string, that will be shown in the browser, when you access the script via the hwd.local website.
+						It works like this:
+					</p>
+					<code>print "hello world";</code>
+					<p>
+						Feel free to change to text to show you have understood the concept :-)
 					</p>
 				</li>
 				<li>
-					<h3>Install Janitor</h3>
+					<h3>Check out your script</h3>
 					<p>
-						Open your BASH (as administrator) and <em>cd</em> your way to your new repository. Once you are
-						in the root folder of your repository you can run the install command:
-					</p>
-					<h4>Mac:</h4>
-					<code>bash <(curl -s https://janitor.parentnode.dk/installers/submodule-installer-mac)</code>
-					<h4>Windows:</h4>
-					<code>bash <(curl -s https://janitor.parentnode.dk/installers/submodule-installer-windows)</code>
-					<h4>Linux/Ubuntu:</h4>
-					<code>bash <(curl -s https://janitor.parentnode.dk/installers/submodule-installer-linux)</code>
-					<p>
-						This will start the Janitor install and setup process. You will be prompted for some information
-						along the way, among other things a domain for your local setup. You can choose a name (lowercase 
-						letters and dashes) and then add .local, so it ends up something like <em>martins-test.local</em>.
+						View you script output in you browser.
 					</p>
 				</li>
 				<li>
-					<h3>Visit your project</h3>
+					<h3>Force an PHP error</h3>
 					<p>
-						After the installation and setup, you should be able to see a "Janitor is alive" page when you visit
-						your new project domain.
+						If you got this far without meeting any PHP errors, then this is your turn now.
+						Let's try to force out a PHP error. Try to remove the quotes from the string you print. And run the script
+						again. Now you know what it looks like :-) It contains valuable output that can be used to locate the error.
 					</p>
 				</li>
 			</ol>
