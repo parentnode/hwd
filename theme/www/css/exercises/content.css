@@ -21,12 +21,19 @@
 #content .tab {margin-left: 40px;}
 #content code {background-color: #ffffff; }
 
-#content .hint {
+/* #content .hint1 {
 	display: none;
-	background: blue;
-}
+} */
 
-#content .hint:hover {
+/* #content p.hint_helper1:hover + #content .hint1 {
 	display: block;
+} */
+
+#content .hint1 {
+display: none;
 }
 
+#content .hint_reveal:hover + #content .hint1 {
+display: block;
+color: red;
+}

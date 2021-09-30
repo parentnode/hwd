@@ -130,64 +130,120 @@
 	&lt;h2&gt;Types of animals&lt;/h2&gt;
 &lt;/div&gt;
 			</code>
-			<p>
-				Note that 1 indentation is normally the size of 4 "spaces" 
-				or 2 "spaces", but we use the size of 4 "spaces",
-				if you press the tab button (the one next to the letter Q) 
-				you can make an indentation.
-			</p>
+
+
 			<p>
 				Note also that there is only one heading h1 in the example above. That is a 
 				general rule, you only have one h1 per article.  
 				So if you for example have 5 pages and you have one article on each page, 
 				you should have 5 h1's in total on the entire website.
 			</p>
+			
+
+			<h4>A bit about indentation</h4>
 			<p>
-				Note that the div start and end tag are above each other.
-				This is a way to show us, the coder,
-				that the all the "stuff" in between is in fact "inside of it".
-				
-				When an element has an inner 
-				element "inside of it the "inner element" is the child and the "outer" is a parent to that child. 
-				So our div here has a lot of children or childnodes as they are also called. 
-				So remember indenting elements doesn't make them children of things.
-				it's when the tags are inside each other they become children. 
-				Just like the a, or em tag is often a child of a p tag.
-				So all all the tags inside of our div example are actually siblings to each other, since
-				non of them have any children in this example. 
-				They all have the same parent div,
-				and the div have an other parent we can't see here in our example. 
-				At some point there is a 
-				parent called a body and later a final parent i the html tag,
-				that wraps around everything in out html document, as you see in the exercise.
+				Note that 1 indentation is normally the size of 4 "spaces" 
+				or 2 "spaces", but we use the size of 4 "spaces" in this course,
+				if you press the tab button (the one next to the letter Q) 
+				you can make an indentation.
+				there are several clever ways to deal with indentations, to speed up our workflow. 
+				for instance, you can select a code section and indent it all at once.
+				you can also remove an indentation with the shortcut  shit + tab.
+			</p>
+			<h4>Best practice</h4>
+			<p>	
+				Make sure you don't make 4 spaces instead of an indentation. 
+				This might seem silly at first because you could think what difference does it make? 
+				When it comes down to it there are several style of code and 
+				often coding teams have there own style. 
+				Messing with the style can cause a lot of tiresome arguments. 
+				Imagine you are a part of a coding team now and here we use a certain style. 
+				There is a reason for the style we use. 
+				Since the most logical thing to do is to use a tab we use a tab not 4 spaces.
+				this might seem a bit OCD'ish. But its important that we are on the same page.  
+				There is a lot of situations when you start coding together 
+				with other people you will need to agree on coding styles.
+				Often the easiest way is to use what is called best practices.
+				Here are some good examples of html
+				<a href="https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Code_guidelines/HTML">best practices</a>.
+				Some times when you are in doubt about what the best practice is ina given situation, ask your team if they have one already? 
+				There are most likely some very good arguments, and experience behind the best practices. 
+				So just go with it for now. First learn the rules then make new ones when you master the old ones:)  
+			</p>
+
+			<h5>best practice: Paragraphs: </h5>
+			<code>
+&lt;p&gt;
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+	incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+	exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+	Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+	eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
+	in culpa qui officia deserunt mollit anim id est laborum.
+&lt;/p&gt;
+<a href=""></a>
+			</code>
+			<p>
+				Note in the code block above how the test text is indented once in relation to the start and end p tag.
+				Also note that the width of the code block the text aren't that long. 
+				Around 80-100 characters seems to be a good length. 
+				A good rule of thump is that you should be able to see the code on you screen when you code. 
+				keeping it "short" will make it easier for the eyes to find the next line as well. 
+				Keep in mind that a tags(&lt;a&gt;) are always on one line. No mater for long the link is.
 			</p>
 			
 
-			<h5>Tips for good headings</h5>
+
+			<h4>Children and parent Elements</h4>
+			<p>
+				Note that the div start and end tag are above each other.
+				This is a way to show us, the coder,
+				that the all the "stuff" in between the 2 tags is in fact a "child" of the parent div.
+				When an element has 1 or several 
+				element "inside" of it the "inner element" is the "child" and the "outer" is a "parent" to that child. 
+				So our div here has a lot of children or childnodes as they are also called. 
+				So remember indenting elements doesn't make them children of things.
+				it's when a tags is inside an other the inner become as child. 
+				Just like the a, or em tag is often a child of a p tag.
+				So in the example above, we have a lot of headings a p tags that all are sibling to each other  
+				since none of them have any children in this example, and the have the same parent div. 
+				And in a real html document the div would then have an other parent that we can't see here in our example. 
+				And at some point the last parent would be the html tag. 
+				Take a look at the exercise or the source code of this page, to see the a parent structure. 
+			</p>
+
+			<h4>Tips for good headings</h4>
 			<p>
 				Headings are a very important for search engines, 
 				and people, especially h1. Make sure the headings reveal as much information as possible, 
 				the headings are not a teaser, confusing or abstract. 
-				The headings should be precise and descriptive and not to short.
+				The headings should be precise and descriptive and not to short not to long either.
 				the worst kind of headings are misleading, 
-				and not describing at all what is really going on in the article.  "Click bait".
-				or bad news papers headings are a good example of bad headings. 
+				and not describing at all what is really going on in the article, aka  "Click bait".
+				Bad news papers headings are a good example of bad headings. 
 				Good headings are so good that you get a feeling 
-				you already know exactly what the rest of the article or sub article is about.
+				you already know exactly what the rest of the article is about.
 				The search algorithm will most likely reward you for this kind of honest behavior.
 				So think twice about what you write in a heading.  
 			</p>
 
-			<h4>Pay attention to "white space"</h4>
+			<h4>Pay attention to "white spaces"</h4>
 			<p>
-				White space is newline's between paragraph or headings ect.
-				it can actually even be the 
-				Make sure that the "white space" makes sense and there is a consistent system behind it.
+				White space can be a newline's between paragraph or headings ect.
+				it can actually even be the space between 2 words or between a tag and and an other tag. 
+				Make sure that the "white space" makes sense to have and there is a consistent system behind it.
 				Often It can make sense to leave on line of white space above a heading to make it more readable.
-				Remember to delete all the white space that dosen't have a purpose.
+				Remember to delete all the white space that doesn't have a purpose. 
+				At least when you hand in code for review.
+			</p>
+			<p>
+				If code blocks are closely related you can arrange them close to each other 
+				"without whitespace" in between. See the code example about "animals living on earth." 
+				Note how the "text block" under the headings doesn't have a white gap between them.
 			</p>
 
-			<h4>Starting to think about arranging html elements for styling </h4> 
+
+			<h4>Start to think about arranging html elements for styling</h4> 
 			<p>
 				This is a more complex task that we will get more into in later exercises. 
 				For now you need to know that all elements (divs, headings, paragraph ect) 
@@ -197,8 +253,8 @@
 				Some elements like divs are called containers and are used for keeping things inside of. 
 				These are very handy for styling when we get to css. 
 				You don't need to use them now you just need to know they exists, read more about 
-				<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div">div's</a>
-				You can see where all the boxes are by using the inspector, see short
+				<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div">div's</a>.
+				You can see where all the "boxes" are by using the inspector, see short
 				<a href="https://www.youtube.com/watch?v=CwiRPmXhcLY">video</a> from Kahn Academy.
 				The inspector will be your workhorse if you are gonna make any website. 
 				So you might as well get to meet it.
@@ -217,18 +273,18 @@
 				Make sure you can understand the code if you come back to it in a year. 
 				Comments, readme  or personal notes can be good for this.
 			</p>
-
-			<p>If you do write comments, write it above the code you are talking about not next to or below it.</p>			
+			<p>If you do write comments, write it above the code you are referring to not next to or below it.</p>			
 			<p>
 				Try to write as few and short comments as possible if you really need them at all. 
-				When you change the code you have to change the comments as well, otherwise you will get lost.
+				When you change the code, you have to change the comments as well, otherwise you will get lost.
 				So fewer comments means less maintenance. But again if nobody else gets it, it need comments.
 				Keep the bus-factor low. 
-				always ask yourself: If I was hit by a bus tomorrow would anyone be able to read my code and maintain it?
+				always ask yourself: If I was hit by a bus tomorrow would anyone else be able to read my code and maintain it?
 			</p>
 			
-			<p>If things are related you can "glue" them together by not making white space</p>
 
+
+		
 				
 			<h3>Don'ts</h3>
 			<ul>
@@ -236,10 +292,8 @@
 				<li>Don't organized your html the way you want it to look on the page, wait untill you learn css</li>
 				<li>Don't make unnecessary white space</li>
 				<li>Don't make bad headings, they needs to give a clear overview, for you and the internet</li>
-				<li>			
-					<p><strong>Don't</strong> just use a tag because you feel like using it, it need's to make sense. </p>
-				</li>
-				<li>don't cheat, you know what that means, copy paste ect</li>
+				<li>Don't just use em or strong tag because you feel like using it, it needs to make sense</li>
+				<li>Don't cheat, you know what that means, copy paste ect, you are here to learn</li>
 			</ul>
 			
 				<p>Make sure you don't leave space between the tag and the words like so:</p>
@@ -251,33 +305,32 @@
 				This also count for h1,h2, em, spans, a, anywhere where there is text. 
 			</p>
 			<p>
-				Don't use strong instead of a h2 or h3, a lot of websites do this, but that dosent make it right.
-				Remember we use h1,h2,3 for search optimization, and structure.
-			</p>
-
-			<p>
-				One could argue that arranging the example with the div in such a a way the each subheading 
+				One could argue that arranging the example with "the animals on earth" in such a a way that each subheading 
 				is indented reletively to the one before like this:
+			</p>
 				<code>
 Dont do this:
 	&lt;h2&gt;heading&lt;/h2&gt;
 		&lt;h3&gt;sub heading&lt;/h3&gt;
 				</code>
-				But dont do it. It will get confusing when you have a lot of html. 
+			<p>
+				But don't do it. It will get confusing when you have a lot of html.
+				Indenting pushes everything to the right, avoid that if possible.
 			</p>
-				
 
 			<h2>Hints</h2>
-			<p class="hint_helper1">
+			<!-- <p class="hint_reveal">
 				If you hover the mouse over this sentence you will get the hint below. 
 				Don't fool yourself first try then look.
-			</p>
-			<p class="hint1">
-				All you need is on this page, mdn or kahn academy ;) Read the resources or the do's and don'ts   and watch the videos and kahn academy
-				Check the source code of this page you are looking at to get inspiration. (right click -> source)
-			</p>
-			
-		
+			</p> -->
+			<!-- <p class="hint1">
+				Hint:
+				All you need is on this page, or on mdn or kahn academy ;) Read the resources or the do's and don'ts and watch the videos on kahn academy
+				Check the source code of this page you are looking at to get inspiration. (right click -> source).
+			</p> -->
+
+			<p class="hint_reveal">Hover over me.</p>
+			<p class="hint1">I am shown when someone hovers over the div above.</p> 
 		</div>
 
 	</div>
