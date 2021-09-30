@@ -23,6 +23,8 @@ $multidimensional["babies"]["Have"] = "The cuteness";
 $multidimensional["babies"]["Want"] = "The boob";
 $multidimensional["aliens"] = ["Want" => "The blood", "Have" => "The tech", "Need" => "The love", "Facts" => ["0", "0", "0"]];
 	
+
+
 ?>
 
 <!DOCTYPE html>
@@ -40,12 +42,37 @@ $multidimensional["aliens"] = ["Want" => "The blood", "Have" => "The tech", "Nee
 	<div id="content">
 
 		<div class="scene">
-			<? 
 			
-			// Add your PHP output here 
-			print indexed[1]
+			 <!-- https://stackoverflow.com/questions/1813098/php-array-to-list/17501916 -->
+
+			<?php
+			// Add your PHP output here
+			$ul_list1 = "<ul>";
+			for ($i=0; $i < count($indexed); $i++) { 
+				if($i != 4){
+					$ul_list1 .= "<li>$indexed[$i]</li>";
+				}
+			}
+			echo $ul_list1;
+			?>
+
+			<?php
+			// for each
+			
+			$ul_list2 = "<ul>";
+
+			foreach($associative as $x) {
+				if ($x != "Don't print me"){
+					$ul_list2 .= "<li>$x</li>";
+				}
+			}
+			$ul_list2 .= "</ul>";
+			echo $ul_list2;
 
 			?>
+
+
+
 		</div>
 
 	</div>
