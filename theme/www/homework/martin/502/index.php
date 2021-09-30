@@ -45,31 +45,33 @@ $multidimensional["aliens"] = ["Want" => "The blood", "Have" => "The tech", "Nee
 			
 			 <!-- https://stackoverflow.com/questions/1813098/php-array-to-list/17501916 -->
 
-			<?php
-			// Add your PHP output here
-			$ul_list1 = "<ul>";
-			for ($i=0; $i < count($indexed); $i++) { 
-				if($i != 4){
-					$ul_list1 .= "<li>$indexed[$i]</li>";
-				}
-			}
-			echo $ul_list1;
-			?>
-
-			<?php
-			// for each
 			
-			$ul_list2 = "<ul>";
-
-			foreach($associative as $x) {
-				if ($x != "Don't print me"){
-					$ul_list2 .= "<li>$x</li>";
+			 <ul>
+			<?php
+			// for each associative
+			for ($i=0; $i < count($indexed); $i++) { 
+				if($indexed[$i] != "Don't print me"){
+					echo "<li>$indexed[$i]</li>";
 				}
 			}
-			$ul_list2 .= "</ul>";
-			echo $ul_list2;
-
+			
 			?>
+			</ul>
+
+			<dt>
+			<?php
+			// for each associative
+			foreach($associative as $key => $value) {
+				if($value != "Don't print me"){
+					echo "<dt>$key</dt>";
+					echo "<dd>$value</dd>";
+					echo "<br>";	
+				}	
+			}
+			?>
+			</dt>
+
+			
 
 
 
