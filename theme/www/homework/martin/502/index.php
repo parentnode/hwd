@@ -72,8 +72,21 @@ $multidimensional["aliens"] = ["Want" => "The blood", "Have" => "The tech", "Nee
 			</dt>
 
 			
+		
+			<?php 
+			// multidimensional
+			foreach( $multidimensional as $outer_key => $outer_val) {
+				if($outer_key != "aliens"){
+					echo "<h2>".$outer_key."</h2><br>";
 
-
+					foreach($outer_val as $innner_val){
+						if($innner_val != "Don't print me"){
+							echo "$innner_val . <br>";
+						}
+					}
+				}
+			} 
+			?>
 
 		</div>
 
