@@ -42,9 +42,10 @@ $multidimensional["aliens"] = ["Want" => "The blood", "Have" => "The tech", "Nee
 	<div id="content">
 
 		<div class="scene">
-			
-			 <!-- https://stackoverflow.com/questions/1813098/php-array-to-list/17501916 -->
-
+			<!-- hints -->
+			<!-- https://stackoverflow.com/questions/1813098/php-array-to-list/17501916 -->
+			<!-- what is the double arrow?  -->
+			<!-- https://stackoverflow.com/questions/14037290/what-does-this-mean-in-php-or -->
 			
 			 <ul>
 			<?php
