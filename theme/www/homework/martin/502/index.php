@@ -42,6 +42,9 @@ $multidimensional["aliens"] = ["Want" => "The blood", "Have" => "The tech", "Nee
 	<div id="content">
 
 		<div class="scene">
+
+			<!-- lav 2 versioner php med html eller html med php i -->
+			<!-- 3 typer strege, ' " eller ren html -->
 			<!-- hints -->
 			<!-- https://stackoverflow.com/questions/1813098/php-array-to-list/17501916 -->
 			<!-- what is the double arrow?  -->
