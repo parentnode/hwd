@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Exercise 314</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="/js/manipulator/seg_desktop.js"></script>
+	<style type="text/css">
+		/* DON'T CHANGE THIS CSS */
+		body {margin: 0;}
+		#page {width: 300px; margin: 0 auto;}
+
+
+		/* added */
+
+
+		body {background-color : #ededed; font-family : "Open Sans", sans-serif;}
+
+		h1 {padding: 40px; text-align: center; font-size: 1.5em;}
+
+		li a {text-decoration : none; color : #2d2f31;}
+
+
+		/* nav {
+		width : 300px; 
+		background: #d9d9d9;
+		margin : 40px auto; 
+		} */
+
+		span {
+		padding : 30px;
+		background : #2d2f31; 
+		color : white;
+		font-size : 1.2em;
+		font-variant : small-caps;
+		cursor : pointer;
+		display: block;
+		}
+
+		span::after {
+		float: right;
+		right: 10%;
+		content: "+";
+		}
+
+		.slide {
+		clear:both;
+		width:100%;
+		height:0px;
+		overflow: hidden;
+		text-align: center;
+		transition: height .4s ease;
+		}
+
+		.slide li {padding : 30px;}
+
+		#touch {position: absolute; opacity: 0; height: 0px;}    
+
+		#touch:checked + .slide {height: 300px;} 
+
+		#navigation ul.navigation > li {
+			display: inline-block;
+			margin: 0 10px 0 0;
+			vertical-align: top;
+
+		}	
+
+	</style>
+</head>
+<body>
+
+<div id="page" class="i:page">
+	<div id="header"></div>
+	<div id="content"></div>
+
+
+			
+
+		<h1>CSS Dropdown Menu</h1>
+
+			
+
+		<label for="touch"><span>titre</span></label>               
+		<input type="checkbox" id="touch"> 
+
+		<ul class="slide">
+			<li><a href="#">Lorem Ipsum</a></li> 
+			<li><a href="#">Lorem Ipsum</a></li>
+			<li><a href="#">Lorem Ipsum</a></li>
+			<li><a href="#">Lorem Ipsum</a></li>
+		</ul>
+
+		
+
+
+		</div>
+	
+	<div id="footer"></div>
+</div>
+
+<script type="text/javascript">
+	"use strict";
+	// ADD YOUR JS HERE
+
+	// u is martin's short hand for util  
+	// querySelector = qs
+	// u.ae = util.appendElement
+	
+
+	this.nN.list = u.qs("ul.navigation", this.nN);
+			this.nN.list.dropdowns = u.qsa("ul.navigation .dropdown", this.nN.list);
+
+			
+			var i, node;
+			for (i = 0; i < this.nN.list.dropdowns.length; i++) {
+
+				node = this.nN.list.dropdowns[i];
+				
+				// add a path class to the offers <li> so it can get highlighted when "path", by checking if there is a "selected" class on one of its children. 
+				if(u.qs(".selected", node))
+					u.ac(node, "path");
+
+				u.e.hover(node,{"delay" : 400});
+
+				node.over = function(event) {
+					u.ac(this, "open");
+				}
+				node.out = function(event) {
+					u.removeClass(this, "open");
+				}
+				
+
+				
+				
+			}
+
+	
+</script>
+
+
+</body>
+</html>
