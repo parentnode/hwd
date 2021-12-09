@@ -49,8 +49,33 @@ $multidimensional["aliens"] = ["Want" => "The blood", "Have" => "The tech", "Nee
 			<!-- https://stackoverflow.com/questions/1813098/php-array-to-list/17501916 -->
 			<!-- what is the double arrow?  -->
 			<!-- https://stackoverflow.com/questions/14037290/what-does-this-mean-in-php-or -->
+			<?php
+			echo "<h1>PHP Loops, and working in an html file</h1>"; 
+			echo "first we just print out all the loops";
+			echo "<br><br>";
+
+			print_r($indexed); 
+			echo "<br><br>";
 			
-			 <ul>
+			print_r($associative);
+			echo "<br><br>";
+			
+			print_r($multidimensional);
+			echo "<br><br>";
+
+			?>
+			
+			
+			
+			<!-- ul starts here -->
+			<ul>
+			
+
+			<?= "<h2>For each associative loop</h2>"; ?>
+			<?= 
+			"<p>notice all the loop is written in php and its wrapped in an ul</p>"; 
+			?>
+
 			<?php
 			// for each associative
 			for ($i=0; $i < count($indexed); $i++) { 
@@ -61,6 +86,7 @@ $multidimensional["aliens"] = ["Want" => "The blood", "Have" => "The tech", "Nee
 			
 			?>
 			</ul>
+			<!-- ul ends here -->
 
 			<dt>
 			<?php
