@@ -51,7 +51,7 @@ $multidimensional["aliens"] = ["Want" => "The blood", "Have" => "The tech", "Nee
 			<!-- https://stackoverflow.com/questions/14037290/what-does-this-mean-in-php-or -->
 			<?php
 			echo "<h1>PHP Loops, and working in an html file</h1>"; 
-			echo "first we just print out all the loops";
+			echo "first we just print out all the loops with a print_r to check them out , see it in view source";
 			echo "<br><br>";
 
 			print_r($indexed); 
@@ -59,7 +59,7 @@ $multidimensional["aliens"] = ["Want" => "The blood", "Have" => "The tech", "Nee
 			
 			print_r($associative);
 			echo "<br><br>";
-			
+
 			print_r($multidimensional);
 			echo "<br><br>";
 
@@ -71,13 +71,14 @@ $multidimensional["aliens"] = ["Want" => "The blood", "Have" => "The tech", "Nee
 			<ul>
 			
 
-			<?= "<h2>For each associative loop</h2>"; ?>
+			<?= "<h2>Normal for loop</h2>"; ?>
 			<?= 
 			"<p>notice all the loop is written in php and its wrapped in an ul</p>"; 
 			?>
 
 			<?php
-			// for each associative
+			// for loop 
+			// count($indexed) ; returns the leghts of the array. 
 			for ($i=0; $i < count($indexed); $i++) { 
 				if($indexed[$i] != "Don't print me"){
 					echo "<li>$indexed[$i]</li>";
@@ -91,6 +92,8 @@ $multidimensional["aliens"] = ["Want" => "The blood", "Have" => "The tech", "Nee
 			<dt>
 			<?php
 			// for each associative
+
+			echo "the asssociative arrray, contains a key, and a value, you can get the key and the value as a pair then you loop through it.";
 			foreach($associative as $key => $value) {
 				if($value != "Don't print me"){
 					echo "<dt>$key</dt>";
@@ -101,21 +104,18 @@ $multidimensional["aliens"] = ["Want" => "The blood", "Have" => "The tech", "Nee
 			?>
 			</dt>
 
-			
-		
-			<?php 
-			// multidimensional
-			foreach( $multidimensional as $outer_key => $outer_val) {
-				if($outer_key != "aliens"){
-					echo "<h2>".$outer_key."</h2><br>";
+			<?php
+			echo  "<h2>multidimensional array nested loops</h2><br>";
 
-					foreach($outer_val as $innner_val){
-						if($innner_val != "Don't print me"){
-							echo "$innner_val . <br>";
-						}
+			foreach($multidimensional as $key => $value) {
+				echo  "<h3>".$key."</h3><br>";
+				$inner_array = $value;
+				foreach ($inner_array as $inner_key => $inner_value){
+					if (!is_array($inner_value)){
+						echo "<p> inner key: " . $inner_key ." - inner value: " .$inner_value . "</p><br>";
 					}
 				}
-			} 
+			}
 			?>
 
 		</div>
