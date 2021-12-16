@@ -77,6 +77,9 @@
 					<p>
 						Now you can visit the controller as long as your a logged in. Try to log out and visit the page again.
 						It should redirect you to the login page again.
+
+						Now change $access_item = true to $access_item["/"] = true
+						now you can proceed to making access settings.
 					</p>
 				</li>
 				<li>
@@ -89,6 +92,21 @@
 					<p>
 						Update the access grants in <em>Users</em> -> <em>Groups</em> when you change the <em>$access_item</em>
 						to allow yourself access.
+					</p>
+				</li>
+				<li>
+					<h3>Trouble shooting: clear janitor cache</h3>
+					<p>
+						If you can't access Users->groups->developer try to flush the janitor cache.
+						Here is how: in "#yourproject#/janitor" go to settings -> cache. 
+						now on the right click gray "flush" button on each "Cache entry",
+						example flush the 3 chache entries: 
+						"user_group_3_permissions"
+						"navigation-main-janitor"
+						"navigation-main" 
+						these cache will be made again when you log in again.
+						try to log out and start over.
+						It hopefully works now.			
 					</p>
 				</li>
 			</ol>
