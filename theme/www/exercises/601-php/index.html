@@ -64,7 +64,26 @@
 						your new project domain.
 					</p>
 				</li>
+				<li>
+					<h3>Trouble shooting</h3>
+					<p>
+						if local host is not working. 
+						check the apche config file: 
+						sites/apache/ apache.conf
+						the last line in this file is the latest added project, if the path is not right that could be the problem
+						change the path rxample from 
+						Include "apache/httpd-vhosts.conf"
+						to
+						Include "/srv/sites/martin/janitor-php/apache/httpd-vhosts.conf"
+
+						now in the terminal example:
+						m@m-ThinkPad-T520:/srv/sites/martin$ 
+						<code>apache restart </code>
+					</p>
+				</li>
 			</ol>
+
+			
 		</div>
 
 	</div>

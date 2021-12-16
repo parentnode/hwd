@@ -46,6 +46,9 @@ Util.Objects["page"] = new function() {
 				// set scroll handler
 				u.e.addWindowEvent(this, "scroll", this.scrolled);
 
+				// set functions here 
+
+
 			}
 
 		}

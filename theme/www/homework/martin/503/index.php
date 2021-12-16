@@ -1,13 +1,31 @@
 <?php
+//include 'include_test.php';
+include __DIR__ . '/include_test.php';
+require __DIR__ . '/require_test.php';
+// run include test
+echo testInclude() . "<br>";
+echo testrequire() . "<br>";
 
-echo "<h1>functions conditions and scopes<h1> <br>";
+echo "test functions: ";
 
-echo "<h2>functions<h2> <br>";
+function addNum($val1, $val2){
+	$var = 5;
+	return $val1 + $val2 * $var; 
+}
+echo addNum(1,2) . "<br>"; 
 
 
+echo "test scope: ";
+$global = 10;
+function testscope(){
+	$local = 5;
+}
 
-echo "<h2>conditions<h2> <br>";
-
-echo "<h2>scopes<h2> <br>";
+if(isset($local)){
+	echo $local;
+}
+if(isset($global)){
+	echo $global;
+}
 
 ?>
